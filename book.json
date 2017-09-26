@@ -1,0 +1,9 @@
+{
+    "plugins": ["asciidoc-admonition-icons", "disqus"],
+    "language": "pt",
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "mcampos"
+        }
+    }    
+}

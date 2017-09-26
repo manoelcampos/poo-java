@@ -1,0 +1,76 @@
+= Introdução
+:revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0
+:source-highlighter: pygments
+:imagesdir: images
+:allow-uri-read:
+:safe: unsafe
+:numbered:
+:listing-caption: Listing
+
+ifdef::env-github[]
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+- https://palmas.ifto.edu.br/index.php/component/content/article?id=225[Curso Superior de Sistemas para Internet]
+- http://www.ifto.edu.br[Instituto Federal de Educação, Ciência e Tecnologia do Tocantins]
+- http://about.me/manoelcampos[Prof. Me. Manoel Campos da Silva Filho]
+
+ifdef::env-github[]
+Acesse o curso online https://manoelcampos.gitbooks.io/poo-java/[neste link], onde é possível fazer o download do material em PDF e epub.
+O acesso ao curso diretamente pelo GitHub não permite a exibição de vídeos embutidos.
+endif::[]
+
+== Objetivos
+Apresentar os fundamentos para o desenvolvimento de softwares modernos seguindo o paradigma de desenvolvimento orientado a objetos.
+Um paradigma define um modelo ou padrão a ser seguido. O paradigma de programação orientada a objetos, dentre vários existentes, define um modelo para construção de software que é seguido por profissionais mundialmente.
+ 
+== Motivação 
+Como você já sabe, desenvolver software não é uma tarefa fácil. Desenvolver programas para resolver problemas reais e cada vez mais complexos, que serão utilizados de fato por alguém além de você, pode ser desafiador. 
+
+Depois que já se sabe o que precisa ser feito, um dos maiores desafios é por onde começar e então muitas dúvidas surgem. Como transformar suas ideas em código? Como este código deve ser organizado? Quais partes do programa devem ser desenvolvidas primeiro? Como identificar estas partes do programa e desenvovê-las isoladamente? Como unir as partes depois de prontas e fazer o sistema inteiro funcionar?
+
+Durante o processo de aprendizagem, todos nós provavelmente utilizamos intuitivamente o "paradigma" de tentitiva e erro. Consigo até ver a cena: 
+
+****
+Você vai escrevendo o código, fazendo alterações sem saber exatamente o que está fazendo, na esperança que o programa funcione. 🙏
+
+****
+.http://joyreactor.com/post/1646612[Tentativa e Erro: "paradigma" de programação mais usado no mundo, quando não se tem a menor idea da finalidade de determinado código.]
+image::code-doesnt-work.jpeg[]
+
+A medida que o código vai aumentando e você vai indiscriminadamente fazendo alterações nele, o código começa a virar um emaranhado de linhas que nem você entende mais. 
+
+.Como fica seu código escrito usando o "paradigma" de tentativa e erro 😳. (Fonte: https://goo.gl/oheZqw[123rf.com])
+image::chaos-of-cables.jpg[]
+
+A programação orientada a objetos (POO), juntamente com uma série de conceitos e práticas de engenharia de software defini padrões para o desenvolvimento de software, buscando: 
+
+- minimizar a quantidade de bugs (erros);
+- permitir que o software seja desenvolvido em equipe (local ou remotamente) de forma que qualquer profissional capacitado possa entender o código de outra pessoa;
+- permitir que o software seja desenvolvido em partes independentes, ainda contribuindo para o trabalho em equipe;
+- facilitar a manutenção de código para correção de bugs e inclusão de novos recursos;
+- assim como métodos de contrução evoluem para corrigir problemas como custo, tempo de construção, qualidade e segurança, a POO surgiu para corrigir problemas de outros paradigmas de programação e suprir novas necessidades tanto dos desenvolvedores quanto dos clientes;
+- etc.
+
+== Pré-requisitos
+
+Lógica de programação e programação estruturada.
+
+== Metodologia
+
+== Plano do Curso
+
+== Método de Avaliação
+
+Para ser aprovado na disciplina o aluno precisa ter média igual ou superior a 6 e pelo menos 75% de presença.
+
+ifdef::backend-revealjs[]
+
+include::chapter1.adoc[]
+
+endif::backend-revealjs[]

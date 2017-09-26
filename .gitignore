@@ -1,0 +1,6 @@
+.bundle
+Gemfile.lock
+*.html
+*.pdf
+build
+node_modules

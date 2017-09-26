@@ -1,0 +1,23 @@
+= Curso de Programação Orientada a Objetox em Java
+:allow-uri-read:
+:safe: unsafe
+
+- https://palmas.ifto.edu.br/index.php/component/content/article?id=225[Curso Superior de Sistemas para Internet]
+- http://www.ifto.edu.br[Instituto Federal de Educação, Ciência e Tecnologia do Tocantins]
+- http://about.me/manoelcampos[Prof. Me. Manoel Campos da Silva Filho]
+
+ifdef::env-github[]
+Acesse o curso online https://manoelcampos.gitbooks.io/poo-java/[neste link], onde é possível fazer o download do material em PDF e epub.
+O acesso ao curso diretamente pelo GitHub não permite a exibição de vídeos embutidos.
+endif::[]
+
+image::https://licensebuttons.net/l/by-sa/4.0/88x31.png[]
+O conteúdo deste curso é disponibilizado sob a licença https://creativecommons.org/licenses/by-sa/4.0/deed.pt_BR[Creative Commons Attribution-ShareAlike 4.0 International License]. 
+
+O conteúdo do curso é escrito usando a linguagem de marcação http://asciidoctor.org[AsciiDoc].
+
+Para gerar os documentos do curso em PDF ou HTML, utilize primeiro o comando `make install`. Depois basta executar `make`. O arquivo slides.html usa a biblioteca https://github.com/hakimel/reveal.js[reveal.js] e é gerado por meio do plugin http://asciidoctor.org/docs/asciidoctor-revealjs/[Asciidoctor Reveal.js].
+
+ifdef::env-github[]
+GitHub is now running Asciidoctor {asciidoctor-version}.
+endif::[]
