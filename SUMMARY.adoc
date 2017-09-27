@@ -1,4 +1,4 @@
 = Índice
 
 . link:README.adoc[Introdução]
-. link:chapter1.adoc[Uma visão geral sobre POO]
+. link:chapter1.adoc[Porquê Programação Orientada a Objetos]

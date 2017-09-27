@@ -1,4 +1,37 @@
 :imagesdir: images
 
-= Uma visão geral sobre Programação Orientada a Objetos (POO)
+= Porquê Programação Orientada a Objetos?
+
+A forma de escrever código vem evoluindo há décadas para resolver muitos dos problemas apresentados no capítulo anterior.
+Vários paradigmas de programação têm sido desenvolvidos para melhorar a forma como escrevemos código, visando principalmente tornar o código mais claro, organizado, fácil de manter e menos suscetível a erros (bugs). 
+
+Até a década de 60 era muito comum o desenvolvimento de programas utilizando o paradigma de <<Unstructured,Programação não Estruturada>>, que resultado em código difícil de entender e manter. Por estes motivos, um código escrito usando tal paradigma é chamado pejorativamente de código espaguete, por ser confuso e não ter uma sequência clara. Muitos dos códigos escrito seguindo este paradigma utilizavam linguagens como https://pt.wikipedia.org/wiki/Assembly[Assembly] que, apesar de serem legíveis para humanos, não são tão legíveis quanto as linguagens atuais.
+
+.Código espaguete 😳. (Fonte: https://goo.gl/oheZqw[123rf.com])
+image::chaos-of-cables.jpg[]
+
+Outras formas de desenvolver programas foram então surgindo. Uma evolução natural da Programação não Estruturada foi a https://pt.wikipedia.org/wiki/Programação_estruturada[Programação Estruturada]. Este foi provavelmente o primeiro paradigma de programação que você aprendeu em lógica de programação. Um código estruturado permite visualizar mais facilmente o fluxo lógica de execução de um programa. Com isto, é possível facilmente criar algoritmos visualmente por meio de https://manoelcampos.gitbooks.io/logica-programacao/content/chapter1.html#representacao[fluxogramas ou blocos].
+
+image::fluxograma.png[title="Exemplo de como um algoritmo estruturado pode ser representado em um fluxograma."]
+
+TIP: O paradigma estruturado é também definido como "a atitude de escrever código com a inteção de escrever código para se comunicar com humanos e não máquinas" <<Unstructured>>. Ou seja, um dos grandes objetivos de um código é que ele seja legível para outros programadores.
+
+Apesar do paradigma estruturado ter tornado a programação de computadores bem mais simples e o código mais claro, ela ainda peca em muitos pontos como:
+
+- image:shapes.jpg[role="right" width=120, link="https://www.pinterest.pt/pin/693413673846671893/"] representação da solução de um problema em pequenas partes para que seja fácil relacionar o problema com a solução: um dos grandes problemas em programação é entender o que um determinado código faz, principalmente se ele foi escrito por outra pessoa. A representação de um código de uma forma que seja próxima do problema que ele resolve torna mais fácil identificar se ele faz o que é esperado; image:reinventing-wheel.jpg[role="right" width=180, link="https://www.aic.cuhk.edu.hk/web8/Reinventing%20the%20wheel.htm"] 
+- reutilização de código, para evitar ter que ficar reinventando a roda:  
+- permitir proteger tanto dados quanto determinadas partes do código para que não sejam alteradas indevidamente, o que poderia gerar bugs;
+- etc.
+
+Desta forma, surgiu a Programação Orientada a Objetos (POO).
+
+
+video::45I9jX5uO9A[youtube, width="640", height="480"]
+
+
+[bibliography]
+== Referências
+
+- [[[Spaguetti]]] Conway, Richard (1978). A primer on disciplined programming using PL/I, PL/CS, and PL/CT. Winthrop Publishers. ISBN 0-87626-712-6
+- [[[Unstructured]]] Cobb, Gary W. (1978). "A measurement of structure for unstructured programming languages". ACM SIGSOFT Software Engineering Notes. 3 (5): 140–147. ISSN 0163-5948. doi:10.1145/953579.811114.
 
