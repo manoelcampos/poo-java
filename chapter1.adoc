@@ -18,20 +18,67 @@ TIP: O paradigma estruturado é também definido como "a atitude de escrever có
 
 Apesar do paradigma estruturado ter tornado a programação de computadores bem mais simples e o código mais claro, ela ainda peca em muitos pontos como:
 
-- image:shapes.jpg[role="right" width=120, link="https://www.pinterest.pt/pin/693413673846671893/"] representação da solução de um problema em pequenas partes para que seja fácil relacionar o problema com a solução: um dos grandes problemas em programação é entender o que um determinado código faz, principalmente se ele foi escrito por outra pessoa. A representação de um código de uma forma que seja próxima do problema que ele resolve torna mais fácil identificar se ele faz o que é esperado; image:reinventing-wheel.jpg[role="right" width=180, link="https://www.aic.cuhk.edu.hk/web8/Reinventing%20the%20wheel.htm"] 
-- reutilização de código, para evitar ter que ficar reinventando a roda:  
-- permitir proteger tanto dados quanto determinadas partes do código para que não sejam alteradas indevidamente, o que poderia gerar bugs;
+- image:shapes.jpg[role="right" width=120, link="https://www.pinterest.pt/pin/693413673846671893/"] divisão do problema: um problema muitas vezes pode ser dividido em várias partes para tornar mais fácil sua resolução. A divisão de tais partes de modo que elas trabalhem em conjunto posteiormente deve ser feita adequadamente.
+- image:problem-solution.jpg[role="right" width=240, link="https://pt.123rf.com/photo_41818211_business-strategy-businessman-planning-and-finding-a-solution-through-a-drawing-of-a-labyrinth-maze.html"] representação da solução de um problema: uma dos grandes desafios em programação é entender o que um determinado código faz, principalmente se ele foi escrito por outra pessoa. A representação de um código de uma forma que seja próxima do problema que ele resolve torna mais fácil identificar se ele faz o que é esperado; image:reinventing-wheel.jpg[role="right" width=180, link="https://www.aic.cuhk.edu.hk/web8/Reinventing%20the%20wheel.htm"] 
+- reutilização de código, para:
+    * evitar ter que ficar reinventando a roda;
+    * evitar re-escrever código que você já fez, seguindo o princípio <<PP,DRY>> (Don't Repeat Yourself = Não Repita Você mesmo) e avitando a famigerada https://en.wikipedia.org/wiki/Copy_and_paste_programming["Programação Copia e Cola"] 😩 image:copy_paste_keyboard.jpg[role=right, width=180, link=https://www.timeshighereducation.com].
+- permitir proteger tanto dados quanto determinadas partes do código de serem usados de maneira indevida, o que poderia gerar bugs;
 - etc.
 
-Desta forma, surgiu a Programação Orientada a Objetos (POO).
+Um dos problemas da alteração indevida de dados surge quando são utilizadas variáveis globais, como no caso do pseudo código apresentado abaixo. O objetivo do algoritmo é solicitar números ao usuário até que ele digite zero para terminar. A cada número digitado o programa deve exibir a soma de todos os números digitados até então. Tente identificar o que está errado com este código.
 
+.Algoritmo incorreto para somar os valores digitados pelo usuário: problemas com alteração individa de variáveis.
+```
+total = 0
+
+funcao soma_numeros(){
+    faça {
+        imprime("Digite um número: ")
+        leia(numero)
+        total = total + numero
+        mostra_subtotal()
+    } enquanto (numero != 0)
+}
+
+funcao mostra_subtotal() {
+    imprime("O total calculado até agora é de ", total)
+    total = 0
+}
+```
+
+A https://pt.wikipedia.org/wiki/Programação_procedural[Programação Procedural] permite resolver alguns destes problemas (como o apresentado no algoritmo acima), mas nem sempre é simples, efetivo e adaptável a diferentes necessidades.
+
+.Intervalo da Aula 😃
+****
+A Programação Copia e Cola apresentada anteriormente é um dos artifícios que programadores usam para resolver muitos problemas. Mas a mundialmente conhecida Programação Orientada a Gambiarras (POG) trouxe avançaos significativos na área.
 
 video::45I9jX5uO9A[youtube, width="640", height="480"]
+****
 
+image:oop-to-the-rescue.png[role=right, link=https://toggl.com/programming-princess, width=200] Assim, surgiu a Programação Orientada a Objetos (POO). Mas antes de explicar como a POO funciona e como ela resolve muitos dos problemas apresentados, vamos olhar o mundo ao nosso redor. Nós estamos cercados de objetos para todos os lados, como prédios, carros, celulares, TVs e livros. Todos estes objetos têm suas características e funcionalidades, como exemplificado na tabela a seguir:
+
+.Características e funcionalidades de objetos comuns
+|===
+|Objeto | Características | Funcionalidades
+
+| Carro | *Cor*: Azul, *Ano de Fabricação*: 2012, *Bancos*: couro | Acelerar, Frenar, Limpar parabrisas, Acender faróis, etc
+| TV | *Tamanho*: 42", *Tela*: LCD, *Classificação Energética*: A | Ligar/Desligar, Trocar canais, Acionar Timer, Exibir guia de programação
+|===
+
+TIP: As características de um objeto são adjetivos (qualidades) e as funcionalidades são verbos (ações), assim é fácil distinguí-las.
+
+Como atualmente é possível criar https://manoelcampos.gitbooks.io/logica-programacao/content/[programas para controlar objetos como carros, TVs, relógios, balanças, porteiros eletrônicos, lâmpadas, portas e muito mais],  a POO aproxima a representação de tais objetos em um programa de computador do mundo real.
+
+image:shopping-cart.jpg[role=right, width=180, link=https://financesonline.com/top-10-alternatives-magento-leading-shopping-cart-software-solutions/] Mas POO não pode ser usada apenas para tarefas complexas como programação de carros inteligentes. Vamos pegar um exemplo mais comum: as lojas virtuais na Internet. Tais lojas possuem sites, que nada mais são do que aplicações (programas) para a Internet. As páginas que permitem busca e exibição de produtos nestes sites são programas normalmente desenvolvidos utilizando-se o pagadigma de orientação a objetos. Para produtos serem exibidos no site, eles precisam ser representados no código escrito pelo programador. Tais produtos são objetos que possuem suas características e funcionalidades reais que devem ser representadas ao desenvolver uma loja virtual.
+
+Na POO, objetos podem ser pessoas, animais e qualquer coisa que precise ser representada para resolver um problema. Por exemplo, na loja virtual, para realização de uma compra, é preciso identificar o cliente. Este é uma pessoa que precisa ter algumas características registradas como nome, sexo, data de nascimento, email e endereço. 
+
+As caracteristicas e funcionalidades de um objeto como pessoa em POO vai depender do tipo de sistema onde tal pessoa está sendo representada. Por exemplo, em um sistema de loja virtual, a pessoa pode ter adicionalmente como características um login e senha. As funcionalidades desta pessoa podem ser alterar senha, adicionar endereço. Já se a pessoa precisa ser representada em um sistema de academia, ela pode ter características adicionais como peso, altura e funcionalidades como calcular idade e calcular índice de massa corporal.
 
 [bibliography]
 == Referências
 
 - [[[Spaguetti]]] Conway, Richard (1978). A primer on disciplined programming using PL/I, PL/CS, and PL/CT. Winthrop Publishers. ISBN 0-87626-712-6
 - [[[Unstructured]]] Cobb, Gary W. (1978). "A measurement of structure for unstructured programming languages". ACM SIGSOFT Software Engineering Notes. 3 (5): 140–147. ISSN 0163-5948. doi:10.1145/953579.811114.
-
+- [PP] Hunt, Andrew, and David Thomas. The pragmatic programmer: from journeyman to master. Addison-Wesley Professional, 2000.
