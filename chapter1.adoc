@@ -1,6 +1,6 @@
 :imagesdir: images
 
-= Porque Programação Orientada a Objetos?
+== Porque Programação Orientada a Objetos?
 
 A forma de escrever código vem evoluindo há décadas para resolver muitos dos problemas apresentados no capítulo anterior.
 Vários paradigmas de programação têm sido desenvolvidos para melhorar a forma como escrevemos código, visando principalmente tornar o código mais claro, organizado, fácil de manter e menos suscetível a erros (bugs). 
@@ -22,7 +22,7 @@ Apesar do paradigma estruturado ter tornado a programação de computadores bem 
 - image:problem-solution.jpg[role="right" width=240, link="https://pt.123rf.com/photo_41818211_business-strategy-businessman-planning-and-finding-a-solution-through-a-drawing-of-a-labyrinth-maze.html"] representação da solução de um problema: uma dos grandes desafios em programação é entender o que um determinado código faz, principalmente se ele foi escrito por outra pessoa. A representação de um código de uma forma que seja próxima do problema que ele resolve torna mais fácil identificar se ele faz o que é esperado; image:reinventing-wheel.jpg[role="right" width=180, link="https://www.aic.cuhk.edu.hk/web8/Reinventing%20the%20wheel.htm"] 
 - reutilização de código, para:
     * evitar ter que ficar reinventando a roda;
-    * evitar re-escrever código que você já fez, seguindo o princípio <<PP,DRY>> (Don't Repeat Yourself = Não Repita Você mesmo) e avitando a famigerada https://en.wikipedia.org/wiki/Copy_and_paste_programming["Programação Copia e Cola"] 😩 image:copy_paste_keyboard.jpg[role=right, width=180, link=https://www.timeshighereducation.com].
+    * evitar re-escrever código que você já fez (princípio <<PP,DRY>>: (Don't Repeat Yourself = Não Repita Você mesmo) e avitando a famigerada https://en.wikipedia.org/wiki/Copy_and_paste_programming["Programação Copia e Cola"] 😩 image:copy_paste_keyboard.jpg[role=right, width=180, link=https://www.timeshighereducation.com].
 - permitir proteger tanto dados quanto determinadas partes do código de serem usados de maneira indevida, o que poderia gerar bugs;
 - etc.
 

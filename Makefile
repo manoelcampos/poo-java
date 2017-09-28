@@ -20,7 +20,8 @@ html:
 	gitbook build ./ ./build/html
 
 pdf:
-	gitbook pdf ./ ./build/book.pdf
+	mkdir -p build
+	gitbook pdf ./ build/book.pdf
 
 clean:
-	rm -f "build"
+	rm -rf "build"

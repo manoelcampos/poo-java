@@ -1,4 +1,4 @@
-= Introdução
+= Programação Orientada a Objetos em Java
 :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0
 :source-highlighter: pygments
 :imagesdir: images
@@ -66,6 +66,10 @@ Lógica de programação e programação procedural/estruturada.
 == Método de Avaliação
 
 Para ser aprovado na disciplina o aluno precisa ter média igual ou superior a 6 e pelo menos 75% de presença.
+
+O aluno será avaliado pelas atividades realizadas em sala de aula e no ambiente virtual de aprendizagem, a soma delas contabilizando 10 pontos por bimestre. Será ainda aplicada 1 prova teórico-prática valendo 10 pontos. A Nota Final do aluno será calculada pela média aritmética das notas dos bimestres.
+
+Caso o aluno não consiga obter nota para aprovação, será aplicado um exame final teórico-prático que, se igual o superior a 6,0, substituirá a Nota Final.
 
 ifdef::backend-revealjs[]
 
