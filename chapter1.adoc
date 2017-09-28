@@ -2,23 +2,77 @@
 
 == Porque Programação Orientada a Objetos?
 
+ifndef::backend-revealjs[]
+
 A forma de escrever código vem evoluindo há décadas para resolver muitos dos problemas apresentados no capítulo anterior.
 Vários paradigmas de programação têm sido desenvolvidos para melhorar a forma como escrevemos código, visando principalmente tornar o código mais claro, organizado, fácil de manter e menos suscetível a erros (bugs). 
 
 Até a década de 60 era muito comum o desenvolvimento de programas utilizando o paradigma de <<Unstructured,Programação não Estruturada>>, que resultava em código difícil de entender e manter. Por estes motivos, um código escrito usando tal paradigma é chamado pejorativamente de código espaguete, por ser confuso e não ter uma sequência clara. Muitos dos códigos escrito seguindo este paradigma utilizavam linguagens como https://pt.wikipedia.org/wiki/Assembly[Assembly] que, apesar de serem legíveis para humanos, não são tão legíveis quanto as linguagens atuais.
 
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+- Forma de escrever código vem evoluindo há décadas.
+- Vários paradigmas de programação têm sido desenvolvidos.
+- Programação não Estruturada
+    * um código escrito usando tal paradigma é chamado pejorativamente de código espaguete
+    * um exemplo é a linguagem https://pt.wikipedia.org/wiki/Assembly[Assembly]
+
+== Porque Programação Orientada a Objetos?
+
+endif::backend-revealjs[]
+
+
 .Como é organizado um código espaguete 😳. (Fonte: link:https://pt.123rf.com/photo_65290422_caos-de-cabos-e-fios-no-pólo-elétrico-em-chiang-mai%20-tailândia.html[123rf.com]])
-image::chaos-of-cables.jpg[]
+image::chaos-of-cables.jpg[width=480]
 
-Outras formas de desenvolver programas foram então surgindo. Uma evolução natural da Programação não Estruturada foi a https://pt.wikipedia.org/wiki/Programação_estruturada[Programação Estruturada]. Este foi provavelmente o primeiro paradigma de programação que você aprendeu em lógica de programação. Um código estruturado permite visualizar mais facilmente o fluxo lógica de execução de um programa. Com isto, é possível facilmente criar algoritmos visualmente por meio de https://manoelcampos.gitbooks.io/logica-programacao/content/chapter1.html#representacao[fluxogramas ou blocos].
+ifndef::backend-revealjs[]
 
-image::fluxograma.png[title="Exemplo de como um algoritmo estruturado pode ser representado em um fluxograma."]
+Outras formas de desenvolver programas foram então surgindo. Uma evolução natural da Programação não Estruturada foi a https://pt.wikipedia.org/wiki/Programação_estruturada[Programação Estruturada]. Este foi provavelmente o primeiro paradigma de programação que você aprendeu em lógica de programação. Um código estruturado permite visualizar mais facilmente o fluxo lógico de execução de um programa. Com isto, é possível facilmente criar algoritmos visualmente por meio de https://manoelcampos.gitbooks.io/logica-programacao/content/chapter1.html#representacao[fluxogramas ou blocos].
 
-TIP: O paradigma estruturado é também definido como "a atitude de escrever código com a inteção de escrever código para se comunicar com humanos e não máquinas" <<Unstructured>>. Ou seja, um dos grandes objetivos de um código é que ele seja legível para outros programadores.
+
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+== Porque Programação Orientada a Objetos?
+
+- Outras formas de desenvolver programas foram então surgindo. 
+- https://pt.wikipedia.org/wiki/Programação_estruturada[Programação Estruturada]: primeiro a ser aprendido em lógica de programação. 
+- Um código estruturado permite visualizar mais facilmente o fluxo lógico de execução de um programa. 
+
+== Porque Programação Orientada a Objetos?
+
+endif::backend-revealjs[]
+
+image::fluxograma.png[title="Como um algoritmo estruturado pode ser representado em um fluxograma.", width=480]
+
+ifdef::backend-revealjs[]
+
+== Porque Programação Orientada a Objetos?
+
+endif::backend-revealjs[]
+
+TIP: O paradigma estruturado é também definido como "a atitude de escrever código com a intenção de se comunicar com humanos e não com máquinas" <<Unstructured>>. Ou seja, um dos grandes objetivos de um código é que ele seja legível para outros programadores.
+
+ifndef::backend-revealjs[]
 
 Apesar do paradigma estruturado ter tornado a programação de computadores bem mais simples e o código mais claro, ela ainda peca em muitos pontos como:
 
-- image:shapes.jpg[role="right" width=120, link="https://www.pinterest.pt/pin/693413673846671893/"] divisão do problema: um problema muitas vezes pode ser dividido em várias partes para tornar mais fácil sua resolução. A divisão de tais partes de modo que elas trabalhem em conjunto posteiormente deve ser feita adequadamente.
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+== Porque Programação Orientada a Objetos?
+
+- Paradigma estruturado ainda peca em muitos pontos:
+
+endif::backend-revealjs[]
+
+ifndef::backend-revealjs[]
+
+- image:shapes.jpg[role="right" width=120, link="https://www.pinterest.pt/pin/693413673846671893/"] divisão do problema: um problema muitas vezes pode ser dividido em várias partes para tornar mais fácil sua resolução. A divisão de tais partes de modo que elas trabalhem em conjunto posteriormente deve ser feita de forma adequada.
 - image:problem-solution.jpg[role="right" width=240, link="https://pt.123rf.com/photo_41818211_business-strategy-businessman-planning-and-finding-a-solution-through-a-drawing-of-a-labyrinth-maze.html"] representação da solução de um problema: uma dos grandes desafios em programação é entender o que um determinado código faz, principalmente se ele foi escrito por outra pessoa. A representação de um código de uma forma que seja próxima do problema que ele resolve torna mais fácil identificar se ele faz o que é esperado; image:reinventing-wheel.jpg[role="right" width=180, link="https://www.aic.cuhk.edu.hk/web8/Reinventing%20the%20wheel.htm"] 
 - reutilização de código, para:
     * evitar ter que ficar reinventando a roda;
@@ -26,9 +80,36 @@ Apesar do paradigma estruturado ter tornado a programação de computadores bem 
 - permitir proteger tanto dados quanto determinadas partes do código de serem usados de maneira indevida, o que poderia gerar bugs;
 - etc.
 
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+    * divisão do problema image:shapes.jpg[role="right" width=120, link="https://www.pinterest.pt/pin/693413673846671893/"]
+    * representação da solução de um problema; image:problem-solution.jpg[role="right" width=240, link="https://pt.123rf.com/photo_41818211_business-strategy-businessman-planning-and-finding-a-solution-through-a-drawing-of-a-labyrinth-maze.html"]
+
+== Porque Programação Orientada a Objetos?
+- Paradigma estruturado ainda peca em muitos pontos:
+    * reutilização de código (Don't Repeat Yourself) e avitando a famigerada https://en.wikipedia.org/wiki/Copy_and_paste_programming["Programação Copia e Cola"] 😩 image:reinventing-wheel.jpg[role="right" width=180, link="https://www.aic.cuhk.edu.hk/web8/Reinventing%20the%20wheel.htm"]image:copy_paste_keyboard.jpg[role=right, width=180, link=https://www.timeshighereducation.com].
+
+== Porque Programação Orientada a Objetos?
+- Paradigma estruturado ainda peca em muitos pontos:
+    * permitir proteger tanto dados quanto determinadas partes do código de serem usados de maneira indevida; etc.
+
+endif::backend-revealjs[]
+
+ifndef::backend-revealjs[]
+
 Um dos problemas da alteração indevida de dados surge quando são utilizadas variáveis globais, como no caso do pseudo código apresentado abaixo. O objetivo do algoritmo é solicitar números ao usuário até que ele digite zero para terminar. A cada número digitado o programa deve exibir a soma de todos os números digitados até então. Tente identificar o que está errado com este código.
 
-.Algoritmo incorreto para somar os valores digitados pelo usuário: problemas com alteração individa de variáveis.
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+== Porque Programação Orientada a Objetos?
+
+endif::backend-revealjs[]
+
+.Algoritmo incorreto para somar números.
 ```
 total = 0
 
@@ -47,34 +128,236 @@ funcao mostra_subtotal() {
 }
 ```
 
+ifndef::backend-revealjs[]
+
 A https://pt.wikipedia.org/wiki/Programação_procedural[Programação Procedural] permite resolver alguns destes problemas (como o apresentado no algoritmo acima), mas nem sempre é simples, efetivo e adaptável a diferentes necessidades.
+
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+== Porque Programação Orientada a Objetos?
+
+endif::backend-revealjs[]
+
 
 [NOTE]
 ====
+
+ifndef::backend-revealjs[]
 A Programação Copia e Cola apresentada anteriormente é um dos artifícios que programadores usam para resolver muitos problemas. Mas a mundialmente conhecida Programação Orientada a Gambiarras (POG) trouxe avançaos significativos na área.
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+- Programação Copia e Cola e Programação Orientada a Gambiarras (POG).
+endif::backend-revealjs[]
 
 video::45I9jX5uO9A[youtube, width="640", height="480"]
 ====
 
+ifndef::backend-revealjs[]
+
 image:oop-to-the-rescue.png[role=right, link=https://toggl.com/programming-princess, width=200] Assim, surgiu a Programação Orientada a Objetos (POO). Mas antes de explicar como a POO funciona e como ela resolve muitos dos problemas apresentados, vamos olhar o mundo ao nosso redor. Nós estamos cercados de objetos para todos os lados, como prédios, carros, celulares, TVs e livros. Todos estes objetos têm suas características e funcionalidades, como exemplificado na tabela a seguir:
 
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+== Porque Programação Orientada a Objetos?
+
+- image:oop-to-the-rescue.png[role=right, link=https://toggl.com/programming-princess, width=200] Então surgiu a POO. 
+- Vamos olhar o mundo ao redor. 
+- Objetos têm suas características e funcionalidades
+
+== Porque Programação Orientada a Objetos?
+
+endif::backend-revealjs[]
+
+ifndef::backend-revealjs[]
 .Características e funcionalidades de objetos comuns
+endif::backend-revealjs[]
 |===
 |Objeto | Características | Funcionalidades
 
-| Carro | *Cor*: Azul, *Ano de Fabricação*: 2012, *Bancos*: couro | Acelerar, Frenar, Limpar parabrisas, Acender faróis, etc
+| Carro | *Cor*: Azul, *Ano Fabricação*: 2012, *Bancos*: couro | Acelerar, Frenar, Limpar parabrisas, Acender faróis
 | TV | *Tamanho*: 42", *Tela*: LCD, *Classificação Energética*: A | Ligar/Desligar, Trocar canais, Acionar Timer, Exibir guia de programação
 |===
 
-TIP: As características de um objeto são adjetivos (qualidades) e as funcionalidades são verbos (ações), assim é fácil distinguí-las.
+ifdef::backend-revealjs[]
 
-Como atualmente é possível criar https://manoelcampos.gitbooks.io/logica-programacao/content/[programas para controlar objetos como carros, TVs, relógios, balanças, porteiros eletrônicos, lâmpadas, portas e muito mais],  a POO aproxima a representação de tais objetos em um programa de computador do mundo real.
+== Porque Programação Orientada a Objetos?
+
+endif::backend-revealjs[]
+
+TIP: As características de um objeto são qualidades (adjetivos) e as funcionalidades são ações (verbos), assim é fácil distinguí-las.
+
+ifndef::backend-revealjs[]
+
+Como atualmente é possível criar https://manoelcampos.gitbooks.io/logica-programacao/content/[programas para controlar objetos como carros, TVs, relógios, balanças, porteiros eletrônicos, lâmpadas, portas e muito mais], a POO aproxima a representação de tais objetos em um programa com os mesmo objetos no mundo real.
+
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+- É possível criar https://manoelcampos.gitbooks.io/logica-programacao/content/[programas para controlar objetos como carros, TVs, relógios, balanças, porteiros eletrônicos, lâmpadas, portas e muito mais]
+- a POO aproxima a representação de tais objetos em um programa.
+
+endif::backend-revealjs[]
+
+ifndef::backend-revealjs[]
 
 image:shopping-cart.jpg[role=right, width=180, link=https://financesonline.com/top-10-alternatives-magento-leading-shopping-cart-software-solutions/] Mas não se assuste, POO não pode ser usada apenas para tarefas complexas como programação de carros inteligentes. Vamos usar um exemplo mais comum: as lojas virtuais na Internet. Tais lojas possuem sites, que nada mais são do que aplicações (programas) para a Internet. As páginas que permitem busca e exibição de produtos nestes sites são programas normalmente desenvolvidos utilizando-se o pagadigma de orientação a objetos. Para produtos serem exibidos no site, eles precisam ser representados no código escrito pelo programador. Tais produtos são objetos que possuem suas características e funcionalidades reais que devem ser representadas ao desenvolver uma loja virtual.
 
-Na POO, objetos podem ser pessoas, animais e qualquer coisa que precise ser representada para resolver um problema. Por exemplo, na loja virtual, para realização de uma compra, é preciso identificar o cliente. Este é uma pessoa que precisa ter algumas características registradas como nome, sexo, data de nascimento, email e endereço. 
+Na POO, objetos podem ser pessoas, animais e qualquer coisa que precise ser representada para resolver um problema. Por exemplo, na loja virtual, para realização de uma compra, é preciso identificar o cliente. Este é uma pessoa que precisa ter algumas características registradas como nome, sexo, data de nascimento, email e endereço. As funcionalidades desta pessoa podem ser alterar senha e adicionar endereço. 
 
-As caracteristicas e funcionalidades de um objeto como pessoa em POO vai depender do tipo de sistema onde tal pessoa está sendo representada. Por exemplo, em um sistema de loja virtual, a pessoa pode ter adicionalmente como características um login e senha. As funcionalidades desta pessoa podem ser alterar senha e adicionar endereço. Já se a pessoa precisa ser representada em um sistema de academia, ela pode ter características adicionais como peso e altura. As funcionalidades poderiam ser calcular idade e calcular índice de massa corporal (IMC).
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+== Porque Programação Orientada a Objetos?
+
+- image:shopping-cart.jpg[role=right, width=180, link=https://financesonline.com/top-10-alternatives-magento-leading-shopping-cart-software-solutions/] Exemplo de objetos: Produtos em uma loja virtual
+- Na POO, objetos podem ser pessoas, animais e qualquer coisa que precise ser representada para resolver um problema: clientes na loja virtual
+
+endif::backend-revealjs[]
+
+== O que são Modelos
+
+ifndef::backend-revealjs[]
+
+Já sabemos que a POO busca representar objetos reais ou abstratos na criação de programas.  Um objeto real poderia ser uma pessoa ou um veículo, mas poderia ser algo abstrato como uma foto digital ou um objeto virtual que é capaz de enviar mensagens SMS para um celular. No português, quando usamos substantivos como "pessoa", "carro" ou "foto digital", estamos nos referindo a algo de forma genérica. Quando usamos nomes como "Manoel", "Fiat Uno" ou "foto do Manoel" estamos nos referindo a coisas concretas e específicas: a pessoa chamada Manoel, o carro Fiat Uno, o arquivo com a foto do Manoel.
+
+Quando desejamos representar tais objetos em um programa, nós estamos interessados em representar pessoas, carros ou fotos digitais de uma forma geral. Assim, nós criamos modelos para tais objetos. Por exemplo, um modelo para pessoas vai permitir representar pessoas de modo geral e não apenas uma pessoa específica. Desta forma, podemos criar um modelo de pessoa para representar o Manoel, a Maria, o João ou qualquer outra pessoa. No sistema da loja virtual, o modelo permitirá que qualquer pessoa que preencha os requisitos para se cadastrar na loja possa fazer isso. Por exemplo, se a loja não permite que menores de 18 anos façam compras, tal restrição deve ser definida no modelo, restringindo o grupo de pessoas que o modelo representa (a não ser que o usuário minta a sua data de nascimento 😳).
+
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+- POO busca representar objetos reais ou abstratos na criação de programas.  
+- Objeto real: pessoa ou veículo
+- Objeto abstrato: foto digital ou um objeto para envio de mensagens SMS. - Substantivos como "pessoa", "carro" ou "foto digital" são genéricos. 
+- Nomes como "Manoel", "Fiat Uno" ou "foto do Manoel" são objetos concretos.
+
+== O que são Modelos
+
+- Em POO objetos são representados de uma forma geral usando modelos.
+- Um modelo para pessoas vai permitir representar pessoas de modo geral. - Permite representar o Manoel, a Maria, o João, etc.
+- Permite representar qualquer pessoa que preencha os requisitos. 
+
+== O que são Modelos
+
+endif::backend-revealjs[]
+
+IMPORTANT: Um modelo em POO é utilizado para representar um objeto real ou abstrato, incluindo suas características, restrições e funcionalidades.
+
+ifndef::backend-revealjs[]
+
+As caracteristicas e funcionalidades de um objeto como pessoa em POO vai depender do tipo de sistema onde tal pessoa está sendo representada. Por exemplo, em um sistema de loja virtual, a pessoa pode ter adicionalmente como características um login e senha. Já se a pessoa precisa ser representada em um sistema de academia, ela pode ter características adicionais como peso e altura. As funcionalidades poderiam ser calcular idade e calcular índice de massa corporal (IMC). Portanto, o modelo de pessoa em uma loja virtual será diferente do modelo de pessoa em um sistema de academia ou de hospital.
+
+Um modelo em POO é semelhante ao projeto de uma casa: a partir dele é possível criar quantas casas desejarmos, com as mesmas características, funcionalidades e restrições.
+
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+- As caracteristicas e funcionalidades de um objeto em POO vai depender do tipo de sistema onde tal objeto está sendo representado. 
+
+== O que são Modelos
+
+endif::backend-revealjs[]
+
+image::projeto-vs-casa.png[title=Modelo de uma casa (projeto) vs Casa contruída a partir do modelo.]
+
+ifndef::backend-revealjs[]
+
+Um modelo em POO define quais características o objeto terá. No exemplo da casa poderiam ser cor, tamanho, quantidade de quartos e banheiros. No entanto, o modelo não define os valores para cada uma destas características. Assim, ao construir uma determinada casa a partir deste modelo é que seria definida qual a cor a casa seria pintada. O modelo só indica que a casa precisa de uma cor.
+
+Em um modelo (projeto) de engenharia civil, os valores de características como "cor" não são especificados, mas outros como "tamanho da casa" são previamente definidos e não podem ser alterados a cada casa que vai ser construída. Um modelo de uma casa em POO também pode aplicar estas restrições, impedindo que o tamanho da casa seja alterado a cada casa construída. 
+
+Da mesma forma que uma casa, um modelo de pessoa pode definir características como cor da pele, peso, altura e naturalidade, mas ele não define os valores para cada uma dessas características. Cada pessoa pode ter uma cor de pele, peso, altura e naturalidade diferente da outra.
+
+Com estes exemplos, pode-se ver como a POO permite representar os mais diversos objetos do mundo real para um programa, diminuindo a distância entre a o modelo e a realidade, entre o código escrito e o objetivo do programa.
+
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+== O que são Modelos
+
+- Um modelo em POO define quais características o objeto terá. 
+- Exemplo da casa: cor, tamanho, quantidade de quartos e banheiros. 
+- O modelo não define os valores para cada uma destas características. 
+- O modelo só indica que a casa precisa de uma cor.
+
+== O que são Modelos
+- Um projeto de engenharia civil é diferente de um modelo padrão em POO.
+- É possível representar as restrições de um projeto de engenharia.
+- Um modelo (como pessoa) não define os valores de características.
+- POO permite representar os mais diversos objetos do mundo real para um programa.
+
+endif::backend-revealjs[]
+
+ifndef::backend-revealjs[]
+=== Classes: o 1º conceito básico da orientação a objetos
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+== Classes
+endif::backend-revealjs[]
+
+ifndef::backend-revealjs[]
+
+Com todas as informações apresentadas anteriormente, utilizando metáforas do mundo real e uma linguagem acessível, você acabou de conhecer o principal conceito da programação orientada a objetos: as *classes*. 
+
+[IMPORTANT]
+Classes são modelos que representam quais características, funcionalidades e restrições objetos terão. As características são qualidades e as funcionalidades são ações que os objetos podem executar.  As restrições são regras que definem: (i) os valores possíveis para tais características; (ii) quando ou como ações podem ser executadas.
+A partir das classes é possível criar objetos concretos, assim como a partir de um projeto de uma casa é possível construir quantas casas for desejado.
+
+Assim como as características de um objeto podem ser identificadas a partir de adjetivos, as funcionalidades a partir de verbos, as classes podem ser identificadas a partir de substantivos como pessoa, carro, casa, produto, etc.
+
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+- Principal conceito da programação orientada a objetos: as *classes*. 
+
+== Classes
+- Modelos que representam quais características, funcionalidades e restrições tais objetos terão. 
+
+== Classes
+- Características = qualidades
+- Funcionalidades = ações 
+- Restrições = regras
+
+== Classes
+- A partir das classes é possível criar objetos concretos.
+- Classes podem ser identificadas a partir de substantivos.
+
+endif::backend-revealjs[]
+
+
+== Resumo do Capítulo
+
+- Um paradigma é um conjunto de padrões e regras a serem seguidos.
+- POO é um paradigma moderno que busca facilitar o desenvolvimento de software e é utilizado mundialmente.
+- Permite melhor divisão do problema em partes, favorecendo o trabalho em equipe.
+
+ifdef::backend-revealjs[]
+== Resumo do Capítulo
+endif::backend-revealjs[]
+
+- Facilita a manutenção do código e melhorar a qualidade dos programas desenvolvidos.
+- Surgiu para suprir falhas de outros paradigmas de programação e novas necessidades do mercado de software.
+- Diminui a distância entre o problema e a representação da solução por meio de código.
+
+ifdef::backend-revealjs[]
+== Resumo do Capítulo
+endif::backend-revealjs[]
+
+- Permitir maior reutilização de código, tanto seu quanto de outras pessoas.
+- Proteger dados e código de uso indevido.
+- As classes são o principal conceito da POO. Elas permitem criar um modelo contendo características e funcionalidades, a partir do qual pode-se criar quantos objetos desejar.
+- Um modelo é como a planta de uma casa: a partir dele podem ser construídas várias casas.
 
 [bibliography]
 == Referências
