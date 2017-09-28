@@ -22,7 +22,7 @@ Apesar do paradigma estruturado ter tornado a programação de computadores bem 
 - image:problem-solution.jpg[role="right" width=240, link="https://pt.123rf.com/photo_41818211_business-strategy-businessman-planning-and-finding-a-solution-through-a-drawing-of-a-labyrinth-maze.html"] representação da solução de um problema: uma dos grandes desafios em programação é entender o que um determinado código faz, principalmente se ele foi escrito por outra pessoa. A representação de um código de uma forma que seja próxima do problema que ele resolve torna mais fácil identificar se ele faz o que é esperado; image:reinventing-wheel.jpg[role="right" width=180, link="https://www.aic.cuhk.edu.hk/web8/Reinventing%20the%20wheel.htm"] 
 - reutilização de código, para:
     * evitar ter que ficar reinventando a roda;
-    * evitar re-escrever código que você já fez (princípio <<PP,DRY>>: (Don't Repeat Yourself = Não Repita Você mesmo) e avitando a famigerada https://en.wikipedia.org/wiki/Copy_and_paste_programming["Programação Copia e Cola"] 😩 image:copy_paste_keyboard.jpg[role=right, width=180, link=https://www.timeshighereducation.com].
+    * evitar re-escrever código que você já fez (princípio <<PP,DRY>>: Don't Repeat Yourself = Não Repita Você mesmo) e avitando a famigerada https://en.wikipedia.org/wiki/Copy_and_paste_programming["Programação Copia e Cola"] 😩 image:copy_paste_keyboard.jpg[role=right, width=180, link=https://www.timeshighereducation.com].
 - permitir proteger tanto dados quanto determinadas partes do código de serem usados de maneira indevida, o que poderia gerar bugs;
 - etc.
 
@@ -49,12 +49,12 @@ funcao mostra_subtotal() {
 
 A https://pt.wikipedia.org/wiki/Programação_procedural[Programação Procedural] permite resolver alguns destes problemas (como o apresentado no algoritmo acima), mas nem sempre é simples, efetivo e adaptável a diferentes necessidades.
 
-.Intervalo da Aula 😃
-****
+[NOTE]
+====
 A Programação Copia e Cola apresentada anteriormente é um dos artifícios que programadores usam para resolver muitos problemas. Mas a mundialmente conhecida Programação Orientada a Gambiarras (POG) trouxe avançaos significativos na área.
 
 video::45I9jX5uO9A[youtube, width="640", height="480"]
-****
+====
 
 image:oop-to-the-rescue.png[role=right, link=https://toggl.com/programming-princess, width=200] Assim, surgiu a Programação Orientada a Objetos (POO). Mas antes de explicar como a POO funciona e como ela resolve muitos dos problemas apresentados, vamos olhar o mundo ao nosso redor. Nós estamos cercados de objetos para todos os lados, como prédios, carros, celulares, TVs e livros. Todos estes objetos têm suas características e funcionalidades, como exemplificado na tabela a seguir:
 
