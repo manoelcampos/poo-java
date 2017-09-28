@@ -1,13 +1,13 @@
 :imagesdir: images
 
-= Porquê Programação Orientada a Objetos?
+= Porque Programação Orientada a Objetos?
 
 A forma de escrever código vem evoluindo há décadas para resolver muitos dos problemas apresentados no capítulo anterior.
 Vários paradigmas de programação têm sido desenvolvidos para melhorar a forma como escrevemos código, visando principalmente tornar o código mais claro, organizado, fácil de manter e menos suscetível a erros (bugs). 
 
 Até a década de 60 era muito comum o desenvolvimento de programas utilizando o paradigma de <<Unstructured,Programação não Estruturada>>, que resultado em código difícil de entender e manter. Por estes motivos, um código escrito usando tal paradigma é chamado pejorativamente de código espaguete, por ser confuso e não ter uma sequência clara. Muitos dos códigos escrito seguindo este paradigma utilizavam linguagens como https://pt.wikipedia.org/wiki/Assembly[Assembly] que, apesar de serem legíveis para humanos, não são tão legíveis quanto as linguagens atuais.
 
-.Código espaguete 😳. (Fonte: https://goo.gl/oheZqw[123rf.com])
+.Código espaguete 😳. (Fonte: link:https://pt.123rf.com/photo_65290422_caos-de-cabos-e-fios-no-pólo-elétrico-em-chiang-mai%20-tailândia.html[123rf.com]])
 image::chaos-of-cables.jpg[]
 
 Outras formas de desenvolver programas foram então surgindo. Uma evolução natural da Programação não Estruturada foi a https://pt.wikipedia.org/wiki/Programação_estruturada[Programação Estruturada]. Este foi provavelmente o primeiro paradigma de programação que você aprendeu em lógica de programação. Um código estruturado permite visualizar mais facilmente o fluxo lógica de execução de um programa. Com isto, é possível facilmente criar algoritmos visualmente por meio de https://manoelcampos.gitbooks.io/logica-programacao/content/chapter1.html#representacao[fluxogramas ou blocos].
@@ -70,15 +70,15 @@ TIP: As características de um objeto são adjetivos (qualidades) e as funcional
 
 Como atualmente é possível criar https://manoelcampos.gitbooks.io/logica-programacao/content/[programas para controlar objetos como carros, TVs, relógios, balanças, porteiros eletrônicos, lâmpadas, portas e muito mais],  a POO aproxima a representação de tais objetos em um programa de computador do mundo real.
 
-image:shopping-cart.jpg[role=right, width=180, link=https://financesonline.com/top-10-alternatives-magento-leading-shopping-cart-software-solutions/] Mas POO não pode ser usada apenas para tarefas complexas como programação de carros inteligentes. Vamos pegar um exemplo mais comum: as lojas virtuais na Internet. Tais lojas possuem sites, que nada mais são do que aplicações (programas) para a Internet. As páginas que permitem busca e exibição de produtos nestes sites são programas normalmente desenvolvidos utilizando-se o pagadigma de orientação a objetos. Para produtos serem exibidos no site, eles precisam ser representados no código escrito pelo programador. Tais produtos são objetos que possuem suas características e funcionalidades reais que devem ser representadas ao desenvolver uma loja virtual.
+image:shopping-cart.jpg[role=right, width=180, link=https://financesonline.com/top-10-alternatives-magento-leading-shopping-cart-software-solutions/] Mas não se assuste, POO não pode ser usada apenas para tarefas complexas como programação de carros inteligentes. Vamos usar um exemplo mais comum: as lojas virtuais na Internet. Tais lojas possuem sites, que nada mais são do que aplicações (programas) para a Internet. As páginas que permitem busca e exibição de produtos nestes sites são programas normalmente desenvolvidos utilizando-se o pagadigma de orientação a objetos. Para produtos serem exibidos no site, eles precisam ser representados no código escrito pelo programador. Tais produtos são objetos que possuem suas características e funcionalidades reais que devem ser representadas ao desenvolver uma loja virtual.
 
 Na POO, objetos podem ser pessoas, animais e qualquer coisa que precise ser representada para resolver um problema. Por exemplo, na loja virtual, para realização de uma compra, é preciso identificar o cliente. Este é uma pessoa que precisa ter algumas características registradas como nome, sexo, data de nascimento, email e endereço. 
 
-As caracteristicas e funcionalidades de um objeto como pessoa em POO vai depender do tipo de sistema onde tal pessoa está sendo representada. Por exemplo, em um sistema de loja virtual, a pessoa pode ter adicionalmente como características um login e senha. As funcionalidades desta pessoa podem ser alterar senha, adicionar endereço. Já se a pessoa precisa ser representada em um sistema de academia, ela pode ter características adicionais como peso, altura e funcionalidades como calcular idade e calcular índice de massa corporal.
+As caracteristicas e funcionalidades de um objeto como pessoa em POO vai depender do tipo de sistema onde tal pessoa está sendo representada. Por exemplo, em um sistema de loja virtual, a pessoa pode ter adicionalmente como características um login e senha. As funcionalidades desta pessoa podem ser alterar senha e adicionar endereço. Já se a pessoa precisa ser representada em um sistema de academia, ela pode ter características adicionais como peso e altura. As funcionalidades poderiam ser calcular idade e calcular índice de massa corporal (IMC).
 
 [bibliography]
 == Referências
 
 - [[[Spaguetti]]] Conway, Richard (1978). A primer on disciplined programming using PL/I, PL/CS, and PL/CT. Winthrop Publishers. ISBN 0-87626-712-6
 - [[[Unstructured]]] Cobb, Gary W. (1978). "A measurement of structure for unstructured programming languages". ACM SIGSOFT Software Engineering Notes. 3 (5): 140–147. ISSN 0163-5948. doi:10.1145/953579.811114.
-- [PP] Hunt, Andrew, and David Thomas. The pragmatic programmer: from journeyman to master. Addison-Wesley Professional, 2000.
+- [PP] Hunt, Andrew, and David Thomas. O Programador Pragmático: de aprendiz a mestre. Bookman Editora, 2009.

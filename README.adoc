@@ -40,7 +40,7 @@ Durante o processo de aprendizagem, todos nós provavelmente utilizamos intuitiv
 Você vai escrevendo o código, fazendo alterações sem saber exatamente o que está fazendo, na esperança que o programa funcione. 🙏
 
 ****
-.http://joyreactor.com/post/1646612[Tentativa e Erro: "paradigma" de programação mais usado no mundo, quando não se tem a menor idea da finalidade de determinado código.]
+.http://joyreactor.com/post/1646612[Tentativa e Erro: "paradigma" de programação mais utilizado quando não se tem a menor ideia do que o código está fazendo 😭.]
 image::code-doesnt-work.jpeg[]
 
 A medida que o código vai aumentando e você vai indiscriminadamente fazendo alterações nele, o código começa a virar um emaranhado de linhas que nem você entende mais. 
