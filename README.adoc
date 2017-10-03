@@ -21,7 +21,6 @@ endif::[]
 - http://about.me/manoelcampos[Prof. Me. Manoel Campos da Silva Filho]
 
 ifdef::backend-revealjs[]
-
 - mcampos@ifto.edu.br 
 - https://manoelcampos.gitbooks.io/poo-java/
 endif::backend-revealjs[]

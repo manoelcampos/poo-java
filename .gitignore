@@ -3,4 +3,5 @@ Gemfile.lock
 *.html
 *.pdf
 build
+html/
 node_modules
