@@ -1,7 +1,7 @@
 = Programação Orientada a Objetos em Java
 :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0
 :revealjs_slideNumber: true
-:source-highlighter: pygments
+:source-highlighter: highlightjs
 :imagesdir: images
 :allow-uri-read:
 :safe: unsafe
