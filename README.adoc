@@ -1,7 +1,6 @@
 = Programação Orientada a Objetos em Java
 :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0
 :revealjs_slideNumber: true
-:revealjs_history: true
 :source-highlighter: pygments
 :imagesdir: images
 :allow-uri-read:
@@ -43,6 +42,39 @@ ifdef::backend-revealjs[]
 - Apresentar os fundamentos para o desenvolvimento de softwares modernos seguindo o paradigma de programação orientada a objetos (POO).
 - Paradigma: define um modelo ou padrão a ser seguido. 
 - POO: define um modelo para construção de software que é seguido mundialmente.
+endif::backend-revealjs[]
+
+== Pré-requisitos
+
+- Lógica de programação e programação procedural/estruturada.
+
+== Metodologia
+
+Aulas expositivas e práticas em laboratório, com aplicação da teoria no desenvolvimento de pequenos projetos.
+
+== Plano do Curso
+
+== Método de Avaliação
+
+ifndef::backend-revealjs[]
+
+Para ser aprovado na disciplina o aluno precisa ter média igual ou superior a 6 e pelo menos 75% de presença.
+
+O aluno será avaliado pelas atividades realizadas em sala de aula e no ambiente virtual de aprendizagem, a soma delas contabilizando 10 pontos por bimestre. Será ainda aplicada 1 prova teórico-prática valendo 10 pontos. A Nota Final do aluno será calculada pela média aritmética das notas dos bimestres.
+
+Caso o aluno não consiga obter nota para aprovação, será aplicado um exame final teórico-prático que, se igual o superior a 6,0, substituirá a Nota Final.
+
+endif::backend-revealjs[]
+
+ifdef::backend-revealjs[]
+
+- Média igual ou superior a 6 e pelo menos 75% de presença.
+
+- Atividades realizadas em sala de aula e no ambiente virtual de aprendizagem, a soma delas contabilizando 10 pontos por bimestre. 
+- Uma prova teórico-prática valendo 10 pontos por bimestre. 
+- A Nota Final é a média aritmética das notas dos bimestres.
+- Recuperação: Exame final teórico-prático.
+
 endif::backend-revealjs[]
 
 == Motivação para uso de POO
@@ -110,38 +142,6 @@ ifdef::backend-revealjs[]
     
 endif::backend-revealjs[]
 
-== Pré-requisitos
-
-- Lógica de programação e programação procedural/estruturada.
-
-== Metodologia
-
-Aulas expositivas e práticas em laboratório, com aplicação da teoria no desenvolvimento de pequenos projetos.
-
-== Plano do Curso
-
-== Método de Avaliação
-
-ifndef::backend-revealjs[]
-
-Para ser aprovado na disciplina o aluno precisa ter média igual ou superior a 6 e pelo menos 75% de presença.
-
-O aluno será avaliado pelas atividades realizadas em sala de aula e no ambiente virtual de aprendizagem, a soma delas contabilizando 10 pontos por bimestre. Será ainda aplicada 1 prova teórico-prática valendo 10 pontos. A Nota Final do aluno será calculada pela média aritmética das notas dos bimestres.
-
-Caso o aluno não consiga obter nota para aprovação, será aplicado um exame final teórico-prático que, se igual o superior a 6,0, substituirá a Nota Final.
-
-endif::backend-revealjs[]
-
-ifdef::backend-revealjs[]
-
-- Média igual ou superior a 6 e pelo menos 75% de presença.
-
-- Atividades realizadas em sala de aula e no ambiente virtual de aprendizagem, a soma delas contabilizando 10 pontos por bimestre. 
-- Uma prova teórico-prática valendo 10 pontos por bimestre. 
-- A Nota Final é a média aritmética das notas dos bimestres.
-- Recuperação: Exame final teórico-prático.
-
-endif::backend-revealjs[]
 
 
 ifdef::backend-revealjs[]

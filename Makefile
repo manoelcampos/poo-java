@@ -17,11 +17,12 @@ slides:
 	bundle exec asciidoctor-revealjs "README.adoc" -o slides.html
 
 html:
-	gitbook build ./ ./build/html
+	gitbook build ./ ./html
 
 pdf:
-	mkdir -p build
-	gitbook pdf ./ build/book.pdf
+	gitbook pdf ./ book.pdf
 
 clean:
-	rm -rf "build"
+	rm -rf "html"
+	rm book.pdf
+	rm slides.html

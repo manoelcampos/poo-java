@@ -19,13 +19,22 @@ ifdef::backend-revealjs[]
     * um código escrito usando tal paradigma é chamado pejorativamente de código espaguete
     * um exemplo é a linguagem https://pt.wikipedia.org/wiki/Assembly[Assembly]
 
-== Porque Programação Orientada a Objetos?
 
 endif::backend-revealjs[]
 
 
+ifdef::backend-revealjs[]
+== Porque Programação Orientada a Objetos?
+endif::backend-revealjs[]
+
 .Como é organizado um código espaguete 😳. (Fonte: link:https://pt.123rf.com/photo_65290422_caos-de-cabos-e-fios-no-pólo-elétrico-em-chiang-mai%20-tailândia.html[123rf.com]])
 image::chaos-of-cables.jpg[width=480]
+
+ifdef::backend-revealjs[]
+== Exemplo de Código em Assembly
+endif::backend-revealjs[]
+
+image::assembly.gif[title=Exemplo de código em linguagem Assembly]
 
 ifndef::backend-revealjs[]
 
@@ -235,13 +244,15 @@ ifdef::backend-revealjs[]
 
 - POO busca representar objetos reais ou abstratos na criação de programas.  
 - Objeto real: pessoa ou veículo
-- Objeto abstrato: foto digital ou um objeto para envio de mensagens SMS. - Substantivos como "pessoa", "carro" ou "foto digital" são genéricos. 
+- Objeto abstrato: foto digital ou um objeto para envio de mensagens SMS. 
+- Substantivos como "pessoa", "carro" ou "foto digital" são genéricos. 
 - Nomes como "Manoel", "Fiat Uno" ou "foto do Manoel" são objetos concretos.
 
 == O que são Modelos
 
 - Em POO objetos são representados de uma forma geral usando modelos.
-- Um modelo para pessoas vai permitir representar pessoas de modo geral. - Permite representar o Manoel, a Maria, o João, etc.
+- Um modelo para pessoas vai permitir representar pessoas de modo geral. 
+- Permite representar o Manoel, a Maria, o João, etc.
 - Permite representar qualquer pessoa que preencha os requisitos. 
 
 == O que são Modelos

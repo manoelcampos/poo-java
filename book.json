@@ -1,5 +1,5 @@
 {
-    "plugins": ["asciidoc-admonition-icons", "disqus"],
+    "plugins": ["asciidoc-admonition-icons", "disqus", "pygments"],
     "language": "pt",
     "pluginsConfig": {
         "disqus": {
