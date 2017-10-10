@@ -1,4 +1,4 @@
 = Índice
 
-. link:README.adoc[POO em Java]
+. link:README.adoc[Introdução]
 . link:chapter1.adoc[Porque POO?]
