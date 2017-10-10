@@ -1,7 +1,6 @@
 
 :imagesdir: images
 
-
 == O que são Modelos
 
 ifndef::backend-revealjs[]
@@ -17,6 +16,9 @@ ifdef::backend-revealjs[]
 - POO busca representar objetos reais ou abstratos na criação de programas.  
 - Objeto real: pessoa ou veículo
 - Objeto abstrato: foto digital ou um objeto para envio de mensagens SMS. 
+
+== O que são Modelos
+
 - Substantivos como "pessoa", "carro" ou "foto digital" são genéricos. 
 - Nomes como "Manoel", "Fiat Uno" ou "foto do Manoel" são objetos concretos.
 
@@ -119,6 +121,35 @@ ifdef::backend-revealjs[]
 
 endif::backend-revealjs[]
 
+ifndef::backend-revealjs[]
+== Objetos
+
+Conhecemos os objetos como eles são no mundo real. Em POO, um objeto é um elemento criado a partir de uma classe. 
+A classe é um modelo, um molde utilizado para criar objetos daquele tipo sempre que for desejado.
+Cada objeto possui todas as características e funcionalidades definidas pela sua classe.
+Vamos utilizar como exemplo uma aplicação para uma loja que precisa cadastrar seus clientes. A partir de uma classe Cliente, pode-se criar quantos objetos forem necessários. Desta forma, cada cliente da loja será representado por um objeto diferente. 
+Apesar de todos os cliente terem as mesmas características definidas na classe, como nome, CPF, sexo e data de nascimento, os valores para cada uma dessas características pode ser diferente para cada cliente. Isto torna os clientes diferentes uns dos outros.
+
+.Classe Pessoa e Objeto da classe Pessoa
+****
+image:pessoa.png[title="Classe Pessoa"] image:objeto-pessoa.jpg[title="Objeto Pessoa"]
+****
+
+Nas figuras acima, temos à direta uma classe Pessoa que representa pessoas de uma forma genérica para um determinado software. No lado esquerdo temos o Manoel que representa uma pessoa específica.
+
+== Criando Classes
+
+Objetos só podem ser criados se existirem classes para serem utilizadas como modelos na criação destes objetos. A linguagem Java possui uma infinidade de classes para as mais diversas finalidades. No entanto, ao criar um software específico para resolver um determinado problema, você precisará criar os modelos para representar tais objetos, ou seja as classes. 
+
+Cada classe precisa obrigatoriamente de um nome. Adicionalmente, ela pode ter (a) características e/ou (b) funcionalidades. Isto quer dizer que ela pode ter (a) e (b), apenas um dos dois ou nenhum. No entanto, uma classe que não possui nem (a) nem (b) não tem utilidade alguma.
+
+Para iniciar, vamos criar uma classe contendo apenas características e ir evoluindo nossas classes ao longo do caminho, à medida que vamos introduzindo conceitos e regras.
+
+Como primeiro exemplo, considere que o proprietário de uma loja de móveis e eletrodoméstricos lhe pede para desenvolver um sistema para controle de vendas. O proprietário precisa inicialmente de um sistema para cadastrar clientes, produtos, funcionários, filiais da loja e outras partes da operação da loja. Assim, identifique quais classes são necessárias e pense nas características que cada uma deve ter.
+
+== Criando Objetos
+
+endif::backend-revealjs[]
 
 == Resumo do Capítulo
 

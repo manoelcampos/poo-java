@@ -227,10 +227,11 @@ image:shopping-cart.jpg[role=right, width=180, link=https://financesonline.com/t
 
 endif::backend-revealjs[]
 
-
+ifndef::backend-revealjs[]
 [bibliography]
 == Referências
 
 - [[[Spaguetti]]] Conway, Richard (1978). A primer on disciplined programming using PL/I, PL/CS, and PL/CT. Winthrop Publishers. ISBN 0-87626-712-6
 - [[[Unstructured]]] Cobb, Gary W. (1978). "A measurement of structure for unstructured programming languages". ACM SIGSOFT Software Engineering Notes. 3 (5): 140–147. ISSN 0163-5948. doi:10.1145/953579.811114.
 - [PP] Hunt, Andrew, and David Thomas. O Programador Pragmático: de aprendiz a mestre. Bookman Editora, 2009.
+endif::backend-revealjs[]
