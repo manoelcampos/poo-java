@@ -146,5 +146,6 @@ endif::backend-revealjs[]
 ifdef::backend-revealjs[]
 
 include::chapter1.adoc[]
+include::chapter2.adoc[]
 
 endif::backend-revealjs[]
