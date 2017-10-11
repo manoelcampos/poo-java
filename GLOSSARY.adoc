@@ -2,6 +2,8 @@
 Utilizada para definir um modelo para objetos. Uma classe é como uma planta de uma casa: a partir da planta pode-se criar quantas casas desejar. A classe funciona como um molde para a criação de objetos.
 Exemplos de classes incluem Cliente, Produto, Instituição, Veículo, etc.
 
+Pode-se também pensar em uma classe como uma fábrica de objetos.
+
 ## Objeto
 É algo concreto criado a partir de uma classe, representando um objeto específico como o Cliente Manoel, a Cliente Maria, a Instituição IFTO, etc.
 

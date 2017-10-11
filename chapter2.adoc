@@ -1,97 +1,37 @@
-
 :imagesdir: images
 
 == O que são Modelos
 
-ifndef::backend-revealjs[]
+Já sabemos que a POO busca representar objetos reais ou abstratos na criação de programas.  Um objeto real poderia ser uma pessoa ou um veículo, mas poderia ser algo abstrato como uma foto digital ou um objeto virtual que é capaz de enviar mensagens SMS para um celular. 
 
-Já sabemos que a POO busca representar objetos reais ou abstratos na criação de programas.  Um objeto real poderia ser uma pessoa ou um veículo, mas poderia ser algo abstrato como uma foto digital ou um objeto virtual que é capaz de enviar mensagens SMS para um celular. No português, quando usamos substantivos como "pessoa", "carro" ou "foto digital", estamos nos referindo a algo de forma genérica. Quando usamos nomes como "Manoel", "Fiat Uno" ou "foto do Manoel" estamos nos referindo a coisas concretas e específicas: a pessoa chamada Manoel, o carro Fiat Uno, o arquivo com a foto do Manoel.
+No português, quando usamos substantivos como "pessoa", "carro" ou "foto digital", estamos nos referindo a algo de forma genérica. Quando usamos nomes como "Manoel", "Fiat Uno" ou "foto do Manoel" estamos nos referindo a coisas concretas e específicas: a pessoa chamada Manoel, o carro Fiat Uno, o arquivo com a foto do Manoel.
 
-Quando desejamos representar tais objetos em um programa, nós estamos interessados em representar pessoas, carros ou fotos digitais de uma forma geral. Assim, nós criamos modelos para tais objetos. Por exemplo, um modelo para pessoas vai permitir representar pessoas de modo geral e não apenas uma pessoa específica. Desta forma, podemos criar um modelo de pessoa para representar o Manoel, a Maria, o João ou qualquer outra pessoa. No sistema da loja virtual, o modelo permitirá que qualquer pessoa que preencha os requisitos para se cadastrar na loja possa fazer isso. Por exemplo, se a loja não permite que menores de 18 anos façam compras, tal restrição deve ser definida no modelo, restringindo o grupo de pessoas que o modelo representa (a não ser que o usuário minta a sua data de nascimento 😳).
+Quando desejamos representar tais objetos em um programa, estamos interessados em representar pessoas, carros ou fotos digitais de uma forma geral. Assim, nós criamos modelos para tais objetos. Um modelo para pessoas vai permitir representar pessoas de modo geral e não apenas uma pessoa específica. Desta forma, podemos criar um modelo de pessoa para representar o Manoel, a Maria, o João ou qualquer outra pessoa. 
 
-endif::backend-revealjs[]
-
-ifdef::backend-revealjs[]
-
-- POO busca representar objetos reais ou abstratos na criação de programas.  
-- Objeto real: pessoa ou veículo
-- Objeto abstrato: foto digital ou um objeto para envio de mensagens SMS. 
-
-== O que são Modelos
-
-- Substantivos como "pessoa", "carro" ou "foto digital" são genéricos. 
-- Nomes como "Manoel", "Fiat Uno" ou "foto do Manoel" são objetos concretos.
-
-== O que são Modelos
-
-- Em POO objetos são representados de uma forma geral usando modelos.
-- Um modelo para pessoas vai permitir representar pessoas de modo geral. 
-- Permite representar o Manoel, a Maria, o João, etc.
-- Permite representar qualquer pessoa que preencha os requisitos. 
-
-== O que são Modelos
-
-endif::backend-revealjs[]
+No sistema da loja virtual, o modelo permitirá que qualquer pessoa que preencha os requisitos para se cadastrar na loja possa fazer isso. Por exemplo, se a loja não permite que menores de 18 anos façam compras, tal restrição deve ser definida no modelo, restringindo o grupo de pessoas que o modelo representa (a não ser que o usuário minta a sua data de nascimento 😳).
 
 IMPORTANT: Um modelo em POO é utilizado para representar um objeto real ou abstrato, incluindo suas características, restrições e funcionalidades.
 
-ifndef::backend-revealjs[]
+As caracteristicas e funcionalidades de um objeto como pessoa em POO vai depender do tipo de sistema onde tal pessoa está sendo representada. Por exemplo, em um sistema de loja virtual, a pessoa pode ter como características um login e senha. Já em um sistema de academia, aos invés de tais características, a pessoa pode ter peso e altura. As funcionalidades poderiam ser: calcular idade e calcular índice de massa corporal (IMC). 
 
-As caracteristicas e funcionalidades de um objeto como pessoa em POO vai depender do tipo de sistema onde tal pessoa está sendo representada. Por exemplo, em um sistema de loja virtual, a pessoa pode ter adicionalmente como características um login e senha. Já se a pessoa precisa ser representada em um sistema de academia, ela pode ter características adicionais como peso e altura. As funcionalidades poderiam ser calcular idade e calcular índice de massa corporal (IMC). Portanto, o modelo de pessoa em uma loja virtual será diferente do modelo de pessoa em um sistema de academia ou de hospital.
+O modelo de pessoa em uma loja virtual será diferente de um sistema de academia ou de hospital. Portanto, não se deve criar "super modelos" que são capazes de representar uma pessoa de forma tão geral que tal pessoa poderia ser utilizada em qualquer tipo de sistema para qualquer negócio. Como é óbvio, não faz sentido ter dados como peso e altura em um sistema de uma loja de eletrodomésticos.
 
 Um modelo em POO é semelhante ao projeto de uma casa: a partir dele é possível criar quantas casas desejarmos, com as mesmas características, funcionalidades e restrições.
 
-endif::backend-revealjs[]
-
-ifdef::backend-revealjs[]
-- As caracteristicas e funcionalidades de um objeto em POO vai depender do tipo de sistema onde tal objeto está sendo representado. 
-endif::backend-revealjs[]
-
-ifdef::backend-revealjs[]
-== O que são Modelos
-
-endif::backend-revealjs[]
-
 image::projeto-vs-casa.png[title=Modelo (projeto) vs Casa contruída a partir do modelo.]
 
-ifndef::backend-revealjs[]
+Algumas características poderiam ser cor, tamanho, quantidade de quartos e banheiros. No entanto, diferente de um projeto de engenharia, um modelo normalmente não define os valores destas características. Assim, ao construir uma determinada casa a partir deste modelo é que seria definida qual a cor a casa seria pintada. O modelo só indica que a casa precisa de uma cor.
 
-Um modelo em POO define quais características o objeto terá. No exemplo da casa poderiam ser cor, tamanho, quantidade de quartos e banheiros. No entanto, o modelo não define os valores para cada uma destas características. Assim, ao construir uma determinada casa a partir deste modelo é que seria definida qual a cor a casa seria pintada. O modelo só indica que a casa precisa de uma cor.
+Em um projeto de engenharia, características como "cor" não são especificadas, mas outras como "tamanho da casa" são previamente definidas e não podem ser alteradas a cada casa a ser construída. Um modelo de uma casa em POO também pode aplicar estas restrições, impedindo que o tamanho da casa seja alterado a cada nova casa. 
 
-Em um modelo (projeto) de engenharia civil, os valores de características como "cor" não são especificados, mas outros como "tamanho da casa" são previamente definidos e não podem ser alterados a cada casa que vai ser construída. Um modelo de uma casa em POO também pode aplicar estas restrições, impedindo que o tamanho da casa seja alterado a cada casa construída. 
+Da mesma forma que uma casa, um modelo de pessoa pode definir características como cor da pele, peso, altura e naturalidade. No entanto, cada pessoa pode ter uma cor de pele, peso, altura e naturalidade diferente da outra.
 
-Da mesma forma que uma casa, um modelo de pessoa pode definir características como cor da pele, peso, altura e naturalidade, mas ele não define os valores para cada uma dessas características. Cada pessoa pode ter uma cor de pele, peso, altura e naturalidade diferente da outra.
+Com estes exemplos, pode-se ver como a POO permite representar os mais diversos objetos do mundo real em um programa, diminuindo a distância entre: 
 
-Com estes exemplos, pode-se ver como a POO permite representar os mais diversos objetos do mundo real para um programa, diminuindo a distância entre a o modelo e a realidade, entre o código escrito e o objetivo do programa.
+- o modelo e a realidade; 
+- o código escrito e o objetivo do programa.
 
-endif::backend-revealjs[]
-
-ifdef::backend-revealjs[]
-
-== O que são Modelos
-
-- Um modelo em POO define quais características o objeto terá. 
-- Exemplo da casa: cor, tamanho, quantidade de quartos e banheiros. 
-- O modelo não define os valores para cada uma destas características. 
-- O modelo só indica que a casa precisa de uma cor.
-
-== O que são Modelos
-- Um projeto de engenharia civil é diferente de um modelo padrão em POO.
-- É possível representar as restrições de um projeto de engenharia.
-- Um modelo (como pessoa) não define os valores de características.
-- POO permite representar os mais diversos objetos do mundo real para um programa.
-
-endif::backend-revealjs[]
-
-ifndef::backend-revealjs[]
 === Classes: o 1º conceito básico da orientação a objetos
-endif::backend-revealjs[]
-
-ifdef::backend-revealjs[]
-== Classes
-endif::backend-revealjs[]
-
-ifndef::backend-revealjs[]
 
 Com todas as informações apresentadas anteriormente, utilizando metáforas do mundo real e uma linguagem acessível, você acabou de conhecer o principal conceito da programação orientada a objetos: as *classes*. 
 
@@ -101,34 +41,14 @@ A partir das classes é possível criar objetos concretos, assim como a partir d
 
 Assim como as características de um objeto podem ser identificadas a partir de adjetivos, as funcionalidades a partir de verbos, as classes podem ser identificadas a partir de substantivos como pessoa, carro, casa, produto, etc.
 
-endif::backend-revealjs[]
-
-ifdef::backend-revealjs[]
-
-- Principal conceito da programação orientada a objetos: as *classes*. 
-
-== Classes
-- Modelos que representam quais características, funcionalidades e restrições tais objetos terão. 
-
-== Classes
-- Características = qualidades
-- Funcionalidades = ações 
-- Restrições = regras
-
-== Classes
-- A partir das classes é possível criar objetos concretos.
-- Classes podem ser identificadas a partir de substantivos.
-
-endif::backend-revealjs[]
-
-ifndef::backend-revealjs[]
 == Objetos
 
 Conhecemos os objetos como eles são no mundo real. Em POO, um objeto é um elemento criado a partir de uma classe. 
-A classe é um modelo, um molde utilizado para criar objetos daquele tipo sempre que for desejado.
+A classe é um modelo, um molde utilizado para criar objetos daquele tipo sempre que for desejado. A classe funciona então como uma fábrica de objetos.
 Cada objeto possui todas as características e funcionalidades definidas pela sua classe.
+
 Vamos utilizar como exemplo uma aplicação para uma loja que precisa cadastrar seus clientes. A partir de uma classe Cliente, pode-se criar quantos objetos forem necessários. Desta forma, cada cliente da loja será representado por um objeto diferente. 
-Apesar de todos os cliente terem as mesmas características definidas na classe, como nome, CPF, sexo e data de nascimento, os valores para cada uma dessas características pode ser diferente para cada cliente. Isto torna os clientes diferentes uns dos outros.
+Apesar de todos os clientes terem as mesmas características definidas na classe, como nome, CPF, sexo e data de nascimento, os valores para cada uma dessas características pode ser diferente para cada cliente. Isto torna os clientes diferentes uns dos outros.
 
 .Classe Pessoa e Objeto da classe Pessoa
 ****
@@ -137,38 +57,14 @@ image:pessoa.png[title="Classe Pessoa"] image:objeto-pessoa.jpg[title="Objeto Pe
 
 Nas figuras acima, temos à direta uma classe Pessoa que representa pessoas de uma forma genérica para um determinado software. No lado esquerdo temos o Manoel que representa uma pessoa específica.
 
-== Criando Classes
-
-Objetos só podem ser criados se existirem classes para serem utilizadas como modelos na criação destes objetos. A linguagem Java possui uma infinidade de classes para as mais diversas finalidades. No entanto, ao criar um software específico para resolver um determinado problema, você precisará criar os modelos para representar tais objetos, ou seja as classes. 
-
-Cada classe precisa obrigatoriamente de um nome. Adicionalmente, ela pode ter (a) características e/ou (b) funcionalidades. Isto quer dizer que ela pode ter (a) e (b), apenas um dos dois ou nenhum. No entanto, uma classe que não possui nem (a) nem (b) não tem utilidade alguma.
-
-Para iniciar, vamos criar uma classe contendo apenas características e ir evoluindo nossas classes ao longo do caminho, à medida que vamos introduzindo conceitos e regras.
-
-Como primeiro exemplo, considere que o proprietário de uma loja de móveis e eletrodoméstricos lhe pede para desenvolver um sistema para controle de vendas. O proprietário precisa inicialmente de um sistema para cadastrar clientes, produtos, funcionários, filiais da loja e outras partes da operação da loja. Assim, identifique quais classes são necessárias e pense nas características que cada uma deve ter.
-
-== Criando Objetos
-
-endif::backend-revealjs[]
-
 == Resumo do Capítulo
 
 - Um paradigma é um conjunto de padrões e regras a serem seguidos.
 - POO é um paradigma moderno que busca facilitar o desenvolvimento de software e é utilizado mundialmente.
 - Permite melhor divisão do problema em partes, favorecendo o trabalho em equipe.
-
-ifdef::backend-revealjs[]
-== Resumo do Capítulo
-endif::backend-revealjs[]
-
 - Facilita a manutenção do código e melhorar a qualidade dos programas desenvolvidos.
 - Surgiu para suprir falhas de outros paradigmas de programação e novas necessidades do mercado de software.
 - Diminui a distância entre o problema e a representação da solução por meio de código.
-
-ifdef::backend-revealjs[]
-== Resumo do Capítulo
-endif::backend-revealjs[]
-
 - Permitir maior reutilização de código, tanto seu quanto de outras pessoas.
 - Proteger dados e código de uso indevido.
 - As classes são o principal conceito da POO. Elas permitem criar um modelo contendo características e funcionalidades, a partir do qual pode-se criar quantos objetos desejar.

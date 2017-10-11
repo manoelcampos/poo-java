@@ -14,7 +14,7 @@ install:
 	gitbook install
 	
 slides:
-	bundle exec asciidoctor-revealjs "README.adoc" -o slides.html
+	bundle exec asciidoctor-revealjs "slides.adoc" -o slides.html
 
 html:
 	gitbook build ./ ./html
@@ -24,5 +24,5 @@ pdf:
 
 clean:
 	rm -rf "html"
-	rm book.pdf
-	rm slides.html
+	rm -f book.pdf
+	rm -f slides.html

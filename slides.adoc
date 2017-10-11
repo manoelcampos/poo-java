@@ -1,0 +1,276 @@
+= Introdução
+:revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0
+:revealjs_slideNumber: true
+:source-highlighter: highlightjs
+:imagesdir: images
+:allow-uri-read:
+:safe: unsafe
+:numbered:
+:listing-caption: Listing
+
+ifdef::env-github[]
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+- https://palmas.ifto.edu.br/index.php/component/content/article?id=225[Curso Superior de Sistemas para Internet] - http://www.ifto.edu.br[IFTO]
+- http://about.me/manoelcampos[Prof. Me. Manoel Campos da Silva Filho]
+- mcampos@ifto.edu.br 
+- https://manoelcampos.gitbooks.io/poo-java/
+
+== Objetivos
+
+- Apresentar os fundamentos para o desenvolvimento de softwares modernos seguindo o paradigma de programação orientada a objetos (POO).
+- Paradigma: define um modelo ou padrão a ser seguido. 
+- POO: define um modelo para construção de software que é seguido mundialmente.
+
+== Pré-requisitos
+
+- Lógica de programação e programação procedural/estruturada.
+
+== Metodologia
+
+Aulas expositivas e práticas em laboratório, com aplicação da teoria no desenvolvimento de pequenos projetos.
+
+== Plano do Curso
+
+== Método de Avaliação
+
+
+- Média igual ou superior a 6 e pelo menos 75% de presença.
+- Atividades realizadas em sala de aula e no ambiente virtual de aprendizagem, a soma delas contabilizando 10 pontos por bimestre. 
+- Uma prova teórico-prática valendo 10 pontos por bimestre. 
+- A Nota Final é a média aritmética das notas dos bimestres.
+- Recuperação: Exame final teórico-prático.
+
+== Motivação para uso de POO
+
+- Desenvolver software não é uma tarefa fácil. 
+- Desenvolver programas para resolver problemas reais e cada vez mais complexos. 
+- Por onde começar? 
+- Como transformar suas ideas em código? 
+
+== Motivação para uso de POO
+
+- Como organizar o código? 
+- Quais partes do programa devem ser desenvolvidas primeiro? 
+- Como identificar estas partes do programa e desenvovê-las isoladamente?
+- Como unir as partes depois de prontas?
+
+== Motivação para uso de POO
+
+****
+.http://joyreactor.com/post/1646612[Tentativa e Erro 🙏: "paradigma" de programação mais utilizado quando não se tem a menor ideia do que o código está fazendo 😭.]
+image::code-doesnt-work.jpeg[]
+****
+
+== Motivação para uso de POO
+
+- Alterações indiscriminadas tornam o código um emaranhado de linhas.
+- POO, conceitos e práticas de engenharia de software: 
+    * minimizar a quantidade de bugs (erros);
+    * permitir que o software seja desenvolvido em equipe;
+    * permitir que o software seja desenvolvido em partes independentes;
+    * facilitar a manutenção de código;
+    
+== Motivação para uso de POO
+
+- POO, conceitos e práticas de engenharia de software: 
+    * reduzir custo, tempo de construção, qualidade e segurança, e outros;
+    * diminuir a distância entre o que o código representa com o que de fato ele faz;
+    * etc.
+
+== Porque POO?
+
+- Forma de escrever código vem evoluindo há décadas.
+- Vários paradigmas de programação têm sido desenvolvidos.
+- Programação não Estruturada
+    * um código escrito usando tal paradigma é chamado pejorativamente de código espaguete
+    * um exemplo é a linguagem https://pt.wikipedia.org/wiki/Assembly[Assembly]
+
+== Porque POO?
+
+.Como é organizado um código espaguete 😳. (Fonte: link:https://pt.123rf.com/photo_65290422_caos-de-cabos-e-fios-no-pólo-elétrico-em-chiang-mai%20-tailândia.html[123rf.com]])
+image::chaos-of-cables.jpg[width=480]
+
+== Exemplo de Código em Assembly
+
+image::assembly.gif[title=Exemplo de código em linguagem Assembly]
+
+== Porque POO?
+
+- Outras formas de desenvolver programas foram então surgindo. 
+- https://pt.wikipedia.org/wiki/Programação_estruturada[Programação Estruturada]: primeiro a ser aprendido em lógica de programação. 
+- Um código estruturado permite visualizar mais facilmente o fluxo lógico de execução de um programa. 
+
+== Porque POO?
+
+image::fluxograma.png[title="Como um algoritmo estruturado pode ser representado em um fluxograma.", width=480]
+
+== Porque POO?
+
+TIP: O paradigma estruturado é também definido como "a atitude de escrever código com a intenção de se comunicar com humanos e não com máquinas" <<Unstructured>>. Ou seja, um dos grandes objetivos de um código é que ele seja legível para outros programadores.
+
+== Porque POO?
+
+- Paradigma estruturado ainda peca em muitos pontos:
+    * divisão do problema image:shapes.jpg[role="right" width=120, link="https://www.pinterest.pt/pin/693413673846671893/"]
+    * representação da solução de um problema; image:problem-solution.jpg[role="right" width=240, link="https://pt.123rf.com/photo_41818211_business-strategy-businessman-planning-and-finding-a-solution-through-a-drawing-of-a-labyrinth-maze.html"]
+
+== Porque POO?
+- Paradigma estruturado ainda peca em muitos pontos:
+    * reutilização de código (Don't Repeat Yourself) e avitando a famigerada https://en.wikipedia.org/wiki/Copy_and_paste_programming["Programação Copia e Cola"] 😩 image:reinventing-wheel.jpg[role="right" width=180, link="https://www.aic.cuhk.edu.hk/web8/Reinventing%20the%20wheel.htm"]image:copy_paste_keyboard.jpg[role=right, width=180, link=https://www.timeshighereducation.com]
+
+== Porque POO?
+- Paradigma estruturado ainda peca em muitos pontos:
+    * permitir proteger tanto dados quanto determinadas partes do código de serem usados de maneira indevida; etc.
+
+== Porque POO?
+
+.Algoritmo incorreto para somar números.
+```
+total = 0
+
+funcao soma_numeros(){
+    faça {
+        imprime("Digite um número: ")
+        leia(numero)
+        total = total + numero
+        mostra_subtotal()
+    } enquanto (numero != 0)
+}
+
+funcao mostra_subtotal() {
+    imprime("O total calculado até agora é de ", total)
+    total = 0
+}
+```
+
+== Porque POO?
+
+.Programação Copia e Cola e POG
+****
+video::45I9jX5uO9A[youtube, width="640", height="480"]
+****
+
+== Porque POO?
+
+image:oop-to-the-rescue.png[role=right, link=https://toggl.com/programming-princess, width=200] 
+
+- Então surgiu a POO. 
+- Vamos olhar o mundo ao redor. 
+- Objetos têm suas características e funcionalidades
+
+== Porque POO?
+
+|===
+|Objeto | Características | Funcionalidades
+
+| Carro | *Cor*: Azul, *Ano Fabricação*: 2012, *Bancos*: couro | Acelerar, Frenar, Limpar parabrisas, Acender faróis
+| TV | *Tamanho*: 42", *Tela*: LCD, *Classificação Energética*: A | Ligar/Desligar, Trocar canais, Acionar Timer, Exibir guia de programação
+|===
+
+== Porque POO?
+
+TIP: As características de um objeto são qualidades (adjetivos) e as funcionalidades são ações (verbos), assim é fácil distinguí-las.
+
+- É possível criar https://manoelcampos.gitbooks.io/logica-programacao/content/[programas para controlar objetos como carros, TVs, relógios, balanças, porteiros eletrônicos, lâmpadas, portas e muito mais]
+- a POO aproxima a representação de tais objetos em um programa.
+
+== Porque POO?
+image:shopping-cart.jpg[role=right, width=180, link=https://financesonline.com/top-10-alternatives-magento-leading-shopping-cart-software-solutions/] 
+
+- Exemplo de objetos: Produtos em uma loja virtual
+- Na POO, objetos podem ser pessoas, animais e qualquer coisa que precise ser representada para resolver um problema: clientes na loja virtual
+
+== O que são Modelos
+
+- POO busca representar objetos reais ou abstratos na criação de programas.  
+- Objeto real: pessoa ou veículo
+- Objeto abstrato: foto digital ou um objeto para envio de mensagens SMS. 
+
+== O que são Modelos
+
+- Substantivos como "pessoa", "carro" ou "foto digital" são genéricos. 
+- Nomes como "Manoel", "Fiat Uno" ou "foto do Manoel" são objetos concretos.
+
+== O que são Modelos
+
+- Em POO objetos são representados de uma forma geral usando modelos.
+- Um modelo para pessoas vai permitir representar pessoas de modo geral. 
+- Permite representar o Manoel, a Maria, o João, etc.
+- Permite representar qualquer pessoa que preencha os requisitos. 
+
+== O que são Modelos
+
+IMPORTANT: Um modelo em POO é utilizado para representar um objeto real ou abstrato, incluindo suas características, restrições e funcionalidades.
+
+- As caracteristicas e funcionalidades de um objeto em POO vai depender do tipo de sistema onde tal objeto está sendo representado. 
+
+== O que são Modelos
+
+image::projeto-vs-casa.png[title=Modelo (projeto) vs Casa contruída.]
+
+== O que são Modelos
+
+- Um modelo em POO define quais características o objeto terá. 
+- Exemplo da casa: cor, tamanho, quantidade de quartos e banheiros. 
+- O modelo não define os valores para cada uma destas características. 
+- O modelo só indica que a casa precisa de uma cor.
+
+== O que são Modelos
+- Um projeto de engenharia civil é diferente de um modelo padrão em POO.
+- É possível representar as restrições de um projeto de engenharia.
+- Um modelo (como pessoa) não define os valores de características.
+- POO permite representar os mais diversos objetos do mundo real para um programa.
+
+== Classes
+
+- Principal conceito da programação orientada a objetos: as *classes*. 
+
+== Classes
+- Modelos que representam quais características, funcionalidades e restrições tais objetos terão. 
+
+== Classes
+- Características = qualidades
+- Funcionalidades = ações 
+- Restrições = regras
+
+== Classes
+- A partir das classes é possível criar objetos concretos.
+- Classes podem ser identificadas a partir de substantivos.
+
+ifndef::backend-revealjs[]
+== Objetos
+
+Conhecemos os objetos como eles são no mundo real. Em POO, um objeto é um elemento criado a partir de uma classe. 
+A classe é um modelo, um molde utilizado para criar objetos daquele tipo sempre que for desejado. A classe funciona então como uma fábrica de objetos.
+Cada objeto possui todas as características e funcionalidades definidas pela sua classe.
+
+Vamos utilizar como exemplo uma aplicação para uma loja que precisa cadastrar seus clientes. A partir de uma classe Cliente, pode-se criar quantos objetos forem necessários. Desta forma, cada cliente da loja será representado por um objeto diferente. 
+Apesar de todos os clientes terem as mesmas características definidas na classe, como nome, CPF, sexo e data de nascimento, os valores para cada uma dessas características pode ser diferente para cada cliente. Isto torna os clientes diferentes uns dos outros.
+
+.Classe Pessoa e Objeto da classe Pessoa
+****
+image:pessoa.png[title="Classe Pessoa"] image:objeto-pessoa.jpg[title="Objeto Pessoa"]
+****
+
+Nas figuras acima, temos à direta uma classe Pessoa que representa pessoas de uma forma genérica para um determinado software. No lado esquerdo temos o Manoel que representa uma pessoa específica.
+
+endif::backend-revealjs[]
+
+== Criando Classes
+
+Objetos só podem ser criados se existirem classes para serem utilizadas como modelos na criação destes objetos. A linguagem Java possui uma infinidade de classes para as mais diversas finalidades. No entanto, ao criar um software específico para resolver um determinado problema, você precisará criar os modelos para representar tais objetos, ou seja as classes. 
+
+Cada classe precisa obrigatoriamente de um nome. Adicionalmente, ela pode ter (a) características e/ou (b) funcionalidades. Isto quer dizer que ela pode ter (a) e (b), apenas um dos dois ou nenhum. No entanto, uma classe que não possui nem (a) nem (b) não tem utilidade alguma.
+
+Para iniciar, vamos criar uma classe contendo apenas características e ir evoluindo nossas classes ao longo do caminho, à medida que vamos introduzindo conceitos e regras.
+
+Como primeiro exemplo, considere que o proprietário de uma loja de móveis e eletrodomésticos lhe pede para desenvolver um sistema para controle de vendas. O proprietário precisa inicialmente de um sistema para cadastrar clientes, produtos, funcionários, filiais da loja e outras partes da operação da loja. Assim, identifique quais classes são necessárias e pense nas características que cada uma deve ter.
+
+== Criando Objetos
