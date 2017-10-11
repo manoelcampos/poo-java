@@ -149,14 +149,14 @@ ifdef::backend-revealjs[]
 
 endif::backend-revealjs[]
 
+.Programação Copia e Cola e POG
+****
 ifndef::backend-revealjs[]
-[NOTE]
-====
 A Programação Copia e Cola apresentada anteriormente é um dos artifícios que programadores usam para resolver muitos problemas. Mas a mundialmente conhecida Programação Orientada a Gambiarras (POG) trouxe avançaos significativos na área.
-====
 endif::backend-revealjs[]
 
 video::45I9jX5uO9A[youtube, width="640", height="480"]
+****
 
 ifndef::backend-revealjs[]
 

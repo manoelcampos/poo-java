@@ -2,4 +2,4 @@
 
 . link:README.adoc[Introdução]
 . link:chapter1.adoc[Porque POO?]
-. link:chapter2.adoc[Modelos]
+. link:chapter2.adoc[Modelos e Objetos]
