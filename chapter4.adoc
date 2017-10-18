@@ -1,0 +1,34 @@
+:imagesdir: images
+
+
+== Criando Classes no BlueJ
+
+Objetos só podem ser criados se existirem classes para serem utilizadas como modelos. A linguagem Java possui uma infinidade de classes para as mais diversas finalidades. No entanto, ao criar um software para resolver um determinado problema, você precisará criar classes específicas do seu software. 
+
+Cada classe precisa obrigatoriamente de um nome. Adicionalmente, ela pode ter (a) características e/ou (b) funcionalidades. Isto quer dizer que ela pode ter (a) e (b), apenas um dos dois ou nenhum. No entanto, uma classe que não possui nem (a) nem (b) não tem utilidade alguma. O mais comum é que classes tenham tanto (a) e (b).
+
+Para iniciar, vamos criar uma classe contendo apenas características e ir evoluindo nossas classes ao longo do caminho, à medida que vamos introduzindo conceitos e regras.
+
+Como primeiro exemplo, considere que o proprietário de uma loja de móveis e eletrodomésticos lhe pede para desenvolver um sistema para controle de vendas. O proprietário precisa inicialmente de um sistema para cadastrar *clientes*, *produtos*, *funcionários*, *filiais* da loja e outras partes da operação da loja. Assim, identifique quais classes são necessárias e pense nas características que cada uma deve ter.
+
+- Definir atributos para as classes
+- Criar funcionalidades básicas, incluindo getters e setters
+    * Cliente: validar email, verificar inadimplência, validar CPF, validar attributes nos setters
+    * Funcionário: 
+    * Produto: adicionar estoque, remover estoque
+    * Filial: validar CNPJ
+
+- Criar relacionamentos
+    * Filial e Gerente
+
+- Adicionar cidade como String no cliente e mostrar os problemas de usar String para isso.
+    * Cliente e Cidade
+    * Filial e Cidade
+
+- Alterar outros campos de String para classes:
+    * Marca, Estado
+
+== Criando Objetos
+
+
+if(!nome.isEmpty())

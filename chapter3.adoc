@@ -1,31 +1,60 @@
 :imagesdir: images
+:bluej-version: BlueJ-linux-411.deb
 
-== Criando Classes
+== Ambiente de Desenvolvimento Java
 
-Objetos só podem ser criados se existirem classes para serem utilizadas como modelos na criação destes objetos. A linguagem Java possui uma infinidade de classes para as mais diversas finalidades. No entanto, ao criar um software específico para resolver um determinado problema, você precisará criar os modelos para representar tais objetos, ou seja as classes. 
+Antes de prosseguir para a parte prática, temos que instalar as ferramentas necessárias para aplicarmos os conceitos de POO em Java.
+Para podermos compilar aplicações Java, precisamos do Java Development Kit (JDK): o Kit de Desenvolvimento Java.
+A forma mais fácil de instalar estas ferramentas depende do sistema operacional utilizado, como apresentado a seguir.
 
-Cada classe precisa obrigatoriamente de um nome. Adicionalmente, ela pode ter (a) características e/ou (b) funcionalidades. Isto quer dizer que ela pode ter (a) e (b), apenas um dos dois ou nenhum. No entanto, uma classe que não possui nem (a) nem (b) não tem utilidade alguma.
+=== Windows
 
-Para iniciar, vamos criar uma classe contendo apenas características e ir evoluindo nossas classes ao longo do caminho, à medida que vamos introduzindo conceitos e regras.
+No Windows o JDK deve ser baixado manualmente no site da http://oracle.com/technetwork/java/javase/downloads/[Oracle].
+Nesta página é possível fazer o download do ambiente de desenvolvimento NetBeans já com o JDK 8 incorporado.
+Como informado na introdução do curso, vamos iniciar o desenvolvimento utilizando a ferramenta https://www.bluej.org[BlueJ],
+mas posteriormente utilizaremos o NetBeans. Assim, é mais fácil já baixar tudo junto.
 
-Como primeiro exemplo, considere que o proprietário de uma loja de móveis e eletrodomésticos lhe pede para desenvolver um sistema para controle de vendas. O proprietário precisa inicialmente de um sistema para cadastrar *clientes*, *produtos*, *funcionários*, *filiais* da loja e outras partes da operação da loja. Assim, identifique quais classes são necessárias e pense nas características que cada uma deve ter.
+IMPORTANT: Não baixe o JDK 9 pois nem o BlueJ 4.1.1 nem o NetBeans 8.2 funcionam com tal versão do JDK.
 
-- Definir atributos para as classes
-- Criar funcionalidades básicas, incluindo getters e setters
-    * Cliente: validar email, verificar inadimplência, validar CPF, validar attributes nos setters
-    * Funcionário: 
-    * Produto: adicionar estoque, remover estoque
-    * Filial: validar CNPJ
+O vídeo abaixo mostra o processo de instalação passo-a-passo, incluindo as configurações necessárias para 
+compilar e executar programas Java pelo prompt de comandos. 
 
-- Criar relacionamentos
-    * Filial e Gerente
+video::https://www.youtube.com/watch?v=qJvh3X51790[youtube, width=640, height=480]
 
-- Adicionar cidade como String no cliente e mostrar os problemas de usar String para isso.
-    * Cliente e Cidade
-    * Filial e Cidade
+=== Linux
 
-- Alterar outros campos de String para classes:
-    * Marca, Estado
+A instalação do JDK no Linux é bem mais simples utilizando o terminal. Basta executar o comando abaixo no terminal, de acordo com a distribuição Linux que estiver utilizando.
 
-== Criando Objetos
+- Debian e derivados (como Ubuntu e Linux Mint): `sudo apt-get install openjdk-8-jdk`
+- Red Hat e derivados (como Fedora e CentOS): `sudo yum install openjdk-8-jdk`
+- ArchLinux e derivados (como ArchBang): `sudo pacman install openjdk-8-jdk`
 
+== BlueJ
+
+O https://www.bluej.org[BlueJ] é um ambiente de integrado de desenvolvimento (Integrated Development Environment, IDE) utilizado para o ensino dos fundamentos de programação orientada a objetos. Diferente de ferramentas profissionais como https://www.jetbrains.com/idea[IntelliJ], http://netbeans.org[NetBeans] e http://eclipse.org[Eclipse], ele possui uma interface minimalista que nos permite focar nos conceitos de POO. Depois de 5 minutos explicando o funcionamento do BlueJ, um aluno pode começar a aprender os POO em Java. O BlueJ é utilizado unica e exclusivamente durante o processo de aprendizagem. Logo, a medida que avançarmos no curso, vamos passar para ambientes profissionais como o NetBeans.
+
+O processo de instalação do BlueJ também depende do sistema operacional que você estiver utilizando. A versão 4.1.1 do BlueJ requer o JDK 8 para funcionar.
+Depois de ter o JDK instalado como indicado na seção anterior, basta seguir as instruções abaixo.
+
+=== Windows
+No Windows, basta fazer o download do BlueJ no https://www.bluej.org[site official], clicando no logo do Windows. image:bluej-windows.png[]
+
+=== Linux 
+Apesar de ainda não ser possível fazer o download do BlueJ utilizando ferramentas de linha de comando como `apt-get`,
+a instalação em distribuições Linux Debian ou derivadas (como o Ubuntu e Linux Mint) é bem facilitada.
+Desta forma, é preciso fazer o download no https://www.bluej.org[site official], clicando no logo do Ubuntu. image:bluej-ubuntu.png[]
+
+Após fazer o download, abra um terminal e execute os comandos abaixo. Se o nome do arquivo baixado não for {bluej-version}, altere o nome nos comandos abaixo.
+
+
+[source,bash]
+----
+#Inicia a instalação do BlueJ
+sudo dpkg -i {bluej-version}
+
+#Caso sejam exibidos erros de falta de dependências, execute o comando abaixo para instalar tais dependências automaticamente
+sudo apt-get -f install
+
+#Inicia novamente a instalação do BlueJ depois de instaladas as dependências
+sudo dpkg -i {bluej-version}
+----
