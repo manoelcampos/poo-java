@@ -1,5 +1,4 @@
 :imagesdir: images
-:bluej-version: BlueJ-linux-411.deb
 
 == Ambiente de Desenvolvimento Java
 
@@ -14,12 +13,12 @@ Nesta página é possível fazer o download do ambiente de desenvolvimento NetBe
 Como informado na introdução do curso, vamos iniciar o desenvolvimento utilizando a ferramenta https://www.bluej.org[BlueJ],
 mas posteriormente utilizaremos o NetBeans. Assim, é mais fácil já baixar tudo junto.
 
-IMPORTANT: Não baixe o JDK 9 pois nem o BlueJ 4.1.1 nem o NetBeans 8.2 funcionam com tal versão do JDK.
+IMPORTANT: O BlueJ 4.1.1 e o NetBeans 8.2 só funcionam com o JDK 8.
 
 O vídeo abaixo mostra o processo de instalação passo-a-passo, incluindo as configurações necessárias para 
 compilar e executar programas Java pelo prompt de comandos. 
 
-video::https://www.youtube.com/watch?v=qJvh3X51790[youtube, width=640, height=480]
+video::qJvh3X51790[youtube, width=640, height=480]
 
 === Linux
 
@@ -37,24 +36,28 @@ O processo de instalação do BlueJ também depende do sistema operacional que v
 Depois de ter o JDK instalado como indicado na seção anterior, basta seguir as instruções abaixo.
 
 === Windows
-No Windows, basta fazer o download do BlueJ no https://www.bluej.org[site official], clicando no logo do Windows. image:bluej-windows.png[]
+No Windows, basta fazer o download do BlueJ no https://www.bluej.org[site official], clicando no logo do Windows. 
+
+image::bluej-windows.png[]
 
 === Linux 
 Apesar de ainda não ser possível fazer o download do BlueJ utilizando ferramentas de linha de comando como `apt-get`,
 a instalação em distribuições Linux Debian ou derivadas (como o Ubuntu e Linux Mint) é bem facilitada.
-Desta forma, é preciso fazer o download no https://www.bluej.org[site official], clicando no logo do Ubuntu. image:bluej-ubuntu.png[]
+Desta forma, é preciso fazer o download no https://www.bluej.org[site official], clicando no logo do Ubuntu. 
 
-Após fazer o download, abra um terminal e execute os comandos abaixo. Se o nome do arquivo baixado não for {bluej-version}, altere o nome nos comandos abaixo.
+image::bluej-ubuntu.png[]
+
+Após fazer o download, abra um terminal e execute os comandos abaixo. Se o nome do arquivo baixado não for `BlueJ-linux-411.deb`, altere o nome nos comandos abaixo.
 
 
 [source,bash]
 ----
 #Inicia a instalação do BlueJ
-sudo dpkg -i {bluej-version}
+sudo dpkg -i BlueJ-linux-411.deb
 
 #Caso sejam exibidos erros de falta de dependências, execute o comando abaixo para instalar tais dependências automaticamente
 sudo apt-get -f install
 
 #Inicia novamente a instalação do BlueJ depois de instaladas as dependências
-sudo dpkg -i {bluej-version}
+sudo dpkg -i BlueJ-linux-411.deb
 ----
