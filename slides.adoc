@@ -2,6 +2,7 @@
 :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0
 :revealjs_slideNumber: true
 :source-highlighter: highlightjs
+:icons: font
 :imagesdir: images
 :allow-uri-read:
 :safe: unsafe
