@@ -30,7 +30,7 @@ A instalação do JDK no Linux é bem mais simples utilizando o terminal. Basta 
 
 == BlueJ
 
-O https://www.bluej.org[BlueJ] é um ambiente de integrado de desenvolvimento (Integrated Development Environment, IDE) utilizado para o ensino dos fundamentos de programação orientada a objetos. Diferente de ferramentas profissionais como https://www.jetbrains.com/idea[IntelliJ], http://netbeans.org[NetBeans] e http://eclipse.org[Eclipse], ele possui uma interface minimalista que nos permite focar nos conceitos de POO. Depois de 5 minutos explicando o funcionamento do BlueJ, um aluno pode começar a aprender os POO em Java. O BlueJ é utilizado unica e exclusivamente durante o processo de aprendizagem. Logo, a medida que avançarmos no curso, vamos passar para ambientes profissionais como o NetBeans.
+O https://www.bluej.org[BlueJ] é um ambiente integrado de desenvolvimento (Integrated Development Environment, IDE) utilizado para o ensino dos fundamentos de programação orientada a objetos. Diferente de ferramentas profissionais como https://www.jetbrains.com/idea[IntelliJ], http://netbeans.org[NetBeans] e http://eclipse.org[Eclipse], ele possui uma interface minimalista que nos permite focar nos conceitos de POO. Depois de 5 minutos explicando o funcionamento do BlueJ, um aluno pode começar a aprender os POO em Java. O BlueJ é utilizado unica e exclusivamente durante o processo de aprendizagem. Logo, a medida que avançarmos no curso, vamos passar para ambientes profissionais como o NetBeans.
 
 O processo de instalação do BlueJ também depende do sistema operacional que você estiver utilizando. A versão 4.1.1 do BlueJ requer o JDK 8 para funcionar.
 Depois de ter o JDK instalado como indicado na seção anterior, basta seguir as instruções abaixo.
@@ -55,7 +55,8 @@ Após fazer o download, abra um terminal e execute os comandos abaixo. Se o nome
 #Inicia a instalação do BlueJ
 sudo dpkg -i BlueJ-linux-411.deb
 
-#Caso sejam exibidos erros de falta de dependências, execute o comando abaixo para instalar tais dependências automaticamente
+#Caso sejam exibidos erros de falta de dependências, 
+#execute o comando abaixo para instalá-las automaticamente
 sudo apt-get -f install
 
 #Inicia novamente a instalação do BlueJ depois de instaladas as dependências

@@ -1,15 +1,61 @@
 :imagesdir: images
 
-
 == Criando Classes no BlueJ
 
 Objetos só podem ser criados se existirem classes para serem utilizadas como modelos. A linguagem Java possui uma infinidade de classes para as mais diversas finalidades. No entanto, ao criar um software para resolver um determinado problema, você precisará criar classes específicas do seu software. 
 
-Cada classe precisa obrigatoriamente de um nome. Adicionalmente, ela pode ter (a) características e/ou (b) funcionalidades. Isto quer dizer que ela pode ter (a) e (b), apenas um dos dois ou nenhum. No entanto, uma classe que não possui nem (a) nem (b) não tem utilidade alguma. O mais comum é que classes tenham tanto (a) e (b).
+Cada classe precisa obrigatoriamente de um nome. Adicionalmente, ela pode ter características e/ou funcionalidades. Para iniciar, vamos criar uma classe contendo apenas características e ir evoluindo nossas classes ao longo do caminho, à medida que vamos introduzindo conceitos e regras.
 
-Para iniciar, vamos criar uma classe contendo apenas características e ir evoluindo nossas classes ao longo do caminho, à medida que vamos introduzindo conceitos e regras.
+Como primeiro exemplo, considere que o proprietário de uma loja de móveis e eletrodomésticos lhe pede para desenvolver um sistema para controle de vendas. O proprietário precisa inicialmente de um sistema para cadastrar *clientes*, *produtos*, *funcionários* e *filiais* da loja. 
 
-Como primeiro exemplo, considere que o proprietário de uma loja de móveis e eletrodomésticos lhe pede para desenvolver um sistema para controle de vendas. O proprietário precisa inicialmente de um sistema para cadastrar *clientes*, *produtos*, *funcionários*, *filiais* da loja e outras partes da operação da loja. Assim, identifique quais classes são necessárias e pense nas características que cada uma deve ter.
+A partir desta descrição, e sabendo que classes são normalmente representadsa utilizando-se substantivos, podemos identificar que os substantivos em negritos serão algumas das nossas classes. Para iniciarmos, abra o BlueJ e será apresentada a janela principal como na figura abaixo.
+
+image::bluej-main-window.png[]
+
+Ao iniciar o BlueJ você pode abrir ou criar um novo projeto. Vamos então criar um novo projeto acessando o menu "Projeto >> Novo Projeto". A tela abaixo aparece para darmos um nome e indicarmos onde desejamos salvar o projeto.
+
+image::bluej-new-project.png[]
+
+Após clicar em OK, a tela principal abre o projeto criado. O projeto inicia vazio.
+
+image::bluej-empty-project.png[]
+
+Do lado esquerdo temos apenas 3 botões, dos quais vamos focar em apenas 2 por enquanto.
+
+- Nova Classe: para criar uma classe no projeto.
+- Compilar: para compilar todas as classes do projeto.
+
+Considerando as classes identificadas acima para o projeto da loja de móveis, vamos clicar no botão "Nova Classe" para criar a primeira classe que chamaremos de *Cliente*. A figura abaixo apresenta a janela para criação da classe. Basta preencher o campo "Nome da Classe" e clicar em OK sem alterar os outros campos. Explicar as opções desta tela está fora de contexto agora.
+
+image::bluej-new-class.png[]
+
+Por convenção, nomes de classes devem ter a inicial maiúscula e ser no singular. Se o nome da classe for composto, a inicial de cada palavra deve ser em maiúsculas. Não é permitido utilizar espaços e acentos devem ser evitados.
+
+IMPORTANT: Apesar de Java permitir o uso de acentos em classes, nome de arquivos e variáveis, isto não é uma prática recomendável. Utilizar acentos para tais elementos pode fazer você obter um mal hábito que não é permitido em várias linguagens. Além disso, se você estiver trabalhando em um projeto envolvendo desenvolvedores de diversas partes do mundo, normalmente o código é escrito em inglês, que não possui acentos.
+
+Após criar a classe, a tela do projeto deve ficar como a figura abaixo, mostrando a nova classe. Ao utilizar o BlueJ, o código Java para a classe criada é gerado automaticamente. No entanto, a classe é criada vazia, sem características nem funcionalidades. Desta forma, ela não tem utilidade alguma. 
+
+image:bluej-class-cliente.png[]
+
+O BlueJ ainda não nos permite adicionar pelo menos características para uma classe sem que precisemos escrever código para isso. Desta forma, para abrir o código da classe gerada, podemos dar dois cliques sobre a classe Cliente para abrir o editor de código. A imagem abaixo apresenta o código da classe Cliente gerado pelo BlueJ. 
+
+image:bluej-code-editor.png[]
+
+Todo o código entre a primeira { e última } (da linha 10 à linha 32) é apenas de demonstração. Ele não tem nenhuma utilidade para a classe Cliente que criamos e ainda inclui alguns detalhes que não serão abordados por enquanto. Ao criar qualquer classe no BlueJ, o mesmo código será criado para todas.
+Assim, vamos apagar esse código entre as linhas 10 e 32 e deixar somente a estrutura básica de toda classe em Java.
+
+O resultado final deve ser como apresentado na figura abaixo.
+
+image:bluej-clean-class.png[]
+
+O código da classe está entre as linhas 8 e 11, o texto nas linhas 2 a 7 são comentários utilizados como documentação da classe.
+Você pode observar na linha 8 que a classe é definida pela palavra *class* seguida do nome que demos para a classe. As chaves nas linhas 9 e 11 são utilizadas para delimitar o início e fim do código da classe. Qualquer característica ou funcionalidade que desejarmos incluir na classe, precisam ser entre estas chaves.
+
+Bem, agora que temos a estrutura da nossa primeira classe pronta, podemos começar adicionar características nessa classe. Como já discutido no capítulo anterior, tais características dependem do finalidade do sistema ou ramo de atividade onde ele será utilizado. No caso do cliente da loja de móveis, algumas características que podemos identificar são: nome, CPF, sexo, email, endereço, cidade e telefone. Cada uma destas características nada mais são do que variáveis. Sabendo disso, precisamos então identificar o tipo de dado de cada uma delas. O email e endereço são claramente dados alfanuméricos (permitem letras e números). Em Java, `String` é o tipo que representa dados alfanuméricos. 
+
+Por outro lado, nome e cidade são claramente dados alfabéticos (permitem somente letras). No entanto, as linguagens de programação convencionalmente não possuem daods que permitem armazenar apenas letras. Assim, utilizamos o tipo `String` para tal finalidade. 
+
+TIP: Apesar das linguagens convencionais não permitirem que uma variável armazene somente letras, é muito simples criar programas que permite ao usuário digitar apenas letras em um campo.
 
 - Definir atributos para as classes
 - Criar funcionalidades básicas, incluindo getters e setters
