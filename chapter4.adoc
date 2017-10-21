@@ -59,7 +59,10 @@ Bem, agora que temos a estrutura da nossa primeira classe pronta, podemos começ
 
 Por outro lado, nome e cidade são claramente dados alfabéticos (permitem somente letras). No entanto, as linguagens de programação convencionalmente não possuem dados que permitam armazenar apenas letras footnote:[Apesar das linguagens convencionais não permitirem que uma variável armazene somente letras, é muito simples criar programas que permitem ao usuário digitar apenas letras em um campo.]. Assim, utilizamos o tipo `String` para tal finalidade. 
 
-IMPORTANT: As características de uma classe são mais um dos princípios básicos de POO, chamadas de *atributos*, campos ou propriedades. Atributos é um termo que utilizamos no cotidiano. Por exemplo, uma pessoa pode ter como atributos o bom humor, paciência, beleza, estatura, etc. Assim, não é um termo específico da POO. Atributos nada mais são do que variáveis que possuem algumas características especiais que veremos ao longo do curso. Como toda variável, cada atributo precisa de um tipo e um nome. 
+.Atributos: as características de uma classe
+****
+As características de uma classe são mais um dos princípios básicos de POO, chamadas de *atributos*, campos ou propriedades. Atributos é um termo que utilizamos no cotidiano. Por exemplo, uma pessoa pode ter como atributos o bom humor, paciência, beleza, estatura, etc. Assim, não é um termo específico da POO. Atributos nada mais são do que variáveis que possuem algumas características especiais que veremos ao longo do curso. Como toda variável, cada atributo precisa de um tipo e um nome. 
+****
 
 Dos atributos apresentados acima, o nome, CPF, email, endereço, cidade e telefone são alfanuméricos, logo do tipo `String`. No caso do sexo como ele pode ser representado por apenas uma letra, o tipo que permite armazenar no máximo uma letra é o `char`. Assim, podemos declarar tais atributos na classe `Cliente` como apresentado abaixo:
 
@@ -135,3 +138,32 @@ TIP: https://en.wikipedia.org/wiki/Duplicate_code[Código duplicado] é um dos m
 
 == Criando Objetos no BlueJ
 
+Agora que temos nossa primeira classe criada no BlueJ, podemos fechar o editor de código e voltar para a tela inicial. Lembre-se que uma classe é um modelo a partir do qual podemos criar quantos objetos desejarmos. Para podermos criar objetos de uma classe, precisamos compilá-la primeiro. 
+
+Logo, na tela inicial do projeto podemos clicar no botão *Compilar* no lado esquerdo.
+
+image::bluej-compile.png[]
+
+Clicando neste botão, todas as classes criadas serão compiladas. Observe que após clicar em *Compilar*, o interior da classe muda, indicando que ela foi compilada.
+
+image::bluej-compiled-class.png[]
+
+A partir de agora podemos então criar objetos a partir das classes compiladas, neste caso somente a classe Cliente. Outra vantagem do uso do BlueJ para aprendizagem de POO é que não precisamos escrever código para testar nossas classes: para criar objetos e interagir com eles. Podemos fazer isso tudo pela interface gráfica do BlueJ.
+
+Depois da classe `Cliente` ter sido compilada, podemos clicar com o botão direito sobre ela e escolher a opção _new Cliente()_. Se a classe não estiver compilada, tal opção não aparecerá.
+
+Em seguida aparecerá uma tela para informarmos o nome do objeto a ser criado. O BlueJ já sugere um nome para o objeto que podemos deixar como está.
+
+image::bluej-new-object.png[]
+
+Após clicar em OK o objeto criado aparece no canto inferior esquerdo da tela principal.
+
+image::bluej-object-created.png[]
+
+Agora já temos um objeto chamado `cliente1` que segue a mesma estrutura definida pela classe `Cliente`, assim como uma casa deve seguir o modelo definido pelo projeto de engenharia.
+
+Com o objeto criado, podemos clicar com o botão direito sobre ele e escolher *Inspecionar*. Assim, podemos ver os atributos para o objeto criado. Como não definimos valores para essses atributos ao criarmos o objeto, o conteúdo apresentado apenas indica que os atributos não receberam nenhum dado ainda.
+
+image::bluej-inspect-object.png[]
+
+Com a imagem acima podemos rapidamente visualizar a estrutura dos objetos da classe `Cliente`. No entanto, para conseguirmos alterar os valores dos atributos, precisaremos escrever código para isto.
