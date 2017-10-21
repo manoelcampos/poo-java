@@ -1,0 +1,16 @@
+- Definir atributos para as classes
+- Criar funcionalidades básicas, incluindo getters e setters
+    * Cliente: validar email, verificar inadimplência, validar CPF, validar attributes nos setters
+    * Funcionário: 
+    * Produto: adicionar estoque, remover estoque
+    * Filial: validar CNPJ
+
+- Criar relacionamentos
+    * Filial e Gerente
+
+- Adicionar cidade como String no cliente e mostrar os problemas de usar String para isso.
+    * Cliente e Cidade
+    * Filial e Cidade
+
+- Alterar outros campos de String para classes:
+    * Marca, Estado

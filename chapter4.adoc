@@ -37,11 +37,13 @@ Após criar a classe, a tela do projeto deve ficar como a figura abaixo, mostran
 
 image:bluej-class-cliente.png[]
 
-O BlueJ ainda não nos permite adicionar pelo menos características para uma classe sem que precisemos escrever código para isso. Desta forma, para abrir o código da classe gerada, podemos dar dois cliques sobre a classe Cliente para abrir o editor de código. A imagem abaixo apresenta o código da classe Cliente gerado pelo BlueJ. 
+=== Visualizando o código de uma classe
+
+Para visualizar o código gerado para uma classe, devemos dar dois cliques sobre a classe desejada. A imagem abaixo apresenta o código da classe `Cliente` gerado pelo BlueJ. 
 
 image:bluej-code-editor.png[]
 
-Todo o código entre a primeira { e última } (da linha 10 à linha 32) é apenas de demonstração. Ele não tem nenhuma utilidade para a classe Cliente que criamos e ainda inclui alguns detalhes que não serão abordados por enquanto. Ao criar qualquer classe no BlueJ, o mesmo código será criado para todas.
+Todo o código entre a primeira e última chave (linha 10 à linha 32) é apenas de demonstração. Ele não tem nenhuma utilidade para a classe `Cliente` que criamos e ainda inclui alguns detalhes que não serão abordados por enquanto. Ao criar qualquer classe no BlueJ, o mesmo código será criado para todas.
 Assim, vamos apagar esse código entre as linhas 10 e 32 e deixar somente a estrutura básica de toda classe em Java.
 
 O resultado final deve ser como apresentado na figura abaixo.
@@ -51,30 +53,61 @@ image:bluej-clean-class.png[]
 O código da classe está entre as linhas 8 e 11, o texto nas linhas 2 a 7 são comentários utilizados como documentação da classe.
 Você pode observar na linha 8 que a classe é definida pela palavra *class* seguida do nome que demos para a classe. As chaves nas linhas 9 e 11 são utilizadas para delimitar o início e fim do código da classe. Qualquer característica ou funcionalidade que desejarmos incluir na classe, precisam ser entre estas chaves.
 
-Bem, agora que temos a estrutura da nossa primeira classe pronta, podemos começar adicionar características nessa classe. Como já discutido no capítulo anterior, tais características dependem do finalidade do sistema ou ramo de atividade onde ele será utilizado. No caso do cliente da loja de móveis, algumas características que podemos identificar são: nome, CPF, sexo, email, endereço, cidade e telefone. Cada uma destas características nada mais são do que variáveis. Sabendo disso, precisamos então identificar o tipo de dado de cada uma delas. O email e endereço são claramente dados alfanuméricos (permitem letras e números). Em Java, `String` é o tipo que representa dados alfanuméricos. 
+=== Adicionando características a uma classe
 
-Por outro lado, nome e cidade são claramente dados alfabéticos (permitem somente letras). No entanto, as linguagens de programação convencionalmente não possuem daods que permitem armazenar apenas letras. Assim, utilizamos o tipo `String` para tal finalidade. 
+Bem, agora que temos a estrutura da nossa primeira classe pronta, podemos começar a adicionar características nessa classe. Como já discutido no capítulo anterior, tais características dependem do finalidade do sistema ou ramo de atividade onde ele será utilizado. No caso do cliente da loja de móveis, algumas características que podemos identificar são: nome, CPF, sexo, email, endereço, cidade e telefone. Cada uma destas características nada mais são do que variáveis. Sabendo disso, precisamos então identificar o tipo de dado de cada uma delas. O email e endereço são claramente dados alfanuméricos (permitem letras e números). Em Java, `String` é o tipo que representa dados alfanuméricos. 
 
-TIP: Apesar das linguagens convencionais não permitirem que uma variável armazene somente letras, é muito simples criar programas que permite ao usuário digitar apenas letras em um campo.
+Por outro lado, nome e cidade são claramente dados alfabéticos (permitem somente letras). No entanto, as linguagens de programação convencionalmente não possuem dados que permitam armazenar apenas letras footnote:[Apesar das linguagens convencionais não permitirem que uma variável armazene somente letras, é muito simples criar programas que permitem ao usuário digitar apenas letras em um campo.]. Assim, utilizamos o tipo `String` para tal finalidade. 
 
-- Definir atributos para as classes
-- Criar funcionalidades básicas, incluindo getters e setters
-    * Cliente: validar email, verificar inadimplência, validar CPF, validar attributes nos setters
-    * Funcionário: 
-    * Produto: adicionar estoque, remover estoque
-    * Filial: validar CNPJ
+IMPORTANT: As características de uma classe são mais um dos princípios básicos de POO, chamadas de *atributos*, campos ou propriedades. Atributos é um termo que utilizamos no cotidiano. Por exemplo, uma pessoa pode ter como atributos o bom humor, paciência, beleza, estatura, etc. Assim, não é um termo específico da POO. Atributos nada mais são do que variáveis que possuem algumas características especiais que veremos ao longo do curso. Como toda variável, cada atributo precisa de um tipo e um nome. 
 
-- Criar relacionamentos
-    * Filial e Gerente
+Dos atributos apresentados acima, o nome, CPF, email, endereço, cidade e telefone são alfanuméricos, logo do tipo `String`. No caso do sexo como ele pode ser representado por apenas uma letra, o tipo que permite armazenar no máximo uma letra é o `char`. Assim, podemos declarar tais atributos na classe `Cliente` como apresentado abaixo:
 
-- Adicionar cidade como String no cliente e mostrar os problemas de usar String para isso.
-    * Cliente e Cidade
-    * Filial e Cidade
+[source,java]
+----
+public class Cliente {
+    String nome;
+    String cpf;
+    String email;
+    String endereco;
+    String cidade;
+    String telefone;
+    char sexo;
+}
+----
 
-- Alterar outros campos de String para classes:
-    * Marca, Estado
+O código acima apresenta a forma mais básica de declaração de atributos. Este é o processo para declaração de variáveis em Java, seguindo o formato `tipo nomeDaVariavel;`.
 
-== Criando Objetos
+.Convenções para nomes de elementos como arquivos, classes, atributos e outros em Java
+****
+Apesar de linguagem Java permitir que sejam utilizados acentos em nomes arquivos, classes, atributos e outros elementos, deve-se evitar tal prática. Assim, no lugar de chamar um atributo de `endereço` deve-se chamar `endereco`. No lugar de chamar uma classe de `Funcionário` deve-se chamar de `Funcionario`.
+****
 
+Observe que o tipo `String` tem inicial maiúscula e o `char` minúscula. Tais tipos são realmente desta forma, não é um erro. Lembre-se que falamos anteiormente que classes por convenção tem inicial maiúscula. Logo, pode-se concluir que `String` nada mais é do que uma classe específica da linguagem Java, enquanto `char` é um tipo primitivo como você pode ter aprendido em aulas de algoritmos ou outra linguagem de programação.
 
-if(!nome.isEmpty())
+TIP: Um tipo primitivo como `char` e `int` permitem declarar variáveis que possuem apenas dados. Uma classe como `String` possui dados (atributos) e funcionalidades. 
+
+.Conveções ao declarar atributos
+****
+Temos diversas variáveis do tipo `String`. Apesar de ser possível declará-las todas em uma única linha como:
+
+[source,java]
+----
+String nome, cpf, email, endereco, cidade, telefone;
+----
+
+não é aconselhável fazer isto para atributos. Veremos posteriormente que atributos podem e devem ser documentados. Declarar vários atributos em uma mesma linha impedirá que elas possam ser adequadamente documentados. Para variáveis convencionais (como variáveis locais dentro de funções), não há problema algum em fazer isso. Apesar de ser repetitivo declarar atributos de um mesmo tipo em linhas diferentes, isto favorece a documentação do projeto e torna a listagem de atributos mais clara e organizada. A forma apresentada é de fato o padrão utilizado na indústria de software orientado a objetos (OO).
+
+Outro ponto importante é que o nome de atributos começam com inicial minúscula, intercalando maiúscula quando o nome for composto. Veja os exemplos abaixo:
+
+[source,java]
+----
+String nome;
+String cidadeNatal;
+String cidadeResidencia;
+----
+
+****
+
+== Criando Objetos no BlueJ
+

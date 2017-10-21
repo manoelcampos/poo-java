@@ -266,12 +266,13 @@ endif::backend-revealjs[]
 
 == Criando Classes
 
-Objetos só podem ser criados se existirem classes para serem utilizadas como modelos na criação destes objetos. A linguagem Java possui uma infinidade de classes para as mais diversas finalidades. No entanto, ao criar um software específico para resolver um determinado problema, você precisará criar os modelos para representar tais objetos, ou seja as classes. 
+- Objetos só podem ser criados se existirem classes para serem utilizadas como modelos. 
+- Java possui uma infinidade de classes para as mais diversas finalidades. 
+- Ao criar um software, você precisará criar classes específicas. 
+- Cada classe precisa de um nome. Adicionalmente pode ter características e/ou funcionalidades. 
 
-Cada classe precisa obrigatoriamente de um nome. Adicionalmente, ela pode ter (a) características e/ou (b) funcionalidades. Isto quer dizer que ela pode ter (a) e (b), apenas um dos dois ou nenhum. No entanto, uma classe que não possui nem (a) nem (b) não tem utilidade alguma.
+== Criando Classes
 
-Para iniciar, vamos criar uma classe contendo apenas características e ir evoluindo nossas classes ao longo do caminho, à medida que vamos introduzindo conceitos e regras.
-
-Como primeiro exemplo, considere que o proprietário de uma loja de móveis e eletrodomésticos lhe pede para desenvolver um sistema para controle de vendas. O proprietário precisa inicialmente de um sistema para cadastrar clientes, produtos, funcionários, filiais da loja e outras partes da operação da loja. Assim, identifique quais classes são necessárias e pense nas características que cada uma deve ter.
+Como primeiro exemplo, considere que o proprietário de uma loja de móveis e eletrodomésticos lhe pede para desenvolver um sistema para controle de vendas. O proprietário precisa inicialmente de um sistema para cadastrar clientes, produtos, funcionários e filiais da loja. Assim, identifique quais classes são necessárias e pense nas características que cada uma deve ter.
 
 == Criando Objetos
