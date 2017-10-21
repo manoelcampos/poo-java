@@ -32,15 +32,15 @@ Com estes exemplos, pode-se ver como a POO permite representar os mais diversos 
 - o código escrito e o objetivo do programa.
 
 .Classes: o 1º conceito básico da orientação a objetos
-****
+[IMPORTANT]
+====
 Com todas as informações apresentadas anteriormente, utilizando metáforas do mundo real e uma linguagem acessível, você acabou de conhecer o principal conceito da programação orientada a objetos: as *classes*. 
 
-[IMPORTANT]
 Classes são modelos que representam quais características, funcionalidades e restrições objetos terão. As características são qualidades e as funcionalidades são ações que os objetos podem executar.  As restrições são regras que definem: (i) os valores possíveis para tais características; (ii) quando ou como ações podem ser executadas.
 A partir das classes é possível criar objetos concretos, assim como a partir de um projeto de uma casa é possível construir quantas casas for desejado.
 
 Assim como as características de um objeto podem ser identificadas a partir de adjetivos, as funcionalidades a partir de verbos, as classes podem ser identificadas a partir de substantivos como pessoa, carro, casa, produto, etc.
-****
+====
 
 == Objetos
 
