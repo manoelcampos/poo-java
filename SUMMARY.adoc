@@ -5,4 +5,5 @@
 . link:chapter2.adoc[Modelos e Objetos]
 . link:chapter3.adoc[Ambiente de Desenvolvimento]
 . link:chapter4.adoc[Criando Classes e Objetos no BlueJ]
+. link:chapter4.adoc[Alterando os valores dos atributos]
 . link:GLOSSARY.adoc[Glossário]
