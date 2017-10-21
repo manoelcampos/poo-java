@@ -1,0 +1,122 @@
+:imagesdir: images
+
+== Definindo valores inicias para atributos
+
+Nos capítulos anteriores aprendemos que _getters_ e _setters_ são funções de uma classe. Em POO, funções dentro de classes são chamadas de métodos. Em Java, toda função deve estar obrigatoriamente dentro de uma classe, assim, as funções criadas até agora são métodos.
+
+Podemos criar métodos adicionais para realizar outras tarefas como verificar se o CPF do cliente é válido. A estrutura básica para criação de funções foi apresentada ao criarmos _getters_ e _setters_.
+
+Porém, podemos ter um tipo específico de método que é responsável por inicializar os atributos de um objeto sendo criado. Utilizando a classe `Cliente` na qual estamos trabalhando, poderíamos definir que determinados atributos devam receber um valor no momento em que um objeto for criado, para garantir que tais atributos terão um valor definido.
+
+Por exemplo, poderíamos considerar que o nome, CPF e sexo de um cliente são obrigatórios e assim, inicializar tais atributos quando um cliente for criado. 
+
+Para tal finalidade, podemos criar métodos especiais que chamamos de *construtores*. 
+
+IMPORTANT: Um construtor é um método especial utilizado por uma classe para criar objetos dela. Em linguagens orientadas a objetos, se um construtor não for definido pelo desenvolvedor, um construtor padrão é automaticamente incluído quando a classe é compilada.
+
+O construtor tem a mesma estrutura de um método, com pequenas excessões que fazem o compilador entender que ele é um construtor. Primeiramente, o nome do construtor deve obrigatoriamente ser igual ao nome da classe, inclusive com inicial maiúscula. Segundo, o construtor não retorna um valor. Se você está atendo, lembra que os _setters_ também não retornam valor e assim o tipo de retorno é `void`. Mas no caso dos construtores, simplesmente deve-se omitir o tipo de retorno. A quantidade e nome dos parâmetros do construtor é igual como para outros métodos: pode-se definir quantos parâmetros desejar, até mesmo nenhum. 
+
+A estrutura de um construtor é então:
+
+[source,java]
+----
+NomeDaClass(ParâmetrosOpcionais){
+
+}
+----
+
+Para a classe `Cliente` poderíamos definir um construtor que inicializa o atributo `cidade` com o valor "Palmas". Considerando que o exemplo proposto no link:chapter4.html[Capítulo 4] é de uma loja física de móveis e eletrodomésticos, e que tal loja pode ter lojas apenas em Palmas, assumir que a maioria dos clientes moram em Palmas é uma suposição plausível. Se o cliente for de outra cidade, esta pode ser indicada no momento do cadastro. Mas queremos que o atributo `cidade` de todo novo cliente já seja preenchido automaticamente com "Palmas".
+
+Para isto podemos criar um construtor dentro da classe `Cliente` como abaixo:
+
+[source,java]
+----
+Cliente(){
+    cidade = "Palmas";
+}
+----
+
+O código da classe `Cliente` com o novo construtor ficaria como mostrado a seguir. Os _getters_ e _setters_ foram omitidos para focarmos apenas no construtor.
+
+[source,java]
+----
+public class Cliente {
+    String nome;
+    String cpf;
+    String email;
+    String endereco;
+    String cidade;
+    String telefone;
+    char sexo;
+    
+    Cliente(){
+        cidade = "Palmas";
+    }
+}
+----
+
+Você pode criar novos clientes pelo BlueJ para verificar que todos eles terão o atributo `cidade` inicializado com "Palmas". Observe que quando clicamos com o botão direito sobre uma classe como a `Cliente`, temos a opção `new Cliente()` disponível. Tal opção é exatamente a chamada do construtor padrão: um que criamos ou que foi incluído automaticamente caso um não tenha sido definido.
+
+image::bluej-default-constructor.png[]
+
+A opção `new Cliente()` mostra exatamente a linha de código que seria necessária para criar um cliente.
+
+IMPORTANT: O construtor padrão é aquele que não possui nenhum parâmetro.
+
+== Permitindo definir qualquer valor inicial para um atributo
+
+O exemplo anterior mostrou como podemos incluir um construtor padrão para definir um valor inicial para qualquer atributo. No entanto, tal valor foi definido de forma fixa: para qualquer cliente criado, automaticamente será definida a cidade como "Palmas" e não uma cidade desejada pelo usuário do sistema.
+
+Podemos criar quantos construtores quisermos. Cada construtor permite criar novos objetos. Diferentes construtores apenas definem diferentes formas para criar os objetos. Os construtores precisam ter o mesmo nome (o nome da classe para serem um construtor), mas devem ter tipos e/ou quantidade de parâmetros diferentes.
+
+Assim, podemos criar mais um construtor que nos permitirá definir qual a cidade no momento de criar um cliente usando tal construtor. Abaixo é apresentado apenas o código do novo construtor que precisará ser incluído dentro da classe `Cliente`, normalmente depois de qualquer construtor existente.
+
+[source,java]
+----
+Cliente(String cidade){
+    this.cidade = cidade;
+}
+----
+
+Este novo construtor agora possui um parâmetro que nos permite indicar qual será a cidade para cada cliente. Assim, cada cliente sendo criado pode ter uma cidade diferente definida no momento da criação do cliente.
+
+Observe que, assim como feito nos _setters_, precisamos utilizar a palavra `this` para diferenciar o atributo da classe do parâmetro do construtor.
+
+O código completo dos construtores é apresentado abaixo (_getters_ e _setters_ omitidos intencionalmente):
+
+[source,java]
+----
+public class Cliente {
+    String nome;
+    String cpf;
+    String email;
+    String endereco;
+    String cidade;
+    String telefone;
+    char sexo;
+    
+    Cliente(){
+        cidade = "Palmas";
+    }
+    
+    Cliente(String cidade){
+        this.cidade = cidade;
+    } 
+}
+----
+
+Se utilizarmos o BlueJ para criar um novo cliente, veremos que agora temos dois construtores disponíveis. Escolhendo a opção exibida na imagem abaixo, chamará o construtor que solicita a cidade do cliente. Assim, o BlueJ já exibirá um novo campo para informarmos a cidade. Em seguida, se mandarmos inspecionar o objeto criado, veremos que o atributo cidade já está preenchido com o valor informado. Podemos então criar quantos clientes desejarmos, cada um com uma cidade diferente.
+
+image::bluej-new-constructor.png[]
+
+Em POO é muito comum definirmos diferentes construtores para uma mesma classe. Isto dá opções ao desenvolvedor no momento de criar objetos da classe. Cada construtor vai ser usado pelo desenvolvedor de acordo com as necessidades. Por exemplo, se o sistema está sendo utilizado na loja física, podemos chamar o construtor padrão (aquele sem parâmetro algum) que automaticamente define que o cliente é da cidade de "Palmas". Já se o sistema estiver sendo acessado online de fora da loja, o construtor que solicita a cidade pode ser chamado no lugar do outro, uma vez que o cliente acessando o sistema online pode estar em qualquer cidade.
+
+== Processo de criação de objetos
+
+Já sabemos que *construtores* são utilizados para criar objetos. O processo de criação de objetos é denominado *instanciação*. Quando temos uma classe podemos instanciá-la, ou seja, criar um objeto desta classe. Um objeto é então uma instância de um classe.
+
+NOTE: Instância neste contexto signfica exemplar ou caso. Uma instância representa um exemplar de uma classe. Imagine que a descrição de um livro em um site de vendas é a classe que representa o livro e cada exemplar vendido é uma instância daquele livro.
+
+Lembrando que mesmo que não adicionemos um construtor em uma classe, um construtor padrão será incluído automaticamente quando a classe for compilada.
+
+Uma classe sem construtor não permite que objetos sejam criados. Isto é possível e tem suas utilidades, mas é assumo para mais adiante.

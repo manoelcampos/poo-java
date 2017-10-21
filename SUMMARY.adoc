@@ -6,5 +6,6 @@
 . link:chapter3.adoc[Ambiente de Desenvolvimento]
 . link:chapter4.adoc[Criando Classes e Objetos no BlueJ]
 . link:chapter5.adoc[Alterando valores dos atributos]
-. link:chapter6.adoc[Obtendo valores dos atributos]
+. link:chapter6.adoc[Obtendo valores de atributos]
+. link:chapter7.adoc[Definindo valores inicias para atributos]
 . link:GLOSSARY.adoc[Glossário]

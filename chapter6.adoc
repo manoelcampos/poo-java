@@ -1,6 +1,6 @@
 :imagesdir: images
 
-== Obtendo valores dos atributos
+== Obtendo valores de atributos
 
 O BlueJ já nos permite visualizar todos os valores dos atributos de um objeto, no entanto, isto é um recurso que a ferramenta disponibiliza apenas para facilitar o entendimento do conceitos de classes e objetos. Na prática, quando precisarmos obter o valor de um atributo de um objeto, precisaremos adicionar uma função para tal finalidade. 
 
