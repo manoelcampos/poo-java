@@ -253,10 +253,10 @@ Primeiramente, quando a função `setEndereco` é executada, ela receberá um en
 
 .Setters: mais um conceito de POO
 [IMPORTANT]
-****
+====
 Toda função que altera o valor de um atributo é chamada de *_setter_*. Ela é uma função como qualquer outra, mas tem essa finalidade específica. 
 
 Qualquer atributo que precise ter seu valor alterado necessita de um *_setter_*. Você verá que criar tais funções é algo repetitivo e entediante. Por esse motivo, as ferramentas de desenvolvimento profissionais nos dispensam deste trabalho e permitem gerar *_setters_* para os atributos que desejarmos.
 
 Este é um dos motivos para *_setter_* terem um padrão quanto ao nome, como apresentado anteriormente. *_Setter_* poderia significar "alterador, atribuidor".
-****
+====
