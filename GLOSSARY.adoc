@@ -5,7 +5,25 @@ Exemplos de classes incluem Cliente, Produto, Instituição, Veículo, etc.
 Pode-se também pensar em uma classe como uma fábrica de objetos.
 
 ## Objeto
-É algo concreto criado a partir de uma classe, representando um objeto específico como o Cliente Manoel, a Cliente Maria, a Instituição IFTO, etc.
+Algo concreto criado a partir de uma classe, representando um objeto específico como o Cliente Manoel, a Cliente Maria, a Instituição IFTO, etc.
 
 ## Instanciação
 Processo de criar um objeto a partir de uma classe. Utiliza-se a palavra reservada _new_ para este propósito.
+
+## Instância
+Um objeto de uma determinada classe.
+
+## Instanciar
+Ação de criar um objeto de uma determinada classe.
+
+## Método
+Função definida dentro de uma classe.
+
+## Construtor
+Método especial utilizado para instanciar um objeto de uma classe.
+
+## Getter
+Método especial utilizado para obter o valor de um atributo, normalmente possuindo o nome no padrão *getNomeDoAtributo*.
+
+## Setter
+Método especial utilizado para alterar o valor de um atributo, normalmente possuindo o nome no padrão *setNomeDoAtributo*.

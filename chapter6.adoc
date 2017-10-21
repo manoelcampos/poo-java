@@ -28,7 +28,7 @@ A linha `return endereco;` é bem mais simples do que utilizamos para o _setter_
 
 Como um _getter_ obtém o valor de um atributo, o tipo de retorno precisa ser diferente de `void` (como foi o caso para os _setters_). Fazendo isso, estamos indicando que nossa função de fato nos dá uma resposta quando ela terminar de executar sua tarefa. 
 
-Para as funções que dão alguma resposta após terminarem de executar, nós dizemos que elas retornam um valor, de acordo com o tipo de retorno. Para fazer uma função retornar um valor, precisamos incluir a palavra `return` seguida do valor a ser retornado. No caso do getter, na maioria dos casos esta é a única linha da função.
+Para as funções que dão alguma resposta após terminarem de executar, nós dizemos que elas retornam um valor, de acordo com o tipo de retorno. Para fazer uma função retornar um valor, precisamos incluir a palavra `return` seguida do valor a ser retornado. No caso do _getter_, na maioria dos casos esta é a única linha da função.
 
 Um _getter_ não possui parâmetros pois ele tem a função de apenas informar algo. Voltando no exemplo da secretária, o chefe poderia pedir a ela para localizar a agenda dele. Neste caso o chefe não precisa passar nenhuma informação à secretária. Ela vai apenas procurar a agenda no escritório e entregar ao chefe. Então a função da secretária de pegar a agenda e entregar ao chefe é um _getter_.
 
