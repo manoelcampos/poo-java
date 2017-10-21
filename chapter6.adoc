@@ -13,7 +13,7 @@ TipoRetorno nomeFuncao() {
 }
 ----
 
-Tais funções apenas obtém o valor de um determinado atributo, assim, não precisamos passar nenhuma informação para a função (nenhum parâmetro) para que ela executa sua tarefa. Desta forma, os parênteses da função ficam vazios. O tipo de retorno normalment é o mesmo definido pela atributo que deseja-se obter o valor. Assim, uma função para obter o valor do atributo `endereco` poderia ser como mostrado abaixo:
+Tais funções apenas obtêm o valor de um determinado atributo, assim, não precisamos passar nenhuma informação para a função (nenhum parâmetro) para que ela executa sua tarefa. Desta forma, os parênteses da função ficam vazios. O tipo de retorno normalment é o mesmo definido pela atributo que deseja-se obter o valor. Assim, uma função para obter o valor do atributo `endereco` poderia ser como mostrado abaixo:
 
 [source, java]
 ----
