@@ -1,7 +1,6 @@
 :imagesdir: images
 
-
-== Alterando os valores dos atributos
+== Alterando valores dos atributos
 
 No mundo real, clientes de uma loja tem atributos em comum, como nome, CPF e telefone. No entanto, clientes distintos têm normalmente valores diferentes para cada um destes atributos. Por exemplo, o CPF de um cliente é diferente de outro. Diferentes pessoas podem ter o mesmo nome, mas normalmente têm nomes distintos. Assim, para que possamos definir os valores de cada um destes atributos da classe, precisamos criar funções para tal finalidade. Uma função é um bloco de código que é responsável por executar uma  tarefa específica. Uma função resolve um determinado problema. 
 
@@ -40,7 +39,7 @@ O código de uma função em Java deve ser inserido dentro de uma classe. Uma fu
 
 Para podermos criar a nossa primeira função para permitir alterar um atributo como o `endereco`, precisamos então definir qual o tipo de retorno, o nome da função e seus parâmetros. No caso de funções que alteram atributos, normalmente elas não dão nenhuma resposta, o que dizemos que elas não retornam nenhum valor. Ou seja, o tipo de retorno é `void`. 
 
-Poderíamos chamar a função de `alteraEndereco`, mas para funções que alteram atributos, há uma convenção importantíssima de utilizar o formato `setNomeDoAtributo`. No caso do atributo `endereco`, a função deve chamar `setEndereco`. Tais funções devem ter apenas um parâmetro, que indica para a função qual é o dado que será armazenado no atributo quando a função for executada. Como os parâmetros são nada mais que variáveis, precisamos definir o tipo e nome de cada um. No caso das funções em questão, o tipo de nome pode ser exatamente os mesmos do atributo que será alterado pela função. Assim, nossa função para alterar o endereço de um cliente terá a seguinte estrutura:
+Poderíamos chamar a função de `alteraEndereco`, mas para funções que alteram atributos, há uma convenção importantíssima de utilizar o formato `setNomeDoAtributo` (_set_ significa neste contexto alterar ou atribuir). No caso do atributo `endereco`, a função deve chamar `setEndereco`. Tais funções devem ter apenas um parâmetro, que indica para a função qual é o dado que será armazenado no atributo quando a função for executada. Como os parâmetros são nada mais que variáveis, precisamos definir o tipo e nome de cada um. No caso das funções em questão, o tipo de nome pode ser exatamente os mesmos do atributo que será alterado pela função. Assim, nossa função para alterar o endereço de um cliente terá a seguinte estrutura:
 
 [source,java]
 ----
@@ -86,7 +85,7 @@ Primeiramente, quando a função `setEndereco` é executada, ela receberá um en
 ====
 Toda função que altera o valor de um atributo é chamada de *_setter_*. Ela é uma função como qualquer outra, mas tem essa finalidade específica. 
 
-Qualquer atributo que precise ter seu valor alterado necessita de um *_setter_*. Você verá que criar tais funções é algo repetitivo e entediante. Por esse motivo, as ferramentas de desenvolvimento profissionais nos dispensam deste trabalho e permitem gerar *_setters_* para os atributos que desejarmos.
+Qualquer atributo que precise ter seu valor alterado necessita de um *_setter_*. Você verá que criar tais funções é algo repetitivo e entediante. Por esse motivo, as ferramentas de desenvolvimento profissionais (como http://netbeans.org[NetBeans]) nos dispensam deste trabalho e permitem gerar *_setters_* para os atributos que desejarmos.
 
-Este é um dos motivos para *_setter_* terem um padrão quanto ao nome, como apresentado anteriormente. *_Setter_* poderia significar "alterador, atribuidor".
+Este é um dos motivos para *_setter_* terem um padrão quanto ao nome, como apresentado anteriormente.
 ====

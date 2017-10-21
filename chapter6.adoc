@@ -1,0 +1,38 @@
+:imagesdir: images
+
+== Obtendo valores dos atributos
+
+O BlueJ já nos permite visualizar todos os valores dos atributos de um objeto, no entanto, isto é um recurso que a ferramenta disponibiliza apenas para facilitar o entendimento do conceitos de classes e objetos. Na prática, quando precisarmos obter o valor de um atributo de um objeto, precisaremos adicionar uma função para tal finalidade. 
+
+Assim como fizemos com os _setters_, preciremos de uma função com uma estrutura definida, como abaixo:
+
+[source, java]
+----
+TipoRetorno nomeFuncao() {
+
+}
+----
+
+Tais funções apenas obtém o valor de um determinado atributo, assim, não precisamos passar nenhuma informação para a função (nenhum parâmetro) para que ela executa sua tarefa. Desta forma, os parênteses da função ficam vazios. O tipo de retorno normalment é o mesmo definido pela atributo que deseja-se obter o valor. Assim, uma função para obter o valor do atributo `endereco` poderia ser como mostrado abaixo:
+
+[source, java]
+----
+String getEndereco() {
+    return endereco;
+}
+----
+
+IMPORTANT: O padrão para o nome de tais funções é *getNomeDoAtributo* e tais funções são chamadas de _getters_ (_get_ significa obter). Assim como os _setters_, elas têm um nome diferenciado pois tem uma finalidade bastante específica: cada _getter_ obtém o valor de um atributo. O código dos _getters_ também pode ser gerado por ferramentas como o NetBeans.
+
+A linha `return endereco;` é bem mais simples do que utilizamos para o _setter_. Aqui não precisamos usar a palavra `this` para nos referirmos ao atributo, pois a função `getEndereco` não possui um parâmetro com o mesmo nome do atributo que estamos utilizando. De fato, ela não possui parâmetro algum. 
+
+Como um _getter_ obtém o valor de um atributo, o tipo de retorno precisa ser diferente de `void` (como foi o caso para os _setters_). Fazendo isso, estamos indicando que nossa função de fato nos dá uma resposta quando ela terminar de executar sua tarefa. 
+
+Para as funções que dão alguma resposta após terminarem de executar, nós dizemos que elas retornam um valor, de acordo com o tipo de retorno. Para fazer uma função retornar um valor, precisamos incluir a palavra `return` seguida do valor a ser retornado. No caso do getter, na maioria dos casos esta é a única linha da função.
+
+Um _getter_ não possui parâmetros pois ele tem a função de apenas informar algo. Voltando no exemplo da secretária, o chefe poderia pedir a ela para localizar a agenda dele. Neste caso o chefe não precisa passar nenhuma informação à secretária. Ela vai apenas procurar a agenda no escritório e entregar ao chefe. Então a função da secretária de pegar a agenda e entregar ao chefe é um _getter_.
+
+Inserindo o código acima na classe cliente, podemos então criar um novo cliente, alterar seu endereço e depois obter apenas o endereço do cliente quando precisarmos. Esta nova função aparecerá quando clicarmos com o botão direito sobre um objeto cliente no BlueJ, nos permitindo chamar o _getter_.
+
+.Chamando um _getter_ de um objeto pela interface do BlueJ.
+image::bluej-getter.png[]
