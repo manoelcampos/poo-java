@@ -22,7 +22,7 @@ String getEndereco() {
 }
 ----
 
-IMPORTANT: O padrão para o nome de tais funções é *getNomeDoAtributo* e tais funções são chamadas de _getters_ (_get_ significa obter). Assim como os _setters_, elas têm um nome diferenciado pois tem uma finalidade bastante específica: cada _getter_ obtém o valor de um atributo. O código dos _getters_ também pode ser gerado por ferramentas como o NetBeans.
+IMPORTANT: O padrão para o nome de tais funções é *getNomeDoAtributo*. Estas funções são chamadas de _getters_ (_get_ significa obter). Assim como os _setters_, elas têm um nome diferenciado pois tem uma finalidade bastante específica: cada _getter_ obtém o valor de um atributo. O código dos _getters_ também pode ser gerado por ferramentas como o NetBeans.
 
 A linha `return endereco;` é bem mais simples do que utilizamos para o _setter_. Aqui não precisamos usar a palavra `this` para nos referirmos ao atributo, pois a função `getEndereco` não possui um parâmetro com o mesmo nome do atributo que estamos utilizando. De fato, ela não possui parâmetro algum. 
 
