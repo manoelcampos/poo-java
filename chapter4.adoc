@@ -31,7 +31,7 @@ image::bluej-new-class.png[]
 
 Por convenção, nomes de classes devem ter a inicial maiúscula e ser no singular. Se o nome da classe for composto, a inicial de cada palavra deve ser em maiúsculas. Não é permitido utilizar espaços e acentos devem ser evitados.
 
-IMPORTANT: Apesar de Java permitir o uso de acentos em classes, nome de arquivos e variáveis, isto não é uma prática recomendável. Utilizar acentos para tais elementos pode fazer você obter um mal hábito que não é permitido em várias linguagens. Além disso, se você estiver trabalhando em um projeto envolvendo desenvolvedores de diversas partes do mundo, normalmente o código é escrito em inglês, que não possui acentos.
+IMPORTANT: Apesar de Java permitir o uso de acentos em classes, nome de arquivos, variáveis e outros elementos, isto não é uma prática recomendável. Utilizar acentos para tais elementos pode fazer você obter um mal hábito que não é permitido em várias linguagens. Além disso, se você estiver trabalhando em um projeto envolvendo desenvolvedores de diversas partes do mundo, normalmente o código é escrito em inglês, que não possui acentos.
 
 Após criar a classe, a tela do projeto deve ficar como a figura abaixo, mostrando a nova classe. Ao utilizar o BlueJ, o código Java para a classe criada é gerado automaticamente. No entanto, a classe é criada vazia, sem características nem funcionalidades. Desta forma, ela não tem utilidade alguma. 
 
@@ -78,14 +78,35 @@ public class Cliente {
 
 O código acima apresenta a forma mais básica de declaração de atributos. Este é o processo para declaração de variáveis em Java, seguindo o formato `tipo nomeDaVariavel;`.
 
-.Convenções para nomes de elementos como arquivos, classes, atributos e outros em Java
-****
-Apesar de linguagem Java permitir que sejam utilizados acentos em nomes arquivos, classes, atributos e outros elementos, deve-se evitar tal prática. Assim, no lugar de chamar um atributo de `endereço` deve-se chamar `endereco`. No lugar de chamar uma classe de `Funcionário` deve-se chamar de `Funcionario`.
-****
-
 Observe que o tipo `String` tem inicial maiúscula e o `char` minúscula. Tais tipos são realmente desta forma, não é um erro. Lembre-se que falamos anteiormente que classes por convenção tem inicial maiúscula. Logo, pode-se concluir que `String` nada mais é do que uma classe específica da linguagem Java, enquanto `char` é um tipo primitivo como você pode ter aprendido em aulas de algoritmos ou outra linguagem de programação.
 
 TIP: Um tipo primitivo como `char` e `int` permitem declarar variáveis que possuem apenas dados. Uma classe como `String` possui dados (atributos) e funcionalidades. 
+
+.Uso de chaves { }
+****
+Em Java, chaves são utilizadas para delimitar um bloco de código, como um `if`, `for`, função, classe, etc. A chave pode ser aberta em uma linha separada, como:
+
+[source,java]
+----
+public class Cliente 
+{
+
+}
+----
+
+ou na mesma linha que define o início de um bloco, como:
+
+[source,java]
+----
+public class Cliente {
+    
+}
+----
+
+O formato definido pela Oracle nas http://www.oracle.com/technetwork/java/codeconventions-150003.pdf[Conveções de Código Java] é o último. Grandes empresas como https://google.github.io/styleguide/javaguide.html[Google] e https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md[Twitter] também recomendam este padrão.
+
+O local de abertura das chaves é uma grande discussão entre desenvolvedores. Há vantagens e desvantagens em relação à clareza do código dependendo de onde as chaves são colocadas. Os guias apresentados nos links acima abordam um pouco esta discussão, além de outros artigos como https://en.wikipedia.org/wiki/Indentation_style[este].
+****
 
 .Conveções ao declarar atributos
 ****
@@ -96,7 +117,7 @@ Temos diversas variáveis do tipo `String`. Apesar de ser possível declará-las
 String nome, cpf, email, endereco, cidade, telefone;
 ----
 
-não é aconselhável fazer isto para atributos. Veremos posteriormente que atributos podem e devem ser documentados. Declarar vários atributos em uma mesma linha impedirá que elas possam ser adequadamente documentados. Para variáveis convencionais (como variáveis locais dentro de funções), não há problema algum em fazer isso. Apesar de ser repetitivo declarar atributos de um mesmo tipo em linhas diferentes, isto favorece a documentação do projeto e torna a listagem de atributos mais clara e organizada. A forma apresentada é de fato o padrão utilizado na indústria de software orientado a objetos (OO).
+não é aconselhável fazer isto para atributos. Veremos posteriormente que atributos podem e devem ser documentados. Declarar vários atributos em uma mesma linha impedirá sua adequada documentação. Para variáveis convencionais (como variáveis locais dentro de funções), não há problema algum em fazer isso. Apesar de ser repetitivo declarar atributos de um mesmo tipo em linhas diferentes, isto favorece a documentação do projeto e torna a listagem de atributos mais clara e organizada. A forma apresentada é de fato o padrão utilizado na indústria de software orientado a objetos (OO).
 
 Outro ponto importante é que o nome de atributos começam com inicial minúscula, intercalando maiúscula quando o nome for composto. Veja os exemplos abaixo:
 
@@ -107,7 +128,10 @@ String cidadeNatal;
 String cidadeResidencia;
 ----
 
+Como falado anteriormente para classes e outros elementos da linguagem Java, não é recomendável utilizar acentos ao dar nomes a atributos.
 ****
+
+TIP: https://en.wikipedia.org/wiki/Duplicate_code[Código duplicado] é um dos maiores problemas no desenvolvimento de software. Existem princípios como o https://en.wikipedia.org/wiki/Don't_repeat_yourself[Don't Repeat Yourself (DRY)] que pregam que você não deve ter retrabalho, ficar escrevendo o mesmo código várias vezes. Ao declarar um atributo em cada linha, repetindo o tipo para cada um, não estamos duplicando código referente à funcionalidades do sistema. Estamos apenas utilizando um determinado tipo várias vezes. Veremos que reutilização de código é um dos pilares da POO.
 
 == Criando Objetos no BlueJ
 
