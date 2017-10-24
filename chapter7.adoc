@@ -64,7 +64,7 @@ public class Cliente {
 
 Você pode criar novos clientes pelo BlueJ para verificar que todos eles terão o atributo `cidade` inicializado com "Palmas". Observe que quando clicamos com o botão direito sobre uma classe como a `Cliente`, temos a opção `new Cliente()` disponível. Tal opção é exatamente a chamada do construtor padrão: um que criamos ou que foi incluído automaticamente caso um não tenha sido definido.
 
-image::bluej-default-constructor.png[]
+image::bluej-default-constructor.gif[]
 
 A opção `new Cliente()` mostra exatamente a linha de código que seria necessária para criar um cliente.
 
@@ -114,7 +114,7 @@ public class Cliente {
 
 Se utilizarmos o BlueJ para criar um novo cliente, veremos que agora temos dois construtores disponíveis. Escolhendo a opção exibida na imagem abaixo, chamará o construtor que solicita a cidade do cliente. Assim, o BlueJ já exibirá um novo campo para informarmos a cidade. Em seguida, se mandarmos inspecionar o objeto criado, veremos que o atributo cidade já está preenchido com o valor informado. Podemos então criar quantos clientes desejarmos, cada um com uma cidade diferente.
 
-image::bluej-new-constructor.png[]
+image::bluej-new-constructor.gif[]
 
 Em POO é muito comum definirmos diferentes construtores para uma mesma classe. Isto dá opções ao desenvolvedor no momento de criar objetos da classe. Cada construtor vai ser usado pelo desenvolvedor de acordo com as necessidades. Por exemplo, se o sistema está sendo utilizado na loja física, podemos chamar o construtor padrão (aquele sem parâmetro algum) que automaticamente define que o cliente é da cidade de "Palmas". Já se o sistema estiver sendo acessado online de fora da loja, o construtor que solicita a cidade pode ser chamado no lugar do outro, uma vez que o cliente acessando o sistema online pode estar em qualquer cidade.
 

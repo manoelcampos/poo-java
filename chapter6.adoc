@@ -35,4 +35,4 @@ Um _getter_ não possui parâmetros pois ele tem a função de apenas informar a
 Inserindo o código acima na classe cliente, podemos então criar um novo cliente, alterar seu endereço e depois obter apenas o endereço do cliente quando precisarmos. Esta nova função aparecerá quando clicarmos com o botão direito sobre um objeto cliente no BlueJ, nos permitindo chamar o _getter_.
 
 .Chamando um _getter_ de um objeto pela interface do BlueJ.
-image::bluej-getter.png[]
+image::bluej-getter.gif[]
