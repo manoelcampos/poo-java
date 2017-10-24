@@ -14,7 +14,7 @@ image::bluej-main-window.png[]
 
 Ao iniciar o BlueJ você pode abrir ou criar um novo projeto. Vamos então criar um novo projeto acessando o menu "Projeto >> Novo Projeto". A tela abaixo aparece para darmos um nome e indicarmos onde desejamos salvar o projeto.
 
-image::bluej-new-project.png[]
+image::bluej-new-project.gif[]
 
 Após clicar em OK, a tela principal abre o projeto criado. O projeto inicia vazio.
 
@@ -27,21 +27,19 @@ Do lado esquerdo temos apenas 3 botões, dos quais vamos focar em apenas 2 por e
 
 Considerando as classes identificadas acima para o projeto da loja de móveis, vamos clicar no botão "Nova Classe" para criar a primeira classe que chamaremos de *Cliente*. A figura abaixo apresenta a janela para criação da classe. Basta preencher o campo "Nome da Classe" e clicar em OK sem alterar os outros campos. Explicar as opções desta tela está fora de contexto agora.
 
-image::bluej-new-class.png[]
+image::bluej-new-class.gif[]
 
 Por convenção, nomes de classes devem ter a inicial maiúscula e ser no singular. Se o nome da classe for composto, a inicial de cada palavra deve ser em maiúsculas. Não é permitido utilizar espaços e acentos devem ser evitados.
 
 IMPORTANT: Apesar de Java permitir o uso de acentos em classes, nome de arquivos, variáveis e outros elementos, isto não é uma prática recomendável. Utilizar acentos para tais elementos pode fazer você obter um mal hábito que não é permitido em várias linguagens. Além disso, se você estiver trabalhando em um projeto envolvendo desenvolvedores de diversas partes do mundo, normalmente o código é escrito em inglês, que não possui acentos.
 
-Após criar a classe, a tela do projeto deve ficar como a figura abaixo, mostrando a nova classe. Ao utilizar o BlueJ, o código Java para a classe criada é gerado automaticamente. No entanto, a classe é criada vazia, sem características nem funcionalidades. Desta forma, ela não tem utilidade alguma. 
-
-image:bluej-class-cliente.png[]
+Ao utilizar o BlueJ, o código Java para a classe criada é gerado automaticamente. No entanto, a classe é criada vazia, sem características nem funcionalidades. Desta forma, ela não tem utilidade alguma. 
 
 === Visualizando o código de uma classe
 
 Para visualizar o código gerado para uma classe, devemos dar dois cliques sobre a classe desejada. A imagem abaixo apresenta o código da classe `Cliente` gerado pelo BlueJ. 
 
-image:bluej-code-editor.png[]
+image:bluej-code-editor.gif[]
 
 Todo o código entre a primeira e última chave (linha 10 à linha 32) é apenas de demonstração. Ele não tem nenhuma utilidade para a classe `Cliente` que criamos e ainda inclui alguns detalhes que não serão abordados por enquanto. Ao criar qualquer classe no BlueJ, o mesmo código será criado para todas.
 Assim, vamos apagar esse código entre as linhas 10 e 32 e deixar somente a estrutura básica de toda classe em Java.
@@ -145,28 +143,24 @@ Agora que temos nossa primeira classe criada no BlueJ, podemos fechar o editor d
 
 Logo, na tela inicial do projeto podemos clicar no botão *Compilar* no lado esquerdo.
 
-image::bluej-compile.png[]
+image::bluej-compile.gif[]
 
 Clicando neste botão, todas as classes criadas serão compiladas. Observe que após clicar em *Compilar*, o interior da classe muda, indicando que ela foi compilada.
 
-image::bluej-compiled-class.png[]
-
-A partir de agora podemos então criar objetos a partir das classes compiladas, neste caso somente a classe Cliente. Outra vantagem do uso do BlueJ para aprendizagem de POO é que não precisamos escrever código para testar nossas classes: para criar objetos e interagir com eles. Podemos fazer isso tudo pela interface gráfica do BlueJ.
+Agora podemos criar objetos a partir das classes compiladas, neste caso somente a classe Cliente. Outra vantagem do uso do BlueJ para aprendizagem de POO é que não precisamos escrever código para testar nossas classes: para criar objetos e interagir com eles. Podemos fazer isso tudo pela interface gráfica do BlueJ.
 
 Depois da classe `Cliente` ter sido compilada, podemos clicar com o botão direito sobre ela e escolher a opção _new Cliente()_. Se a classe não estiver compilada, tal opção não aparecerá.
 
 Em seguida aparecerá uma tela para informarmos o nome do objeto a ser criado. O BlueJ já sugere um nome para o objeto que podemos deixar como está.
 
-image::bluej-new-object.png[]
+image::bluej-new-object.gif[]
 
 Após clicar em OK o objeto criado aparece no canto inferior esquerdo da tela principal.
-
-image::bluej-object-created.png[]
 
 Agora já temos um objeto chamado `cliente1` que segue a mesma estrutura definida pela classe `Cliente`, assim como uma casa deve seguir o modelo definido pelo projeto de engenharia.
 
 Podemos clicar com o botão direito sobre um objeto e escolher *Inspecionar*. Assim, podemos ver os atributos de tal objeto. Como não definimos valores para essses atributos ao criarmos o objeto, o conteúdo apresentado pode não fazer o menor sentido para você e apenas indica que os atributos não receberam nenhum dado ainda.
 
-image::bluej-inspect-object.png[]
+image::bluej-inspect-object.gif[]
 
 Com a imagem acima podemos rapidamente visualizar a estrutura dos objetos da classe `Cliente`. No entanto, para conseguirmos alterar os valores dos atributos, precisaremos escrever código para isto.

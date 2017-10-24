@@ -16,7 +16,7 @@ IMPORTANT: Um construtor é um método especial utilizado por uma classe para cr
 
 O construtor tem a mesma estrutura de um método, com pequenas excessões que fazem o compilador entender que ele é um construtor. Primeiramente, o nome do construtor deve obrigatoriamente ser igual ao nome da classe, inclusive com inicial maiúscula. Segundo, o construtor não retorna um valor. Se você está atendo, lembra que os _setters_ também não retornam valor e assim o tipo de retorno é `void`. Mas no caso dos construtores, simplesmente deve-se omitir o tipo de retorno. A quantidade e nome dos parâmetros do construtor é igual como para outros métodos: pode-se definir quantos parâmetros desejar, até mesmo nenhum. 
 
-A estrutura de um construtor é então:
+A estrutura básica de um construtor é então:
 
 [source,java]
 ----
@@ -36,7 +36,14 @@ Cliente(){
 }
 ----
 
-O código da classe `Cliente` com o novo construtor ficaria como mostrado a seguir. Os _getters_ e _setters_ foram omitidos para focarmos apenas no construtor.
+Olhando o código do construtor acima isoladamente, pode parecer muito com a declaração de uma classe com um atributo chamado `cidade`. No entanto, o código da classe `Cliente` com o novo construtor ficaria como mostrado a seguir. Os _getters_ e _setters_ foram omitidos para focarmos apenas no construtor.
+
+As diferenças entre a classe e o construtor são bem claras: 
+
+- a classe é precedida pela palavra `class`;
+- cada atributo da classe é precedido por um tipo;
+- o construtor tem obrigatoriamente parênteses (mesmo que vazio);
+- a linha de código apresentada dentro do construtor não pode ser confundida com a declaração de um atributo pois não está sendo especificado um tipo. Assim, tal linha está armazenando um valor dentro de um atributo declarado na classe.
 
 [source,java]
 ----
