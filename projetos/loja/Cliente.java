@@ -9,15 +9,47 @@ public class Cliente
 {
     String nome;
     String endereco;
+    String cidade;
     String cpf;
     char sexo;
     float renda;
     String email;
     
+    /*
+     * Um construtor é um método especial
+     * que não tem um tipo de retorno (nem mesmo void).
+     * 
+     * Ele é usado para inicializar os objetos criados,
+     * por exemplo, definindo valores para alguns
+     * de seus atributos.
+     * 
+     * Podemos ter mais de um construtor.
+     * Quando um objeto é criado, algum(ns) desses construtores é chamado.
+     * 
+     * Ele deve ter exatamente o mesmo nome da classe
+     * (com inicial maiúscula).
+     * 
+     * Um construtor que não possui parâmetros é 
+     * chamado de construtor padrão.
+    */    
+    Cliente(){
+        cidade = "Palmas";
+    }
+    
+    Cliente(String nome, String cpf, String cidade){
+        setNome(nome);
+        setCpf(cpf);
+        setCidade(cidade);
+    }    
+    
     void setNome(String nome){
         if(!nome.equals("")) {
             this.nome = nome;
         }
+    }
+    
+    private void setCidade(String cidade){
+        this.cidade = cidade;
     }
     
     void setEndereco(String endereco){
@@ -32,6 +64,12 @@ public class Cliente
     
     boolean cpfValido (String cpf)
     {
+        cpf = cpf.replaceAll("\\.", "");
+        cpf = cpf.replaceAll("-", "");
+        if (cpf.length() != 11){
+            return false;
+        }
+
         int d1, d2;
         int digito1, digito2, resto;
         int digitoCPF;

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Empresa
+comment0.text=\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ Empresa\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=
+comment1.target=Empresa()
+comment1.text=\n\ COnstrutor\ para\ objetos\ da\ classe\ Empresa\n
+comment2.params=y
+comment2.target=int\ sampleMethod(int)
+comment2.text=\n\ Exemplo\ de\ m\u00E9todo\ -\ substitua\ este\ coment\u00E1rio\ pelo\ seu\ pr\u00F3prio\n\ \n\ @param\ \ y\ \ \ exemplo\ de\ um\ par\u00E2metro\ de\ m\u00E9todo\n\ @return\ \ \ \ \ a\ soma\ de\ x\ com\ y\ \n
+numComments=3

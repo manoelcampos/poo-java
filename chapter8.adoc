@@ -1,0 +1,32 @@
+:imagesdir: images
+
+== Entendendo mais sobre classes
+
+Vimos que uma classe é um modelo utilizado para criar objetos. Porém, uma classe é simplesmente um tipo especial, que além de armazenar dados, permite a execução de operações (funções) que chamamos de métodos. Em Java temos tipos primitivos como `char`, `int` e `double`. Variáveis desses tipos apenas armazenam dados. Um tipo primitivo não define internamente um conjunto de operações que podem ser feitas sobre os valores armazenados em tais variáveis. Um tipo como o `int`, por exemplo, poderia ter uma operação para indicar se o número armazenado na variável é par ou não. 
+
+Como nenhuma operação é definida para estes tipos, isto torna mais complicada a manipulação dos dados armazenados em tais variáveis. Isto se deve ao fato de que, uma vez que percisemos fazer uma operação como verificar se um número é par, devemos escrever nosso próprio código para isto ou utilizar uma funções disponível em qualquer outro lugar. 
+
+Uma classe define os dados (atributos) e operações (métodos) que os objetos da classe terão, colocando tudo junto num só lugar. Assim, os métodos permitem que os atributos de cada objeto criado sejam manipulados. A manipulação desses dados é mais fácil, uma vez que qualquer método pode manipular qualquer um dos atributos declarados diratamente na classe. 
+
+Imagine um controle remoto de um ar condicionado. Ele o controle remoto de um ar condicionado na sua casa ou trabalho: tal controle específico é um exemplo de um objeto criado a partir de uma classe que poderíamos chamar de `ControleRemoto`. Cada controle remoto armazena alguns dados como a temperatura configurada para o ar condicionado e as horas. Estes seriam atributos da classe. Os botões do controle remoto são métodos que permitem executar ações como ligar ou desligar o ar condicionado e alterar a temperatura. Os botões que permitem alterar a temperatura manipulam o atributo `temperatura`, aumentando ou reduzindo seu valor.
+
+Se o controle remoto não fosse uma classe e sim um tipo primitivo, poderíamos ser capazes de visualizar a temperatura e hora apenas no painel do ar condicionado, enquanto que o controle serviria apenas para executar operações como aumentar e diminuir a temperatura. Com o controle remoto como uma classe, podemos tanto visualizar os atributos como executar operações para alterar seus valores. Isto torna muito mais fácil o uso do controle remoto para controlar o ar condicionado.
+
+.Uma classe representando um controle remoto.
+image:controle-remoto-ar.png[]
+
+== Utilizando as classes criadas
+
+No link:chapter4.adoc[Capítulo 4] foram apresentadas algumas classes para serem criadas para o sistema da loja de móveis.
+Algumas delas eram `Cliente`, `Produto`, `Funcionario` e `Venda`.
+
+Ao realizar uma venda, por exemplo, a venda é feita para um determinado cliente. Como cliente é uma classe que criamos anteriormente, podemos então definir um atributo da classe `Cliente` dentro da `Venda`.
+Uma classe é como um tipo, assim, podemos criar tal atributo da mesma forma que criamos qualquer atributo de um tipo primitivo.
+
+[source,java]
+----
+public class Venda
+{
+    Cliente cliente;
+}
+----

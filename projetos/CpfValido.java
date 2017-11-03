@@ -1,11 +1,12 @@
     /**
      * Verifica se um CPF é válido.
      * @param cpf CPF a ser verificado
-     * @return true se o CPF for válido, falso caso contrário.
+     * @return true se o CPF for válido, false caso contrário.
      */
     boolean cpfValido (String cpf) {
         cpf = cpf.replaceAll("\\.", "");
         cpf = cpf.replaceAll("-", "");
+
         if (cpf.length() != 11){
             return false;
         }

@@ -20,7 +20,7 @@ A estrutura básica de um construtor é então:
 
 [source,java]
 ----
-NomeDaClass(ParâmetrosOpcionais){
+NomeDaClasse(parâmetrosOpcionais){
 
 }
 ----
@@ -38,13 +38,6 @@ Cliente(){
 
 Olhando o código do construtor acima isoladamente, pode parecer muito com a declaração de uma classe com um atributo chamado `cidade`. No entanto, o código da classe `Cliente` com o novo construtor ficaria como mostrado a seguir. Os _getters_ e _setters_ foram omitidos para focarmos apenas no construtor.
 
-As diferenças entre a classe e o construtor são bem claras: 
-
-- a classe é precedida pela palavra `class`;
-- cada atributo da classe é precedido por um tipo;
-- o construtor tem obrigatoriamente parênteses (mesmo que vazio);
-- a linha de código apresentada dentro do construtor não pode ser confundida com a declaração de um atributo pois não está sendo especificado um tipo. Assim, tal linha está armazenando um valor dentro de um atributo declarado na classe.
-
 [source,java]
 ----
 public class Cliente {
@@ -61,6 +54,13 @@ public class Cliente {
     }
 }
 ----
+
+As diferenças entre a classe e o construtor são bem claras: 
+
+- a classe é precedida pela palavra `class`;
+- cada atributo da classe é precedido por um tipo;
+- o construtor tem obrigatoriamente parênteses (mesmo que vazio);
+- a linha de código apresentada dentro do construtor não pode ser confundida com a declaração de um atributo pois não está sendo especificado um tipo. Assim, tal linha está armazenando um valor dentro de um atributo declarado na classe.
 
 Você pode criar novos clientes pelo BlueJ para verificar que todos eles terão o atributo `cidade` inicializado com "Palmas". Observe que quando clicamos com o botão direito sobre uma classe como a `Cliente`, temos a opção `new Cliente()` disponível. Tal opção é exatamente a chamada do construtor padrão: um que criamos ou que foi incluído automaticamente caso um não tenha sido definido.
 
@@ -126,4 +126,4 @@ NOTE: Instância neste contexto signfica exemplar ou caso. Uma instância repres
 
 Lembrando que mesmo que não adicionemos um construtor em uma classe, um construtor padrão será incluído automaticamente quando a classe for compilada.
 
-Uma classe sem construtor não permite que objetos sejam criados. Isto é possível e tem suas utilidades, mas é assumo para mais adiante.
+Uma classe sem construtor não permite que objetos sejam criados. Isto é possível e tem suas utilidades, mas é assunto para mais adiante.
