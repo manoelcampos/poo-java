@@ -8,25 +8,98 @@ Como nenhuma operação é definida para estes tipos, isto torna mais complicada
 
 Uma classe define os dados (atributos) e operações (métodos) que os objetos da classe terão, colocando tudo junto num só lugar. Assim, os métodos permitem que os atributos de cada objeto criado sejam manipulados. A manipulação desses dados é mais fácil, uma vez que qualquer método pode manipular qualquer um dos atributos declarados diratamente na classe. 
 
-Imagine um controle remoto de um ar condicionado. Ele o controle remoto de um ar condicionado na sua casa ou trabalho: tal controle específico é um exemplo de um objeto criado a partir de uma classe que poderíamos chamar de `ControleRemoto`. Cada controle remoto armazena alguns dados como a temperatura configurada para o ar condicionado e as horas. Estes seriam atributos da classe. Os botões do controle remoto são métodos que permitem executar ações como ligar ou desligar o ar condicionado e alterar a temperatura. Os botões que permitem alterar a temperatura manipulam o atributo `temperatura`, aumentando ou reduzindo seu valor.
+Imagine o controle remoto de um ar condicionado na sua casa ou trabalho: tal controle específico é um exemplo de um objeto criado a partir de uma classe que poderíamos chamar de `ControleRemoto`. Cada controle remoto armazena alguns dados como a temperatura configurada para o ar condicionado e as horas. Estes seriam atributos da classe. Os botões do controle remoto são métodos que permitem executar ações como ligar ou desligar o ar condicionado e alterar a temperatura. Os botões que permitem alterar a temperatura manipulam o atributo `temperatura`, aumentando ou reduzindo seu valor.
 
 Se o controle remoto não fosse uma classe e sim um tipo primitivo, poderíamos ser capazes de visualizar a temperatura e hora apenas no painel do ar condicionado, enquanto que o controle serviria apenas para executar operações como aumentar e diminuir a temperatura. Com o controle remoto como uma classe, podemos tanto visualizar os atributos como executar operações para alterar seus valores. Isto torna muito mais fácil o uso do controle remoto para controlar o ar condicionado.
 
-.Uma classe representando um controle remoto.
+.Um objeto de uma classe representando um controle remoto.
 image:controle-remoto-ar.png[]
 
-== Utilizando as classes criadas
+== Criando novas classes
 
-No link:chapter4.adoc[Capítulo 4] foram apresentadas algumas classes para serem criadas para o sistema da loja de móveis.
-Algumas delas eram `Cliente`, `Produto`, `Funcionario` e `Venda`.
+No link:chapter4.adoc[Capítulo 4] foram sugeridas algumas classes para o sistema da loja de móveis, como `Cliente`, `Produto`, `Funcionario`, `Venda` e `Empresa`.
 
-Ao realizar uma venda, por exemplo, a venda é feita para um determinado cliente. Como cliente é uma classe que criamos anteriormente, podemos então definir um atributo da classe `Cliente` dentro da `Venda`.
-Uma classe é como um tipo, assim, podemos criar tal atributo da mesma forma que criamos qualquer atributo de um tipo primitivo.
+Vamos criar então a classe `Empresa` que permitirá representar a matriz e filiais da empresa. Para isso, crie tal classe no BlueJ adicionando os campos mostrados no código abaixo:
 
 [source,java]
 ----
-public class Venda
+public class Empresa
 {
-    Cliente cliente;
+    String endereco;
+    String cidade;
+    String telefone;
+    String email;
+    boolean matriz;
 }
 ----
+
+Tal classe possui atributos para armazenar o endereço, cidade, telefone e email da empresa. Além destes, há um atributo do tipo `boolean` chamado `matriz` para indicar se a empresa é a matriz ou alguma filial. O tipo `boolean` é chamado de tipo lógico e permite armazenar valores _true_ (verdadeiro) ou _false_ (falso). Assim, se objeto da classe `Empresa` tiver o valor _true_ para tal atributo, tal instância da `Empresa` é a matriz, caso contrário será uma filial. Quando utilizamos o tipo `boolean` queremos saber se algo é verdade ou falso. Assim, ao declarar o atributo `matriz` estamos querendo saber se a empresa é uma matriz ou não.
+
+Agora que temos o código inicial da nossa classe `Empresa`, devemos então criar os _getter's_ e _setter's_ que permitirão obter e alterar os valores dos atributos.
+
+O código abaixo apresenta _getter's_ e _setter's_ para os atributos `endereco` e `matriz`. 
+
+[source,java]
+----
+public class Empresa
+{
+    String endereco;
+    String cidade;
+    String telefone;
+    String email;
+    boolean matriz;
+
+    void setEndereco(String endereco){
+        this.endereco = endereco;
+    }
+
+    String getEndereco(){
+        return endereco;
+    }
+
+    void setMatriz(boolean matriz){
+        this.matriz = matriz;
+    }
+
+    /**
+     * Indica se a empresa é uma matriz ou não.
+     *
+     * Getters de atributos do tipo boolean
+     * devem ter o nome no formato isNomeDoAtributo.
+    */
+    boolean isMatriz(){
+        return matriz;
+    }
+}
+----
+
+Aprendemos anteriormente que tais métodos devem ter nomes e estruturas padrões: um _getter_ deve iniciar com a palavra _get_ seguida do nome do atributo; um _setter_ deve iniciar com a palavra _set_ seguido do nome do atributo. 
+
+Porém, para atributos do tipo `boolean` o _getter_ deve ter um padrão diferente: deve iniciar com a palavra _is_ seguida do nome do atributo. Assim, o _getter_ para o atributo `matriz` é `isMatriz` e não `getMatriz`. Ao traduzir `isMatriz` temos uma pergunta: é matriz?
+
+Como o tipo do atributo é `boolean`, a resposta será binária: verdade (true) ou falso (false). Desta forma, o nome do método é mais intuitivo que `getMatriz`.
+
+== Utilizando as classes criadas
+
+Podemos definir que uma empresa tem um gerente. Como `Empresa` é uma classe que criamos anteriormente, podemos então incluir um atributo da classe `Funcionario` dentro da `Empresa`.
+Uma classe é como um tipo, assim, podemos criar tal atributo da mesma forma que criamos qualquer atributo de um tipo primitivo.
+
+O código abaixo apresenta um trecho do código da classe `Empresa` depois de adicionado o atributo `gerente`. Como podemos ver, tal atributo foi declado da mesma forma que qualquer outro, seguindo a regra `tipo nomeDoAtributo;`. A única diferença é que agora, no lugar de usarmos um tipo primitivo existente na linguagem Java, podemos utilizar uma classe criada por nós ou qualquer outra pessoa, disponivel na linguagem Java ou baixada da Internet.
+
+[source,java]
+----
+public class Empresa
+{
+    String endereco;
+    String cidade;
+    String telefone;
+    String email;
+    boolean matriz;
+
+    Funcionario gerente;
+}
+----
+
+Como falado anteriormente, convencionalmente, classes iniciam com letra maiúscula. Sabendo disso, podemos identificar que `String` na verdade é uma classe é não um tipo primitivo como `int` ou `char`. `String` é uma classe nativa da linguagem Java que nos permite armazenar qualquer texto, inclusive emojis 🙏.
+
+IMPORTANT: Acabamos de aprender sobre *associações*: um tipo de relacionamento entre classes e mais um conceito *fundamental* de POO.

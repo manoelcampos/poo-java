@@ -36,3 +36,13 @@ Inserindo o código acima na classe cliente, podemos então criar um novo client
 
 .Chamando um _getter_ de um objeto pela interface do BlueJ.
 image::bluej-getter.gif[]
+
+== Porque utilizar padrões de nomes para _getter's_ e _setter's_
+
+Depois de criar algumas classes, você verá que criar _getter's_ e _setter's_ é uma tarefa repetitiva e entendiante. Vimos no link:chapter4.adoc[capítulo 4] que o princípio https://en.wikipedia.org/wiki/Don't_repeat_yourself[DRY] prega que devemos evitar retrabalho e esta criação destes métodos vai exatamente contra isso. Porém, veremos que em ferramentas profissionais como o http://netbeans.org[NetBeans] permitem gerar o código necessário para tais métodos, como pode ser visto no vídeo de demonstração abaixo.
+
+video:kgDYmly5Xj4[youtube]
+
+Assim, não temos que manualmente criar tais métodos. Mas como podem ver no vídeo, estas ferramentas também seguem o padrão de nomes para _getter's_ e _setter's_. Isto permite, por exemplo, a ferramenta identificar que já existe um desses métodos para um determinado atributo e não criar um novo método para ele.
+
+Além disso, apenas verificando o nome de um método destes, podemos imediatamente saber qual a finalidade dele, sem precisar ler o código.

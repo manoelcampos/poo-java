@@ -39,7 +39,7 @@ O código de uma função em Java deve ser inserido dentro de uma classe. Uma fu
 
 Para podermos criar a nossa primeira função para permitir alterar um atributo como o `endereco`, precisamos então definir qual o tipo de retorno, o nome da função e seus parâmetros. No caso de funções que alteram atributos, normalmente elas não dão nenhuma resposta, o que dizemos que elas não retornam nenhum valor. Ou seja, o tipo de retorno é `void`. 
 
-Poderíamos chamar a função de `alteraEndereco`, mas para funções que alteram atributos, há uma convenção importantíssima de utilizar o formato `setNomeDoAtributo` (_set_ significa neste contexto alterar ou atribuir). No caso do atributo `endereco`, a função deve chamar `setEndereco`. Tais funções devem ter apenas um parâmetro, que indica para a função qual é o dado que será armazenado no atributo quando a função for executada. Como os parâmetros são nada mais que variáveis, precisamos definir o tipo e nome de cada um. No caso das funções em questão, o tipo de nome pode ser exatamente os mesmos do atributo que será alterado pela função. Assim, nossa função para alterar o endereço de um cliente terá a seguinte estrutura:
+Poderíamos chamar a função de `alteraEndereco`, mas para funções que alteram atributos, há uma convenção importantíssima de utilizar o formato `setNomeDoAtributo` (_set_ significa neste contexto alterar ou atribuir). No caso do atributo `endereco`, a função deve chamar `setEndereco`. Tais funções devem ter apenas um parâmetro, que indica para a função qual é o dado que será armazenado no atributo quando a função for executada. Como os parâmetros são nada mais que variáveis, precisamos definir o tipo e nome de cada um. No caso das funções em questão, o tipo e nome podem ser exatamente os mesmos do atributo que será alterado pela função. Assim, nossa função para alterar o endereço de um cliente terá a seguinte estrutura:
 
 [source,java]
 ----
@@ -48,7 +48,7 @@ void setEndereco(String endereco) {
 }
 ----
 
-A função precisará receber um endereço como parâmetro e armazenar tal endereço no atributo `endereco`, alterando assim o endereço do cliente. Para fazer, a função só precisa de uma linha de código, como mostrado abaixo:
+A função precisará receber um endereço como parâmetro e armazenar tal endereço no atributo `endereco`, alterando assim o endereço do cliente. Para isso, a função só precisa de uma linha de código, como mostrado abaixo:
 
 [source,java]
 ----
@@ -57,7 +57,7 @@ void setEndereco(String endereco) {
 }
 ----
 
-A linha `this.endereco = endereco;` faz exatamente isto: copia o endereço recebido no parâmetro `endereco` e armazena o atributo `endereco` da classe. Como o parâmetro e o atributo tem o mesmo nome, para diferenciar o primeiro do segundo, utilizamos `this.endereco`. A palavra `this` significa "este" e representa o objeto para o qual o endereço estiver sendo alterado. 
+A linha `this.endereco = endereco;` copia o endereço recebido no parâmetro `endereco` e armazena o atributo `endereco` da classe. Como o parâmetro e o atributo tem o mesmo nome, utilizamos `this.endereco` para nos referirmos ao atributo e apenas `endereco` para nos referirmos ao parâmetro recebido pela função. A palavra `this` significa "este" e representa o objeto para o qual o endereço estiver sendo alterado. 
 
 Como alteramos a classe cliente, vamos compilar novamente e criar um novo objeto chamado `cliente1`, seguindo os mesmos passos indicados anteriormente. Clique com o botão direito sobre o `cliente1` criado na parte inferior do BlueJ. Você verá que a função `setEndereco` agora aparece na lista de opções. Desta forma, podemos executar a função, o que em programação dizemos *chamar uma função*.
 
@@ -71,7 +71,7 @@ image::bluej-object-changed.gif[]
 
 Quando clicamos no `cliente1` para alterar o endereço, `this` representa o objeto `cliente1`. Assim, `this.endereco` representa o atributo endereço do `cliente1`, enquanto somente `endereco` representa o parâmetro que possui o mesmo nome do atributo.
 
-A animação abaixo mostra a relação entre tal parâmetro e o atributo `endereco` e como a função `setEndereco` funciona.
+A animação abaixo mostra o que acontece quando a função `setEndereco` é chamada, além da relação entre o parâmetro e o atributo `endereco`.
 
 .Como o atributo `endereco` da classe `Cliente` funciona em conjunto com o parâmetro `endereco` da função `setEndereco`.
 image::attributes-and-method-parameters.gif[]

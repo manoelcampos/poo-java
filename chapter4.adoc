@@ -20,10 +20,10 @@ Após clicar em OK, a tela principal abre o projeto criado. O projeto inicia vaz
 
 image::bluej-empty-project.png[]
 
-Do lado esquerdo temos apenas 3 botões, dos quais vamos focar em apenas 2 por enquanto.
+Do lado esquerdo temos apenas 3 botões, dos quais vamos focar em apenas 2 por enquanto:
 
-- Nova Classe: para criar uma classe no projeto.
-- Compilar: para compilar todas as classes do projeto.
+- *Nova Classe*: para criar uma classe no projeto.
+- *Compilar*: para compilar todas as classes do projeto.
 
 Considerando as classes identificadas acima para o projeto da loja de móveis, vamos clicar no botão "Nova Classe" para criar a primeira classe que chamaremos de *Cliente*. A figura abaixo apresenta a janela para criação da classe. Basta preencher o campo "Nome da Classe" e clicar em OK sem alterar os outros campos. Explicar as opções desta tela está fora de contexto agora.
 
@@ -78,11 +78,11 @@ public class Cliente {
 }
 ----
 
-O código acima apresenta a forma mais básica de declaração de atributos. Este é o processo para declaração de variáveis em Java, seguindo o formato `tipo nomeDaVariavel;`.
+O código da classe `Cliente` apresenta a forma mais básica de declaração de atributos. Este é o processo para declaração de variáveis em Java, seguindo o formato `tipo nomeDaVariavel;`.
 
-Observe que o tipo `String` tem inicial maiúscula e o `char` minúscula. Tais tipos são realmente desta forma, não é um erro. Lembre-se que falamos anteiormente que classes por convenção tem inicial maiúscula. Logo, pode-se concluir que `String` nada mais é do que uma classe específica da linguagem Java, enquanto `char` é um tipo primitivo como você pode ter aprendido em aulas de algoritmos ou outra linguagem de programação.
+Observe que o tipo `String` tem inicial maiúscula e o `char` minúscula. Tais tipos são realmente desta forma, não é um erro. Lembre-se que falamos anteriormente que classes, por convenção, tem inicial maiúscula. Logo, pode-se concluir que `String` nada mais é do que uma classe específica da linguagem Java, enquanto `char` é um tipo primitivo como você pode ter aprendido em aulas de algoritmos ou outra linguagem de programação.
 
-TIP: Um tipo primitivo como `char` e `int` permitem declarar variáveis que possuem apenas dados. Uma classe como `String` possui dados (atributos) e funcionalidades. 
+Um tipo primitivo como `char` e `int` permitem declarar variáveis que possuem apenas dados. Uma classe como `String` possui dados (atributos) e funcionalidades. 
 
 .Uso de chaves { }
 [NOTE]
@@ -96,6 +96,7 @@ public class Cliente
 
 }
 ----
+
 
 ou na mesma linha que define o início de um bloco, como:
 
@@ -111,9 +112,7 @@ O formato definido pela Oracle nas http://www.oracle.com/technetwork/java/codeco
 O local de abertura das chaves é uma grande discussão entre desenvolvedores. Há vantagens e desvantagens em relação à clareza do código dependendo de onde as chaves são colocadas. Os guias apresentados nos links acima abordam um pouco esta discussão, além de outros artigos como https://en.wikipedia.org/wiki/Indentation_style[este].
 ====
 
-.Conveções ao declarar atributos
-[NOTE]
-====
+=== Conveções ao declarar atributos
 Temos diversas variáveis do tipo `String`. Apesar de ser possível declará-las todas em uma única linha como:
 
 [source,java]
@@ -133,7 +132,6 @@ String cidadeResidencia;
 ----
 
 Como falado anteriormente para classes e outros elementos da linguagem Java, não é recomendável utilizar acentos ao dar nomes a atributos.
-====
 
 TIP: https://en.wikipedia.org/wiki/Duplicate_code[Código duplicado] é um dos maiores problemas no desenvolvimento de software. Existem princípios como o https://en.wikipedia.org/wiki/Don't_repeat_yourself[Don't Repeat Yourself (DRY)] que pregam que você não deve ter retrabalho, ficar escrevendo o mesmo código várias vezes. Ao declarar um atributo em cada linha, repetindo o tipo para cada um, não estamos duplicando código referente à funcionalidades do sistema. Estamos apenas utilizando um determinado tipo várias vezes. Veremos que reutilização de código é um dos pilares da POO.
 
