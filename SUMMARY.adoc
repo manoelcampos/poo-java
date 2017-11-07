@@ -8,5 +8,5 @@
 . link:chapter5.adoc[Alterando valores dos atributos]
 . link:chapter6.adoc[Obtendo valores de atributos]
 . link:chapter7.adoc[Definindo valores inicias para atributos]
-. link:chapter8.adoc[Mais sobre classes]
+. link:chapter8.adoc[Classes e Associações]
 . link:GLOSSARY.adoc[Glossário]

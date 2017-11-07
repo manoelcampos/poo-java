@@ -7,7 +7,6 @@
 
 
 
-
 - Criar relacionamentos
     * Empresa ---> Gerente
 
@@ -17,7 +16,7 @@
 
 - Alterar outros campos de String para classes:
     * Produto ---> Marca
-    * Cidade ---> Estado
+    * Cidade  ---> Estado
 
 - Criar classe Venda de forma simplificada, contendo um atributo Produto + quantidade, um cliente e um vendedor
 - Criar um setter para o Produto

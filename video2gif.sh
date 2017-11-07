@@ -7,6 +7,7 @@ if [ $# -eq 0 ]; then
 fi
 
 IN="$1"
+#Removes the input file extension
 OUT="${IN%.*}.gif"
 
 if [ $# -gt 1 ]; then

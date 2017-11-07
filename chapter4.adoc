@@ -51,9 +51,10 @@ image:bluej-clean-class.png[]
 O código da classe está entre as linhas 8 e 11, o texto nas linhas 2 a 7 são comentários utilizados como documentação da classe.
 Você pode observar na linha 8 que a classe é definida pela palavra *class* seguida do nome que demos para a classe. As chaves nas linhas 9 e 11 são utilizadas para delimitar o início e fim do código da classe. Qualquer característica ou funcionalidade que desejarmos incluir na classe, precisam ser entre estas chaves.
 
+[[atributos]]
 === Adicionando características a uma classe
 
-Bem, agora que temos a estrutura da nossa primeira classe pronta, podemos começar a adicionar características nessa classe. Como já discutido no capítulo anterior, tais características dependem do finalidade do sistema ou ramo de atividade onde ele será utilizado. No caso do cliente da loja de móveis, algumas características que podemos identificar são: nome, CPF, sexo, email, endereço, cidade e telefone. Cada uma destas características nada mais são do que variáveis. Sabendo disso, precisamos então identificar o tipo de dado de cada uma delas. O email e endereço são claramente dados alfanuméricos (permitem letras e números). Em Java, `String` é o tipo que representa dados alfanuméricos. 
+Bem, agora que temos a estrutura da nossa primeira classe pronta, podemos começar a adicionar características nessa classe. Como já discutido no capítulo anterior, tais características dependem do finalidade do sistema ou ramo de atividade onde ele será utilizado. No caso do cliente da loja de móveis, algumas características que podemos identificar são: nome, CPF, sexo, email, endereço, cidade e telefone. Cada uma destas características nada mais são do que variáveis. Sabendo disso, precisamos então identificar o tipo de dado de cada uma delas. O email e endereço são claramente dados alfanuméricos (permitem letras e números). Em Java, `String` é o tipo que representa dados alfanuméricos (inclusive emojis 🙏). 
 
 Por outro lado, nome e cidade são claramente dados alfabéticos (permitem somente letras). No entanto, as linguagens de programação convencionalmente não possuem dados que permitam armazenar apenas letras footnote:[Apesar das linguagens convencionais não permitirem que uma variável armazene somente letras, é muito simples criar programas que permitem ao usuário digitar apenas letras em um campo.]. Assim, utilizamos o tipo `String` para tal finalidade. 
 
@@ -71,10 +72,10 @@ public class Cliente {
     String nome;
     String cpf;
     String email;
-    String endereco;
-    String cidade;
     String telefone;
     char sexo;
+    String endereco;
+    String cidade;
 }
 ----
 
@@ -162,3 +163,25 @@ Podemos clicar com o botão direito sobre um objeto e escolher *Inspecionar*, ou
 image::bluej-inspect-object.gif[]
 
 Com a imagem acima podemos rapidamente visualizar a estrutura dos objetos da classe `Cliente`. No entanto, para conseguirmos alterar os valores dos atributos, precisaremos escrever código para isto.
+
+== Criando novas classes
+
+Agora que você já sabe como criar classes no BlueJ, vamos criar a classe `Funcionario`. Como citado anteriormente, acentos devem ser evitados. Tal classe terá muitos dos atributos que foram definidos para a classe `Cliente`, além dos seguintes atributos adicionais:
+
+- `matricula` do tipo `int`
+- `cargo` do tipo `String`
+
+O código inicial da classe `Funcionário` deve ficar como apresentado abaixo. Lembre-se de criar os _getter's_ e _setter's_ para cada um dos atributos.
+
+[source,java]
+----
+public class Funcionario {
+    String nome;
+    int matricula;
+    String cpf;
+    String email;
+    String telefone;
+    char sexo;
+    String cargo;
+}
+----

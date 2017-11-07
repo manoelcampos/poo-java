@@ -47,6 +47,10 @@ public class Empresa
     String cidade;
     String telefone;
     String email;
+
+    /**
+     * Situação da empresa: se ela é uma matriz ou não.
+    */
     boolean matriz;
 
     void setEndereco(String endereco){
@@ -62,7 +66,7 @@ public class Empresa
     }
 
     /**
-     * Indica se a empresa é uma matriz ou não.
+     * Obtém a situação da empresa: se ela é uma matriz ou não.
      *
      * Getters de atributos do tipo boolean
      * devem ter o nome no formato isNomeDoAtributo.
@@ -81,10 +85,10 @@ Como o tipo do atributo é `boolean`, a resposta será binária: verdade (true) 
 
 == Utilizando as classes criadas
 
-Podemos definir que uma empresa tem um gerente. Como `Empresa` é uma classe que criamos anteriormente, podemos então incluir um atributo da classe `Funcionario` dentro da `Empresa`.
+Podemos definir que uma empresa tem um gerente, este sendo um funcionário. Como `Empresa` é uma classe que criamos anteriormente, podemos então incluir um atributo da classe `Funcionario` dentro da `Empresa`.
 Uma classe é como um tipo, assim, podemos criar tal atributo da mesma forma que criamos qualquer atributo de um tipo primitivo.
 
-O código abaixo apresenta um trecho do código da classe `Empresa` depois de adicionado o atributo `gerente`. Como podemos ver, tal atributo foi declado da mesma forma que qualquer outro, seguindo a regra `tipo nomeDoAtributo;`. A única diferença é que agora, no lugar de usarmos um tipo primitivo existente na linguagem Java, podemos utilizar uma classe criada por nós ou qualquer outra pessoa, disponivel na linguagem Java ou baixada da Internet.
+Abaixo é apresentado um trecho do código da classe `Empresa`, depois de adicionado o atributo `gerente`. Como podemos ver, tal atributo foi declado da mesma forma que qualquer outro, seguindo a regra `tipo nomeDoAtributo;`. A única diferença é que agora, no lugar de usarmos um tipo primitivo ou classe existente na linguagem Java, utilizamos uma classe que desenvolvemos.
 
 [source,java]
 ----
@@ -96,10 +100,99 @@ public class Empresa
     String email;
     boolean matriz;
 
+    /**
+     * Indica qual funcionário é o gerente da empresa.
+    */
     Funcionario gerente;
 }
 ----
 
-Como falado anteriormente, convencionalmente, classes iniciam com letra maiúscula. Sabendo disso, podemos identificar que `String` na verdade é uma classe é não um tipo primitivo como `int` ou `char`. `String` é uma classe nativa da linguagem Java que nos permite armazenar qualquer texto, inclusive emojis 🙏.
+IMPORTANT: Acabamos de aprender sobre *associações*: um tipo de *relacionamento* entre classes e mais um conceito *fundamental* de POO.
 
-IMPORTANT: Acabamos de aprender sobre *associações*: um tipo de relacionamento entre classes e mais um conceito *fundamental* de POO.
+A partir do momento que incluímos o atributo `gerente` sendo da classe `Funcionario`, se voltarmos para a tela inicial do BlueJ, veremos que ele criaou uma seta representando a associação entre a classe `Empresa` e `Funcionario`, como pode ser visto na figura abaixo:
+
+image:class-association.png[]
+
+A direção da seta indica que a partir de uma empresa podemos saber qual funcionário a gerencia.
+
+== Definindo novas associações
+
+As classes `Cliente` e `Empresa` têm o atributo `cidade` em comum. Tal atributo foi declarado como `String`, o que, neste caso, nos traz alguns problemas. 
+
+Imagine que você cadastro um cliente e informou sua cidade como "Paraíso do Tocantins". Outro funcionário pode ter cadastrado outro cliente e ter esquecido o acento, colocando "Paraiso do Tocantins". Outro dia você mesmo foi cadastrar mais um cliente e colocou a cidade apenas como "Paraíso". Por fim, um cliente utilizou a loja virtual para se cadastrar e informou a cidade sem acento e apenas como "Paraiso".
+
+Assim, estamos falando da mesma cidade mas a mesma foi informada de 4 maneiras diferentes. Se o sistema possui um relatório que mostra o total de clientes por cidade, ele vai mostrar a cidade Paraíso do Tocantins como se fosse 4 cidades distintas. Assim, no lugar de mostrar que há 4 clientes de tal cidade, ele mostrará que há 4 cidades diferentes com 1 cliente cada uma.
+
+Tendo a cidade como `String`, a cada cliente que for cadastrado, é preciso digitar o nome da cidade por completo, o que pode levar a erros de digitação e assim ter nomes diferentes para a mesma cidade, além de ser cansativo. 
+
+Também não temos informações adicionais da cidade como qual estado ela pertence. Mesmo que o estado fosse incluído após a cidade, como "Curitiba - PR", isto permitiria que siglas inexistentes de estados fossem informadas. Por fim, se quiséssemos saber quantos clientes há em cada estado, seria complicado obter tais informações, uma vez que a cidade e o estado não estão armazenados em atributos individuais.
+
+Lembre que estamos utilizando programação orientada a objetos. Logo, você precisa pensar em termos de objetos. Como em POO um objeto pode ser qualquer coisa, uma cidade pode então ser um objeto. Assim, para representarmos cidades no nosso software, precisamos criar uma classe `Cidade`. 
+
+Tal classe pode ter os atributos nome e estado. Obviamente, uma cidade pode ter muito mais dados que isso. Poderíamos indicar quem é o prefeito, qual a população, a área e muitos outros dados. Mas assim como falado no link:capítulo 2[chapter2.adoc] quando introduzimos o conceito de classes, as características e funcionalidades de uma classe vão depender do problema em questão. Para o nosso software de loja de móveis, não nos interessa saber todos esses dados adicionais que foram citados. Somente o nome e o estado são suficientes.
+
+No entanto, assim como tratamos a cidade como um objeto, o estado também poderia. Isto nos leva a criar uma classe `Estado`. Como temos que indicar qual estado uma cidade é, devemos então criar primeiramente a classe `Estado`. Ela pode conter os atributos nome e uf, como apresentado no código abaixo.
+
+[source,java]
+----
+public class Estado
+{
+    String nome;
+    String uf;
+}
+----
+
+Se continuarmos pensando no que mais um estado pode ter, podemos rapidamente concluir que poderíamos indicar a qual país ele pertence. Isto nos levaria a criar uma classe para representar os países. Porém, se este dado não é importante para o nosso software, não devemos incluir algo que não precisamos. 
+
+Alguém pode questionar que a loja de móveis pode crescer e começar a vender produtos internacionalmente. Mas você não deve incluir todos os recursos no seu software por simplesmente estar pensando no longo prazo. Em engenharia de software, existe uma recomendação que diz que você não deve fazer isso <<1>> <<2>> <<3>>. 
+
+Se você ainda não precisa de uma determinada característica ou funcionalidade no seu software, não inclua até elas serem necessárias (a não ser que você tenha realmente um excelente motivo para isto). Incluir tais características só farão você perder tempo com recursos que não serão utilizados imediatamente pelos usuários do software.
+
+Bem, agora que criamos nossa classe `Estado`, podemos criar a classe `Cidade` como mostrado abaixo:
+
+[source,java]
+----
+public class Cidade
+{
+    String nome;
+    Estado estado;
+}
+----
+
+Por fim, podemos então alterar o tipo do atributo `cidade` nas classes `Cliente` e `Empresa` de `String` para `Cidade`. Como demonstração, o código da classe `Cliente` é mostrado abaixo. Os métodos foram omitidos intencionalmente. O atributo `cidade` é o último apresentado.
+
+[source,java]
+----
+public class Cliente {
+    String nome;
+    String cpf;
+    String email;
+    String telefone;
+    char sexo;
+    String endereco;
+
+    Cidade cidade;
+}
+----
+
+
+== Criando mais classes e associações
+
+Para praticar, faça o mesmo que fizemos com o atributo `cidade` na classe `Cliente` para a classe `Empresa`. Altere o atributo `cidade` de `String` para a classe `Cidade`.
+
+Agora, crie uma nova classe para representar produtos e outra para representar marcas.
+A classe `Produto` pode ter os atributos:
+
+- `descricao` como `String`
+- `precoCompra`, `precoVenda` e `estoque` como `double`
+
+Além disso, poderíamos definir um atributo `marca` também como `String`. Mas devido aos problemas discutidos para o atributo `cidade` na classe `Cliente`, vamos criar uma classe `Marca` e criar uma associação de `Produto` para tal `Marca`. Como estamos indicando a direção da associação (de -> para), isto significa que devemos criar um atributo da classe `Marca` dentro de `Produto` e não o contrário. Após criar tal associação, o BlueJ mostrará uma seta com a direção de tal associação.
+
+IMPORTANT: A direção de uma associação, representada pela direção da seta em um diagrama de classes, é chamada em POO de navegação. Ela define que classe tem acesso a uma determinada classe. Se a navegação da associação entre duas classes `A` e `B` for de `A` para `B`, um objeto da classe `A` tem acesso um ou mais objetos da classe `B`. Isto significa que dentro de `A` existe um ou mais objetos da classe `B`. Se a associação for de `B` para `A`, a classe `B` é quem terá um ou mais objetos de `A`.
+
+[bibliography]
+== Referências
+
+- [[[1]]] Wikipedia. https://pt.wikipedia.org/wiki/YAGNI[Princípio YAGNI]. 
+- [[[2]]] Wikipedia. https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it[YAGNI: You aren't gonna need it ("Você não vai precisar disto")].
+- [[[3]]] Martin Fowler. https://martinfowler.com/bliki/Yagni.html[YAGNI]. 

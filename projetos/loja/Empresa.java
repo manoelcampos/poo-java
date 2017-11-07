@@ -6,4 +6,5 @@ public class Empresa
     String telefone;
     String email;
     boolean matriz;
+    Funcionario gerente;
 }
