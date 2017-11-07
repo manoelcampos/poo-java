@@ -13,7 +13,7 @@ Imagine o controle remoto de um ar condicionado na sua casa ou trabalho: tal con
 Se o controle remoto não fosse uma classe e sim um tipo primitivo, poderíamos ser capazes de visualizar a temperatura e hora apenas no painel do ar condicionado, enquanto que o controle serviria apenas para executar operações como aumentar e diminuir a temperatura. Com o controle remoto como uma classe, podemos tanto visualizar os atributos como executar operações para alterar seus valores. Isto torna muito mais fácil o uso do controle remoto para controlar o ar condicionado.
 
 .Um objeto de uma classe representando um controle remoto.
-image:controle-remoto-ar.png[]
+image::controle-remoto-ar.png[]
 
 == Criando novas classes
 
