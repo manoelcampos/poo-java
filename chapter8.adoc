@@ -112,9 +112,14 @@ IMPORTANT: Acabamos de aprender sobre *associações*: um tipo de *relacionament
 A partir do momento que incluímos o atributo `gerente` sendo da classe `Funcionario`, se voltarmos para a tela inicial do BlueJ, veremos que ele criaou uma seta representando a associação entre a classe `Empresa` e `Funcionario`, como pode ser visto na figura abaixo. Na figura, a direção da seta indica que a partir de uma empresa podemos saber qual funcionário a gerencia.
 
 .Diagrama de Clases
-image:class-association.png[]
+image::class-association.png[]
 
 Tal figura representa o que chamamos em POO de *Diagrama de Classes*. Este é um diagrama fundamental que é uma das formas de visualizarmos nosso código. Assim como na programação estruturada podemos utilizar fluxogramas como uma alternativa para a representação textual de um algoritmo, podemos utilizar um diagrama de classes para visualizar um conjunto de classes e como elas estão relacionadas entre si.
+
+=== Definindo um gerente para uma empresa
+
+- Por meio do setter
+- Por meio de um construtor
 
 == Definindo novas associações
 

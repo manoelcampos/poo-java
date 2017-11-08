@@ -1,19 +1,16 @@
-
-/**
- * Write a description of class Funcionario here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Funcionario
 {
-    String nome;
+    private String nome;
+    String matricula;
+    String cpf;
+    String cargo;
+    String cidade;
     
     void setNome(String nome){
         this.nome = nome;
     }
     
-    public String toString(){
+    String getNome(){
         return nome;
     }
 }
