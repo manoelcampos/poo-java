@@ -248,40 +248,18 @@ IMPORTANT: A direção de uma associação, representada pela direção da seta 
 
 == Testando Blocos
 
-.AsciiDoc history
+.AsciiDoc Block 1
 ****
 AsciiDoc was first released in Nov 2002 by Stuart Rackham.
 It was designed from the start to be a shorthand syntax
 for producing professional documents like DocBook and LaTeX.
 ****
 
-.Sample document
+.AsciiDoc Block 2
 ====
-Here's a sample AsciiDoc document:
-
-[listing]
-....
-= Title of Document
-Doc Writer
-:toc:
-
-This guide provides...
-....
-
+Here's a sample AsciiDoc document. +
 The document header is useful, but not required.
 ====
-
-[quote, Abraham Lincoln, Address delivered at the dedication of the Cemetery at Gettysburg]
-____
-Four score and seven years ago our fathers brought forth
-on this continent a new nation...
-____
-
-"I hold it that a little rebellion now and then is a good thing,
-and as necessary in the political world as storms in the physical."
--- Thomas Jefferson, Papers of Thomas Jefferson: Volume 11
-
-
 
 [bibliography]
 == Referências
