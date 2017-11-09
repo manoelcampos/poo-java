@@ -246,7 +246,14 @@ Além disso, poderíamos definir um atributo `marca` também como `String`. Mas 
 
 IMPORTANT: A direção de uma associação, representada pela direção da seta em um diagrama de classes, é chamada em POO de navegação. Ela define que classe tem acesso a uma determinada classe. Se a navegação da associação entre duas classes `A` e `B` for de `A` para `B`, um objeto da classe `A` tem acesso um ou mais objetos da classe `B`. Isto significa que dentro de `A` existe um ou mais objetos da classe `B`. Se a associação for de `B` para `A`, a classe `B` é quem terá um ou mais objetos de `A`.
 
-== Testando Blocos
+[bibliography]
+== Referências
+
+- [[[1]]] Wikipedia. https://pt.wikipedia.org/wiki/YAGNI[Princípio YAGNI]. 
+- [[[2]]] Wikipedia. https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it[YAGNI: You aren't gonna need it ("Você não vai precisar disto")].
+- [[[3]]] Martin Fowler. https://martinfowler.com/bliki/Yagni.html[YAGNI]. 
+
+== Blocks
 
 .AsciiDoc Block 1
 ****
@@ -260,10 +267,3 @@ for producing professional documents like DocBook and LaTeX.
 Here's a sample AsciiDoc document. +
 The document header is useful, but not required.
 ====
-
-[bibliography]
-== Referências
-
-- [[[1]]] Wikipedia. https://pt.wikipedia.org/wiki/YAGNI[Princípio YAGNI]. 
-- [[[2]]] Wikipedia. https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it[YAGNI: You aren't gonna need it ("Você não vai precisar disto")].
-- [[[3]]] Martin Fowler. https://martinfowler.com/bliki/Yagni.html[YAGNI]. 
