@@ -41,7 +41,7 @@ image::bluej-getter.gif[]
 
 Depois de criar algumas classes, você verá que criar _getter's_ e _setter's_ é uma tarefa repetitiva e entendiante. Vimos no link:chapter4.adoc[capítulo 4] que o princípio https://en.wikipedia.org/wiki/Don't_repeat_yourself[DRY] prega que devemos evitar retrabalho e esta criação destes métodos vai exatamente contra isso. Porém, veremos que em ferramentas profissionais como o http://netbeans.org[NetBeans] permitem gerar o código necessário para tais métodos, como pode ser visto no vídeo de demonstração abaixo.
 
-video:kgDYmly5Xj4[youtube]
+video:kgDYmly5Xj4[youtube, width="100%", height="300vh"]
 
 Assim, não temos que manualmente criar tais métodos. Mas como podem ver no vídeo, estas ferramentas também seguem o padrão de nomes para _getter's_ e _setter's_. Isto permite, por exemplo, a ferramenta identificar que já existe um desses métodos para um determinado atributo e não criar um novo método para ele.
 
