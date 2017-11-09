@@ -1,4 +1,5 @@
 :imagesdir: images
+:experimental:
 
 == Criando Classes no BlueJ
 
@@ -12,11 +13,11 @@ A partir desta descrição, e sabendo que classes são normalmente representadsa
 
 image::bluej-main-window.png[]
 
-Ao iniciar o BlueJ você pode abrir ou criar um novo projeto. Vamos então criar um novo projeto acessando o menu "Projeto >> Novo Projeto". A tela abaixo aparece para darmos um nome e indicarmos onde desejamos salvar o projeto.
+Ao iniciar o BlueJ você pode abrir ou criar um novo projeto. Vamos então criar um novo projeto acessando o menu:Projeto[Novo Projeto]. A tela abaixo aparece para darmos um nome e indicarmos onde desejamos salvar o projeto.
 
 image::bluej-new-project.gif[]
 
-Após clicar em OK, a tela principal abre o projeto criado. O projeto inicia vazio.
+Após clicar em btn:[OK], a tela principal abre o projeto criado. O projeto inicia vazio.
 
 image::bluej-empty-project.png[]
 

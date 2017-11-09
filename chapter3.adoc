@@ -6,7 +6,7 @@ Antes de prosseguir para a parte prática, temos que instalar as ferramentas nec
 Para podermos compilar aplicações Java, precisamos do Java Development Kit (JDK): o Kit de Desenvolvimento Java.
 A forma mais fácil de instalar estas ferramentas depende do sistema operacional utilizado, como apresentado a seguir.
 
-=== Windows
+=== JDK no Windows
 
 No Windows o JDK deve ser baixado manualmente no site da http://oracle.com/technetwork/java/javase/downloads/[Oracle].
 Nesta página é possível fazer o download do ambiente de desenvolvimento NetBeans já com o JDK 8 incorporado.
@@ -20,7 +20,7 @@ compilar e executar programas Java pelo prompt de comandos.
 
 video::qJvh3X51790[youtube, width="100%", height="300vh"]
 
-=== Linux
+=== JDK no Linux
 
 A instalação do JDK no Linux é bem mais simples utilizando o terminal. Basta executar o comando abaixo no terminal, de acordo com a distribuição Linux que estiver utilizando.
 
@@ -35,12 +35,12 @@ O https://www.bluej.org[BlueJ] é um ambiente integrado de desenvolvimento (Inte
 O processo de instalação do BlueJ também depende do sistema operacional que você estiver utilizando. A versão 4.1.1 do BlueJ requer o JDK 8 para funcionar.
 Depois de ter o JDK instalado como indicado na seção anterior, basta seguir as instruções abaixo.
 
-=== Windows
+=== BlueJ no Windows
 No Windows, basta fazer o download do BlueJ no https://www.bluej.org[site official], clicando no logo do Windows. 
 
 image::bluej-windows.png[]
 
-=== Linux 
+=== BlueJ no Linux 
 Apesar de ainda não ser possível fazer o download do BlueJ utilizando ferramentas de linha de comando como `apt-get`,
 a instalação em distribuições Linux Debian ou derivadas (como o Ubuntu e Linux Mint) é bem facilitada.
 Desta forma, é preciso fazer o download no https://www.bluej.org[site official], clicando no logo do Ubuntu. 
