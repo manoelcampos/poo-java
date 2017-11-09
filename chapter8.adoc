@@ -185,7 +185,7 @@ Também não temos informações adicionais da cidade como qual estado ela perte
 
 Lembre que estamos utilizando programação orientada a objetos. Logo, você precisa pensar em termos de objetos. Como em POO um objeto pode ser qualquer coisa, uma cidade pode então ser um objeto. Assim, para representarmos cidades no nosso software, precisamos criar uma classe `Cidade`. 
 
-Tal classe pode ter os atributos nome e estado. Obviamente, uma cidade pode ter muito mais dados que isso. Poderíamos indicar quem é o prefeito, qual a população, a área e muitos outros dados. Mas assim como falado no link:capítulo 2[chapter2.adoc] quando introduzimos o conceito de classes, as características e funcionalidades de uma classe vão depender do problema em questão. Para o nosso software de loja de móveis, não nos interessa saber todos esses dados adicionais que foram citados. Somente o nome e o estado são suficientes.
+Tal classe pode ter os atributos nome e estado. Obviamente, uma cidade pode ter muito mais dados que isso. Poderíamos indicar quem é o prefeito, qual a população, a área e muitos outros dados. Mas assim como falado no link:chapter2.adoc[Capítulo 2] quando introduzimos o conceito de classes, as características e funcionalidades de uma classe vão depender do problema em questão. Para o nosso software de loja de móveis, não nos interessa saber todos esses dados adicionais que foram citados. Somente o nome e o estado são suficientes.
 
 No entanto, assim como tratamos a cidade como um objeto, o estado também poderia. Isto nos leva a criar uma classe `Estado`. Como temos que indicar qual estado uma cidade é, devemos então criar primeiramente a classe `Estado`. Ela pode conter os atributos nome e uf, como apresentado no código abaixo.
 

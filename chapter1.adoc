@@ -55,7 +55,7 @@ A https://pt.wikipedia.org/wiki/Programação_procedural[Programação Procedura
 ****
 A Programação Copia e Cola apresentada anteriormente é um dos artifícios que programadores usam para resolver muitos problemas. Mas a mundialmente conhecida Programação Orientada a Gambiarras (POG) trouxe avançaos significativos na área.
 
-video::45I9jX5uO9A[youtube, width="640", height="480"]
+video::45I9jX5uO9A[youtube, width="100%", height="300vh"]
 ****
 
 image:oop-to-the-rescue.png[role=right, link=https://toggl.com/programming-princess, width=200] Assim, surgiu a Programação Orientada a Objetos (POO). Mas antes de explicar como a POO funciona e como ela resolve muitos dos problemas apresentados, vamos olhar o mundo ao nosso redor. Nós estamos cercados de objetos para todos os lados, como prédios, carros, celulares, TVs e livros. Todos estes objetos têm suas características e funcionalidades, como exemplificado na tabela a seguir:
