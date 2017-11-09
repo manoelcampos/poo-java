@@ -10,23 +10,12 @@ public class Empresa
     boolean matriz;
     Funcionario gerente;
     
-    Empresa(){
-        this.cidade = "Palmas";
-        this.cnpj = "00000000000000";
-    }
-    
     Empresa(Funcionario gerente){
         setGerente(gerente);
-        gerente.setNome("João");
     }
     
     void setGerente(Funcionario gerente){
-        if(gerente.getNome().isEmpty()) {
-            System.out.println("O gerente deve ter um nome.");
-        }
-        else {
-            this.gerente = gerente;
-        }
+        this.gerente = gerente;
     }
     
     Funcionario getGerente(){

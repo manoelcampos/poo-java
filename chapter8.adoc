@@ -109,17 +109,67 @@ public class Empresa
 
 IMPORTANT: Acabamos de aprender sobre *associações*: um tipo de *relacionamento* entre classes e mais um conceito *fundamental* de POO.
 
-A partir do momento que incluímos o atributo `gerente` sendo da classe `Funcionario`, se voltarmos para a tela inicial do BlueJ, veremos que ele criaou uma seta representando a associação entre a classe `Empresa` e `Funcionario`, como pode ser visto na figura abaixo. Na figura, a direção da seta indica que a partir de uma empresa podemos saber qual funcionário a gerencia.
+A partir do momento que incluímos o atributo `gerente` sendo da classe `Funcionario`, se voltarmos para a tela inicial do BlueJ, veremos que ele criou uma seta representando a associação entre a classe `Empresa` e `Funcionario`, como pode ser visto na figura abaixo. Na figura, a direção da seta indica que a partir de uma empresa podemos saber qual funcionário a gerencia.
 
 .Diagrama de Clases
 image::class-association.png[]
 
 Tal figura representa o que chamamos em POO de *Diagrama de Classes*. Este é um diagrama fundamental que é uma das formas de visualizarmos nosso código. Assim como na programação estruturada podemos utilizar fluxogramas como uma alternativa para a representação textual de um algoritmo, podemos utilizar um diagrama de classes para visualizar um conjunto de classes e como elas estão relacionadas entre si.
 
-=== Definindo um gerente para uma empresa
+Como adicionamos o atributo `gerente`, agora precisamos criar o _getter_ e _setter_ para ele, como mostra o código abaixo (que deve ser incluído dentro da classe `Empresa`):
 
-- Por meio do setter
-- Por meio de um construtor
+[source,java]
+----
+Funcionario getGerente(){
+    return gerente;
+}
+
+void setGerente(Funcionario gerente){
+    this.gerente = gerente;
+}
+----
+
+=== Definindo um gerente para uma empresa por meio do setter
+
+A classe `Empresa` agora possui um atributo `gerente` que é do tipo (classe) `Funcionario`. Podemos então criar uma `Empresa` como já fizemos antes (clicando sobre a classe na tela principal do BlueJ e escolhendo a opção `new Empresa()`). Após o objeto `Empresa` ter sido criado, podemos utilizar os _setter's_ para definir os valores dos atributos. No entanto, o atributo `gerente` é do tipo `Funcionario`. Assim, precisaremos então criar um funcionário antes de definir quem é o gerente da empresa, como mostrado na figura abaixo. Estamos definindo um nome para o funcionário criado, antes de atribuir ele como gerente da empresa.
+
+image::bluej-new-funcionario.gif[]
+
+Se clicarmos duas vezes na empresa que criamos anteriormente (no conto inferior esquerdo do BlueJ na imagem acima), veremos que o gerente da empresa está como `null`, o que indica que a empresa não possui um gerente ainda. Como a classe `Empresa` possui um método `setGerente`, podemos utilizá-lo para definir o funcionário que acabamos de criar como gerente. Tal funcionário é um objeto chamado `funcionario1` na imagem acima. Ou seja, o objeto é uma variável chamada de `funcionario1`.
+
+Agora, podemos então chamar o método `setGerente` na empresa criada para definir o `funcionario1` como gerente, como mostrado abaixo. Quando clicarmos duas vezes novamente sobre a empresa criada, vemos que o atributo `gerente` não é mais `null`, sendo apresentada uma seta que representa a associação entre a `empresa1` e o `funcionario1`. Se clicarmos duas vezes em tal seta, teremos acesso a tal funcionário e poderemos ver todos os seus atributos.
+
+image::bluej-set-gerente.gif[]
+
+=== Definindo um gerente para uma empresa por meio de um construtor
+
+Vimos no link:chapter7.html[Capítulo 7] o que são construtores e como adicioná-los a uma classe. Aprendemos que se nenhum construtor for manualmente incluído, um construtor padrão (que não recebe nenhum parâmetro) é automaticamente adicionado.
+
+Podemos então criar um construtor para a classe `Empresa` para nos permitir definir quem é o gerente no momento que uma empresa for criada. Para isto, basta adicionar o código do construtor a seguir dentro da classe `Empresa`.
+
+[source,java]
+----
+    Empresa(Funcionario gerente){
+        setGerente(gerente);
+    }
+----
+
+Lembre-se que o construtor é um método especial que cria objetos da classe. Ele deve obrigatoriamente ter o mesmo nome da classe e pode ter parâmetros (como é o caso do parâmetro `gerente`).
+
+Como já fizemos antes no Capítulo 7, dentro do construtor, estamos chamando o método `setGerente` que já recebe um funcionário e define ele como gerente da empresa. No lugar de tal linha de código, poderíamos simplesmente ter feito `this.gerente = gerente`, mas isto duplicaria o código existente dentro de `setGerente`, como já discutido no capítulo citado.
+
+Como alteramos o código, precisaremos compilar a classe novamente, e recriar o `funcionario1`. Vamos então criar uma nova empresa utilizando o novo construtor adicionado, como mostrado na figura abaixo. Observe que agora, ao criar uma empresa, precisamos indicar quem é o gerente. Veja que pelo fato de termos adicionado um construtor com parâmetros, o construtor padrão (sem parâmetros, que permite criar uma empresa e definir o gerente posteriormente), não é mais disponibilizado. 
+
+image::bluej-construtor-empresa-gerente.gif[]
+
+Em Java, quando um construtor com parâmetros é adicionado, se um construtor padrão (sem parâmetros) não foi explicitamente definido no código, ele não é automaticamente disponibilizado. Isto é uma característica da linguagem. Se desejar ter o construtor padrão também, precisará manualmente incluir ele, mesmo que ele não execute nenhum código definido por você, como mostrado abaixo.
+
+[source,java]
+----
+    Empresa(){
+        
+    }
+----
 
 == Definindo novas associações
 
