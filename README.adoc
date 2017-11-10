@@ -16,8 +16,7 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-- https://palmas.ifto.edu.br/index.php/component/content/article?id=225[Curso Superior de Sistemas para Internet] - http://www.ifto.edu.br[IFTO]
-- http://about.me/manoelcampos[Prof. Me. Manoel Campos da Silva Filho]
+http://about.me/manoelcampos[Prof. Me. Manoel Campos da Silva Filho]
 
 
 ifdef::env-github[]
@@ -32,21 +31,6 @@ Um paradigma define um modelo ou padrão a ser seguido. O paradigma de programa�
 == Pré-requisitos
 
 - Lógica de programação e programação procedural/estruturada.
-
-== Metodologia
-
-Aulas expositivas e práticas em laboratório, com aplicação da teoria no desenvolvimento de pequenos projetos.
-O ambiente de desenvolvimento para ensino de Programação Orientada a Objetos em Java denominado https://www.bluej.org[BlueJ] será utilizado como ferramenta inicial para auxiliar no aprendizado dos conceitos da disciplina.
-
-== Plano do Curso
-
-== Método de Avaliação
-
-Para ser aprovado na disciplina o aluno precisa ter média igual ou superior a 6 e pelo menos 75% de presença.
-
-O aluno será avaliado pelas atividades realizadas em sala de aula e no ambiente virtual de aprendizagem, a soma delas contabilizando 10 pontos por bimestre. Será ainda aplicada 1 prova teórico-prática valendo 10 pontos. A Nota Final do aluno será calculada pela média aritmética das notas dos bimestres.
-
-Caso o aluno não consiga obter nota para aprovação, será aplicado um exame final teórico-prático que, se igual o superior a 6,0, substituirá a Nota Final.
 
 == Motivação para uso de POO
 
