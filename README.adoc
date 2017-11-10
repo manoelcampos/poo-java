@@ -1,4 +1,4 @@
-= Introdução
+= Programação Orientada a Objetos em Java: uma abordagem didática utilizando o BlueJ
 :source-highlighter: highlightjs
 :imagesdir: images
 :allow-uri-read:
