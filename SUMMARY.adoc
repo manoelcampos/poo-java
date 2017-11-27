@@ -9,5 +9,6 @@
 . link:chapter6.adoc[Obtendo valores de atributos]
 . link:chapter7.adoc[Definindo valores inicias para atributos]
 . link:chapter8.adoc[Classes e Associações]
+.. link:chapter8-exercise.adoc[Exercício]
 . link:chapter9.adoc[Permissões de Acesso]
 . link:GLOSSARY.adoc[Glossário]

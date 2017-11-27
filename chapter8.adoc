@@ -259,13 +259,6 @@ Além disso, poderíamos definir um atributo `marca` também como `String`. Mas 
 
 IMPORTANT: A direção de uma associação, representada pela direção da seta em um diagrama de classes, é chamada em POO de navegação. Ela define que classe tem acesso a uma determinada classe. Se a navegação da associação entre duas classes `A` e `B` for de `A` para `B`, um objeto da classe `A` tem acesso um ou mais objetos da classe `B`. Isto significa que dentro de `A` existe um ou mais objetos da classe `B`. Se a associação for de `B` para `A`, a classe `B` é quem terá um ou mais objetos de `A`.
 
-[exercicio]
-== Exercício
-
-Para praticarmos os conceitos apresentados até agora, considere o seguinte problema. Você precisa desenvolver um sistema acadêmico para controle de notas de alunos de uma instituição de ensino. O sistema precisa registrar os cursos ofertados na instituição. Cada curso possui um conjunto de disciplinas e cada disciplina pertence a um único curso. Alunos são matriculados em um curso. Cada aluno também deve ter uma lista de disciplinas em que está matriculado.
-
-Identifique os atributos necessários para as classes. Crie os _getters_ , _setters_ e construtores que achar conveniente. A classe `Curso` deve ter um método `adicionarDisciplina` que adiciona uma disciplina à lista do curso. A classe `Aluno` também deve possuir um método semelhante. Tais métodos só devem adicionar a disciplina informada se a mesma ainda não existir na lista de disciplinas do curso ou do aluno.
-
 [bibliography]
 == Referências
 
