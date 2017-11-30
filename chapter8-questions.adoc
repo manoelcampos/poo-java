@@ -1,17 +1,17 @@
 :imagesdir: images
 
-== Questões de POO para Concurso
+== Questões de Concursos Públicos
 _(Tópicos: Classes, Objetos, Atributos, Métodos, Construtores, Associações, Getters, Setters)_
 
 === ANO: 2015 BANCA: CESPE ÓRGÃO: TRE-RS PROVA: TÉCNICO JUDICIÁRIO - PROGRAMAÇÃO DE SISTEMAS
 Considere as seguintes informações:
 
-carro (objeto)
-tamanho
-capacidade porta-malas
-quantidade de portas
-trava porta
-destrava porta
+- carro (objeto)
+- tamanho
+- capacidade porta-malas
+- quantidade de portas
+- trava porta
+- destrava porta
 
 Nas informações listadas acima, referentes ao objeto carro, a informação trava porta, quando analisada em relação à orientação a objetos, representa:
 
