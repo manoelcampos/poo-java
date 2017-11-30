@@ -1,0 +1,137 @@
+:imagesdir: images
+
+== Questões de POO para Concurso
+_(Tópicos: Classes, Objetos, Atributos, Métodos, Construtores, Associações, Getters, Setters)_
+
+=== ANO: 2015 BANCA: CESPE ÓRGÃO: TRE-RS PROVA: TÉCNICO JUDICIÁRIO - PROGRAMAÇÃO DE SISTEMAS
+Considere as seguintes informações:
+
+carro (objeto)
+tamanho
+capacidade porta-malas
+quantidade de portas
+trava porta
+destrava porta
+
+Nas informações listadas acima, referentes ao objeto carro, a informação trava porta, quando analisada em relação à orientação a objetos, representa:
+
+A. uma classe
+B. um método
+C. uma herança
+D. uma estrutura
+E. um atributo
+
+=== ANO: 2015 BANCA: AOCP ÓRGÃO: HU-UFJF PROVA: ANALISTA DE TECNOLOGIA DA INFORMAÇÃO - PROCESSOS
+Diante dos paradigmas principais de desenvolvimento de software no mercado, tem-se o paradigma estruturado e o da orientação a objetos. Objeto, neste contexto, é:
+
+A. um método.
+B. uma instância de uma classe.
+C. uma variável.
+D. array.
+E. função
+
+=== ANO: 2015 BANCA: UFG ÓRGÃO: AL-GO PROVA: ASSISTENTE LEGISLATIVO - PROGRAMADOR DE COMPUTADOR
+Na programação orientada a objetos, a instanciação de objetos tem o objetivo de:
+
+A. criar um objeto.
+B. definir atributos e métodos de uma classe.
+C. inicializar uma classe.
+D. abstrair os atributos de um objeto.
+
+=== ANO: 2010 BANCA: FCC ÓRGÃO: TCE-SP PROVA: AGENTE DA FISCALIZAÇÃO FINANCEIRA - SUPORTE DE WEB
+A descrição de um conjunto de entidades (reais ou abstratas) de um mesmo tipo e com as mesmas características e comportamentos. Trata-se da definição de: 
+
+A. String. 
+B. Método. 
+C. Conjunto. 
+D. Classe. 
+E. Objeto.
+
+=== ANO: 2010 BANCA: CESPE ÓRGÃO: ABIN PROVA: OFICIAL TÉCNICO DE INTELIGÊNCIA - ÁREA DE DESENVOLVIMENTO E MANUTENÇÃO DE SISTEMAS
+
+Objeto é o agrupamento de classes similares que apresentam os mesmos atributos e operações. Na definição de uma classe, é necessário estabelecer a que objeto ela ocorre como instância.
+
+A. Certo
+B. Errado
+
+=== ANO: 2010 BANCA: ESAF ÓRGÃO: SUSEP PROVA: ANALISTA TÉCNICO DA SUSEP - TECNOLOGIA DA INFORMAÇÃO
+Em relação à programação orientada a objetos, é correto aﬁrmar que:
+
+A. o objeto é deﬁnido por atributos.
+B. objetos são instâncias de um atributo. 
+C. apenas atributos numéricos são válidos. 
+D. atributos podem ser agrupados em pointvalues. 
+E. atributos adequados dispensam referências a objetos.
+
+=== ANO: 2014 BANCA: CESPE ÓRGÃO: ANATEL PROVA: ANALISTA ADMINISTRATIVO - DESENVOLVIMENTO DE SISTEMAS DE INFORMAÇÃO
+O uso do conceito de delegação em projetos leva a um código dinâmico, normalmente com um ganho de desempenho.
+
+A. Certo
+B. Errado
+
+=== ANO: 2012 BANCA: FCC ÓRGÃO: TRE-SP PROVA: ANALISTA JUDICIÁRIO - ANALISTA DE SISTEMAS
+Nos conceitos de orientação a objetos, ....1.... é uma estrutura composta por ....2.... que descrevem suas propriedades e também por ....3.... que moldam seu comportamento. ....4.... são ....V5... dessa estrutura e só existem em tempo de execução.
+
+Para completar corretamente o texto as lacunas devem ser preenchidas, respectivamente, por:
+
+A. 1-objeto, 2-métodos, 3-assinaturas, 4-Classes, 5-cópias. 
+B. 1-polimorfismo, 2-funções, 3-métodos, 4-Herança, 5-cópias. 
+C. 1-classe, 2-atributos, 3-operações, 4-Objetos, 5-instâncias. 
+D. 1-multiplicidade, 2-símbolos, 3-números, 4-Classes, 5-herdeiros. 
+E. 1-domínio, 2-diagramas, 3-casos de caso, 4-Diagramas de classe, 5-exemplos. 
+
+=== ANO: 2014 BANCA: BIO RIO ÓRGÃO: EMGEPRON PROVA: ANALISTA DE SISTEMAS - DESENVOLVIMENTO DE APLICAÇÕES
+Na orientação a objetos, um objeto é composto pelos seus dados e pelas funções que os manipulam, componentes que são conhecidos, respectivamente, por:
+
+A. classes e atributos 
+B. atributos e métodos 
+C. propriedades e classes 
+D. métodos e propriedades
+
+=== ANO: 2013 BANCA: CESPE ÓRGÃO: TRT - 17ª REGIÃO (ES) PROVA: ANALISTA JUDICIÁRIO - TECNOLOGIA DA INFORMAÇÃO
+Ao se criar um objeto, seus atributos são acessados por qualquer outro objeto, sem restrições.
+
+A. Certo
+B. Errado
+
+=== ANO: 2008 BANCA: FCC ÓRGÃO: TRT - 2ª REGIÃO (SP) PROVA: ANALISTA JUDICIÁRIO - TECNOLOGIA DA INFORMAÇÃO
+As instâncias de uma classe são:
+
+A. seus atributos.
+B. suas superclasses.
+C. suas operações.
+D. seus objetos.
+E. seus relacionamentos. 
+
+=== Câmara Municipal de São Paulo - SP 2014 Cargo: Consultor Técnico Legislativo – Nível Superior Informática Banca: FCC
+A afirmativa I refere-se à Programação Estruturada (PE. e a afirmativa II refere-se à Programação Orientada a Objetos (POO). A alternativa que traz as duas afirmativas verdadeiras é:
+
+A. I − Em linguagens estruturadas, como o Assembly, o programador sempre cria códigos de difícil leitura, pois nesse tipo de linguagem os saltos (jumps) estão sempre presentes.
+II − A POO provê uma melhor organização do código e contribui para o reaproveitamento de código, mas seus conceitos são de difícil compreensão se comparados aos conceitos da PE.
+B. I − A PE possibilita que o programador tenha maior controle sobre o fluxo de execução do programa. Para isso, pode utilizar estruturas de sequência, estruturas de decisão e estruturas de repetição.
+II − Os métodos definem o comportamento dos objetos, tendo seus nomes normalmente definidos por verbos. Para uma classe Carro, por exemplo, poderia haver os métodos ligar, acelerar e desligar.
+C. I − Uma característica da PE são os saltos (jumps), que funcionam da seguinte forma: o programador define um label no código e depois, a partir de qualquer parte do programa, ele pode executar um desvio de fluxo de execução para aquele label, mediante a avaliação positiva de uma condição.
+II − Classe é o molde para criar objetos. Possui todas as especificações de um grupo deles. As interfaces definem características de objetos, por exemplo, uma classe Pessoa pode ter as interfaces Nome, Endereço e Telefone.
+D. I − A depuração de um código com muitos labels e saltos (jumps), dificulta o entendimento do fluxo de execução de um programa estruturado.
+II − Herança é a capacidade de criar classes a partir de uma superclasse. Essas classes herdam, então, todas as características da superclasse. Encapsulamento é o princípio pelo qual uma classe sobrescreve um comportamento herdado de sua superclasse.
+E. I − A PE baseia-se no que deve ser feito e não em como a tarefa deve ser feita. Tende a gerar códigos em que os tratamentos dos dados são misturados com o comportamento do programa.
+II − Polimorfismo é a habilidade de esconder de outros objetos, as características intrínsecas de um dado objeto. Toda a comunicação entre objetos deve ser realizada através de interfaces. Um objeto não deve ser capaz de acessar nem alterar métodos de outro objeto diretamente.
+
+=== IFB 2017 - Cargo: Professor - Área Desenvolvimento de Sistemas - Banca: IFB Nível: Superior
+Alguns conceitos básicos de classes e objetos apresentados em Barnes e Kölling (2009) são descritos no texto a seguir:
+
+Os objetos são criados a partir de ____________ . A classe descreve o tipo do ___________ ; os objetos representam instanciações individuais da ____________ . Podemos nos comunicar com objetos invocando seus métodos. O cabeçalho de um método é chamado ____________ e fornece informações necessárias para invocar o método. O ____________ de um objeto é representado pelos valores armazenados em seus ____________ . Os ____________ permitem que cada objeto seja configurado adequadamente quando ele é criado. Os ____________ implementam o comportamento dos objetos.
+
+As palavras que completam CORRETAMENTE, na ordem apresentada, as lacunas do texto acima são:
+
+A. valores; programa; variável; assinatura; comportamento; campos; construtores; métodos
+B. classes; objeto; classe; assinatura; estado; campos; construtores; métodos
+C. classes; programa; classe; invocação; conceito; campos; retornos; métodos
+D. programas; objeto; classe; retorno; estado; retornos; construtores; classificadores
+E. valores; objeto; variável; assinatura; comportamento; campos; construtores; classificadores
+
+=== CESPE - 2012 - MPE-PI - Analista Ministerial - Informática 
+É possível que um mesmo objeto tenha mais de um método com o mesmo nome.
+
+A. Certo
+B. Errado
