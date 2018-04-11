@@ -16,9 +16,9 @@ mas posteriormente utilizaremos o NetBeans. Assim, é mais fácil já baixar tud
 IMPORTANT: O BlueJ 4.1.1 e o NetBeans 8.2 só funcionam com o JDK 8.
 
 O vídeo abaixo mostra o processo de instalação passo-a-passo, incluindo as configurações necessárias para 
-compilar e executar programas Java pelo prompt de comandos. 
+compilar e executar programas Java pelo prompt de comandos no Windows. 
 
-video::qJvh3X51790[youtube, width="100%", height="300vh"]
+video::CdzJcXYQxt8[youtube, width="100%", height="300vh"]
 
 === JDK no Linux
 
