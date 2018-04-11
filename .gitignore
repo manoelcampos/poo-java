@@ -5,5 +5,7 @@ Gemfile.lock
 build
 html/
 node_modules
+*.ctxt
 *.class
-projetos/loja/doc/
+*/private/
+*/target/

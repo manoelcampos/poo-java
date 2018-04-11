@@ -34,14 +34,12 @@
     * apresentar os modificadores de acesso público e privado e como o código acessando 
       atributos diretamente de fora da classe produto param de funcionar.
 
-- Alterar a venda para permitir incluir vários itens: apresentação do conceito de agregação.
-
+- Alterar a venda para permitir incluir vários itens
 
 - Exercícios
   * no setter do produto na classe Venda, verificar se o produto informado
     tem estoque maior que zero para poder atribuir o produto à venda.
     Caso o estoque seja zero ou negativo, exibir a mensagem "O produto informado não possui estoque e não pode ser vendido".
 
+- Mostrar em detalhes os relacionamentos 1..n
 - Mostrar o problema de NullPointerException e como resolver, criando instancias dos relacionamentos no construtor.    
-
-

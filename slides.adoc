@@ -20,8 +20,9 @@ endif::[]
 
 - https://palmas.ifto.edu.br/index.php/component/content/article?id=225[Curso Superior de Sistemas para Internet] - http://www.ifto.edu.br[IFTO]
 - http://about.me/manoelcampos[Prof. Me. Manoel Campos da Silva Filho]
-- mcampos@ifto.edu.br 
+- manoelcampos@gmail.com
 - https://manoelcampos.gitbooks.io/poo-java/
+- Whatsapp: 99280-7866
 
 == Objetivos
 
