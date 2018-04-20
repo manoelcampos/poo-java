@@ -4,7 +4,7 @@
 
 Vimos que uma classe é um modelo utilizado para criar objetos. Porém, uma classe é simplesmente um tipo especial, que além de armazenar dados, permite a execução de operações (funções) que chamamos de métodos. Em Java temos tipos primitivos como `char`, `int` e `double`. Variáveis desses tipos apenas armazenam dados. Um tipo primitivo não define internamente um conjunto de operações que podem ser feitas sobre os valores armazenados em tais variáveis. Um tipo como o `int`, por exemplo, poderia ter uma operação para indicar se o número armazenado na variável é par ou não. 
 
-Como nenhuma operação é definida para estes tipos, isto torna mais complicada a manipulação dos dados armazenados em tais variáveis. Isto se deve ao fato de que, uma vez que percisemos fazer uma operação como verificar se um número é par, devemos escrever nosso próprio código para isto ou utilizar uma funções disponível em qualquer outro lugar. 
+Como nenhuma operação é definida para estes tipos, isto torna mais complicada a manipulação dos dados armazenados em tais variáveis. Isto se deve ao fato de que, uma vez que precisarmos fazer uma operação como verificar se um número é par, devemos escrever nosso próprio código para isto ou utilizar uma funções disponível em qualquer outro lugar. 
 
 Uma classe define os dados (atributos) e operações (métodos) que os objetos da classe terão, colocando tudo junto num só lugar. Assim, os métodos permitem que os atributos de cada objeto criado sejam manipulados. A manipulação desses dados é mais fácil, uma vez que qualquer método pode manipular qualquer um dos atributos declarados diratamente na classe. 
 
@@ -107,7 +107,7 @@ public class Empresa
 }
 ----
 
-IMPORTANT: Acabamos de aprender sobre *associações*: um tipo de *relacionamento* entre classes e mais um conceito *fundamental* de POO.
+IMPORTANT: Acabamos de aprender sobre *associações*: um tipo de *relacionamento* entre classes e mais um conceito *fundamental* da POO.
 
 A partir do momento que incluímos o atributo `gerente` sendo da classe `Funcionario`, se voltarmos para a tela inicial do BlueJ, veremos que ele criou uma seta representando a associação entre a classe `Empresa` e `Funcionario`, como pode ser visto na figura abaixo. Na figura, a direção da seta indica que a partir de uma empresa podemos saber qual funcionário a gerencia.
 

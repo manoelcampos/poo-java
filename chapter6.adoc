@@ -13,7 +13,7 @@ TipoRetorno nomeFuncao() {
 }
 ----
 
-Tais funções apenas obtêm o valor de um determinado atributo, assim, não precisamos passar nenhuma informação para a função (nenhum parâmetro) para que ela executa sua tarefa. Desta forma, os parênteses da função ficam vazios. O tipo de retorno normalment é o mesmo definido pela atributo que deseja-se obter o valor. Assim, uma função para obter o valor do atributo `endereco` poderia ser como mostrado abaixo:
+Tais funções apenas obtêm o valor de um determinado atributo, assim, não precisamos passar nenhuma informação para a função (nenhum parâmetro) para que ela execute sua tarefa. Desta forma, os parênteses da função ficam vazios. O tipo de retorno normalmente é o mesmo definido pelo atributo que deseja-se obter o valor. Assim, uma função para obter o valor do atributo `endereco` poderia ser como mostrado abaixo:
 
 [source, java]
 ----
@@ -22,7 +22,7 @@ String getEndereco() {
 }
 ----
 
-IMPORTANT: O padrão para o nome de tais funções é *getNomeDoAtributo*. Estas funções são chamadas de _getters_ (_get_ significa obter). Assim como os _setters_, elas têm um nome diferenciado pois tem uma finalidade bastante específica: cada _getter_ obtém o valor de um atributo. O código dos _getters_ também pode ser gerado por ferramentas como o NetBeans.
+IMPORTANT: O padrão para o nome de tais funções é *getNomeDoAtributo*. Estas funções são chamadas de _getters_ (_get_ significa obter). Assim como os _setters_, elas devem ter um nome específico pois possuem uma finalidade bem definida: obter o valor de um atributo.
 
 A linha `return endereco;` é bem mais simples do que utilizamos para o _setter_. Aqui não precisamos usar a palavra `this` para nos referirmos ao atributo, pois a função `getEndereco` não possui um parâmetro com o mesmo nome do atributo que estamos utilizando. De fato, ela não possui parâmetro algum. 
 
@@ -43,6 +43,12 @@ Depois de criar algumas classes, você verá que criar _getter's_ e _setter's_ �
 
 video::kgDYmly5Xj4[youtube, width="100%", height="300vh"]
 
-Assim, não temos que manualmente criar tais métodos. Mas como podem ver no vídeo, estas ferramentas também seguem o padrão de nomes para _getter's_ e _setter's_. Isto permite, por exemplo, a ferramenta identificar que já existe um desses métodos para um determinado atributo e não criar um novo método para ele.
+Assim, não temos que manualmente criar tais métodos. Mas como podem ver no vídeo, estas ferramentas também seguem o padrão de nomes para _getter's_ e _setter's_. Isto permite, por exemplo, a ferramenta identificar se já existe um desses métodos para um determinado atributo e não criar um novo método para ele.
 
 Além disso, apenas verificando o nome de um método destes, podemos imediatamente saber qual a finalidade dele, sem precisar ler o código.
+
+.Getters e Setters
+[IMPORTANT]
+====
+Você verá que criar *getters* e *setters* é algo repetitivo e entediante. Por esse motivo, ferramentas de desenvolvimento profissionais (como http://netbeans.org[NetBeans]) nos dispensam deste trabalho e permitem gerar tais métodos para os atributos que desejarmos. Este é um dos motivos destes métodos terem um padrão quanto ao nome.
+====
