@@ -4,13 +4,13 @@
 
 Vimos que uma classe é um modelo utilizado para criar objetos. Porém, uma classe é simplesmente um tipo especial, que além de armazenar dados, permite a execução de operações (funções) que chamamos de métodos. Em Java temos tipos primitivos como `char`, `int` e `double`. Variáveis desses tipos apenas armazenam dados. Um tipo primitivo não define internamente um conjunto de operações que podem ser feitas sobre os valores armazenados em tais variáveis. Um tipo como o `int`, por exemplo, poderia ter uma operação para indicar se o número armazenado na variável é par ou não. 
 
-Como nenhuma operação é definida para estes tipos, isto torna mais complicada a manipulação dos dados armazenados em tais variáveis. Isto se deve ao fato de que, uma vez que precisarmos fazer uma operação como verificar se um número é par, devemos escrever nosso próprio código para isto ou utilizar uma funções disponível em qualquer outro lugar. 
+Como nenhuma operação é definida para estes tipos, isto torna mais complicada a manipulação dos dados armazenados em tais variáveis. Isto se deve ao fato de que, uma vez que precisarmos fazer uma operação como verificar se um número é par, devemos escrever nosso próprio código para isto ou utilizar uma função disponível em qualquer outro lugar. 
 
 Uma classe define os dados (atributos) e operações (métodos) que os objetos da classe terão, colocando tudo junto num só lugar. Assim, os métodos permitem que os atributos de cada objeto criado sejam manipulados. A manipulação desses dados é mais fácil, uma vez que qualquer método pode manipular qualquer um dos atributos declarados diratamente na classe. 
 
-Imagine o controle remoto de um ar condicionado na sua casa ou trabalho: tal controle específico é um exemplo de um objeto criado a partir de uma classe que poderíamos chamar de `ControleRemoto`. Cada controle remoto armazena alguns dados como a temperatura configurada para o ar condicionado e as horas. Estes seriam atributos da classe. Os botões do controle remoto são métodos que permitem executar ações como ligar ou desligar o ar condicionado e alterar a temperatura. Os botões que permitem alterar a temperatura manipulam o atributo `temperatura`, aumentando ou reduzindo seu valor.
+Imagine o controle remoto de um ar condicionado: tal controle específico é um exemplo de um objeto criado a partir de uma classe que poderíamos chamar de `ControleRemoto`. Cada controle remoto armazena alguns dados como a temperatura configurada para o ar condicionado e as horas. Estes seriam atributos da classe. Os botões do controle remoto são métodos que permitem executar ações como ligar ou desligar o aparelho e alterar a temperatura. Os botões que permitem alterar a temperatura manipulam o atributo `temperatura`, aumentando ou reduzindo seu valor.
 
-Se o controle remoto não fosse uma classe e sim um tipo primitivo, poderíamos ser capazes de visualizar a temperatura e hora apenas no painel do ar condicionado, enquanto que o controle serviria apenas para executar operações como aumentar e diminuir a temperatura. Com o controle remoto como uma classe, podemos tanto visualizar os atributos como executar operações para alterar seus valores. Isto torna muito mais fácil o uso do controle remoto para controlar o ar condicionado.
+Se o controle remoto não fosse uma classe e sim um tipo primitivo, só poderíamos visualizar a temperatura e hora no painel do aparelho, enquanto que o controle serviria apenas para executar operações como aumentar e diminuir a temperatura. Com o controle remoto como uma classe, podemos tanto visualizar os atributos como executar operações para alterar seus valores. Isto torna muito mais fácil o uso do ar condicionado.
 
 .Um objeto de uma classe representando um controle remoto.
 image::controle-remoto-ar.png[]
@@ -33,7 +33,7 @@ public class Empresa
 }
 ----
 
-Tal classe possui atributos para armazenar o endereço, cidade, telefone e email da empresa. Além destes, há um atributo do tipo `boolean` chamado `matriz` para indicar se a empresa é a matriz ou alguma filial. O tipo `boolean` é chamado de tipo lógico e permite armazenar valores _true_ (verdadeiro) ou _false_ (falso). Assim, se objeto da classe `Empresa` tiver o valor _true_ para tal atributo, tal instância da `Empresa` é a matriz, caso contrário será uma filial. Quando utilizamos o tipo `boolean` queremos saber se algo é verdade ou falso. Assim, ao declarar o atributo `matriz` estamos querendo saber se a empresa é uma matriz ou não.
+Tal classe possui atributos para armazenar o endereço, cidade, telefone e email da empresa. Além destes, há um atributo do tipo `boolean` chamado `matriz` para indicar se a empresa é a matriz ou alguma filial. O tipo `boolean` é chamado de tipo lógico e permite armazenar valores _true_ (verdadeiro) ou _false_ (falso). Assim, se um objeto da classe `Empresa` tiver o valor _true_ para tal atributo, tal instância da `Empresa` é a matriz, caso contrário será uma filial. Quando utilizamos o tipo `boolean`, queremos saber se algo é verdade ou falso. Logo, ao declarar o atributo `matriz` queremos saber se a empresa é uma matriz ou não.
 
 Agora que temos o código inicial da nossa classe `Empresa`, devemos então criar os _getter's_ e _setter's_ que permitirão obter e alterar os valores dos atributos.
 
@@ -81,7 +81,7 @@ Aprendemos anteriormente que tais métodos devem ter nomes e estruturas padrões
 
 Porém, para atributos do tipo `boolean` o _getter_ deve ter um padrão diferente: deve iniciar com a palavra _is_ seguida do nome do atributo. Assim, o _getter_ para o atributo `matriz` é `isMatriz` e não `getMatriz`. Ao traduzir `isMatriz` temos uma pergunta: é matriz?
 
-Como o tipo do atributo é `boolean`, a resposta será binária: verdade (true) ou falso (false). Desta forma, o nome do método é mais intuitivo que `getMatriz`.
+Como o tipo do atributo é `boolean`, a resposta será binária: verdade (_true_) ou falso (_false_). Desta forma, o nome do método é mais intuitivo que `getMatriz`.
 
 == Utilizando as classes criadas
 
@@ -109,7 +109,7 @@ public class Empresa
 
 IMPORTANT: Acabamos de aprender sobre *associações*: um tipo de *relacionamento* entre classes e mais um conceito *fundamental* da POO.
 
-A partir do momento que incluímos o atributo `gerente` sendo da classe `Funcionario`, se voltarmos para a tela inicial do BlueJ, veremos que ele criou uma seta representando a associação entre a classe `Empresa` e `Funcionario`, como pode ser visto na figura abaixo. Na figura, a direção da seta indica que a partir de uma empresa podemos saber qual funcionário a gerencia.
+A partir do momento que incluímos o atributo `gerente` sendo da classe `Funcionario`, se voltarmos para a tela inicial do BlueJ, veremos que ele criou uma seta representando a associação entre a classe `Empresa` e `Funcionario`, como pode ser visto na figura abaixo. A direção da seta indica que a partir de uma empresa podemos saber qual funcionário a gerencia.
 
 .Diagrama de Clases
 image::class-association.png[]
@@ -131,25 +131,27 @@ void setGerente(Funcionario gerente){
 
 === Definindo um gerente para uma empresa por meio do setter
 
-A classe `Empresa` agora possui um atributo `gerente` que é do tipo (classe) `Funcionario`. Podemos então criar uma `Empresa` como já fizemos antes (clicando sobre a classe na tela principal do BlueJ e escolhendo a opção `new Empresa()`). Após o objeto `Empresa` ter sido criado, podemos utilizar os _setter's_ para definir os valores dos atributos. Como o atributo `gerente` é do tipo `Funcionario`, precisaremos então criar um funcionário antes de definir quem é o gerente da empresa, como mostrado na figura abaixo. Na imagem, estamos definindo um nome para o funcionário criado, antes de atribuir ele como gerente da empresa.
+A classe `Empresa` agora possui um atributo `gerente` que é do tipo (classe) `Funcionario`. Podemos então criar uma `Empresa` como já fizemos antes (clicando sobre a classe na tela principal do BlueJ e escolhendo a opção `new Empresa()`). Após o objeto `Empresa` ter sido criado, podemos utilizar os _setter's_ para definir os valores dos atributos. Como o atributo `gerente` é do tipo `Funcionario`, precisaremos então criar um funcionário antes de definir quem é o gerente da empresa. Como mostra a figura abaixo, estamos definindo um nome para o funcionário criado, antes de atribuir ele como gerente da empresa.
 
 .Criando um novo funcionário
 image::bluej-new-funcionario.gif[]
 
-Se clicarmos duas vezes na empresa que criamos anteriormente (no conto inferior esquerdo do BlueJ na imagem acima), veremos que o gerente da empresa está como `null`, o que indica que a empresa não possui um gerente ainda. Como a classe `Empresa` possui um método `setGerente`, podemos utilizá-lo para definir o funcionário que acabamos de criar como gerente. Tal funcionário é um objeto chamado `funcionario1` na imagem acima. Ou seja, o objeto é uma variável chamada de `funcionario1`.
+Se clicarmos duas vezes na empresa que criamos anteriormente (no conto inferior esquerdo do BlueJ na imagem acima), veremos que o gerente da empresa está como `null`, o que indica que a empresa não possui um gerente ainda. Como a classe `Empresa` possui um método `setGerente`, podemos utilizá-lo para definir o funcionário que acabamos de criar como gerente. Tal funcionário é um objeto chamado `funcionario1` na imagem acima. Ou seja, o objeto é uma variável chamada `funcionario1`.
 
-NOTE: Ao criar um funcionário no BlueJ, ele sugere que o nome do objeto (também chamado de instância e representado por uma variável) seja `funcionaN`, onde `N` é um número adicionado a cada objeto criado. Ou seja, ele abrevia a palavra `funcionario`. Assim, o nome sugerido pelo BlueJ para a variável do primeiro funcionário criado será `funciona1`. No entanto, observe que, na imagem acima, alteramos tal nome para `funcionario1`.
+NOTE: Ao criar um funcionário no BlueJ, ele sugere que o nome do objeto (também chamado de instância e representado por uma variável) seja `funcionaN`, onde `N` é um número adicionado a cada objeto criado. Ou seja, ele abrevia a palavra `funcionario`. Assim, o nome sugerido pelo BlueJ para a variável do primeiro funcionário criado será `funciona1`. No entanto, observe que, na imagem acima, alteramos tal nome para `funcionario1`. 
 
 Agora, podemos então chamar o método `setGerente` na empresa criada para definir o `funcionario1` como gerente, como mostrado abaixo. Quando clicarmos duas vezes novamente sobre a empresa criada, vemos que o atributo `gerente` não é mais `null`, sendo apresentada uma seta que representa a associação entre a `empresa1` e o `funcionario1`. Se clicarmos duas vezes em tal seta, teremos acesso a tal funcionário e poderemos ver todos os seus atributos.
+
+NOTE: Não confunda o nome da variável que é utilizada para acessar um determinado funcionário com o atributo `nome` da classe `Funcionario`. O nome da variável (`funcionario1` no exemplo) é utilizado para acessar o objeto `Funcionario` via programação. O atributo `nome` é apenas um dado que todo funcionário tem, assim como o `cpf` ou qualquer outro. Assim, ao informar qual `Funcionario` é o gerente de uma `Empresa`, devemos indicar o nome da variável (`funcionario1` na Figura 4 abaixo), não o valor do atributo `nome` do `Funcionario` criado ("Manoel" na Figura 3 acima).
 
 .Definindo o gerente de uma empresa por meio de um _setter_
 image::bluej-set-gerente.gif[]
 
 === Definindo um gerente para uma empresa por meio de um construtor
 
-Vimos no link:chapter7.html[Capítulo 7] o que são construtores e como adicioná-los a uma classe. Aprendemos que se nenhum construtor for manualmente incluído, um construtor padrão (que não recebe nenhum parâmetro) é automaticamente adicionado.
+Vimos no link:chapter7.html[Capítulo 7] o que são construtores e como adicioná-los a uma classe. Aprendemos que se nenhum construtor for manualmente incluído, um construtor padrão (que não recebe nenhum parâmetro) é automaticamente adicionado na classe compilada.
 
-Podemos então criar um construtor para a classe `Empresa` para nos permitir definir quem é o gerente no momento que uma empresa for criada. Para isto, basta adicionar o código do construtor a seguir dentro da classe `Empresa`.
+Podemos então criar um construtor para a classe `Empresa` para permitir definir, no momento que uma empresa for criada, quem é o gerente. Para isto, basta adicionar o código do construtor a seguir dentro da classe `Empresa`.
 
 [source,java]
 ----
@@ -160,14 +162,14 @@ Podemos então criar um construtor para a classe `Empresa` para nos permitir def
 
 Lembre-se que o construtor é um método especial que cria objetos da classe. Ele deve obrigatoriamente ter o mesmo nome da classe e pode ter parâmetros (como é o caso do parâmetro `gerente`).
 
-Como já fizemos antes no Capítulo 7, dentro do construtor, estamos chamando o método `setGerente` que já recebe um funcionário e define ele como gerente da empresa. No lugar de tal linha de código, poderíamos simplesmente ter feito `this.gerente = gerente`, mas isto duplicaria o código existente dentro de `setGerente`, como já discutido no capítulo citado.
+Como já fizemos antes no Capítulo 7, dentro do construtor, estamos chamando o método `setGerente` que já recebe um `Funcionario` e define ele como gerente da `Empresa`. No lugar de tal linha de código, poderíamos simplesmente ter feito `this.gerente = gerente`, mas isto duplicaria o código existente dentro de `setGerente`, como já discutido no capítulo citado.
 
-Como alteramos o código, precisaremos compilar a classe novamente, e recriar o `funcionario1`. Vamos então criar uma nova empresa utilizando o novo construtor adicionado, como mostrado na figura abaixo. Observe que agora, ao criar uma empresa, precisamos indicar quem é o gerente. Veja que pelo fato de termos adicionado um construtor com parâmetros, o construtor padrão (sem parâmetros, que permite criar uma empresa e definir o gerente posteriormente), não é mais disponibilizado. 
+Como alteramos o código, precisaremos compilar a classe novamente, e recriar o `funcionario1`. Vamos então criar uma nova `Empresa` utilizando o construtor adicionado, como mostrado na figura abaixo. Observe que agora, ao criar uma `Empresa`, precisamos indicar quem é o gerente. Veja que pelo fato de termos adicionado um construtor com parâmetros, o construtor padrão (sem parâmetros, que cria uma `Empresa` sem definir inicialmente um gerente), não é mais disponibilizado. 
 
 .Criando uma empresa e definindo o gerente por meio de um construtor
 image::bluej-construtor-empresa-gerente.gif[]
 
-Em Java, quando um construtor com parâmetros é adicionado, se um construtor padrão (sem parâmetros) não foi explicitamente definido no código, ele não é automaticamente disponibilizado. Isto é uma característica da linguagem. Se desejar ter o construtor padrão também, precisará manualmente incluir ele, mesmo que ele não execute nenhum código definido por você, como mostrado abaixo.
+Em Java, quando um construtor com parâmetros é adicionado, se um construtor padrão (sem parâmetros) não foi explicitamente definido no código, ele não é automaticamente disponibilizado. Isto é uma característica da linguagem. Se desejar ter o construtor padrão também, precisará manualmente incluí-lo, mesmo que ele não execute nenhum código definido por você, como mostrado abaixo.
 
 [source,java]
 ----
@@ -176,31 +178,27 @@ Em Java, quando um construtor com parâmetros é adicionado, se um construtor pa
     }
 ----
 
-=== Entendendo como um objeto é passado por parâmetro para um método
-
-Na nossa vida social, utilizamos o nome de uma pessoa para fazermos referência a ela. Em um departamento de uma empresa, podemos nos referir a um colega de trabalho simplesmente pelo seu nome e todos saberão de quem estamos falando. Nas Figuras 4 e 5 acima, ao usarmos o método `setGerente(Funcionario gerente)` ou o construtor `Empresa(Funcionario gerente)`, qualquer um deles espera que nós informemos quem é o funcionário que será definido como gerente da empresa. Assim, precisamos indicar uma referência para tal objeto. No entanto, em programação *NÃO* nos referimos a um objeto por meio de um de seus atributos (o nome é um dos atributos de uma pessoa, inclusive no mundo real). Nos referimos a um objeto por meio do nome de uma variável que o representa.  
-
-Ao chamarmos um método como o `setGerente` na Figura 4, não informamos que o funcionário era o "Manoel". Indicamos que o funcionário era aquele representado pela variável `funcionario1`. Fazendo uma analogia com uma situação real, imagine que você está em uma reunião para decidir quem será o gerente de uma nova filial de uma loja. Em tal reunião, poderia ser decidido que a funcionária Maria seria a gerente dessa nova filial, mas a Maria não está presente na reunião. Assim, estamos nos referindo a ela apenas pelo seu nome. 
-
-Em POO, para a Maria ser definida como gerente da nova filial, ela precisará ser trazida pra reunião. Desta forma, quando um método como o `setGerente` solicita um funcionário, não temos como utilizar apenas o nome de um funcionário (nem qualquer outro atributo como CPF ou matrícula) para informar quem é o funcionário escolhido. Temos que apresentar o funcionário para o método, só assim o método poderá definir o funcionário como gerente. A apresentação do funcionário para o método `setGerente` é feita indicando qual a variável representa o funcionário.
+Apesar de tal construtor parecer não fazer absolutamente nada, o compilador Java inclui o código necessário para instanciar uma `Empresa` utilizando tal construtor.
 
 == Definindo novas associações
 
 As classes `Cliente` e `Empresa` têm o atributo `cidade` em comum. Tal atributo foi declarado como `String`, o que, neste caso, nos traz alguns problemas. 
 
-Imagine que você cadastro um cliente e informou sua cidade como "Paraíso do Tocantins". Outro funcionário pode ter cadastrado outro cliente e ter esquecido o acento, colocando "Paraiso do Tocantins". Outro dia você mesmo foi cadastrar mais um cliente e colocou a cidade apenas como "Paraíso". Por fim, um cliente utilizou a loja virtual para se cadastrar e informou a cidade sem acento e apenas como "Paraiso".
+Imagine que você cadastrou um cliente e informou sua cidade como "Paraíso do Tocantins". Outro funcionário pode ter cadastrado outro cliente e ter esquecido o acento, colocando "Paraiso do Tocantins". Outro dia você mesmo foi cadastrar mais um cliente e colocou a cidade apenas como "Paraíso". Por fim, um cliente utilizou a loja virtual para se cadastrar e informou a cidade sem acento e apenas como "Paraiso".
 
-Assim, estamos falando da mesma cidade mas a mesma foi informada de 4 maneiras diferentes. Se o sistema possui um relatório que mostra o total de clientes por cidade, ele vai mostrar a cidade Paraíso do Tocantins como se fosse 4 cidades distintas. Assim, no lugar de mostrar que há 4 clientes de tal cidade, ele mostrará que há 4 cidades diferentes com 1 cliente cada uma.
+Assim, estamos falando da mesma cidade mas ela foi informada de 4 maneiras diferentes. Se o sistema possui um relatório que mostra o total de clientes por cidade, ele mostrará a cidade Paraíso do Tocantins como se fossem 4 cidades distintas. No lugar de mostrar que há 4 clientes de tal cidade, ele mostrará que há 4 cidades diferentes com 1 cliente cada uma.
 
-Tendo a cidade como `String`, a cada cliente que for cadastrado, é preciso digitar o nome da cidade por completo, o que pode levar a erros de digitação e assim ter nomes diferentes para a mesma cidade, além de ser cansativo. 
+Tendo a cidade como `String`, a cada cliente que for cadastrado, é preciso digitar o nome da cidade por completo, o que pode levar a erros de digitação e assim ter nomes diferentes para a mesma cidade, além de ser cansativo. Se utilizemos um campo com a lista de cidades cadastradas, isso evitará que o nome da cidade seja informado incorretamente. 
 
-Também não temos informações adicionais da cidade como qual estado ela pertence. Mesmo que o estado fosse incluído após a cidade, como "Curitiba - PR", isto permitiria que siglas inexistentes de estados fossem informadas. Por fim, se quiséssemos saber quantos clientes há em cada estado, seria complicado obter tais informações, uma vez que a cidade e o estado não estão armazenados em atributos individuais.
+A alternativa apresentada traz outros problemas como o armazenamento do nome da cidade no cadastro de cada cliente. Se identificarmos que um nome foi incorretamente incluído na lista, teremos que corrigir tal nome em todos os clientes que foram vinculados a tal cidade. Além disso, se precisarmos incluir uma nova cidade nesta lista e tal lista está sendo exibida em várias janelas do sistema, pode ser que precisemos incluir esta nova cidade manualmente em cada tela.
+
+Também não temos informações adicionais da cidade, como o estado a qual ela pertence. Mesmo que o estado fosse incluído após a cidade, como "Curitiba - PR", isto permitiria que siglas inexistentes de estados fossem informadas. Por fim, se quiséssemos saber quantos clientes há em cada estado, seria complicado obter tais informações, uma vez que a cidade e o estado não estão armazenados em atributos individuais.
 
 Lembre que estamos utilizando programação orientada a objetos. Logo, você precisa pensar em termos de objetos. Como em POO um objeto pode ser qualquer coisa, uma cidade pode então ser um objeto. Assim, para representarmos cidades no nosso software, precisamos criar uma classe `Cidade`. 
 
 Tal classe pode ter os atributos nome e estado. Obviamente, uma cidade pode ter muito mais dados que isso. Poderíamos indicar quem é o prefeito, qual a população, a área e muitos outros dados. Mas assim como falado no link:chapter2.adoc[Capítulo 2] quando introduzimos o conceito de classes, as características e funcionalidades de uma classe vão depender do problema em questão. Para o nosso software de loja de móveis, não nos interessa saber todos esses dados adicionais que foram citados. Somente o nome e o estado são suficientes.
 
-No entanto, assim como tratamos a cidade como um objeto, o estado também poderia. Isto nos leva a criar uma classe `Estado`. Como temos que indicar qual estado uma cidade é, devemos então criar primeiramente a classe `Estado`. Ela pode conter os atributos nome e uf, como apresentado no código abaixo.
+No entanto, assim como tratamos a cidade como um objeto, o estado também poderia ser. Isto nos leva a criar uma classe `Estado`. Como temos que indicar a qual estado uma cidade pertence, devemos então criar primeiramente a classe `Estado`. Ela pode conter os atributos `nome` e `uf`, como apresentado no código abaixo.
 
 [source,java]
 ----
@@ -211,11 +209,11 @@ public class Estado
 }
 ----
 
-Se continuarmos pensando no que mais um estado pode ter, podemos rapidamente concluir que poderíamos indicar a qual país ele pertence. Isto nos levaria a criar uma classe para representar os países. Porém, se este dado não é importante para o nosso software, não devemos incluir algo que não precisamos. 
+Se continuarmos pensando no que mais um estado pode ter, rapidamente poderíamos concluir que ele percente a um determinado país. Isto nos levaria a criar uma classe para representar os países. Porém, se este dado não é importante para o nosso software, não devemos incluir algo que não precisamos. 
 
-Alguém pode questionar que a loja de móveis pode crescer e começar a vender produtos internacionalmente. Mas você não deve incluir todos os recursos no seu software por simplesmente estar pensando no longo prazo. Em engenharia de software, existe uma recomendação que diz que você não deve fazer isso <<1>> <<2>> <<3>>. 
+Alguém pode questionar que a loja de móveis pode crescer e começar a vender produtos internacionalmente. Mas você não deve incluir todos os recursos no seu software por simplesmente estar pensando no longo prazo. Em engenharia de software, existe uma recomendação indicando que a inclusão de recursos para uso futuro devem ser ponderados <<1>> <<2>> <<3>>. 
 
-Se você ainda não precisa de uma determinada característica ou funcionalidade no seu software, não inclua até elas serem necessárias (a não ser que você tenha realmente um excelente motivo para isto). Incluir tais características só farão você perder tempo com recursos que não serão utilizados imediatamente pelos usuários do software.
+Se você ainda não precisa de uma determinada característica ou funcionalidade no seu software, normalmente não deve incluí-la até elas serem realmente necessárias (a não ser que você tenha realmente um excelente motivo para isto). Incluir tais características podem só fazer você perder tempo com recursos que podem nunca ser utilizados pelos usuários do software.
 
 Bem, agora que criamos nossa classe `Estado`, podemos criar a classe `Cidade` como mostrado abaixo:
 
@@ -228,7 +226,7 @@ public class Cidade
 }
 ----
 
-Por fim, podemos então alterar o tipo do atributo `cidade` nas classes `Cliente` e `Empresa` de `String` para `Cidade`. Como demonstração, o código da classe `Cliente` é mostrado abaixo. Os métodos foram omitidos intencionalmente. O atributo `cidade` é o último apresentado.
+Por fim, podemos então alterar o tipo do atributo `cidade` nas classes `Cliente` e `Empresa` de `String` para `Cidade`. Como demonstração, o código da classe `Cliente` é mostrado abaixo. Os métodos foram omitidos intencionalmente. 
 
 [source,java]
 ----
@@ -244,20 +242,17 @@ public class Cliente {
 }
 ----
 
-
 == Criando mais classes e associações
 
-Para praticar, na classe `Empresa`, faça o mesmo que fizemos com o atributo `cidade` da classe `Cliente`: altere o tipo do atributo `cidade` de `String` para `Cidade`.
-
-Agora, crie uma nova classe para representar produtos e outra para representar marcas.
+Para praticar, faça na classe `Empresa` o mesmo que fizemos na classe `Cliente`: altere o tipo do atributo `cidade` de `String` para `Cidade`. Agora, crie uma nova classe para representar produtos e outra para representar marcas.
 A classe `Produto` pode ter os atributos:
 
 - `descricao` como `String`
 - `precoCompra`, `precoVenda` e `estoque` como `double`
 
-Além disso, poderíamos definir um atributo `marca` também como `String`. Mas devido aos problemas discutidos para o atributo `cidade` na classe `Cliente`, vamos criar uma classe `Marca` e criar uma associação de `Produto` para tal `Marca`. Como estamos indicando a direção da associação (de -> para), isto significa que devemos criar um atributo da classe `Marca` dentro de `Produto` e não o contrário. Após criar tal associação, o BlueJ mostrará uma seta com a direção de tal associação.
+Além disso, poderíamos definir um atributo `marca` também como `String`. Mas devido aos problemas discutidos para o atributo `cidade` na classe `Cliente`, vamos criar uma classe `Marca` e definir uma associação *de* `Produto` *para* `Marca`. Como estamos indicando a direção da associação (*de* -> *para*), isto significa que devemos criar um atributo da classe `Marca` dentro de `Produto`, não o contrário. Após criar tal associação, o BlueJ mostrará uma seta indicando a direção da mesma.
 
-IMPORTANT: A direção de uma associação, representada pela direção da seta em um diagrama de classes, é chamada em POO de navegação. Ela define que classe tem acesso a uma determinada classe. Se a navegação da associação entre duas classes `A` e `B` for de `A` para `B`, um objeto da classe `A` tem acesso um ou mais objetos da classe `B`. Isto significa que dentro de `A` existe um ou mais objetos da classe `B`. Se a associação for de `B` para `A`, a classe `B` é quem terá um ou mais objetos de `A`.
+IMPORTANT: A direção de uma associação, representada pela direção da seta em um diagrama de classes, é chamada em POO de navegação. Ela define qual classe tem acesso a outra classe. Se a navegação da associação entre duas classes `A` e `B` for de `A` para `B`, um objeto da classe `A` tem acesso a um ou mais objetos da classe `B`. Isto significa que dentro de `A` existe um ou mais objetos da classe `B`. Se a associação for de `B` para `A`, a classe `B` é quem terá um ou mais objetos de `A`.
 
 [bibliography]
 == Referências
