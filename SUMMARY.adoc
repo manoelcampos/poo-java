@@ -10,6 +10,7 @@
 . link:chapter7.adoc[Criando objetos e definindo valores inicias]
 . link:chapter8.adoc[Classes e Associações]
 .. link:chapter8-exercise.adoc[Exercício Prático]
-.. link:chapter8-questions.adoc[Questões Teóricas]
+.. link:chapter8-questions1.adoc[Questões Teóricas 1]
+.. link:chapter8-questions2.adoc[Questões Teóricas 2]
 . link:chapter9.adoc[Permissões de Acesso]
 . link:GLOSSARY.adoc[Glossário]

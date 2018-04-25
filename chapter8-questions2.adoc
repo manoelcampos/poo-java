@@ -1,0 +1,419 @@
+:source-highlighter: highlightjs
+:numbered:
+:unsafe:
+
+= Questões de Concurso - Programação Orientada a Objetos
+
+=== A análise e o projeto orientados a objetos têm como meta identificar o melhor conjunto de objetos para descrever um sistema de software. O funcionamento desse sistema se dá por meio do relacionamento e troca de mensagens entre esses objetos. Na programação orientada a objetos, implementa-se um conjunto de classes que definem os objetos presentes no sistema de software. Com relação à herança múltipla é correto afirmar 
+(ANO: 2009 BANCA: TJPR ÓRGÃO: TJ-PR PROVA: INFORMÁTICA - ANALISTA DE SISTEMAS):
+
+A. O usuário não necessita conhecer detalhes do funcionamento interno do sistema para poder utilizá-lo
+B. É o princípio pelo qual duas ou mais classes derivadas de uma mesma superclasse podem invocar métodos que têm a mesma identificação mas comportamentos distintos
+C. As mensagens enviadas a um objeto podem mudar o valor de um ou mais atributos
+D. Possibilita que uma classe herde atributos e métodos de duas ou mais classes
+
+=== Controlar a complexidade pela ênfase em características essenciais e pela supressão de detalhes em orientação a objetos é denominado(a) 
+(ANO: 2009 BANCA: TJPR ÓRGÃO: TJ-PR PROVA: INFORMÁTICA - ANALISTA DE SISTEMAS): 
+
+A. abstração
+B. herança
+C. analogia
+D. visibilidade
+
+=== Na orientação a objetos, o conceito que garante que nenhum acesso direto é concedido aos dados é atribuído por meio do(a) 
+(FUNCAB - 2013 - CODATA - Auxiliar de Informática - Apoio ao Usuário ):
+
+A. polimorfismo.
+B. herança.
+C. agregação.
+D. abstração.
+E. encapsulamento.
+
+=== Assinale a opção correta quanto à abordagem conceitual de abstração sob o paradigma de programação orientada a objetos. 
+(CESPE - 2013 - TRE-MS - Técnico Judiciário - Programação de Sistemas)
+
+A. As abstrações, idealmente, caracterizam-se por não serem grandes demais em comparação aos módulos, pois senão elas se tornam multifuncionais e de difícil compreensão. Como consequência, a abstração deve ser implementada apenas no nível de estruturas de dados necessários para se atingir o objetivo pretendido.
+B. Abstração consiste em uma linguagem puramente lógica. A motivação para isso veio em parte da vontade de se reconciliar o uso da lógica como uma linguagem declarativa de representação do conhecimento com a representação procedimental do conhecimento.
+C. Abstração é uma linguagem declarativa que permite acesso à base de dados mediante a utilização da teoria dos conjuntos e da álgebra relacional como fundamento de seu funcionamento.
+E. Abstração é um conceito segundo o qual o sistema ou software é dividido em partes distintas. Compõe o ferramental necessário para um programa mais legível com uma melhor manutenção e melhor desempenho por meio da programação orientada a objetos.
+E. Abstração é a habilidade de se concentrar nos aspectos essenciais de um contexto qualquer, ignorando características menos importantes ou acidentais. Em modelagem orientada a objetos, uma classe é uma abstração de entidades existentes no domínio do sistema de software.
+
+=== Na orientação a objetos, a sobrecarga é utilizada por meio do conceito de: 
+(FUNCAB - 2013 - CODATA - Auxiliar de Informática - Apoio ao Usuário)
+
+A. encapsulamento.
+B. herança.
+C. agregação.
+D. polimorfismo.
+E. abstração.
+
+=== O trecho de código mostrado abaixo é um exemplo de encapsulamento. 
+(CESPE - 2013 - TRT - 10ª REGIÃO (DF e TO) - Analista Judiciário - Tecnologia da Informação)
+
+[source, java]
+----
+public class Animal
+{
+    public String nome;
+    public String tipo;
+    public String cor;
+
+    public String getNome(){ return nome; }
+    public void setNome(String nome){ this.nome = nome; }
+    public String getTipo(){ return tipo; }
+    public void setTipo(String tipo){ this.tipo = tipo; }
+    public String getCor(){ return cor; }
+    public void setCor(String cor){ this.cor = cor; }
+}
+----
+
+C) Certo 
+E) Errado
+
+=== No contexto de programação orientada a objetos, considere as afirmativas abaixo. 
+(FCC - 2012 - TJ-RJ - Analista Judiciário - Análise de Sistemas)
+
+
+I) Objetos são instâncias de classes. 
+II) Herança é uma relação entre objetos. 
+III) Mensagens são formas de executar métodos. 
+IV) Classes são apenas agrupamentos de métodos. 
+V) Ocorre herança múltipla quando mais de um método é herdado. 
+VI) Herança é uma relação entre classes. 
+
+Está correto o que se afirma APENAS em
+
+A. I, III e IV.
+B. I, III e VI.
+C. III, IV e VI.
+D. II, III e V.
+E. II, IV e V.
+
+=== Sobre orientação a objetos é correto afirmar:
+(FCC - 2012 - TRF - 2ª REGIÃO - Técnico Judiciário - Informática)
+
+A. Na hierarquia de classes, se superclasse é uma generalização de subclasses, pode-se inferir que a subclasse é uma especialização de superclasse.
+B. Numa árvore genealógica de classes, a classe mais baixa herda os atributos e métodos somente da superclasse no nível imediatamente acima.
+C. As variáveis de uma classe só podem ser alteradas por métodos definidos nos seus objetos.
+D. O polimorfismo se caracteriza quando, para mensagens distintas, objetos diferentes responderem ou agirem de forma idêntica.
+E. Os objetos de uma classe são idênticos no que se refere à sua interface e ao seu estado.
+
+=== QUESTÃO ERRADA. IDENTIFIQUE O PORQUÊ: Na orientação a objetos, em uma relação de herança entre classes, a subclasse herda da superclasse
+(FCC - 2012 - TRE-SP - Técnico Judiciário - Programação de Sistemas)
+
+A. apenas as variáveis públicas de instância.
+B. apenas os métodos e variáveis de instância públicos.
+C. todas as variáveis de instância e apenas os métodos estáticos.
+D. todas as variáveis e métodos, exceto os públicos e os que foram sobrescritos.
+E. todas as variáveis de instância e os métodos, entretanto, podem explicitamente sobrescrever alguns destes componentes.
+
+
+=== A Análise e Projeto Orientado a Objetos oferece suporte a um recurso que apresenta as características listadas a seguir.
+(CONSULPLAN - 2012 - TSE - Analista Judiciário - Análise de Sistemas)
+
+I) Separa os aspectos externos de um objeto, que são acessíveis a outros objetos, dos detalhes internos da implementação, que estão escondidos de outros objetos. 
+II) Evita que partes de um programa se tornem tão interdependentes que uma pequena mudança tenha grandes efeitos em cascata. 
+III) Pode-se mudar a implementação de um objeto sem afetar as aplicações que o utilizam. 
+
+Esse recurso denomina-se
+
+A. encapsulamento.
+B. compartilhamento.
+C. especialização.
+D. generalização.
+
+=== Na orientação a objetos
+(FCC - 2012 - TST - Analista Judiciário - Análise de Sistemas)
+
+A. a herança permite que os membros de uma classe, chamada de classe-mãe, possam ser reaproveitados na definição de outra classe, chamada de classe-filha. Esta classe-filha tem acesso aos membros públicos e protegidos da classe-mãe. O polimorfismo, associado à herança, permite que métodos abstratos definidos em uma classe abstrata sejam implementados nas classes-filhas, podendo estes métodos, nas classes-filhas, apresentar comportamentos distintos.
+B. atributos e métodos podem ser reaproveitados através da herança, quando uma subclasse herda as características de uma superclasse. Uma subclasse pode ter acesso aos membros de uma superclasse, independente do modificador atribuído. O polimorfismo é um recurso que permite a uma subclasse reimplementar os métodos herdados de uma superclasse, sendo este método abstrato ou não.
+C. a herança e o polimorfismo são complementares, ou seja, devem ser aplicados em conjunto. A herança existe a partir de classes abstratas que contêm atributos e métodos abstratos. O polimorfismo obriga que as classes-filhas implementem os métodos e atributos desta classe-mãe. O acesso aos atributos da classe-mãe independe do modificador utilizado.
+D. o conceito de herança estabelece que uma classe possa aproveitar a implementação, definições dos atributos e métodos de uma classe-base. A classe-filha pode ter acesso aos métodos e atributos públicos e protegidos da classe-base. O polimorfismo é aplicado ao caso em que existe a necessidade de implementar métodos sobrecarregados, nos quais a classe-filha necessita implementar dois métodos com o mesmo nome e parâmetros diferentes.
+E. o polimorfismo é uma técnica que permite um objeto nascer a partir do uso de sobrecarga de construtores de uma classe, ou seja, o polimorfismo permite que um objeto possa ser instanciado de diferentes maneiras. A herança permite que uma classe sirva de base para que outras classes sejam implementadas. Entretanto, os membros com modificadores públicos da classe-base podem ser acessados pela classe-filha.
+
+=== Sobre a orientação a objeto é correto afirmar:
+(FCC - 2012 - TCE-AM - Analista de Controle Externo - Tecnologia da Informação)
+
+A. Herança permite o reaproveitamento de atributos e métodos, porém, isso não altera o tempo de desenvolvimento, não diminui o número de linhas de código e não facilita futuras manutenções.
+B. Em uma aplicação que utiliza herança múltipla, uma superclasse deve herdar atributos e métodos de diversas subclasses. Todas as linguagens de programação orientadas a objeto permitem herança múltipla.
+C. O polimorfismo associado à herança trabalha com a redeclaração de métodos previamente herdados por uma classe. Esses métodos, embora semelhantes, diferem de alguma forma da implementação utilizada na superclasse, sendo necessário, portanto, reimplementá-los na subclasse.
+D. A visibilidade protegida é representada pelo símbolo til (~) e significa que somente os objetos da classe detentora do atributo ou método poderão enxergá-lo ou utilizá-lo.
+E. Em uma relação de herança é possível criar classes gerais, com características compartilhadas por muitas classes. Essas classes não podem possuir diferenças.
+
+=== Em relação a projetos orientados a objetos, a restrição de multiplicidade
+(FCC - 2012 - TJ-PE - Técnico Judiciário - Programador de Computador)
+
+A. garante que uma classe seja utilizada na composição de múltiplos objetos.
+B. descreve a quantidade de objetos que podem ser instanciados para uma determinada classe.
+C. indica o número de instâncias de uma classe que participa da relação com as instâncias de outra classe.
+D. expressa a possibilidade de composição de múltiplos atributos e métodos para um objeto.
+E. reduz a complexidade, pois permite tratar múltiplos objetos como um único objeto.
+
+=== No contexto de Programação Orientada a Objetos (OOP), sobre a relação de agregação e composição, ou relação todo-parte, considere: 
+(FCC - 2012 - TRT - 11ª Região (AM) - Técnico Judiciário - Tecnologia da Informação)
+
+I) A relação de agregação expressa o ato ou resultado de formar um objeto usando outros objetos como seus componentes. 
+II) Na relação de agregação, as partes só existem enquanto o todo existir. 
+III Na relação de composição, as partes são independentes da existência do todo. 
+
+Está correto o que se afirma em
+
+A. I, apenas.
+B. II, apenas.
+C. II e III, apenas.
+D. III, apenas.
+E. I, II e III.
+
+=== Na orientação a objetos, é um recurso que serve para inicializar os atributos e é executado automaticamente sempre que um novo objeto é criado:
+(FCC - 2011 - NOSSA CAIXA DESENVOLVIMENTO - Analista de Sistemas)
+
+A. método.
+B. polimorfismo.
+C. interface.
+D. classe.
+E. construtor.
+
+=== A respeito da orientação a objetos, julgue os itens subsequentes. 
+(CESPE - 2011 - Correios - Analista de Correios - Analista de Sistemas - Desenvolvimento de Sistemas)
+
+Na linguagem de programação Java, um método público da superclasse somente pode ser anulado por um método público da subclasse.
+
+C) Certo E) Errado
+
+=== Em relação aos conceitos fundamentais da orientação a objetos, o mecanismo pelo qual um objeto utiliza os recursos de outro, podendo ele assumir os tipos "usa um" ou "parte de", denomina-se
+(FCC - 2011 - TRE-AP - Técnico Judiciário - Programação de Sistemas)
+
+A. Encapsulamento.
+B. Herança.
+C. Método.
+D. Polimorfismo.
+E. Associação.
+
+=== Em relação às assertivas abaixo, relacionadas à programação orientada a objetos, 
+(COPEVE-UFAL - 2011 - UFAL - Analista de Tecnologia da Informação)
+
+I) Uma classe abstrata deve necessariamente possuir ao menos um método abstrato. 
+II) As hierarquias de generalização/especialização agrupam características comuns a várias classes em classes mais gerais, conhecidas como superclasses. 
+III) Em Java, o modificador final pode ser utilizado para indicar classes folha na hierarquia de generalização/especialização, isto é, classes que não podem ter subclasses herdando delas. 
+IV) Em Java, o modificador static é utilizado para representar objetos que devem ser armazenados em disco rígido. 
+
+verifica-se que
+
+A. apenas I e IV são verdadeiras.
+B. apenas I, II e III são verdadeiras.
+C. apenas III é verdadeira.
+D. apenas III e IV são verdadeiras.
+E. apenas II e III são verdadeiras.
+
+=== Polimorfismo é a
+(ESAF - 2010 - SUSEP - Analista Técnico - Prova 2 - Tecnologia da Informação)
+
+A. utilização múltipla de programas em análise orientada a objetos.
+B. habilidade de uma única operação ou nome de atributo ser definido em mais de uma classe e assumir diferentes implementações em cada uma dessas classes.
+C. habilidade de um programador em desenvolver aplicações e caracterizar objetos com múltiplos atributos.
+D. utilização de uma classe com diferentes formatos em programas com definição de objetos e atributos.
+E. habilidade de uma única variável ser utilizada em diferentes programas orientados a objetos.
+
+=== Sobre herança na orientação a objetos, é correto afirmar:
+(FCC - 2010 - TRF - 4ª REGIÃO - Analista Judiciário - Tecnologia da Informação)
+
+A. O conjunto de objetos representado por uma subclasse é, em geral, maior que o conjunto de objetos representado por sua superclasse.
+B. Cada objeto de subclasse é um objeto de sua subclasse.
+C. Um problema com herança é que uma subclasse pode herdar métodos que ela não necessita ou que não deveria ter.
+D. Todo relacionamento de classe é um relacionamento de herança.
+E. Os objetos de superclasse podem ser tratados como objetos de suas subclasses.
+
+=== Sejam A e B duas classes em um programa orientado a objetos. Se A é __________ de B, então objetos da classe A _________________ atributos que objetos da classe B. 
+(FEPESE - 2010 - UDESC - Analista de Sistemas)
+
+Assinale a alternativa que completa correta e sequencialmente as lacunas do texto.
+
+A. subclasse ; podem possuir mais
+B. subclasse ; não podem possuir mais
+C. superclasse ; possuem necessariamente mais
+D. superclasse ; possuem necessariamente menos
+E. subclasse ; possuem necessariamente menos
+
+=== Sobre a orientação a objetos, é correto afirmar:
+(FCC - 2010 - TRF - 4ª REGIÃO - Analista Judiciário - Tecnologia da Informação)
+
+A. Variáveis e métodos de classe pública (public) existem e podem ser utilizados, mesmo se nenhum objeto dessa classe tiver sido instanciado.
+B. Os modificadores de acesso public, private e protected controlam o acesso apenas aos métodos de uma classe.
+C. É possível criar vários construtores sobrecarregados em uma classe para permitir que objetos dessa classe sejam inicializados de diferentes maneiras.
+D. Um construtor invocado sem argumentos inicializa o objeto, mas causa um erro em tempo de execução, pois todo construtor de classe deve receber pelo menos um parâmetro.
+E. Ao implementar um método de uma classe, devem ser utilizados os métodos set e get da classe para acessar apenas os dados públicos (publics) da classe.
+
+=== Em conformidade com a metodologia orientada a objetos, com a finalidade de evitar que partes de um programa se tornem tão independentes que uma pequena alteração tenha grandes efeitos em cascata, é aplicado um recurso que separa os aspectos externos e acessíveis de um objeto dos detalhes internos de implementação.
+(FGV - 2010 - SEAD-AP - Auditor da Receita do Estado - Prova 2)
+
+Esse recurso utiliza um princípio da Orientação a Objetos que propõe ocultar determinados elementos de uma classe das demais classes. O objetivo ao colocar uma proteção ao redor é prevenir contra os efeitos colaterais indesejados ao ter essas propriedades modificadas de forma inesperada.
+
+Este recurso é conhecido por:
+
+a) coesão.
+b) acoplamento.
+c) polimorfismo.
+d) modularidade.
+e) encapsulamento.
+
+=== Na orientação a objetos, ao nível de classe, são definidos os
+(FCC - 2009 - SEFAZ-SP - Agente Fiscal de Rendas - Tecnologia da Informação - Prova 3)
+
+A. atributos e os valores dos atributos.
+B. atributos e a invocação das operações.
+C. atributos e os métodos.
+D. métodos e os valores dos atributos.
+E. métodos e a invocação das operações.
+
+=== Analise as seguintes afi rmações relacionadas a Orientação a Objetos:
+(ESAF - 2008 - Prefeitura de Natal - RN - Auditor do Tesouro Municipal - Tecnologia da Informação - Prova 2)
+
+I) O acesso a atributos públicos só pode ser feito a partir dos métodos membros da classe derivada. 
+II) A visibilidade dos atributos pode ser pública, privada ou protegida. 
+III) Os métodos protegidos podem ser acessados a partir dos métodos da classe do qual é membro. 
+IV) Diferentemente dos atributos privados, o acesso a métodos privados pode ser feito a partir dos métodos membros de qualquer classe.
+
+Indique a opção que contenha todas as afi rmações verdadeiras.
+
+A. I e II.
+B. II e III.
+C. III e IV.
+D. I e III.
+E. II e IV.
+
+=== São dois tipos de relacionamento todo-parte:
+(FCC - 2008 - TRT - 18ª Região (GO) - Analista Judiciário - Tecnologia da Informação)
+
+A. agregação e composição.
+B. generalização e composição.
+C. generalização e especialização.
+D. composição e dependência.
+E. especialização e agregação.
+
+=== Considere as classes abaixo:
+(CESGRANRIO - 2008 - Petrobrás - Analista de Sistemas Júnior - Engenharia de Software)
+
+[source, java]
+----
+public class Produto {
+    private Fabricante fabricante;
+
+    public Fabricante getFabricante(){ return fabricante; }
+    public void setFabricante(Fabricante fabricante){ this.fabricante = fabricante; }
+}
+
+public class Fabricante {
+    private List<Produto> produtos;
+    
+    public Fabricante(){
+        this.produtos = new ArrayList<>();
+    }
+
+    public List<Produto> getProdutos(){ return produtos; }
+}
+----
+
+Assinale o diagrama de classe que expressa corretamente a implementação mostrada acima, em Java, das classes Produto e Fabricante, bem como da associação entre as mesmas
+
+A. image:questions/produto-fabricante1.jpg[]
+B. image:questions/produto-fabricante1.jpg/produto-fabricante2.jpg[]
+C. image:questions/produto-fabricante1.jpg/produto-fabricante3.jpg[]
+D. image:questions/produto-fabricante1.jpg/produto-fabricante4.jpg[]
+E. image:questions/produto-fabricante1.jpg/produto-fabricante5.jpg[]
+
+=== Considere: Casas ABC Ltda., Empresa e Nome da Empresa. 
+(FCC - 2008 - TCE-AL - Programador)
+
+Na orientação a objetos, os itens acima representam, respectivamente,
+
+A. atributo, classe e objeto.
+B. classe, atributo e objeto.
+C. classe, objeto e atributo.
+D. objeto, atributo e classe.
+E. objeto, classe e atributo.
+
+=== Que característica NÃO é fundamental em uma linguagem de programação orientada a objeto?
+(CESGRANRIO - 2007 - EPE - Analista de Gestão Corporativa Júnior - Área Tecnologia da Informação)
+
+A. Criação de classes.
+B. Encapsulamento.
+C. Herança múltipla.
+D. Herança simples.
+E. Instanciação de objetos.
+
+=== Em programação orientada a objetos, é correto afirmar que herança múltipla:
+(CESGRANRIO - 2006 - DNPM - Técnico Administrativo - Especialidade - Informática)
+
+A. é a instância de uma classe abstrata.
+B. define no máximo uma classe pai.
+C. permite que uma classe herde atributos e métodos de duas ou mais classes.
+D. ocorre quando uma classe é a instância de vários objetos.
+E. significa o mesmo que polimorfismo.
+
+=== Em algumas linguagens de Programação Orientadas a Objetos, como por exemplo Java, ao se derivar uma classe a partir de uma classe base, a classe base pode ser herdada como public, protected ou private. Quando a derivação é do tipo public, os membros
+(ESAF - 2006 - CGU - Analista de Finanças e Controle - Área - Tecnologia da Informação - Prova 3)
+
+A. public e protected da classe base tornam-se, respectivamente, membros public e protected da classe derivada.
+B. private da classe base serão acessados e utilizados diretamente a partir da classe derivada.
+C. public e protected da classe base tornam-se membros public da classe derivada.
+D. public e protected da classe base tornam-se membros protected da classe derivada.
+E. public, protected e private da classe base tornam-se, todos, membros private na classe derivada, independentemente do tipo de herança utilizada.
+
+=== Na programação orientada a objetos, o encapsulamento
+(ESAF - 2005 - Receita Federal - Auditor Fiscal da Receita Federal - Área Tecnologia da Informação - Prova 3)
+
+A. é a base de toda a abordagem dessa metodologia de programação e diz-se que um dado está encapsulado quando envolvido por código de forma que só é visível na rotina onde foi criado; o mesmo acontece com uma rotina, que sendo encapsulada, suas operações internas são invisíveis às outras rotinas.
+B. pode ser entendido como sendo um conjunto de instâncias criadas a partir de um outro conjunto de instâncias com características semelhantes.
+C. é defi nido como sendo uma técnica que permite a um código possuir "vários comportamentos" ou produzir "vários comportamentos".
+D. possibilita a criação de uma nova classe de modo que essa classe (denominada subclasse, classe-filha ou classe derivada) herda todas as características da classe-mãe (denominada superclasse, classe base ou classe primitiva); podendo, ainda, a classe-filha possuir propriedades e métodos próprios.
+E. é considerado como a habilidade de modelar características do mundo real do problema que o programador esteja tentando resolver.
+
+=== Classes e objetos são dois conceitos-chave da programação orientada a objetos. Com relação a estes conceitos, é correto afirmar que
+(ESAF - 2005 - Receita Federal - Auditor Fiscal da Receita Federal - Área Tecnologia da Informação - Prova 3)
+
+A. se pode definir uma classe como um pacote de software, de modo que, com a herança, um objeto define comportamento e forma-padrão para a construção de uma nova classe abstrata.
+B. uma classe é uma descrição de um ou mais objetos por meio de um conjunto uniforme de atributos e serviços. Além disso, pode conter uma descrição de como criar novos objetos na classe.
+C. uma classe é uma abstração de alguma coisa no domínio de um problema ou na sua implementação, refletindo a capacidade de um sistema para manter informações sobre ela, interagir com ela ou ambos.
+D. um objeto é um protótipo que defi ne os atributos e métodos comuns a todas as classes de um certo tipo.
+E. o polimorfismo caracteriza-se pela possibilidade de objetos distintos possuírem métodos com nomes idênticos, mas com implementações distintas.
+
+=== A orientação a objetos foi adotada como sendo o paradigma oficial da maioria das linguagens de programação mais recentes. Tomando por base os conceitos da orientação a objetos, atribua V (verdadeiro) ou F (falso) às afirmativas a seguir. 
+(COPS-UEL - 2013 - AFPR - Analista - Tecnologia da Informação)
+
+* Na programação orientada a objetos, é correto dizer que o comportamento de um objeto afeta o seu estado, assim como o seu estado afeta o seu comportamento. 
+* O principal objetivo de um método Acessor (Acessador ou Getter) é o de alterar o valor de um atributo privado. 
+* A sobrecarga de métodos ocorre quando um método é encontrado, tanto na superclasse quanto na subclasse, com o mesmo nome, tipo de retorno e número de parâmetros. 
+* Uma classe pode herdar variáveis de instância e métodos de uma superclasse abstrata. 
+* A herança permite garantir que todas as classes agrupadas sob um certo supertipo tenham todos os métodos que o supertipo tem. Assinale a alternativa que contém, de cima para baixo, a sequência correta.
+
+A alternativa com a sequência correta é:
+
+A. V, V, F, F, V.
+B. V, F, V, F, F.
+C. V, F, F, V, V.
+D. F, V, V, V, F.
+E. F, V, V, F, V.
+
+=== Sobre programação orientada a objetos analise as afirmativas:
+
+I) A POO (programação orientada a objetos) encapsula dados (atributos) e métodos (comportamento) em objetos.
+II) Os objetos têm a propriedade de ocultar informações. Isto significa que, embora os objetos possam saber se comunicar uns com os outros, através de interfaces bem-definidas, os objetos, normalmente, não têm permissão para conhecer como os outros objetos são implementados.
+III) O conceito de Encapsulamento (ocultamento de informação) é baseado na restrição do escopo ou visibilidade da informação, utilizada em projetos baseados em objetos, para obter melhor legibilidade, manutenibilidade e reusabilidade do software.
+IV) O método construtor de uma classe Java é um método especial, que possui o mesmo nome da classe e é executado quando a classe é instanciada. Esse método não permite a sua sobrecarga, ou seja, não podemos criar vários métodos construtores, mesmo que contenham parâmetros diferentes.
+
+Estão corretas as afirmativas:
+
+A. II, III e IV
+B. I, II e IV
+C. I, II e III
+D. II e IV
+E. I e IV
+
+=== Na programação orientada a objetos com Java, os modificadores de acesso são padrões de visibilidade de acesso às classes, atributos e métodos. Um método com o modificador
+(DPE/SP 2015 - Agente de Defensoria Pública - Área Programador - FCC)
+
+A. default pode ser acessado de dentro da própria classe, de qualquer classe do pacote e de subclasses que herdam da classe que contém o método.
+B. public pode ser acessado somente a partir de classes que estão no mesmo pacote.
+C. protected pode ser acessado somente de dentro da própria classe ou de classes que estão no mesmo pacote.
+D. private pode ser acessado somente de dentro da própria classe.
+E. static pode ser acessado a partir de qualquer classe da aplicação.
