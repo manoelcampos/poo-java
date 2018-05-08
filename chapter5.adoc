@@ -25,7 +25,7 @@ TipoRetorno nomeFuncao(Tipo parametro) {
 }
 ----
 
-O *TipoRetorno* indica se a função precisa retornar alguma resposta para quem solicitou a execução da tarefa e que tipo de dado terá tal resposta. Tal tipo pode ser qualquer um da linguagem Java, como `String` ou `int`. Caso a função não precise dar uma resposta (ou seja, ela tem apenas que executar uma tarefa mas não tem que responder para quem solicitou a execução de tal tarefa), a palavra `void` deve ser utilizada no lugar. `void` significa *vazio*, indicando que a função não retorna uma resposta.
+O *TipoRetorno* indica se a função precisa retornar alguma resposta para quem solicitou a execução da tarefa e que tipo de dado terá tal resposta. Tal tipo pode ser qualquer um, como `String` ou `int`. Caso a função não precise dar uma resposta (ou seja, ela tem apenas que executar uma tarefa mas não tem que responder para quem solicitou a execução de tal tarefa), a palavra `void` deve ser utilizada no lugar. `void` significa *vazio*, indicando que a função não retorna uma resposta.
 
 O nome da função é definido de acordo com a finalidade da mesma. No caso do exemplo da secretária, a função poderia ser chamada de `comprarPassagensAereas`.  Se a função necessitar que sejam passados quaisquer dados para que ela possa executar sua tarefa, tais dados precisam ser indicados dentro dos parênteses. Estes dados são denominados *parâmetros* e são opcionais. O exemplo mostra a estrutura de uma função com 1 parâmetro.
 
@@ -33,9 +33,9 @@ Os parâmetros também são variáveis. Assim como os atributos, eles são chama
 
 TIP: Nomes de funções seguem o mesmo padrão de nomes de atributos: iniciam com minúsculas, intercalando maiúscula para cada palavra. Evite usar acentos.
 
-Funções em Java devem ser incluídas obrigatoriamente dentro de uma classe. Uma função, da forma como utilizada em POO, não pode ser incluída dentro das chaves de outra função. Para quem está iniciando na criação de funções, a forma mais simples de incluir uma nova função é antes do fecha-chaves da classe (normalmente o último `}` encontrado).
+Funções em Java devem ser incluídas obrigatoriamente dentro de uma classe. Uma função, da forma como utilizada em POO com Java, não pode ser incluída dentro das chaves de outra função. Para quem está iniciando na criação de funções, a forma mais simples de incluir uma nova função é antes do fecha-chaves da classe (normalmente o último `}` encontrado).
 
-Para podermos criar a nossa primeira função para permitir alterar um atributo como o `endereco`, precisamos então definir qual o tipo de retorno, o nome da função e seus parâmetros. No caso de funções que alteram atributos, normalmente elas não dão nenhuma resposta, o que dizemos que elas não retornam nenhum valor. Ou seja, o tipo de retorno é `void`. 
+Para podermos criar a nossa primeira função que permita alterar um atributo como o `endereco`, precisamos então definir qual o tipo de retorno, o nome da função e seus parâmetros. No caso de funções que alteram atributos, normalmente elas não dão nenhuma resposta, o que dizemos que elas não retornam nenhum valor. Ou seja, o tipo de retorno é `void`. 
 
 Poderíamos chamar a função de `alteraEndereco`, mas para funções que alteram atributos, há uma convenção importantíssima de utilizar o formato `setNomeDoAtributo` (_set_ significa neste contexto alterar ou atribuir). No caso do atributo `endereco`, a função deve ser chamada `setEndereco`. Tais funções devem ter apenas um parâmetro, que indica qual é o dado que será armazenado no atributo quando a função for executada. Como os parâmetros são nada mais que variáveis, precisamos definir o tipo e nome de cada um. No caso das funções em questão, o tipo e nome podem ser exatamente os mesmos do atributo que será alterado pela função. Assim, nossa função para alterar o endereço de um cliente terá a seguinte estrutura:
 
