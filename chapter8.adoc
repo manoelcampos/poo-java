@@ -252,7 +252,7 @@ A classe `Produto` pode ter os atributos:
 
 Além disso, poderíamos definir um atributo `marca` também como `String`. Mas devido aos problemas discutidos para o atributo `cidade` na classe `Cliente`, vamos criar uma classe `Marca` e definir uma associação *de* `Produto` *para* `Marca`. Como estamos indicando a direção da associação (*de* -> *para*), isto significa que devemos criar um atributo da classe `Marca` dentro de `Produto`, não o contrário. Após criar tal associação, o BlueJ mostrará uma seta indicando a direção da mesma.
 
-IMPORTANT: A direção de uma associação, representada pela direção da seta em um diagrama de classes, é chamada em POO de navegação. Ela define qual classe tem acesso a outra classe. Se a navegação da associação entre duas classes `A` e `B` for de `A` para `B`, um objeto da classe `A` tem acesso a um ou mais objetos da classe `B`. Isto significa que dentro de `A` existe um ou mais objetos da classe `B`. Se a associação for de `B` para `A`, a classe `B` é quem terá um ou mais objetos de `A`.
+IMPORTANT: A direção de uma associação, representada pela direção da seta em um diagrama de classes, é chamada em POO de navegação. Ela define qual classe tem acesso à outra classe. Se a navegação da associação entre duas classes `A` e `B` for de `A` para `B` (`A` -> `B`), um objeto da classe `A` tem acesso a um ou mais objetos da classe `B`. Isto significa que dentro de um objeto da classe `A` pode existir um ou mais objetos da classe `B`. Se a associação for de `B` para `A` (`B` -> `A`), a classe `B` é quem terá um ou mais objetos de `A`.
 
 [bibliography]
 == Referências
