@@ -1,3 +1,5 @@
+= Capítulo X
+
 - Mostrar a duplicação de dados entre cliente e funcionário.
 - Analisar os atributos e métodos comuns a cada classe.
 - Pensar nos tipos de pessoas que existem na sociedade (em termos jurídicos)
@@ -7,11 +9,12 @@
 - O que as filhas herdam da mãe.
 - Herança múltipla: classe pai e mãe?
 
-- Projeto: 
-  Criar projeto utilizando herança, contendo classes de pessoas para um sistema acadêmico.
-  Tal sistema deve possuir classes como aluno, professor e funcionário.
-  Defina e implemente as classes mães e filhas para tal projeto,
-  incluíndo os atributos e métodos que achar necessários.
+== Projeto
+
+Criar projeto utilizando herança, contendo classes de pessoas para um sistema acadêmico.
+Tal sistema deve possuir classes como aluno, professor e funcionário.
+Defina e implemente as classes mães e filhas para tal projeto,
+incluíndo os atributos e métodos que achar necessários.
 
 - Repetir o mesmo processo feito de refatorar a função de validar CPF com a função para validar CNPJ  
   (extraindo novos métodos dela). Definir a visibilidade dos métodos extraídos.

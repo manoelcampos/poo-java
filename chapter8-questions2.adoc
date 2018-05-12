@@ -2,7 +2,7 @@
 :numbered:
 :unsafe:
 
-= Questões de Concurso - Programação Orientada a Objetos
+= Questões de Concursos Públicos para Prova 2
 
 === A análise e o projeto orientados a objetos têm como meta identificar o melhor conjunto de objetos para descrever um sistema de software. O funcionamento desse sistema se dá por meio do relacionamento e troca de mensagens entre esses objetos. Na programação orientada a objetos, implementa-se um conjunto de classes que definem os objetos presentes no sistema de software. Com relação à herança múltipla é correto afirmar 
 (ANO: 2009 BANCA: TJPR ÓRGÃO: TJ-PR PROVA: INFORMÁTICA - ANALISTA DE SISTEMAS):

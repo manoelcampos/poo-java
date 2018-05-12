@@ -1,3 +1,5 @@
+= Capítulo X
+
 - Apresentar o termo Gen-Spec
 
 - Criação de projeto com classes de diferentes partes de um
@@ -10,7 +12,7 @@
   - Refatorar projeto para mover classes para pacotes
   - Utilizando suas classes de outro pacote
 
-- Herança vs Todo-Parte {agregação (relacionamento fraco) e composição (relacionamento forte)}
+- Herança vs Todo-Parte: agregação (relacionamento fraco) e composição (relacionamento forte)
   - Mostrar que com herança, não podemos ter um professor que é aluno (ou vice versa). 
   - Mostrar a duplicação de dados de PF entre um aluno que já é professor e que, ao alterar os dados de PF
     em um, estes ficam desatualizados no outro.

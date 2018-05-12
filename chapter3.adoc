@@ -13,7 +13,7 @@ Nesta página é possível fazer o download do ambiente de desenvolvimento NetBe
 Como informado na introdução do curso, vamos iniciar o desenvolvimento utilizando a ferramenta https://www.bluej.org[BlueJ],
 mas posteriormente utilizaremos o NetBeans. Assim, é mais fácil já baixar tudo junto.
 
-IMPORTANT: O BlueJ 4.1.1 e o NetBeans 8.2 só funcionam com o JDK 8.
+IMPORTANT: O BlueJ 4.1.2 e o NetBeans 8.2 só funcionam com o JDK 8.
 
 O vídeo abaixo mostra o processo de instalação passo-a-passo, incluindo as configurações necessárias para 
 compilar e executar programas Java pelo prompt de comandos no Windows. 
@@ -22,7 +22,7 @@ video::CdzJcXYQxt8[youtube, width="100%", height="300vh"]
 
 === JDK no Linux
 
-A instalação do JDK no Linux é bem mais simples utilizando o terminal. Basta executar o comando abaixo no terminal, de acordo com a distribuição Linux que estiver utilizando.
+A instalação do JDK no Linux é bem mais simples. Basta executar o comando abaixo no terminal, de acordo com a distribuição Linux que estiver utilizando.
 
 - Debian e derivados (como Ubuntu e Linux Mint): `sudo apt-get install openjdk-8-jdk`
 - Red Hat e derivados (como Fedora e CentOS): `sudo yum install openjdk-8-jdk`
@@ -47,18 +47,17 @@ Desta forma, é preciso fazer o download no https://www.bluej.org[site official]
 
 image::bluej-ubuntu.png[]
 
-Após fazer o download, abra um terminal e execute os comandos abaixo. Se o nome do arquivo baixado não for `BlueJ-linux-411.deb`, altere o nome nos comandos abaixo.
-
+Após fazer o download, abra um terminal e execute os comandos abaixo. Se o nome do arquivo baixado não for `BlueJ-linux-412.deb`, altere o nome nos comandos abaixo.
 
 [source,bash]
 ----
 #Inicia a instalação do BlueJ
-sudo dpkg -i BlueJ-linux-411.deb
+sudo dpkg -i BlueJ-linux-412.deb
 
 #Caso sejam exibidos erros de falta de dependências, 
 #execute o comando abaixo para instalá-las automaticamente
 sudo apt-get -f install
 
 #Inicia novamente a instalação do BlueJ depois de instaladas as dependências
-sudo dpkg -i BlueJ-linux-411.deb
+sudo dpkg -i BlueJ-linux-412.deb
 ----
