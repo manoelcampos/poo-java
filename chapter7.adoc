@@ -41,13 +41,13 @@ Olhando o código do construtor acima isoladamente, pode parecer muito com a dec
 [source,java]
 ----
 public class Cliente {
-    String nome;
-    String cpf;
-    String email;
-    String endereco;
-    String cidade;
-    String telefone;
-    char sexo;
+    private String nome;
+    private String cpf;
+    private String email;
+    private String endereco;
+    private String cidade;
+    private String telefone;
+    private char sexo;
     
     Cliente(){
         cidade = "Palmas";
@@ -92,13 +92,13 @@ O código completo dos construtores é apresentado abaixo (_getters_ e _setters_
 [source,java]
 ----
 public class Cliente {
-    String nome;
-    String cpf;
-    String email;
-    String endereco;
-    String cidade;
-    String telefone;
-    char sexo;
+    private String nome;
+    private String cpf;
+    private String email;
+    private String endereco;
+    private String cidade;
+    private String telefone;
+    private char sexo;
     
     Cliente(){
         cidade = "Palmas";

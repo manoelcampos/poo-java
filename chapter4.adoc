@@ -65,7 +65,7 @@ Por outro lado, nome e cidade são claramente dados alfabéticos (permitem somen
 As características de uma classe são mais um dos princípios básicos de POO, chamadas de *atributos*, campos ou propriedades. Atributos é um termo que utilizamos no cotidiano. Por exemplo, uma pessoa pode ter como atributos o bom humor, paciência, beleza, estatura, etc. Assim, não é um termo específico da POO. Atributos nada mais são do que variáveis que possuem algumas características especiais que veremos ao longo do curso. Como toda variável, cada atributo precisa de um tipo e um nome. 
 ====
 
-Dos atributos apresentados acima, o nome, CPF, email, endereço, cidade e telefone são alfanuméricos, logo do tipo `String`. No caso do sexo como ele pode ser representado por apenas uma letra, o tipo que permite armazenar no máximo uma letra é o `char`. Assim, podemos declarar tais atributos na classe `Cliente` como apresentado abaixo:
+Dos atributos apresentados acima, o nome, CPF, email, endereço, cidade e telefone são alfanuméricos, logo do tipo `String`. No caso do sexo, como ele pode ser representado por apenas uma letra, o tipo que permite armazenar no máximo uma letra é o `char`. Assim, podemos declarar tais atributos na classe `Cliente` como apresentado abaixo:
 
 [source,java]
 ----
@@ -82,9 +82,24 @@ public class Cliente {
 
 O código da classe `Cliente` apresenta a forma mais básica de declaração de atributos. Este é o processo para declaração de variáveis em Java, seguindo o formato `tipo nomeDaVariavel;`.
 
-Observe que o tipo `String` tem inicial maiúscula e o `char` minúscula. Tais tipos são realmente desta forma, não é um erro. Lembre-se que falamos anteriormente que classes, por convenção, tem inicial maiúscula. Logo, pode-se concluir que `String` nada mais é do que uma classe específica da linguagem Java, enquanto `char` é um tipo primitivo como você pode ter aprendido em aulas de algoritmos ou outra linguagem de programação.
+Observe que o tipo `String` tem inicial maiúscula e o `char` minúscula. Tais tipos são realmente desta forma, não é um erro. Lembre-se que falamos anteriormente que classes, por convenção, tem inicial maiúscula. Logo, pode-se deduzir que `String` nada mais é do que uma classe específica da linguagem Java, enquanto `char` é um tipo primitivo como você pode ter aprendido em aulas de algoritmos ou outra linguagem de programação.
 
 Um tipo primitivo como `char` e `int` permitem declarar variáveis que possuem apenas dados. Uma classe como `String` possui dados (atributos) e funcionalidades. 
+
+Apesar do código mostrado ser a forma mais básica para declaração de atributos, tal forma não é recomenda em POO, pois não estamos definindo nenhum controle de acesso aos nossos atributos. Como a prática tem mostrado que quando apresentamos uma forma mais simples porém menos adequada de se escrever código, alunos tendem acabam se habituando à primeira forma e sempre escrevendo código daquele jeito. Assim, para evitar a aquisição deste mau hábito, os atributos devem ser declarados como privados, utilizando a palavra `private`, como mostrado no código abaixo. Controle de acesso só será abordado no link:chapter9.adoc[Capítulo 9]. Por enquanto, não se preocupe em entender o porquê disto.
+
+[source,java]
+----
+public class Cliente {
+    private String nome;
+    private String cpf;
+    private String email;
+    private String telefone;
+    private char sexo;
+    private String endereco;
+    private String cidade;
+}
+----
 
 .Uso de chaves { }
 [NOTE]
@@ -115,11 +130,11 @@ O local de abertura das chaves é uma grande discussão entre desenvolvedores. H
 ====
 
 === Conveções ao declarar atributos
-Temos diversas variáveis do tipo `String`. Apesar de ser possível declará-las todas em uma única linha como:
+Temos diversos atributos do tipo `String`. Apesar de ser possível declará-los todos em uma única linha como:
 
 [source,java]
 ----
-String nome, cpf, email, endereco, cidade, telefone;
+private String nome, cpf, email, endereco, cidade, telefone;
 ----
 
 não é aconselhável fazer isto para atributos. Veremos posteriormente que atributos podem e devem ser documentados. Declarar vários atributos em uma mesma linha impedirá sua adequada documentação. Para variáveis convencionais (como variáveis locais dentro de funções), não há problema algum em fazer isso. Apesar de ser repetitivo declarar atributos de um mesmo tipo em linhas diferentes, isto favorece a documentação do projeto e torna a listagem de atributos mais clara e organizada. A forma apresentada é de fato o padrão utilizado na indústria de software orientado a objetos (OO).
@@ -128,9 +143,9 @@ Outro ponto importante é que o nome de atributos começam com inicial minúscul
 
 [source,java]
 ----
-String nome;
-String cidadeNatal;
-String cidadeResidencia;
+private String nome;
+private String cidadeNatal;
+private String cidadeResidencia;
 ----
 
 Como falado anteriormente para classes e outros elementos da linguagem Java, não é recomendável utilizar acentos ao dar nomes a atributos.
@@ -177,12 +192,12 @@ O código inicial da classe `Funcionário` deve ficar como apresentado abaixo. L
 [source,java]
 ----
 public class Funcionario {
-    String nome;
-    int matricula;
-    String cpf;
-    String email;
-    String telefone;
-    char sexo;
-    String cargo;
+    private String nome;
+    private int matricula;
+    private String cpf;
+    private String email;
+    private String telefone;
+    private char sexo;
+    private String cargo;
 }
 ----

@@ -25,11 +25,11 @@ Vamos criar então a classe `Empresa` que permitirá representar a matriz e fili
 ----
 public class Empresa
 {
-    String endereco;
-    String cidade;
-    String telefone;
-    String email;
-    boolean matriz;
+    private String endereco;
+    private String cidade;
+    private String telefone;
+    private String email;
+    private boolean matriz;
 }
 ----
 
@@ -43,15 +43,15 @@ O código abaixo apresenta _getter's_ e _setter's_ para os atributos `endereco` 
 ----
 public class Empresa
 {
-    String endereco;
-    String cidade;
-    String telefone;
-    String email;
+    private String endereco;
+    private String cidade;
+    private String telefone;
+    private String email;
 
     /**
      * Situação da empresa: se ela é uma matriz ou não.
     */
-    boolean matriz;
+    private boolean matriz;
 
     void setEndereco(String endereco){
         this.endereco = endereco;
@@ -94,16 +94,16 @@ Abaixo é apresentado um trecho do código da classe `Empresa`, depois de adicio
 ----
 public class Empresa
 {
-    String endereco;
-    String cidade;
-    String telefone;
-    String email;
-    boolean matriz;
+    private String endereco;
+    private String cidade;
+    private String telefone;
+    private String email;
+    private boolean matriz;
 
     /**
      * Indica qual funcionário é o gerente da empresa.
     */
-    Funcionario gerente;
+    private Funcionario gerente;
 }
 ----
 
@@ -204,8 +204,8 @@ No entanto, assim como tratamos a cidade como um objeto, o estado também poderi
 ----
 public class Estado
 {
-    String nome;
-    String uf;
+    private String nome;
+    private String uf;
 }
 ----
 
@@ -221,8 +221,8 @@ Bem, agora que criamos nossa classe `Estado`, podemos criar a classe `Cidade` co
 ----
 public class Cidade
 {
-    String nome;
-    Estado estado;
+    private String nome;
+    private Estado estado;
 }
 ----
 
@@ -231,14 +231,14 @@ Por fim, podemos então alterar o tipo do atributo `cidade` nas classes `Cliente
 [source,java]
 ----
 public class Cliente {
-    String nome;
-    String cpf;
-    String email;
-    String telefone;
-    char sexo;
-    String endereco;
+    private String nome;
+    private String cpf;
+    private String email;
+    private String telefone;
+    private char sexo;
+    private String endereco;
 
-    Cidade cidade;
+    private Cidade cidade;
 }
 ----
 
