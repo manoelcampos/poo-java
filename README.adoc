@@ -18,7 +18,6 @@ endif::[]
 
 http://about.me/manoelcampos[Prof. Me. Manoel Campos da Silva Filho]
 
-
 ifdef::env-github[]
 IMPORTANT: Acesse o curso online https://manoelcampos.gitbooks.io/poo-java/[neste link], onde é possível fazer o download do material em PDF e epub.
 O acesso ao curso diretamente pelo GitHub não permite a exibição de vídeos nem a navegação facilitada entre capítulos.

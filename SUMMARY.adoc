@@ -1,8 +1,8 @@
 = Índice
 
 . link:README.adoc[Introdução]
-. link:chapter1.adoc[Porque POO?]
-. link:chapter2.adoc[Modelos e Objetos]
+.. link:chapter1.adoc[Porque POO?]
+.. link:chapter2.adoc[Modelos e Objetos]
 . link:chapter3.adoc[Ambiente de Desenvolvimento]
 . link:chapter4.adoc[Criando Classes e Objetos no BlueJ]
 .. link:chapter4p1.adoc[Alterando valores dos atributos]
