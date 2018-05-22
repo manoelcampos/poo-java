@@ -1,32 +1,46 @@
+= Capítulo 9
+
+- Introdução à encapsulamento (visibilidade)
+    * Criar classe Venda de forma simplificada, contendo um atributo Produto + quantidade, um cliente e um vendedor
+    * mostrar que os atributos são acessíveis dentro de qualquer lugar da classe: criar um método valorTotal na venda para mostrar isso
+    * Criar um método salvar() na venda que vai reduzir o estoque do produto,
+      acessando os atributos diretamente
+    * apresentar os modificadores de acesso público e privado e como o código acessando 
+      atributos diretamente de fora da classe produto param de funcionar.
+- Alterar a venda para permitir incluir vários itens
+- No setter do produto na classe Venda, verificar se o produto informado
+    tem estoque maior que zero para poder atribuir o produto à venda.
+    Caso o estoque seja zero ou negativo, exibir a mensagem "O produto informado não possui estoque e não pode ser vendido".
+ 
+== Adicionar Funcionalidades Básicas
+
+- Cliente: validar email, validar CPF, validar attributos nos setters
+  - CPF: Usar uma função pronta, depois refatorar tal função (criar a função do zero seria mais fácil,
+    mas o objetivo é mostrar como a POO pode tornar mais claro um código que antes era confuso e repetivo.)
+- Filial: validar CNPJ.
+
 = Capítulo X
 
-== Abstração
-Pode ocorer por meio de Encapsulamento, Herança, Níveis de Abstração, Classes Abstratas e Polimorfismo
+- Mostrar a duplicação de dados entre cliente e funcionário.
+- Analisar os atributos e métodos comuns a cada classe.
+- Pensar nos tipos de pessoas que existem na sociedade (em termos jurídicos)
+- Criar projeto no netbeans para introduzir herança de Pessoa, Pessoa Física, Pessoa Juridica, Cliente, Funcionário e Fornecedor.
+- Visibilidade com modificadores private e public e introduzir o termo encapsulamento: refatorar o método cpf válido, extraindo novos métodos privados.
+- Classes Mãe (Super classe) e classes Filhas (subclasses)
+- O que as filhas herdam da mãe.
+- Herança múltipla: classe pai e mãe?
 
-- Mostrar que a validação do CPF pode incluir outros detalhes como a existência somente de números:
-  se tiver outros caracteres vai ocorrer erro na validação.
-- Mostrar versão da validação do CPF que o usuário da classe precisa primeiro chamar os métodos
-  separados para: remover símbolos, verificar se o cpf tem 11 dígitos e só depois 
-  fazer os cálculos.
-- Mostrar como essa versão é complexa de usar e que ainda se tiverem letras no CPF, ocorrerá erro.
-- Mostrar que podemos esconder toda essa complexidade abstraindo o processo de validação do CPF 
-  pelo encapsulamento de métodos
-- Mostrar como seria criar um Funcionário utilizando associações (não herança) entre PesoaFisica e Pessoa.
-  O uso de herança abastrai a complexidade de criar objetos separados.
-- Mostrar no projeto usando herança e agregação, como podemos abstrair a complexidade de 
-  acessar os dados de PF e Pessoa a partir de um objeto PF, criando métodos wrappers que delegam a chamada
-  de métodos como Funcionario.getNome() para PessoaFisica.getNome().
-- Mostrar como podemos refatorar a herança entre Pessoa, PF e Funcionário, criando agregação
-  somente entre PF e Funcionário, fazendo o NetBeans automaticamente criar a delegação
-- Mostar "Replace Inheritance with Delegation" refactoring no IntelliJ
-- Mostrar que a criação de níveis de herança é uma forma de criar níveis de abstração,
-  separando-se complexidade e dados genéricos em classes superiores e específicos em classes
-  inferiores.
-- Exemplos de abstração: 
-  * adaptadores como Ts elétricos: se a interface de uma classe não é da forma que desejamos
-    ou precisamos, podemos criar uma camada de abstração sobre essa classe
-    para mudar o formato dessa interface, abstraindo a interface original.
+== Projeto
 
-== Links
+Criar projeto utilizando herança, contendo classes de pessoas para um sistema acadêmico.
+Tal sistema deve possuir classes como aluno, professor e funcionário.
+Defina e implemente as classes mães e filhas para tal projeto,
+incluíndo os atributos e métodos que achar necessários.
 
-- http://www.tonymarston.co.uk/php-mysql/abstraction.txt
+- Repetir o mesmo processo de refatorar a função de validar CPF com a função de validar CNPJ  
+  (extraindo novos métodos dela). Definir a visibilidade dos métodos extraídos.
+  Relembrar que tais métodos são para uso interno da classe: fora dela nem precisamos saber que eles existem.
+- Mostrar os níveis de visibilidade protected e package (default) e como funcionam com herança
+- Os métodos extraídos do cpfValido podem ser definidos como protected.
+  O remove símbolos, por exemplo, pode ir pra classe pessoa para 
+  ser usado por PessoaFisica e PessoaJuridica.

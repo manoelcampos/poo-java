@@ -31,5 +31,4 @@ public class Funcionario
     public void setEmpresa(Empresa empresa){
         this.empresa = empresa;
     }
-    
 }
