@@ -7,6 +7,7 @@ public class Venda
     private String data;
     private double percentualDesconto;
     private List<ItemVenda> itens;
+    private Cliente cliente;
     
     public Venda(){
         this.itens = new ArrayList<>();

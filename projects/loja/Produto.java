@@ -13,45 +13,7 @@ public class Produto
     private String descricao;
     private String marca;
     private String modelo;
-    /**
-     * Indica a quantidade do produto que há em estoque.
-     * Para este atributo, não temos um setter que altera seu
-     * val seu valor diretamente.
-     * A alteração do estoque do produto normalmente
-     * ocorre pela adição ou removão de uma determinada
-     * quantidade de tal estoque.
-     * Por exemplo, ao usar um setter para remover uma quantidade do estoque,
-     * precisaríamos primeiro obter o valor atual do estoque,
-     * substrair a quantidade desejada e depois atribuir o novo
-     * valor usando o setter, como:
-     * 
-     * produto.setEstoque(produto.getEstoque() - quantidade);
-     * 
-     * Observe que tal linha é extensa e sucesctível a erros.
-     * A quantidade solicitada pode não estar disponível e assim
-     * o estoque ficará negativo.
-     * 
-     * Neste caso, o setter não foi adicionado e os métodos
-     * addEstoque e removeEstoque foram incluídos no lugar.
-     * Tais métodos tornam mais fácil a manipulação do estoque.
-     * Eles são utilizados dentro da classe venda, tornando o código
-     * dentro da venda bastante simples e claro.
-     * Além disso, o controle de estoque é responsabilidade da classe
-     * Produto (ela que possui o atributo estoque).
-     * Assim, seguindo o Princípio da Responsabilidade Única (Single Responsibility Principle, SRP)
-     * dos princípios SOLID, cada classe deve ter apenas uma responsabilidade.
-     * A responsabilidade da classe Produto é controlar produtos, incluindo o seu estoque.
-     * A responsabilidade da classe Venda é controlar vendas, não controlar estoque de produtos.
-     * Se tivessemos apenas um setEstoque na classe Produto,
-     * ao realizar uma venda, a venda teria que se encarregar de incluir a lógica
-     * para reduzir o estoque, fazendo algo como produto.setEstoque(produto.getEstoque() - quantidadeVendida).
-     * 
-     * Desta forma, estaríamos trazendo lógica que deveria estar dentro do Produto
-     * para dentro da Venda, tornando o código da venda mais complexo.
-     * Por fim, o código apresentando não está fazendo nenhuma validação.
-     * Se fossemos inclur isto, o código ficaria ainda mais extenso. 
-     * Logo, todo esse código deve estar aqui dentro do Produto.
-     */
+    
     private int estoque;
     
     public Produto(String descricao, int estoque){

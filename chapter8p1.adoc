@@ -1,15 +1,60 @@
 :imagesdir: images
 
-==== Quantidade de Objetos em um Relacionamento
+== Quantidade de Objetos em um Relacionamento
 
-Quando criamos os relacionamentos `Empresa` -> `Funcionario` para definir quem era o gerente da empresa e entre `Empresa` -> `Cidade` para indicar em qual cidade a empresa está situada, apenas incluímos os atributos `Funcionario gerente` e `Cidade cidade` dentro da empresa. Assim, a empresa tem um gerente e é situada em uma cidade.
+Quando criamos os relacionamentos `Empresa` -> `Funcionario` (para definir quem era o gerente da empresa) e entre `Empresa` -> `Cidade` (para indicar em qual cidade a empresa está situada), apenas incluímos os atributos `Funcionario gerente` e `Cidade cidade` dentro da `Empresa`. 
 
-Fizemos isso de forma intuitiva, pois sabemos, por exemplo, que uma empresa (matriz ou filial) está situada em apenas uma cidade, definindo então quantos objetos de cada lado da associação podem ser envolvidos. Tal informação é chamada de cardinalidade ou multiplicidade. Assim, de forma simplificada, o relacionamento `Empresa` -> `Cidade` tem uma cardinalidade 1 pra 1, indicando que podemos relacionar 1 objeto Empresa com no máximo 1 objeto Cidade.
+Fizemos isso de forma intuitiva, pois sabemos, por exemplo, que uma empresa (matriz ou filial) está situada em apenas uma cidade, definindo então quantos objetos de cada lado da associação podem ser envolvidos. Tal informação é chamada de cardinalidade ou multiplicidade. Assim, de forma simplificada, o relacionamento `Empresa` -> `Cidade` tem uma cardinalidade 1..1 (lê-se "1 pra 1"), indicando que podemos relacionar 1 objeto `Empresa` com no máximo 1 objeto `Cidade`.
 
-Quando temos um relacionamento 1 pra 1, para criarmos tal relacionamento entre as duas classes envolvidas, precisamos apenas incluir um atributo do tipo da classe de destino (onde a seta chega), dentro da classe de origem (de onde a seta parte). No caso do exemplo `Empresa` -> `Cidade`, temos que apenas colocar um atributo da classe `Cidade` dentro da classe `Empresa`.
+Para criarmos um relacionamento 1..1 entre duas classes, precisamos apenas incluir um atributo do tipo da classe de destino (onde a seta chega), dentro da classe de origem (de onde a seta parte). O código abaixo apresenta os relacionamentos de `Empresa` para `Cidade` e `Funcionario`.
 
-Isto define que os objetos de tais classes podem se relacionar. Para relacionar os objetos de fato, neste exemplo 1 `Empresa` e 1 `Cidade`, normalmente precisamos ter um setter para o atributo que define o relacionamento (como o atributo `cidade` dentro da classe `Empresa`). Assim, ao chamarmos o método `setCidade()` a partir de um objeto `Empresa`, estaremos efetivamente relacionando um objeto `Cidade` a um `Empresa`.
+[source,java]
+----
+public class Empresa
+{
+    private String nomeFantasia;
+    private String razaoSocial;
+    private String cnpj;
+    private String endereco;
+    private String telefone;
+    private String site;
+    private boolean matriz;
 
-Apesar de ser natural pensarmos na cardinalidade entre `Empresa` e `Cidade` como 1 para 1, na verdade tal cardinalidade é n para 1, ou seja, vários objetos `Empresa` podem estar relacionados a mesma cidade. Você pode pensar que seria o mesmo que dizer que 1 `Empresa` então está relacionada a 1 `Cidade`. Se pensarmos assim, podemos representar tal cardinalidade como 1 -> 1, seguindo a direção da seta neste relacionamento entre as duas classes. E então, ao avaliar o relacionamento no sentido contrário (`Empresa` <- `Cidade`), então apenas inverteríamos a seta na cardinalidade, ficando 1 <- 1, que lendo na direção da seta indica que 1 `Cidade` possui no máximo 1 `Empresa`.
+    //Cria um relacionamento 1..1  entre Empresa -> Cidade
+    private Cidade cidade;    
 
-Mas sabemos que isto não é verdade, uma cidade pode ter várias (n) empresas. Por esse motivo, é mais simples interpretarmos relacionamentos semelhantes à `Empresa` -> `Cidade` como n -> 1, pois se criarmos o relacionamento no sentido contrário, apenas inverteremos a seta e teremos n <- 1, indicando que 1 cidade pode ter várias empresas.
+    //Cria um relacionamento 1..1  entre Empresa -> Funcionario
+    private Funcionario gerente;
+
+    //Métodos omitidos por simplificação
+}
+----
+
+Isto define que os objetos de tais classes podem se relacionar. Para relacionar os objetos de fato, uma `Empresa` e uma `Cidade` neste exemplo, normalmente precisamos ter um _setter_ para o atributo que define o relacionamento, como o atributo `cidade` dentro da classe `Empresa`. Assim, ao chamarmos o método `setCidade()` a partir de um objeto `Empresa`, somente neste momento é que estaremos relacionando um objeto `Cidade` a um `Empresa`.
+
+== Relacionamentos Bi-Direcionais e 1..n
+
+Como vimos, é muito simples criar relacionamentos com cardinalidade 1..1, como o relacionamento `Empresa` -> `Cidade`. Já sabemos que a direção da seta indica que objeto terá acesso ao outro objeto na associação. No relacionamento apresentado, a partir de uma `Empresa` poderemos saber qual a `Cidade` em que ela está situada. No entanto, a partir da `Cidade`, não temos como saber quais empresas estão situadas lá. Para obtermos tal informação, precisamos criar um relacionamento no sentido contrário, de `Cidade` para `Empresa`.
+
+Ao fazermos isso, estaremos criando um relacionamento bi-direcional entre as duas classes. Na prática, estamos criando dois relacionamentos uni-direcionais em sentidos contrários. Dependendo da ferramenta de desenvolvimento ou modelagem utilizada, isto será representado como um único relacionamento com setas nos dois lados (bi-direcional) ou duas setas individuais (dois relacionamentos uni-direcionais). O BlueJ adota a segunda opção, que inclusive é mais didática, pois mostra que são relacionamentos individuais, que inclusive precisam ser programados separadamente.
+
+Ao criar um relacionamento em um sentido, o relacionamento no sentido contrário não é criado automaticamente, pois podemos simplesmente não precisar dele. Assim, criá-lo é uma escolha, de acordo com as necessidades do sistema.
+
+No nosso caso, vamos dizer que precisamos sim saber quais são as empresas situadas em uma determinada cidade. Logo, temos que criar o relacionamento `Cidade` -> `Empresa` como 1..n, já que uma cidade pode ter várias empresas. Para isto, segue-se a lógica utilizada para os outros relacionamentos: dentro da classe de origem (`Cidade` neste caso), devemos incluir um atributo da classe de destino (`Empresa`). 
+
+No entanto, com relacionamentos 1..n é preciso algumas modificações. Como a cidade pode ter várias empresas, precisaríamos de uma estrutura como um vetor, por exemplo, para permitir que uma cidade guardasse a relação de empresas lá situadas. A declaração de vetores em Java é muito simples, como `Empresa empresas[];`. Observe que basta utilizar colcheques vazios para declarar um vetor. No entanto, em linguagens estáticas como Java, depois que o tamanho de um vetor é definido, não se pode mais aumentar nem diminuir a quantidade de elementos de tal vetor. Se usarmos um vetor para representar as empresas de uma cidade, antes de começar a utilizar tal vetor precisaremos instanciar o mesmo, indicando a quantidade de elementos que o vetor comportará. 
+
+Poderíamos fazer isso no construtor da classe `Cidade` como `this.empresas = new Empresa[10];`. Com esta linha estamos instanciando (`new`) um vetor que pode armazenar até 10 empresas. Os colchetes indicam que é um vetor, o valor entre eles a capacidade do mesmo e `Empresa` o tipo de elementos que podem ser armazenados nas posições do vetor.
+
+O grande problema do uso de vetores representar relacionamentos 1..n é que não sabemos quantas empresas cada cidade terá. O tamanho escolhido para o vetor pode ser exagerado ou insuficiente. Se for exagerado, podemos estar desperdiçando memória desnecessariamente, criando um vetor com muitas posições que nunca serão usadas. Se for insuficiente, isso criará um problema ao usuário quando ele precisar adicionar mais empresas na cidade e o vetor estiver cheio.
+
+Por esses motivos e alguns outros que estão fora do escopo deste curso, o uso direto de vetores em Java é desaconselhável. Vetores são excelentes estruturas que permitem armazenar um conjunto de dados sequencialmente na memória. Desta forma, percorrer um vetor utiliando um laço de repetição é extremamente rápido. Assim, o uso de vetores em Java é aconselhável somente se você for obrigado e utilizá-los (pois uma determinada função exige um vetor), você possui poucos elementos a armazenar e normalmente sabe quantos são ou há questões de desempenho que você já avaliou e verificou que a melhor alternativa é o uso de vetores.
+
+
+
+== Repensando a cardinalidade
+
+Apesar de ser natural pensarmos na cardinalidade de `Empresa` -> `Cidade` como 1..1, na verdade tal cardinalidade é n..1, ou seja, vários objetos `Empresa` podem estar relacionados à mesma cidade. Logo, podemos ter várias empresas na mesma cidade. Você pode pensar que seria o mesmo que dizer que 1 `Empresa` está relacionada a 1 `Cidade`. Se pensarmos assim, podemos representar a cardinalidade e direção da associação entre essas duas classes como 1 -> 1. No entanto, se apenas invertermos a seta para avaliarmos o relacionamento no sentido contrário (`Empresa` <- `Cidade`), teremos 1 <- 1. Lendo na direção da seta indica que 1 `Cidade` possui no máximo 1 `Empresa`.
+
+Sabemos que isto não é verdade, uma cidade pode ter várias (n) empresas. Por esse motivo, no lugar de interpretarmos relacionamentos semelhantes à `Empresa` -> `Cidade` como 1 -> 1, é mais simples interpretarmos como n -> 1. Assim, se criarmos o relacionamento no sentido contrário, só precisamos inverter a seta e teremos n <- 1, indicando que 1 cidade pode ter várias empresas.
+

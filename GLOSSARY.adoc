@@ -35,3 +35,16 @@ Define a quantidade de objetos que podem estar envolvidos num relacionamento ent
 ## Multiplicidade
 
 Mesmo que cardinalidade.
+
+## Parâmetro
+
+Representa uma variável cujo valor será solicitado por uma função quando a mesma for chamada.
+Um parâmetro usualmente representa um dado que a função solicita para que ela possa
+executar sua tarefa. Os parâmetros são definidos entre os parênteses de uma função.
+
+Eles não devem ser confundidos com variáveis locais, que são variáveis definidas
+dentro das chaves de uma função, cujo seu valor é definido internamente pela própria
+função e não solicitado quando a função é chamada.
+
+Por exemplo, todo _setter_ possui um parâmetro, solicitando a quem chamar o método
+qual o valor que será armazenado no atributo ao qual o _setter_ corresponde.

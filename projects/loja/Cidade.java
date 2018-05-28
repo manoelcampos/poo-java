@@ -11,16 +11,6 @@
 public class Cidade
 {
     private String nome;
-    /**
-     * Na classe cidade, definimos
-     * o estado a qual ela percente utilizando uma
-     * classe Estado para isto.
-     * Pelos mesmos motivos que inserimos um atributo chamado cidade
-     * do tipo Cidade (e não String) dentro de Empresa.
-     * Ao adicionar este atributo estado, estamos
-     * criando um relacionamento Cidade --> Estado,
-     * indicando que uma Cidade pertence a um Estado.
-     */
     private Estado estado;
     
     public void setNome(String nome){
