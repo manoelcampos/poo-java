@@ -65,7 +65,14 @@ Existe uma expressão em computação que diz "Measure, don't guess", ou seja, "
 Assim, simplesmente supor que o uso de vetores vai melhorar o desempenho, sem antes ter utilizado ferramentas de medição, é apenas um palpite. Para mais detalhes, veja https://dzone.com/articles/microbenchmarking-jmh-measure[este artigo (apenas em inglês)].
 ====
 
-No lugar de vetores, o mais aconselhável é o uso da Java Collections Framework (JCF), uma biblioteca de classes para trabalhar com coleções de elementos. Como a JCF disponibiliza uma série de classes, isto significa que a grande maioria de problemas relacionados ao uso de vetores é resolvido por meio de métodos disponibilizados por tais classes. Como indicado anteriormente, a única forma de aumentar o tamanho de um vetor é criar outro e copiar os dados do anterior para o novo vetor. Utilizando vetores diretamente, seria preciso implementar métodos para realizar tais operações. Com a JCF (que chamamos também simplesmente de Collections), todos esses métodos já estão prontos e não precisamos perder tempo reinventando a roda.
+No lugar de vetores, o mais aconselhável é o uso da Java Collections Framework (JCF), uma biblioteca de classes para trabalhar com coleções de elementos. Esta é uma biblioteca moderna, eficiente e provavelmente a mais conhecida e utilizada de toda a plataforma Java. 
+
+[quote, Oleg Shelajev, 'https://zeroturnaround.com/rebellabs/java-collections-cheat-sheet/[ZeroTurnaround]']
+____
+Todo programa Java tende a ter uma coisa em comum: todos eles usarão coleções.
+____
+
+Como a JCF disponibiliza uma série de classes, isto significa que a grande maioria de problemas relacionados ao uso de vetores é resolvido por meio de métodos disponibilizados por tais classes. Como indicado anteriormente, a única forma de aumentar o tamanho de um vetor é criar outro e copiar os dados do anterior para o novo vetor. Utilizando vetores diretamente, seria preciso implementar métodos para realizar tais operações. Com a JCF (que chamamos também simplesmente de Collections), todos esses métodos já estão prontos e não precisamos perder tempo reinventando a roda.
 
 === Como usar Collections para criar relacionamentos 1..n
 
@@ -101,7 +108,7 @@ public class Cidade
      */
     private ArrayList<Empresa> empresas;
 
-    //Getters e setters necessários omitidos por simplificação
+    //Getters e setters omitidos por simplificação
 }
 ----
 
@@ -116,7 +123,6 @@ public class Cidade
     private String nome;
     private Estado estado;
     private ArrayList<Empresa> empresas;
-
     //Getters e setters para nome e estado omitidos por simplificação
 
     public ArrayList<Empresa> getEmpresas(){
@@ -134,8 +140,8 @@ O vídeo a seguir demonstra o processo de instanciação de uma Empresa e uma Ci
 video::jDlUtqXHAl4[youtube, 640, 480]
 
 O erro ocorre pois estamos tentando utilizar a lista de empresas antes de ter instanciado a mesma.
-Observe que em nenhum momento dentro do código da classe Cidade, utilizamos o operador `new` para primeiro criar uma 
-lista vazia para podermos começar a inserir empresas. Como é óbvio, se vamos fazer uma lista de compras, primeiramente precisamos conseguir, por exemplo, uma folha de papel (preferencialmente em branco) para podermos começar a adicionar os elementos na nossa lista. Este é o passo que nos falta no código acima. Como visto no link::chapter7.html[Capítulo 7], podemos utilizar um construtor para definir valores iniciais para atributos da nossa classe. Como `empresas` é um atributo, podemos então instanciá-lo em um construtor padrão na classe Cidade. Assim, podemos incluir nosso construtor depois do último atributo da classe (preferencialmente), como abaixo:
+Observe que em nenhum momento, dentro do código da classe Cidade, utilizamos o operador `new` para primeiro criar uma 
+lista vazia e assim podermos inserir empresas nela. Como é óbvio, se vamos fazer uma lista de compras, primeiramente precisamos conseguir, por exemplo, uma folha de papel (preferencialmente em branco) para podermos começar a adicionar os elementos na nossa lista. Este é o passo que nos falta no código acima. Como visto no link::chapter7.html[Capítulo 7], podemos utilizar um construtor para definir valores iniciais para atributos da nossa classe. Como `empresas` é um atributo, podemos então instanciá-lo em um construtor padrão na classe Cidade. Assim, podemos incluir nosso construtor depois do último atributo da classe (preferencialmente), como abaixo:
 
 [source,java]
 ----
