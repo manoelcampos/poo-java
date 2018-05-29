@@ -48,3 +48,10 @@ função e não solicitado quando a função é chamada.
 
 Por exemplo, todo _setter_ possui um parâmetro, solicitando a quem chamar o método
 qual o valor que será armazenado no atributo ao qual o _setter_ corresponde.
+
+## NullPointerException
+
+Erro que ocorre quando tentamos utilizar um método ou acessar um atributo de uma variável cujo valor é `null`.
+Tal valor indica que a variável atualmente não armazena nenhuma referência para um objeto criado em memória.
+Ou seja, a variável não possui o endereço de memória de um objeto. Assim, ela não representa objeto algum
+e logo não podemos tentar usar um objeto que não foi criado. Por este motivo ocorre o erro.
