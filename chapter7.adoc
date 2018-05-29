@@ -1,6 +1,6 @@
 :imagesdir: images
 
-== Criando objetos e definindo valores inicias para atributos
+== Construindo objetos e definindo valores inicias
 
 Nos capítulos anteriores aprendemos que _getters_ e _setters_ são funções de uma classe. Em POO, funções dentro de classes são chamadas de métodos. Em Java, toda função deve estar obrigatoriamente dentro de uma classe, assim, as funções criadas até agora são métodos.
 
