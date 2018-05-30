@@ -4,7 +4,7 @@
 
 Quando criamos os relacionamentos `Empresa` -> `Funcionario` (para definir quem era o gerente da empresa) e entre `Empresa` -> `Cidade` (para indicar em qual cidade a empresa está situada), apenas incluímos os atributos `Funcionario gerente` e `Cidade cidade` dentro da `Empresa`. 
 
-Fizemos isso de forma intuitiva, pois sabemos, por exemplo, que uma empresa (matriz ou filial) está situada em apenas uma cidade, definindo então quantos objetos de cada lado da associação podem ser envolvidos. Tal informação é chamada de cardinalidade ou multiplicidade. Assim, de forma simplificada, o relacionamento `Empresa` -> `Cidade` tem uma cardinalidade 1..1 (lê-se "1 pra 1"), indicando que podemos relacionar 1 objeto `Empresa` com no máximo 1 objeto `Cidade`.
+Fizemos isso de forma intuitiva, pois sabemos, por exemplo, que uma empresa (matriz ou filial) está situada em apenas uma cidade, definindo então quantos objetos de cada lado da associação podem ser envolvidos. Tal informação é chamada de cardinalidade ou multiplicidade. Assim, de forma simplificada, o relacionamento `Empresa` -> `Cidade` tem uma cardinalidade 1..1 (_lê-se "1 pra 1"_), indicando que podemos relacionar 1 objeto `Empresa` com no máximo 1 objeto `Cidade`.
 
 Para criarmos um relacionamento 1..1 entre duas classes, precisamos apenas incluir um atributo do tipo da classe de destino (onde a seta chega), dentro da classe de origem (de onde a seta parte). O código abaixo apresenta os relacionamentos de `Empresa` para `Cidade` e `Funcionario`.
 

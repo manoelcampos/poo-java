@@ -1,19 +1,13 @@
+import java.util.List;
 import java.util.ArrayList;
 
-/**
- * A classe Cidade contém apenas os atributos que definimos como essenciais
- * para o nosso sistema da loja.
- * Dados como quem é o prefeito, qual a população ou área não são necessários
- * para o nosso modelo de cidade.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Cidade
 {
     private String nome;
     private Estado estado;    
-    private ArrayList<Empresa> empresas;
+    private List<Empresa> empresas;
+    
+    public Cidade(){ this.empresas = new ArrayList<>();}
     
     public String getNome(){ return nome; }
     
@@ -23,13 +17,12 @@ public class Cidade
     
     public void setEstado(Estado estado){ this.estado = estado; }
     
-    public ArrayList<Empresa> getEmpresas(){
+    public List<Empresa> getEmpresas(){
         return empresas;
     }
 
     public void addEmpresa(Empresa empresa){
         empresas.add(empresa);
     }
-    
 }
 
