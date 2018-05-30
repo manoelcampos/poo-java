@@ -86,7 +86,7 @@ Observe que o tipo `String` tem inicial maiúscula e o `char` minúscula. Tais t
 
 Um tipo primitivo como `char` e `int` permitem declarar variáveis que possuem apenas dados. Uma classe como `String` possui dados (atributos) e funcionalidades. 
 
-Apesar do código mostrado ser a forma mais básica para declaração de atributos, tal forma não é recomenda em POO, pois não estamos definindo nenhum controle de acesso aos nossos atributos. Como a prática tem mostrado que quando apresentamos uma forma mais simples porém menos adequada de se escrever código, alunos tendem acabam se habituando à primeira forma e sempre escrevendo código daquele jeito. Assim, para evitar a aquisição deste mau hábito, os atributos devem ser declarados como privados, utilizando a palavra `private`, como mostrado no código abaixo. Controle de acesso só será abordado no link:chapter9.adoc[Capítulo 9]. Por enquanto, não se preocupe em entender o porquê disto.
+Apesar do código mostrado ser a forma mais básica para declaração de atributos, tal forma não é recomenda em POO, pois não estamos definindo nenhum controle de acesso aos nossos atributos. Como a prática tem mostrado que quando apresentamos uma forma mais simples porém menos adequada de se escrever código, alunos tendem acabam se habituando à primeira forma e sempre escrevendo código daquele jeito. Assim, para evitar a aquisição deste mau hábito, os atributos devem ser declarados como privados, utilizando a palavra `private`, como mostrado no código abaixo. Controle de acesso só será abordado no mais adiante. Por enquanto, não se preocupe em entender o porquê disto.
 
 [source,java]
 ----

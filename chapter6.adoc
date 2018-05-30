@@ -157,7 +157,7 @@ image::bluej-set-gerente.gif[]
 
 === Definindo um gerente para uma empresa por meio de um construtor
 
-Vimos no link:chapter7.html[Capítulo 7] o que são construtores e como adicioná-los a uma classe. Aprendemos que se nenhum construtor for manualmente incluído, um construtor padrão (que não recebe nenhum parâmetro) é automaticamente adicionado na classe compilada.
+Vimos no link:chapter5.html[Capítulo 5] o que são construtores e como adicioná-los a uma classe. Aprendemos que se nenhum construtor for manualmente incluído, um construtor padrão (que não recebe nenhum parâmetro) é automaticamente adicionado na classe compilada.
 
 Podemos então criar um construtor para a classe `Empresa` para permitir definir, no momento que uma empresa for criada, quem é o gerente. Para isto, basta adicionar o código do construtor a seguir dentro da classe `Empresa`.
 

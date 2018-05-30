@@ -1,5 +1,0 @@
-:imagesdir: images
-
-== Permissões de Acesso
-
-Altera

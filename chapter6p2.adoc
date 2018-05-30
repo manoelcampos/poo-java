@@ -133,7 +133,7 @@ video::jDlUtqXHAl4[youtube, 640, 480]
 
 O erro ocorre pois estamos tentando utilizar a lista de empresas antes de termos instanciado a mesma.
 Observe que em nenhum momento, dentro do código da classe `Cidade`, utilizamos o operador `new` para criar uma 
-lista vazia e assim podermos inserir empresas nela. Como é óbvio, se vamos fazer uma lista de compras, primeiramente precisamos conseguir, por exemplo, uma folha de papel (preferencialmente em branco) para podermos começar a adicionar os elementos na nossa lista. Este é o passo que nos falta no código acima. Como visto no link::chapter7.html[Capítulo 7], podemos utilizar um construtor para definir valores iniciais para atributos da nossa classe. Como `empresas` é um atributo, podemos então instanciá-lo em um construtor padrão na classe Cidade, e assim incluir nosso construtor depois do último atributo da classe (preferencialmente), como abaixo:
+lista vazia e assim podermos inserir empresas nela. Como é óbvio, se vamos fazer uma lista de compras, primeiramente precisamos conseguir, por exemplo, uma folha de papel (preferencialmente em branco) para podermos começar a adicionar os elementos na nossa lista. Este é o passo que nos falta no código acima. Como visto no link::chapter5.html[Capítulo 5], podemos utilizar um construtor para definir valores iniciais para atributos da nossa classe. Como `empresas` é um atributo, podemos então instanciá-lo em um construtor padrão na classe Cidade, e assim incluir nosso construtor depois do último atributo da classe (preferencialmente), como abaixo:
 
 [source,java]
 ----
