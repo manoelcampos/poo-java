@@ -1,6 +1,6 @@
 :imagesdir: images
 
-== Re-avaliando a implementação de um relacionamento com cardinalidade 1..n
+== Re-avaliando relacionamentos com cardinalidade 1..n
 
 O processo de criação de relacionamentos 1..n é obviamente mais complicado que os 1..1. Para isto tivemos que:
 
@@ -115,7 +115,7 @@ public class Cidade
 }
 ----
 
-== Repensando a cardinalidade 1..1
+== Re-avaliando relacionamentos com cardinalidade 1..1
 
 Apesar de ser natural pensarmos na cardinalidade de `Empresa` -> `Cidade` como 1..1, na verdade tal cardinalidade é n..1, ou seja, vários objetos `Empresa` podem estar relacionados à mesma cidade. Logo, podemos ter várias empresas na mesma cidade. Você pode pensar que seria o mesmo que dizer que 1 `Empresa` está relacionada a 1 `Cidade`. Se pensarmos assim, podemos representar a cardinalidade e direção da associação entre essas duas classes como 1 -> 1. No entanto, se apenas invertermos a seta para avaliarmos o relacionamento no sentido contrário (`Empresa` <- `Cidade`), teremos 1 <- 1. Lendo na direção da seta indica que 1 `Cidade` possui no máximo 1 `Empresa`.
 

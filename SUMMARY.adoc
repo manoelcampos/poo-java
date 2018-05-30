@@ -11,7 +11,7 @@
 . link:chapter8.adoc[Classes e Associações]
 .. link:chapter8p1.adoc[Quant. Objetos em um Relacionamento]
 .. link:chapter8p2.adoc[Relacionamentos Bi-Direcionais e 1..n]
-.. link:chapter8p3.adoc[Re-avaliando Cardinalidades]
+.. link:chapter8p3.adoc[Re-avaliando Relacionamentos]
 .. link:chapter8-exercise.adoc[Exercício Prático]
 .. link:chapter8-questions1.adoc[Questões Teóricas 1]
 .. link:chapter8-questions2.adoc[Questões Teóricas 2]
