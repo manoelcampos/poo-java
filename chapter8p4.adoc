@@ -1,0 +1,4 @@
+:imagesdir: images
+
+== Relacionamentos N..N
+
