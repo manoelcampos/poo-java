@@ -151,6 +151,7 @@ Esta última forma mostrada funciona, mas não é a maneira correta de instancia
 
 Avançando alguns anos para o Java 7 de 2011, deixamos de precisar indicar o tipo de elementos da coleção no momento de instanciá-la. Só precisamos fazer isso ao declarar as variáveis. Assim, podemos apenas deixar o `<>` vazio dentro do construto. Se utilizarmos da forma acima, ferramentas de desenvolvimento vão sugerir que aquela não é a forma mais adequada e atual. Nosso classe então fica como abaixo:
 
+[source,java]
 ----
 import java.util.ArrayList;
 
@@ -162,8 +163,11 @@ public class Cidade
     //Getters e setters para nome e estado omitidos por simplificação
 
     public Cidade(){
-        //Observe que removemos o tipo dos elementos da lista de dentro do <>.
-        //Isto só pode ser feito no momento de instanciar a lista.
+        /*
+        Observe que removemos o tipo dos elementos 
+        da lista de dentro do <>.
+        Isto só pode ser feito no momento de instanciar a lista.
+        */
         this.empresas = new ArrayList<>();        
     }
 
