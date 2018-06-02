@@ -73,7 +73,6 @@ Observe que alteramos o `import`, a declaração do atributo, a instanciação d
 
 Por exemplo, o projeto de uma casa pode iniciar apenas com a parte estrutural, que inclui o alicerce e estruturas de sustentação das paredes e teto. Somente isto torna o projeto incompleto. Em fases seguintes é preciso incluir outros projetos como o elétrico. Assim, a `List` seria um projeto estrutural, enquanto `ArrayList` e `LinkedList` complementariam tal projeto, formando um projeto completo e funcional. Assim, o código completo e final da classe `Cidade` é como mostrado abaixo. Observe que tivemos que importar tanto `List` quando `ArrayList` pois estamos utilizando os dois tipos.
 
-
 [source,java]
 ----
 import java.util.List;
@@ -114,6 +113,8 @@ public class Cidade
     }
 }
 ----
+
+Ao usarmos um tipo mais genérico como `List` ao declarar uma variável e um tipo específico como `ArrayList` apenas no momento de instanciar um objeto para aquela variável, estamos tornando nosso código mais flexível à mudanças. A técnica que aplicamos é baseada em um trabalho científico publicado por https://pt.wikipedia.org/wiki/Barbara_Liskov[Barbara Liskov] em 1994, que apresentou o https://pt.wikipedia.org/wiki/Princípio_da_substituição_de_Liskov[Princípio da substituição de Liskov] (LSP da sigla em inglês). Este é um dos 5 importantes princípios chamados http://blog.caelum.com.br/principios-do-codigo-solido-na-orientacao-a-objetos/[SOLID], que é assunto para disciplinas de engenharia de software. O tema foi abordado aqui apenas para mostrar como essas técnicas são extremamente importantes e utilizadas pela industria para produzir software de qualidade, mas muitas vezes ignoradas por programadores.
 
 == Re-avaliando relacionamentos com cardinalidade 1..1
 

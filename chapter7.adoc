@@ -1,3 +1,108 @@
 :imagesdir: images
 
-== Herança
+== Herança: uma das formas de reutilização de código
+
+Quando introduzimos os conceitos de POO, uma das vantagens amplamente elogiadas deste
+paradigma são as diferentes maneiras de reutilização de código.
+Em programação estruturada podemos reutilizar código por meio de funções
+e bibliotecas de funções. Em linguagens orientadas a objeto, além destes meios, temos as classes
+como estrutura fundamental
+que garantem uma ampla reutilização de código. 
+Uma vez que uma classe foi feita, ela pode ser utilizada em diversas partes
+do sistema, inclusive em outros sistemas.
+
+Continuando neste tema de reutilização de código, vamos relembrar as classes
+`Cliente` e `Funcionario` que criamos no link:chapter4.adoc[Capítulo 4].
+O código delas foi colocado lado-a-lado logo abaixo para avaliarmos o quanto
+de código duplicado temos entre essas duas classes. 
+Como podemos ver, temos 5 atributos (de `nome` a `sexo`) repetidos as duas classes.
+Uma das coisas que temos abominado é a duplicação de código, que leva à degradação da qualidade de um projeto e em último caso ao chamado https://en.wikipedia.org/wiki/Software_rot[apodrecimento de software]. 
+
+[source,java]
+----
+//private removido dos atributos por simplificação
+public class Cliente {   public class Funcionario {
+    String nome;            String nome;
+    String cpf;             String cpf;
+    String email;           String email;
+    String telefone;        String telefone;
+    char sexo;              char sexo;
+    String endereco;        int matricula;
+    String cidade;          String cargo;
+}                        }
+----
+
+Você pode pensar que não temos
+de fato código duplicado, mas apenas declaração de atributos. No entanto, declaração de variáveis também é código. Tivemos trabalho dobrado ao declarar
+tais atributos primeiro na classe `Cliente` e depois na `Funcionario`.
+O pior de tudo é que, métodos como _getters_, _setters_ e quaisquer outros métodos
+como para validação de CPF precisariam ser incluídos duas vezes: uma vez para cada classe.
+Tais métodos foram omitidos abaixo apenas por questões práticas, para usar menos espaço.
+Nestes casos, se os métodos estão duplicados e você descobre que precisa fazer qualquer alteração
+em algum deles, precisará fazer também na cópia do mesmo método na outra classe.
+
+Mas aí você pode justificar dizendo que funcionários e clientes precisam
+ter estes atributos em comum de qualquer forma. Está certo, mas tal necessidade não deve ser resolvida com duplicação de código.
+
+Se você está duplicando código para resolver um problema, saiba que está apenas
+criando um problema de manutenção que pode lhe atormentar futuramente.
+Depois de alguns meses quando você precisar corrigir um desses métodos,
+possivelmente nem lembrará que duplicou o método em outra classe. Você vai 
+corrigir um e deixar o outro como estava. 
+
+Por fim, você pode me lembrar que há algumas décadas até os editores de texto mais simples
+possuem um recurso chamado "Localizar". Realmente, inclusive as ferramentas de desenvolvimento
+possuem recursos avançados como https://pt.wikipedia.org/wiki/Expressão_regular[expressões regulares] 
+que nos permitem localizar texto de acordo com um padrão que definirmos.
+Porém, o código duplicado pode ter sido alterado de uma forma que você pode não conseguir localizá-lo mais.
+
+
+Então, para resolver o problema apresentado acima, vamos aprender os conceitos de herança em Java neste capítulo.
+Herança é provavelmente o conceito mais fácil de ser entendido em POO, pois somos familiarizados com tal conceito da biologia e é algo que faz parte de nossas vidas.
+
+Vamos analisar a árvore genealógica abaixo. Coloque-se como o personsagem na raiz da árvore. Você é então filho(a) de um pai e uma mãe. Dessa forma, você herda tanto características quanto comportamentos de ambos os pais. As características são por exemplo a cor da pele, tipo de cabelo e altura. Já os comportamentos podem ser o humor, sinceridade, legaldade, gentileza, responsabilidade, etc. Apesar de termos uma herança genética recebida de ambos os pais, não herdamos todas as características e comportamentos dos dois. O que herdamos é definido seletivamente pela genética. Assim, recebemos um conjunto de características e comportamentos do nosso pai e outro conjunto da nossa mãe. 
+
+Outro detalhe importante é que os irmãos são sempre diferentes de alguma forma, cada um tem uma herança genética diferente do outro. Mesmo que existam gêmeos idênticos, eles são assim apenas na aparência, mas não no comportamento. Um irmão pode ter habilidades natas como conseguir resolver problemas matemáticos que o outro não consegue.
+
+.Uma árvore genealógica convencional (Fonte: http://www.editoradobrasil.com.br:81/blog-da-gabi/arvore-genealogica/[Editora do Brasil]).
+image::arvore-genealogica.jpg[]
+
+Na árvore genealógica temos vários níveis de antecessores acima dos pais, como avós maternos e paternos, bisavós maternos e paternos, etc. Por conta desta interligação genética, não recebemos herança genética apenas dos nossos pais, mas de todos os antecessores nos níveis superiores. Claramente, a carga genética que herdamos dos antecessores de níveis mais elevados é bem menor que dos nossos pais. Em geral, as pessoas não fazem ideia do que herdaram de seus bisavós, por exemplo.
+
+Os conceitos apresentados acima são aplicados na POO, mas com algumas diferenças.
+Tal modelo onde cada filho(a) tem um pai e uma mãe é chamado de herança múltipla. 
+Na POO, a herança é aplicada às classes. Porém, na grande maioria das linguagens orientadas a objetos, uma classe filha só pode ter mãe, não tendo pai. Isto é chamado de herança simples.
+
+[NOTE]
+====
+Apesar de existirem recursos como Interfaces e algumas inovações nesse sentido no Java 8,
+o Java não permite de fato definir que uma classe herde de duas ou mais classes. 
+O que temos são alguns recursos parecidos com isso, mas que não são de fato totais implementações
+de herança múltipla. Isto inclusive é um assunto controverso e muitas vezes apresentado de forma incorreta em questões de concurso, que com a devida fundamentação teórica, cabe recurso.
+====
+
+Já sabemos que as características são atributos e comportamentos/habilidades são os métodos de uma classe. 
+Isto tudo é o que uma classe filha pode receber como herança de uma classe mãe, avó,
+bisavó e qualquer outra num nível superior na árvore.
+
+No entanto, diferente da biologia, na POO uma classe filha herda tudo o que cada uma das classes antecessoras decidir fornecer às suas descendentes. Isto quer dizer que, uma classe filha e suas irmãs recebem toda a herança da classe mãe, da avó, da bisavó e assim por diante. Na biologia isso não funcionaria adequadamente: um descendente seria tanto homem quanto mulher se herdasse tudo tanto do pai quanto da mãe (e dos outros antecessores) 🤔.
+
+Por outro lado, na POO as classes irmãs herdarão os mesmos atributos e habilidades. Não há como uma classe irmã herdar um atributo ou habilidade que outra irmã não herdou. Isto é possível na biologia quando, por exemplo, um irmão nasce sem uma das pernas (neste caso por uma anomalia). Consequentemente, tal irmão não terá a habilidade de correr. Na POO, se uma classe antecessora (mãe, avó, etc) indicar que as classes descententes herdarão a habilidade "correr", todas as classes filhas herdarão tal habilidade por padrão. 
+
+IMPORTANT: Não temos anomalias nem seletividade genética na POO.
+
+Na vida real, mesmo que os irmãos tenham nascido com as mesmas habilidades, por conta de um acidente, algum deles pode perder uma habilidade como ouvir ou ver. Mas isso não tem nada a ver com herança. Na POO, algo semelhante pode ocorrer quando uma classe irmã, depois de declarada (de ter sido escrita pela primeira vez), for alterada para indicar que uma determinada habilidade não funcionará mais ou funcionará de forma diferente. Por exemplo, podemos indicar que para uma determinada classe irmã, a habilidade "visão" só funcionará em 50% ou que simplesmente não funcionará. Já outra classe irmã terá a habilidade como herdada das classes antecessoras. Mas isso é assunto para outro tópico.
+
+Por fim, uma classe irmã pode receber atributos e habilidades que são específicas dela, e não herdadas das classes antecessoras. Na biologia, um determinado irmão também pode adquirir uma habilidade ao longo do tempo, como aprender a tocar um instrumento.
+
+A tabela abaixo apresenta um resumo comparativo entre a herança na biologia e na POO em Java.
+
+.Comparação entre Herança na Biologia e em Java
+|==============================================================
+| *Recurso*         | *Herança na Biologia* | *Herança em Java* 
+| Tipo de Herança| Múltipla para a maioria dos seres vivos. | Simples para Java e a maioria das linguagens OO.
+| O que filhos herdam | Um pouco de cada um dos antecessores (pai e mãe, avós maternos e paternos, etc). | Tudo o que cada uma das classes antecessoras decidir fornecer às descendentes.
+| Habilidades/comportamentos herdadas(os) (o que irmãos têm em comum) | É definido de forma seletiva pela genética. Mesmo que gêmeos idênticos tenham a mesma aparência, eles têm alguns comportamentos diferentes. | Os irmãos sempre herdarão as mesmas características (atributos) e comportamentos/habilidades (métodos), o que não significa que terão o mesmo conjunto de características e habilidades (ver última linha da tabela).
+| Alteração e perda de habilidades/comportamentos | Um determinado irmão pode perder ou ter uma habilidade alterada devido a um acidente. | Uma classe irmã pode ter uma habilidade alterada intencionalmente pelo desenvolvedor para que funcione de modo diferente ou que se torne completamente não funcional. Neste último caso, a classe ainda terá tal habilidade, que nada mais é que um método, só que ele não faz mais nada. 
+| Habilidades e comportamentos específicos de um irmão 2+| Nos dois casos, um irmão pode adquirir habilidades que são só dele, que não foram herança. |
+|==============================================================

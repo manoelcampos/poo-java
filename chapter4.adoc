@@ -193,11 +193,11 @@ O código inicial da classe `Funcionário` deve ficar como apresentado abaixo. L
 ----
 public class Funcionario {
     private String nome;
-    private int matricula;
     private String cpf;
     private String email;
     private String telefone;
     private char sexo;
+    private int matricula;
     private String cargo;
 }
 ----
