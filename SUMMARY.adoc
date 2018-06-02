@@ -15,6 +15,7 @@
 .. link:chapter6-exercise.adoc[Exercício Prático]
 .. link:chapter6-questions1.adoc[Questões Teóricas 1]
 .. link:chapter6-questions2.adoc[Questões Teóricas 2]
-. link:chapter7.adoc[Herança]
+. link:chapter7.adoc[Introdução à Herança]
+.. link:chapter7p1.adoc[Implementando Herança]
 . link:chapter8.adoc[Encapsulamento]
 . link:GLOSSARY.adoc[Glossário]

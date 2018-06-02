@@ -1,6 +1,6 @@
 :imagesdir: images
 
-== Herança: uma das formas de reutilização de código
+== Introdução à Herança: uma das formas de reutilização de código
 
 Quando introduzimos os conceitos de POO, uma das vantagens amplamente elogiadas deste
 paradigma são as diferentes maneiras de reutilização de código.
@@ -27,6 +27,7 @@ public class Cliente {   public class Funcionario {
     String email;           String email;
     String telefone;        String telefone;
     char sexo;              char sexo;
+    
     String endereco;        int matricula;
     String cidade;          String cargo;
 }                        }
@@ -100,9 +101,9 @@ A tabela abaixo apresenta um resumo comparativo entre a herança na biologia e n
 .Comparação entre Herança na Biologia e em Java
 |==============================================================
 | *Recurso*         | *Herança na Biologia* | *Herança em Java* 
-| Tipo de Herança| Múltipla para a maioria dos seres vivos. | Simples para Java e a maioria das linguagens OO.
+| Tipo de Herança| Múltipla para a maioria dos seres vivos (filhos tem mãe e pai). | Simples para Java e a maioria das linguagens OO (classes filhas tem apenas mãe, mas não pai).
 | O que filhos herdam | Um pouco de cada um dos antecessores (pai e mãe, avós maternos e paternos, etc). | Tudo o que cada uma das classes antecessoras decidir fornecer às descendentes.
 | Habilidades/comportamentos herdadas(os) (o que irmãos têm em comum) | É definido de forma seletiva pela genética. Mesmo que gêmeos idênticos tenham a mesma aparência, eles têm alguns comportamentos diferentes. | Os irmãos sempre herdarão as mesmas características (atributos) e comportamentos/habilidades (métodos), o que não significa que terão o mesmo conjunto de características e habilidades (ver última linha da tabela).
-| Alteração e perda de habilidades/comportamentos | Um determinado irmão pode perder ou ter uma habilidade alterada devido a um acidente. | Uma classe irmã pode ter uma habilidade alterada intencionalmente pelo desenvolvedor para que funcione de modo diferente ou que se torne completamente não funcional. Neste último caso, a classe ainda terá tal habilidade, que nada mais é que um método, só que ele não faz mais nada. 
+| Alteração e perda de habilidades/comportamentos | Um determinado irmão pode perder ou ter uma habilidade alterada devido a um acidente. | Uma classe irmã pode ter uma habilidade alterada intencionalmente pelo desenvolvedor para que funcione de modo diferente ou que se torne completamente não funcional. Neste último caso, a classe ainda terá tal habilidade, que nada mais é que um método, só que tal método não fará mais nada. 
 | Habilidades e comportamentos específicos de um irmão 2+| Nos dois casos, um irmão pode adquirir habilidades que são só dele, que não foram herança. |
 |==============================================================
