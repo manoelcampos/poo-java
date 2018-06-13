@@ -65,36 +65,7 @@ public class PessoaFisica extends Pessoa
         
         return dig;
     }
-  
-    /**
-     * Verifica se um CPF é válido ou não, utilizando o algorítmo denominado Módulo
-     * 11, como descrito em
-     * https://pt.wikipedia.org/wiki/Dígito_verificador#Módulo_11.
-     * 
-     * Antes esta função era confusa e extensa. O processo de validação do CPF
-     * envolve calcular o valor do primeiro e do segundo dígito, para então comparar
-     * tais resultados com os dígitos informados pelo usuário. Tal cálculo do
-     * dígito, apesar de ser um código de algumas linhas, é confuso para quem nunca
-     * viu como é feito o processo de validação do CPF. Além disso, tal cálculo
-     * precisa ser feito duas vezes, uma vez para cada dígito. Desta forma,
-     * utilizamos um processo de refatoração para remover o código que calcula um
-     * dígito para outro método chamado calculaDigito, fora do método isCpfValido. Com
-     * isto, evitamos qualquer repetição de código e tornamos o código
-     * do método isCpfValido menor e muito mais legível.
-     * 
-     * Ao criar o método calcularDigito, definimos sua visibilidade
-     * como private, para indicar que ele não será acessível fora da classe.
-     * Isto porque, o método é apenas parte do processo de validação do CPF.
-     * Ele chamado fora deste processo não tem utilidade alguma.
-     * Desta forma, colocando o método como private estamos aplicando
-     * o conceito de encapsulamento, escondendo tal método dentro da classe.
-     * Assim, as outras classes nem saberão que ele existe.
-     * Apenas o método isCpfValido é que estará visível externamente
-     * para outras classes.
-     * 
-     * @param cpf CPF a ser validado
-     * @return true se o CPF for válido, false caso contrário.
-     */
+    
     public boolean isCpfValido(String cpf) {
         //Remove caracteres não numéricos do CPF
         cpf = cpf.replaceAll("\\D", "");

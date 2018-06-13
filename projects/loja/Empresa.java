@@ -27,7 +27,7 @@ public class Empresa
     public Empresa(Funcionario gerente){
         setGerente(gerente);
     }
-    
+
     public void setCidade(Cidade cidade){
         this.cidade = cidade;
     }

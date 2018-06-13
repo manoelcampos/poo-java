@@ -7,7 +7,7 @@ Vários paradigmas de programação têm sido desenvolvidos para melhorar a form
 
 Até a década de 60 era muito comum o desenvolvimento de programas utilizando o paradigma de <<Unstructured,Programação não Estruturada>>, que resultava em código difícil de entender e manter. Por estes motivos, um código escrito usando tal paradigma é chamado pejorativamente de código espaguete, por ser confuso e não ter uma sequência clara. Muitos dos códigos escrito seguindo este paradigma utilizavam linguagens como https://pt.wikipedia.org/wiki/Assembly[Assembly] que, apesar de serem legíveis para humanos, não são tão legíveis quanto as linguagens atuais.
 
-.Como é organizado um código espaguete 😳. (Fonte: link:https://pt.123rf.com/photo_65290422_caos-de-cabos-e-fios-no-pólo-elétrico-em-chiang-mai%20-tailândia.html[123rf.com]])
+.Como é organizado um código espaguete 😳. (Fonte: link:https://pt.123rf.com/photo_65290422_caos-de-cabos-e-fios-no-pólo-elétrico-em-chiang-mai%20-tailândia.html[123rf.com])
 image::chaos-of-cables.jpg[width=480]
 
 image::assembly.gif[title=Exemplo de código em linguagem Assembly]
@@ -16,7 +16,7 @@ Outras formas de desenvolver programas foram então surgindo. Uma evolução nat
 
 image::fluxograma.png[title="Como um algoritmo estruturado pode ser representado em um fluxograma.", width=480]
 
-TIP: O paradigma estruturado é também definido como "a atitude de escrever código com a intenção de se comunicar com humanos e não com máquinas" <<Unstructured>>. Ou seja, um dos grandes objetivos de um código é que ele seja legível para outros programadores.
+TIP: O paradigma estruturado é também definido como "a atitude de escrever código com a intenção de se comunicar com humanos e não com máquinas" <<Structured>>. Ou seja, um dos grandes objetivos de um código é que ele seja legível para outros programadores.
 
 Apesar do paradigma estruturado ter tornado a programação de computadores bem mais simples e o código mais claro, ela ainda peca em muitos pontos como:
 
@@ -24,7 +24,7 @@ Apesar do paradigma estruturado ter tornado a programação de computadores bem 
 - image:problem-solution.jpg[role="right" width=240, link="https://pt.123rf.com/photo_41818211_business-strategy-businessman-planning-and-finding-a-solution-through-a-drawing-of-a-labyrinth-maze.html"] representação da solução de um problema: uma dos grandes desafios em programação é entender o que um determinado código faz, principalmente se ele foi escrito por outra pessoa. A representação de um código de uma forma que seja próxima do problema que ele resolve torna mais fácil identificar se ele faz o que é esperado; image:reinventing-wheel.jpg[role="right" width=180, link="https://www.aic.cuhk.edu.hk/web8/Reinventing%20the%20wheel.htm"] 
 - reutilização de código, para:
     * evitar ter que ficar reinventando a roda;
-    * evitar re-escrever código que você já fez (princípio <<PP,DRY>>: Don't Repeat Yourself = Não Repita Você mesmo) e avitando a famigerada https://en.wikipedia.org/wiki/Copy_and_paste_programming["Programação Copia e Cola"] 😩 image:copy_paste_keyboard.jpg[role=right, width=180, link=https://www.timeshighereducation.com].
+    * evitar re-escrever código que você já fez (princípio <<PP,DRY>>: Don't Repeat Yourself = Não Repita Você mesmo) e avitando a famigerada https://en.wikipedia.org/wiki/Copy_and_paste_programming["Programação Copia-e-Cola"] 😩 image:copy_paste_keyboard.jpg[role=right, width=180, link=https://www.timeshighereducation.com].
 - permitir proteger tanto dados quanto determinadas partes do código de serem usados de maneira indevida, o que poderia gerar bugs;
 - etc.
 
@@ -36,16 +36,16 @@ total = 0
 
 funcao soma_numeros(){
     faça {
-        imprime("Digite um número: ")
-        leia(numero)
-        total = total + numero
-        mostra_subtotal()
-    } enquanto (numero != 0)
+        imprime("Digite um número: ");
+        leia(numero);
+        total = total + numero;
+        mostra_subtotal();
+    } enquanto (numero != 0);
 }
 
 funcao mostra_subtotal() {
-    imprime("O total calculado até agora é de ", total)
-    total = 0
+    imprime("O total calculado até agora é de ", total);
+    total = 0;
 }
 ```
 
@@ -65,7 +65,7 @@ image:oop-to-the-rescue.png[role=right, link=https://toggl.com/programming-princ
 |===
 |Objeto | Características | Funcionalidades
 
-| Carro | *Cor*: Azul, *Ano Fabricação*: 2012, *Bancos*: couro | Acelerar, Frenar, Limpar parabrisas, Acender faróis
+| Carro | *Cor*: Azul, *Ano Fabricação*: 2012, *Revestimento dos Bancos*: couro | Acelerar, Frenar, Limpar parabrisas, Acender faróis
 | TV | *Tamanho*: 42", *Tela*: LCD, *Classificação Energética*: A | Ligar/Desligar, Trocar canais, Acionar Timer, Exibir guia de programação
 |===
 
@@ -82,5 +82,5 @@ Na POO, objetos podem ser pessoas, animais e qualquer coisa que precise ser repr
 == Referências
 
 - [[[Spaguetti]]] Conway, Richard (1978). A primer on disciplined programming using PL/I, PL/CS, and PL/CT. Winthrop Publishers. ISBN 0-87626-712-6
-- [[[Unstructured]]] Cobb, Gary W. (1978). "A measurement of structure for unstructured programming languages". ACM SIGSOFT Software Engineering Notes. 3 (5): 140–147. ISSN 0163-5948. doi:10.1145/953579.811114.
+- [[[Structured]]] Cobb, Gary W. (1978). "A measurement of structure for unstructured programming languages". ACM SIGSOFT Software Engineering Notes. 3 (5): 140–147. ISSN 0163-5948. doi:10.1145/953579.811114.
 - [PP] Hunt, Andrew, and David Thomas. O Programador Pragmático: de aprendiz a mestre. Bookman Editora, 2009.
