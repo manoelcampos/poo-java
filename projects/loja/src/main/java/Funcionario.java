@@ -1,10 +1,19 @@
-public class Funcionario extends PessoaFisica
+/**
+ * Ver comentários na classe {@link Cliente}.
+ * @author manoelcampos
+ */
+public class Funcionario
 {
     private String cargo;
     private String matricula;
     private double salario;
     private Empresa empresa;
+    private PessoaFisica pessoaFisica;
 
+    public Funcionario(PessoaFisica pessoaFisica){
+        this.pessoaFisica = pessoaFisica;
+    }
+            
     public String getCargo() {
         return cargo;
     }
@@ -17,6 +26,10 @@ public class Funcionario extends PessoaFisica
         return salario;
     }
 
+    public PessoaFisica getPessoaFisica() {
+        return pessoaFisica;
+    }
+    
     public void setCargo(String cargo){
         this.cargo = cargo;
     }

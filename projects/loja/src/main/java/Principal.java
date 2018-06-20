@@ -1,85 +1,138 @@
 
 public class Principal {
     /**
-     * Executa um exemplo mostrando que, quando
-     * temos um Funcionario que também é Cliente,
-     * utilizando herança desde Pessoa até 
-     * tais classes, não temos como compartilhar
-     * dados do cadastro do Funcionario para fazer
-     * o cadastro do Cliente.
-     * Esta é uma das limitações da herança.
+     * Executa uma aplicação que mostra como resolver
+     * um dos problemas que podem surgir com o uso de herança:
+     * quando temos, por exemplo, uma pessoa que pode ter múltiplos
+     * papéis dentro de um sistemas. Este é o caso
+     * de um funcionário que pode ser cadastrado como cliente.
+     * Utilizando herança totalmente, se a pessoa já estiver
+     * cadastrada como funcionário, ao cadastrá-la como cliente,
+     * precisaremos duplicar todos os dados pessoais como
+     * nome e CPF. Tais problemas foram relatados na versão anterior do projeto.
      * 
+     * Esta versão apresenta a solução para tal problema com o uso 
+     * de herança apenas entre as classes Pessoa, PessoaFisica e PessoaJuridica.
+     * Desta forma, as classes Funcionario, Cliente e Empresa não herdarão
+     * mais de PessoaFisica e PessoaJuridica.
+     * 
+     * Veja comentários nas classes Cliente e Funcionario para mais detalhes.
      * @param args 
      */
     public static void main(String[] args) {
-        /*
-         * Como Empresa herda de PessoaJuridica e Pessoa,
-         * o código abaixo mostra que podemos instanciar
-         * um objeto empresa da classe Empresa e teremos
-         * acesso a tudo que foi herdado das classes superiores
-         * (superclasses) Pessoa e PessoaJuridica.
-         * Por exemplo, o método setNome() foi herdado de Pessoa
-         * e o setCnpj() foi herdado de PessoaJuridica.
-         */
         Empresa empresa = new Empresa();
         empresa.setNome("Lojas Mais");
+        
         empresa.setCnpj("493848934");
+        
         System.out.println(
-                "Empresa: " + empresa.getNome() + 
-                " CNPJ: " + empresa.getCnpj() + "\n");
+            "Nome: " + empresa.getNome() + 
+            " CNPJ: " + empresa.getCnpj() + "\n");
         
         /*
-         * Aqui estamos criando um funcionário e definindo os valores
-         * de seus atributos.
+         * Como Funcionario e Cliente não herdam mais de PessoaFisica,
+         * para criar um objeto destas classes, precisamos
+         * primeiro criar um objeto da classe PessoaFisica.
+         * Agora como não temos herança, o Cliente e Funcionario
+         * não herdam mais nada de PessoaFisica e Pessoa.
+         * Com herança, ao criar um Cliente, sabemos que
+         * ele terá tudo que foi herdado de Pessoa e PessoaFisica,
+         * mas no momento de instanciar um Cliente, só precisamos
+         * declarar uma única variável Cliente e utilizar
+         * apenas a classe Cliente. Podemos até esquecer que 
+         * Pessoa e PessoaFisica existem, pois quando vamos
+         * atribuir, por exemplo, o nome ao cliente,
+         * apenas chamamos o método setNome(), como se este
+         * método tivesse sido declarado diretamente na classe Cliente.
+         * 
+         * Como removemos a relação de herança do Cliente e Funcionario
+         * com PessoaFisica, agora precisamos criar primeiramente um objeto
+         * PessoaFisica para depois criar um cliente e informar
+         * qual PessoaFisica aquele cliente representa (está relacionado).
+         * 
+         * Abaixo estamos então criando a PessoaFisica Manoel
          */
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome("Manoel Campos");
-        funcionario.setCpf("11111111111");
-        funcionario.setEndereco("103 Sul");
+        PessoaFisica pessoaFisica = new PessoaFisica();
+        pessoaFisica.setNome("Manoel Campos da Silva Filho");
+        pessoaFisica.setCpf("11111111111");
+        pessoaFisica.setEndereco("504 Sul");
+        
+        /*
+         * Depois que criamos a PessoaFisica, podemos então criar
+         * um Funcionario ou Cliente e indicar qual é a PessoaFisica
+         * que ele representa. Estamos então criando um Funcionario
+         * e dizendo que ele representa a PessoaFisica Manoel,
+         * criada logo acima.
+         * 
+         * Em seguida, apenas precisamos definir os valores dos atributos
+         * específicos do Funcionario ou Cliente.
+         * No caso abaixo, estamos definindo o cargo do Funcionario.
+         */
+        Funcionario funcionario = new Funcionario(pessoaFisica);
         funcionario.setCargo("Vendedor");
         
         /*
-         * Apesar da pessoa acima ser um funcionário,
-         * ela pode atuar como um cliente, pois um funcionário
-         * também pode comprar na loja. Neste caso, ele assume o papel
-         * de cliente.
-         * No entanto, mesmo que já tenhamos criado o funcionário
-         * e preenchido todos os seus dados, para cadastrá-lo como cliente
-         * precisaremos preencher todos os dados novamente.
-         * Com isto, não temos duplicação de código (pois abaixo
-         * estamos apenas chamando funções e estas foram feitas para 
-         * serem chamadas quantas vezes forem necessárias),
-         * mas temos duplicação de dados.
-         * 
-         * O código abaixo ao menos utiliza os dados do funcionário para
-         * realizar o cadastro do cliente (obtendo o nome e CPF do funcionário
-         * e usando estes mesmos dados no cadastro do cliente).
+         * No momento de cadastrar o Manoel (que já é Funcionario)
+         * como Cliente, não precisamos criar outra PessoaFisica
+         * e nem indicar novamente todos os dados de Pessoa e PessoaFisica,
+         * pois o Manoel já existe como PessoaFisica (pois criamos ele 
+         * para podermos cadastrá-lo como Funcionario).
+         * Assim, apenas reutilizamos o cadastro (objeto) da PessoaFisica
+         * para cadastrar o Cliente.
+         * Só precisamos então definir os atributos que são específicos
+         * do cliente (neste caso a renda).
          */
-        Cliente cliente = new Cliente();
-        cliente.setNome(funcionario.getNome());
-        cliente.setCpf(funcionario.getCpf());
+        Cliente cliente = new Cliente(pessoaFisica);
         cliente.setRenda(1000);
         
         /**
-         * No entanto, as linhas abaixo mostram que é possível 
-         * atualizar qualquer um daqueles dados no cliente
-         * e o funcionário ficará com dados desatualizados,
-         * como pode ser visto nos prints abaixo.
+         * Observe que agora como Cliente e Funcionario não herdam de PessoaFisica,
+         * eles não tem métodos como getNome(), setNome(), getCpf() e setCpf().
+         * Assim, para podermos obter dados como o nome ou cpf, precisamos
+         * primeiro obter a PessoaFisica vinculada ao Cliente ou Funcionario
+         * e então a partir daí obter o nome, cpf ou qualquer outro
+         * dado de Pessoa ou PessoaFisica.
          * 
-         * Ter dados duplicados é tão problemático quanto ter código duplicado.
-         * Como saberemos quais dados exibidos abaixo para o Manoel são 
-         * os corretos? Os dados no cadastro dele como funcionário
-         * ou no cadastro dele como cliente?
+         * Como temos uma variável pessoaFisica logo acima,
+         * no lugar de usar cliente.getPessoaFisica().getNome()
+         * poderíamos simplesmente usar pessoaFisica().getNome().
+         * Mas a primeira linha é pra mostra que, caso não tivessemos 
+         * uma variável pessoaFisica, a forma de obter os dados
+         * de PessoaFisica de um Cliente seria somente da primeira forma.
          */
-        cliente.setNome("Manoel Campos da Silva Filho");
-        cliente.setEndereco("704 Sul");
+        System.out.println("------------------Dados do Cadastro Inicial-----------------");
+        System.out.println("Nome do cliente: " + cliente.getPessoaFisica().getNome());
+        System.out.println("CPF do cliente: " + cliente.getPessoaFisica().getCpf());
+        System.out.println("Endereçco do cliente: " + cliente.getPessoaFisica().getEndereco());
         
-        System.out.println("Nome do funcionário: " + funcionario.getNome());
-        System.out.println("CPF do funcionário: " + funcionario.getCpf());
-        System.out.println("Endereço do funcinário: " + funcionario.getEndereco());
+        System.out.println("\nNome do funcionário: " + funcionario.getPessoaFisica().getNome());
+        System.out.println("CPF do funcionário: " + funcionario.getPessoaFisica().getCpf());
+        System.out.println("Endereçco do funcionário: " + funcionario.getPessoaFisica().getEndereco());
+        
 
-        System.out.println("\nNome do cliente: " + cliente.getNome());
-        System.out.println("CPF do cliente: " + cliente.getCpf());
-        System.out.println("Endereço do cliente: " + cliente.getEndereco());
+        /*
+         * Desta forma, se alterarmos qualquer dado no objeto pessoaFisica,
+         * tais alterações serão visualizadas tanto pelo objeto
+         * cliente quanto pelo objeto funcionario, pois os dois estão
+         * vinculados ao mesmo objeto pessoaFisica.
+         * 
+         * Abaixo estamos fazendo exatamente isso, estamos
+         * alterando o endereço da pessoaFisica (ou seja, em um só lugar, 
+         * não precisamos alterar no cliente e depois no funcionario)
+         * e podemos ver que tanto o objeto cliente quanto o funcionario
+         * visualizam tal alteração. Assim, não temos dados duplicados.
+         */
+        pessoaFisica.setEndereco("704 Sul");
+        
+        System.out.println("\n----Dados do Cadastro Depois de Alterado na PessoaFisica----");
+        System.out.println("Nome do cliente: " + cliente.getPessoaFisica().getNome());
+        System.out.println("CPF do cliente: " + cliente.getPessoaFisica().getCpf());
+        System.out.println("Endereçco do cliente: " + cliente.getPessoaFisica().getEndereco());
+        
+        System.out.println("\nNome do funcionário: " + funcionario.getPessoaFisica().getNome());
+        System.out.println("CPF do funcionário: " + funcionario.getPessoaFisica().getCpf());
+        System.out.println("Endereçco do funcionário: " + funcionario.getPessoaFisica().getEndereco());
+        
+        Venda venda = new Venda();
     }
 }
