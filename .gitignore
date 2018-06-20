@@ -9,4 +9,5 @@ node_modules
 *.ctxt
 *.class
 */private/
-*/target/
+**/target/
+/projects/loja-v8/target/

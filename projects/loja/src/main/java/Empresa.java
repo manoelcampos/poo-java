@@ -1,23 +1,7 @@
 
-/**
- * Write a description of class Empresa here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Empresa
+public class Empresa extends PessoaJuridica
 {
-    private String nomeFantasia;
-    private String razaoSocial;
-    private String cnpj;
-    private String endereco;
-    
-    private Cidade cidade;    
-    private String telefone;
-    private String site;
-    private boolean matriz;
-    
-  
+    private boolean matriz;    
     private Funcionario gerente;
     
     public Empresa(){
@@ -28,9 +12,6 @@ public class Empresa
         setGerente(gerente);
     }
 
-    public void setCidade(Cidade cidade){
-        this.cidade = cidade;
-    }
     
     public void setGerente(Funcionario gerente){
         if(gerente == null){
@@ -60,4 +41,7 @@ public class Empresa
     public boolean isMatriz(){
         return matriz;
     }
+
+
+   
 }

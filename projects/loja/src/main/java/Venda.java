@@ -8,6 +8,7 @@ public class Venda
     private double percentualDesconto;
     private List<ItemVenda> itens;
     private Cliente cliente;
+    private Funcionario funcionario;
     
     public Venda(){
         this.itens = new ArrayList<>();
