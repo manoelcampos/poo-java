@@ -1,0 +1,44 @@
+- Definir atributos para as classes
+- Criar funcionalidades básicas, incluindo getters e setters
+    * Cliente: validar email, validar CPF, validar attributos nos setters
+    * Funcionário
+    * Produto: adicionar estoque, remover estoque
+    * Filial: validar CNPJ.
+
+- Criar relacionamentos
+    * Empresa ---> Gerente
+
+- Criar relacionamento de Funcionario -> Empresa e mostrar como fica uma navegação dupla.
+- Mostrar que, se um funcionário trabalha numa empresa A e ele for definido como gerente de uma empresa B,
+  ele vai continuar registrado como se estivesse na empresa A.
+  Alterar o construtor da empresa que recebe um gerente para definir tal gerente como funcionário da empresa a qual ele vai gerenciar.
+- Mostrar que se usarmos o setGerente na Empresa, o funcionário da empresa A que passou a gerenciar a empresa B vai continuar como se trabalhasse na empresa A.
+- Mostrar que se for usado o setEmpresa no funcionário para alterar a empresa de A para B e tal funcionário era gerente da empresa A, ele vai passar a trabalhar para B mas vai continuar como gerente de A.
+  Neste caso, algumas opções seriam possíveis. Uma delas seria impedir que um funcionário que é gerente da uma empresa seja diretamente alterado para outra empresa. Neste caso, primeiro poderíamos deixar a empresa A sem gerente. Assim, o funcionário estaria livre para ir para qualquer outra empresa.
+
+- Adicionar cidade como String no cliente e mostrar os problemas de usar String para isso. 
+  Criar novos relacionamentos:
+    * Cliente ---> Cidade
+    * Empresa ---> Cidade
+
+- Alterar outros campos de String para classes:
+    * Produto ---> Marca
+    * Cidade  ---> Estado
+
+- Introdução à encapsulamento (visibilidade)
+    * Criar classe Venda de forma simplificada, contendo um atributo Produto + quantidade, um cliente e um vendedor
+    * mostrar que os atributos são acessíveis dentro de qualquer lugar da classe: criar um método valorTotal na venda para mostrar isso
+    * Criar um método salvar() na venda que vai reduzir o estoque do produto,
+      acessando os atributos diretamente
+    * apresentar os modificadores de acesso público e privado e como o código acessando 
+      atributos diretamente de fora da classe produto param de funcionar.
+
+- Alterar a venda para permitir incluir vários itens
+- Mostrar em detalhes os relacionamentos 1..n
+- Mostrar o problema de NullPointerException e como resolver, criando instancias dos relacionamentos no construtor.   
+
+- Exercícios
+  * no setter do produto na classe Venda, verificar se o produto informado
+    tem estoque maior que zero para poder atribuir o produto à venda.
+    Caso o estoque seja zero ou negativo, exibir a mensagem "O produto informado não possui estoque e não pode ser vendido".
+ 
