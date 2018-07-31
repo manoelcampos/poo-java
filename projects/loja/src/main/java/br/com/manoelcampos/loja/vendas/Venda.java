@@ -1,3 +1,7 @@
+package br.com.manoelcampos.loja.vendas;
+
+import br.com.manoelcampos.loja.pessoas.Funcionario;
+import br.com.manoelcampos.loja.pessoas.Cliente;
 import java.util.List;
 import java.util.ArrayList;
 

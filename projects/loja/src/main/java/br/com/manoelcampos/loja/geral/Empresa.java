@@ -1,3 +1,9 @@
+package br.com.manoelcampos.loja.geral;
+
+
+import br.com.manoelcampos.loja.pessoas.Funcionario;
+import br.com.manoelcampos.loja.pessoas.PessoaJuridica;
+
 
 public class Empresa extends PessoaJuridica
 {

@@ -1,3 +1,7 @@
+package br.com.manoelcampos.loja.pessoas;
+
+import br.com.manoelcampos.loja.geral.Empresa;
+
 /**
  * Ver comentários na classe {@link Cliente}.
  * @author manoelcampos

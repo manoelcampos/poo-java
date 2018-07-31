@@ -1,3 +1,5 @@
+package br.com.manoelcampos.loja.pessoas;
+
 /**
  * Aqui estamos definindo que a classe PessoaFisica 
  * extende Pessoa, ou seja, PessoaFisica é filha
@@ -19,11 +21,16 @@ public class PessoaFisica extends Pessoa
         return cpf; 
     }
     
+    /**
+     * Altera o CPF
+     * @param cpf CPF a ser armazenado
+     * @throws IllegalArgumentException quando o CPF for inválido ou vazio
+     */
     public void setCpf(String cpf) { 
-        if(cpf == null || cpf.trim().isEmpty()){
-            System.out.println("O CPF é obrigatório"); 
+        if(cpf.trim().isEmpty()){
+            throw new IllegalArgumentException("O CPF é obrigatório");
         } else if(!isCpfValido(cpf)) {
-            System.out.println("O CPF é inválido"); 
+            throw new IllegalArgumentException("O CPF é inválido");
         } else {
             this.cpf = cpf;
         }
@@ -44,32 +51,6 @@ public class PessoaFisica extends Pessoa
         }
         else this.sexo = sexo;
     }    
-    
-    /**
-     * Calcula um dígito verificador de um CPF ou CNPJ utilizando o algoritmo módulo
-     * 11
-     * 
-     * @param totalAlgarismos número de algarismos a serem usados para calcular um
-     *                        dígito do CPF
-     * @return o dígito verificador calculado
-     */
-    private int calculaDigito(String cpf, int totalAlgarismos) {
-        int soma = 0;
-        int algarismo;
-        for (int i = 0; i < totalAlgarismos; i++) {
-            algarismo = Integer.valueOf(cpf.substring(i, i + 1));
-            soma += (totalAlgarismos + 1 - i) * algarismo;
-        }
-
-        int dig = 11 - (soma % 11);
-        /*
-         * O código abaixo é o mesmo que: 
-         * if(dig > 9) 
-         *   return 0; 
-         * else return dig;
-         */
-        return dig > 9 ? 0 : dig;
-    }
 
     /**
      * Verifica se um CPF é válido ou não, utilizando o algorítmo denominado Módulo
@@ -100,14 +81,17 @@ public class PessoaFisica extends Pessoa
      */
     public boolean isCpfValido(String cpf) {
         // Remove caracteres não numéricos do CPF
-        cpf = cpf.replaceAll("\\D", "");
+        cpf = removerSimbolos(cpf);
 
         if (cpf.length() != 11) {
             return false;
         }
 
-        int d1 = calculaDigito(cpf, 9);
-        int d2 = calculaDigito(cpf, 10);
+        int soma1 = somaAlgarismos(cpf, 0, 9);
+        int d1 = calculaDigito(soma1);
+        
+        int soma2 = somaAlgarismos(cpf, 0, 10);
+        int d2 = calculaDigito(soma2);
 
         // Converte os dígitos calculados de int para String e une (concatena) os dois
         // numa só String.
@@ -119,5 +103,32 @@ public class PessoaFisica extends Pessoa
         // Compara os 2 últimos dígitos do CPF com os 2 calculados. 
         // Se forem iguais, o CPF é válido.
         return digVerificadorExistente.equals(digVerificadorCalculado);
-    }    
+    }   
+    
+    public static void main(String[] args) {
+        PessoaFisica pf = new PessoaFisica();
+        //try == tentar
+        try {
+            pf.setCpf(null);
+            System.out.println("CPF: " + pf.getCpf());
+        //catch == capturar (capturar o erro)
+        } catch(IllegalArgumentException erro){
+            System.out.println(erro.getMessage());
+        } catch(NullPointerException erro){
+            System.out.println("O CPF não pode ser vazio.");
+        }
+        
+        pf.setNome("Manoel");
+        System.out.println("Nome: " + pf.getNome());
+    }
 }
+
+
+
+
+
+
+
+
+
+

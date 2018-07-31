@@ -103,6 +103,7 @@ public class PessoaJuridica extends Pessoa
     /**
      * Soma uma determinada sequência de algarismos de um CPF ou CNPJ.
      * Tal some é utilizada para posteriormente calcular um dígito verificador.
+     * 
      * @param cnpj cnpj para fazer a soma de alguns algarismos
      * @param inicio posição inicial de onde os algarismos serão somados
      * @param totalAlgarismos total de algarismos para somar

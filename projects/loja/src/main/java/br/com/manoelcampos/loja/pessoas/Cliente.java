@@ -1,3 +1,5 @@
+package br.com.manoelcampos.loja.pessoas;
+
 /**
  * Devido precisarmos que um Cliente seja cadastrado como 
  * Funcionario ou vice-versa, o Cliente e Funcionario não herdam

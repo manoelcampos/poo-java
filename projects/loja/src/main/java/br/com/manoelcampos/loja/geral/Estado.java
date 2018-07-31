@@ -1,3 +1,5 @@
+package br.com.manoelcampos.loja.geral;
+
 import java.util.List;
 import java.util.ArrayList;
 

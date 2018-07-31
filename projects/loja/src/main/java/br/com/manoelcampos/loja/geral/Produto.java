@@ -1,3 +1,5 @@
+package br.com.manoelcampos.loja.geral;
+
 
 /**
  * Write a description of class Produto here.

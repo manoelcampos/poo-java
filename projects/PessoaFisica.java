@@ -47,7 +47,7 @@ public class PessoaFisica extends Pessoa
     
     /**
      * Calcula um dígito verificador de um CPF ou CNPJ utilizando o algoritmo módulo
-     * 11
+     * 11.
      * 
      * @param totalAlgarismos número de algarismos a serem usados para calcular um
      *                        dígito do CPF
@@ -57,7 +57,7 @@ public class PessoaFisica extends Pessoa
         int soma = 0;
         int algarismo;
         for (int i = 0; i < totalAlgarismos; i++) {
-            algarismo = Integer.valueOf(cpf.substring(i, i + 1));
+            algarismo = vetor[i] - 48;
             soma += (totalAlgarismos + 1 - i) * algarismo;
         }
 

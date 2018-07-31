@@ -1,3 +1,7 @@
+package br.com.manoelcampos.loja.vendas;
+
+import br.com.manoelcampos.loja.geral.Produto;
+
 
 public class ItemVenda
 {

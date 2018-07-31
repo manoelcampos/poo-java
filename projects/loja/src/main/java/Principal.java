@@ -1,4 +1,11 @@
 
+import br.com.manoelcampos.loja.geral.Empresa;
+import br.com.manoelcampos.loja.vendas.Venda;
+import br.com.manoelcampos.loja.pessoas.Cliente;
+import br.com.manoelcampos.loja.pessoas.Funcionario;
+import br.com.manoelcampos.loja.pessoas.PessoaFisica;
+
+
 public class Principal {
     /**
      * Executa uma aplicação que mostra como resolver
