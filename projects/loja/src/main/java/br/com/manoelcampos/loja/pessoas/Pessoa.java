@@ -16,6 +16,13 @@ public class Pessoa
     private String endereco;
     private String telefone;
     
+    public Pessoa(){}
+    
+    public Pessoa(String nome, Cidade cidade){ 
+        setNome(nome);
+        setCidade(cidade); 
+    }
+
     public String getNome(){ return nome; }
     
     public void setNome(String nome){  
@@ -113,4 +120,11 @@ public class Pessoa
         }
         return soma;
     }
+
+    @Override
+    public String toString() {
+        return nome;
+    }
+    
+    
 }

@@ -16,6 +16,12 @@ public class PessoaFisica extends Pessoa
     private String cpf;
     private char sexo;
     private String dataNascimento;
+    
+    public PessoaFisica(){}
+    
+    public PessoaFisica(String cpf){
+        setCpf(cpf);
+    }
 
     public String getCpf(){ 
         return cpf; 
@@ -121,6 +127,7 @@ public class PessoaFisica extends Pessoa
         pf.setNome("Manoel");
         System.out.println("Nome: " + pf.getNome());
     }
+    
 }
 
 

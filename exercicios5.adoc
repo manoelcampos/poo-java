@@ -1,0 +1,29 @@
+= Abstração: por meio de Encapsulamento, Herança, Níveis de Abstração, Classes Abstratas e Polimorfismo
+
+- Mostrar que a validação do CPF pode incluir outros detalhes como a existência somente de números:
+  se tiver outros caracteres vai ocorrer erro na validação.
+- Mostrar versão da validação do CPF que o usuário da classe precisa primeiro chamar os métodos
+  separados para: remover símbolos, verificar se o cpf tem 11 dígitos e só depois 
+  fazer os cálculos.
+- Mostrar como essa versão é complexa de usar e que ainda se tiverem letras no CPF, ocorrerá erro.
+- Mostrar que podemos esconder toda essa complexidade abstraindo o processo de validação do CPF 
+  pelo encapsulamento de métodos
+- Mostrar como seria criar um Funcionário utilizando associações (não herança) entre PesoaFisica e Pessoa.
+  O uso de herança abastrai a complexidade de criar objetos separados.
+- Mostrar no projeto usando herança e agregação, como podemos abstrair a complexidade de 
+  acessar os dados de PF e Pessoa a partir de um objeto PF, criando métodos wrappers que delegam a chamada
+  de métodos como Funcionario.getNome() para PessoaFisica.getNome().
+- Mostrar como podemos refatorar a herança entre Pessoa, PF e Funcionário, criando agregação
+  somente entre PF e Funcionário, fazendo o NetBeans automaticamente criar a delegação
+- Mostar "Replace Inheritance with Delegation" refactoring no IntelliJ
+- Mostrar que a criação de níveis de herança é uma forma de criar níveis de abstração,
+  separando-se complexidade e dados genéricos em classes superiores e específicos em classes
+  inferiores.
+- Exemplos de abstração: 
+  * adaptadores como T's elétricos: se a interface de uma classe não é da forma que desejamos
+    ou precisamos, podemos criar uma camada de abstração sobre essa classe
+    para mudar o formato dessa interface, abstraindo a interface original.
+  
+= Links
+
+http://www.tonymarston.co.uk/php-mysql/abstraction.txt

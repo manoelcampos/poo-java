@@ -14,7 +14,8 @@ install:
 	gitbook install
 	
 slides:
-	bundle exec asciidoctor-revealjs "slides.adoc" -o slides.html
+	#bundle exec asciidoctor-revealjs "slides.adoc" -o slides.html
+	bundle exec asciidoctor-revealjs "polimorfismo.adoc" -o polimorfismo.html
 
 html:
 	gitbook build ./ ./html

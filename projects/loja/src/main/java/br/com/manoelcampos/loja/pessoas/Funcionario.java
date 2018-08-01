@@ -17,7 +17,7 @@ public class Funcionario
     public Funcionario(PessoaFisica pessoaFisica){
         this.pessoaFisica = pessoaFisica;
     }
-            
+
     public String getCargo() {
         return cargo;
     }

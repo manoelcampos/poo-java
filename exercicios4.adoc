@@ -1,28 +1,73 @@
-- Abstração: por meio de Encapsulamento, Herança, Níveis de Abstração, Classes Abstratas e Polimorfismo
-  - Mostrar que a validação do CPF pode incluir outros detalhes como a existência somente de números:
-    se tiver outros caracteres vai ocorrer erro na validação.
-  - Mostrar versão da validação do CPF que o usuário da classe precisa primeiro chamar os métodos
-    separados para: remover símbolos, verificar se o cpf tem 11 dígitos e só depois 
-    fazer os cálculos.
-  - Mostrar como essa versão é complexa de usar e que ainda se tiverem letras no CPF, ocorrerá erro.
-  - Mostrar que podemos esconder toda essa complexidade abstraindo o processo de validação do CPF 
-    pelo encapsulamento de métodos
-  - Mostrar como seria criar um Funcionário utilizando associações (não herança) entre PesoaFisica e Pessoa.
-    O uso de herança abastrai a complexidade de criar objetos separados.
-  - Mostrar no projeto usando herança e agregação, como podemos abstrair a complexidade de 
-    acessar os dados de PF e Pessoa a partir de um objeto PF, criando métodos wrappers que delegam a chamada
-    de métodos como Funcionario.getNome() para PessoaFisica.getNome().
-  - Mostrar como podemos refatorar a herança entre Pessoa, PF e Funcionário, criando agregação
-    somente entre PF e Funcionário, fazendo o NetBeans automaticamente criar a delegação
-  - Mostar "Replace Inheritance with Delegation" refactoring no IntelliJ
-  - Mostrar que a criação de níveis de herança é uma forma de criar níveis de abstração,
-    separando-se complexidade e dados genéricos em classes superiores e específicos em classes
-    inferiores.
-  - Exemplos de abstração: 
-    - adaptadores como Ts elétricos: se a interface de uma classe não é da forma que desejamos
-      ou precisamos, podemos criar uma camada de abstração sobre essa classe
-      para mudar o formato dessa interface, abstraindo a interface original.
-  
-  == Links
+= Polimorfismo
 
-  http://www.tonymarston.co.uk/php-mysql/abstraction.txt
+== Tipos de Polimorfirmo
+=== Estático
+==== Ad Hoc (Method Overload)
+Ad hoc significa "específico e temporário". Neste caso significa que um método vai se comportar de forma específica, de acordo com os valores que foram passados a ele. Assim, isso quer dizer que o método não terá sempre um mesmo comportamento. O comportamento em um determinado momento depende dos valores passados ao método. Ou seja, o comportamento do método é temporariamente definido de acordo com tais valores. Se em uma próxima chamada forem passados diferentes valores, o comportamento pode ser diferente para este outro momento. 
+
+As chamadas dos métodos dependem de um tipo específico definido. De acordo com os tipos, uma determinada versão de um mesmo método é chamada. Permite executar diferentes versões da mesma função, de acordo com os tipos e quantidade de parâmetros.
+
+Exemplos são os vários construtores de uma classe: eles são métodos com o mesmo nome, mas parâmetros diferentes.
+
+Novos métodos sobrecarregados:
+- Estoque.removeEstoque(ItemVenda item)
+- Estado.addCidade(List<Cidade> cidades) (observe que não é o mesmo que setCidades(List<Cidade> cidades))
+- Estado.addCidade(Cidade... cidades) 
+
+==== Paramêtrico (Generics)
+As chamadas dos métodos NÃO dependem de um tipo específico definido. Isso quer dizer que se chamarmos um método genérico m(T param), o método a ser chamado não depende do tipo de T: sempre será chamado o método m que recebe um parâmetro T. 
+
+Podemos unir method overload e generics criando um método genérico m(T param) e depois um método sobrecarregado m(T param, int x). O método é chamado genérico por usar um tipo T. No caso do exemplo, há duas versões desse mesmo método genérico, logo é é genérico e sobrecarregado. Assim, se chamarmos passando um tipo T e um int, estaremos chamando o segundo método e não o primeiro. Executa uma mesma versão de uma função para diferentes tipos e quantidade de parâmetros.
+
+- Classes Genéricas:
+  * List e ArrayList
+  * class RepositorioPessoas<T extends Pessoa>: métodos para buscar pessoa mais velha, buscar pessoas sem CPF,
+    buscar pessoas agrupando por cidade (com SQL conseguimos contar, obter média, max e min de um determinado
+    atributo de uma pessoa agrupando por um campo como cidade, mas não as pessoas em si. Usando ORM isso pode
+    ser feito de forma automática)
+- Métodos Genéricos (sem uma classe genérica)
+
+==== Sobrecarga de operadores 
+Java não suporta, linguagens como Lua e C++ suportam
+
+=== Dinâmico:
+- Subtipagem: Subtyping / Subclassing (Herança)
+  * Lista de dependentes PessoaFisica do Funcionario
+  * Um método como addDependente(PessoaFisica dependente) aceita objetos PessoaFisica e de qualquer subclasse.
+    Isto quer dizer que uma variável de uma classe B pode armazenar objetos B e de subclasses de B (como C ou D),
+    mas não pode armazenar objetos de uma superclasse de B como A.
+    No exemplo, dependente pode armazenar objetos da classe PessoaFisica e das subclasses Cliente e Funcionario,
+    mas não pode armazenar objetos da superclasse Pessoa. Isto porque Cliente e Funcionario são PessoaFisica
+    mas nem toda Pessoa é uma PessoaFisica. Uma Empresa não é uma PessoaFisica mas sim uma PessoaJuridica.
+- Method Override (requer subtipagem)
+  * Renomear o atributo salario para salarioBase e calcular o salario total de acordo com o tipo
+    de funcionario. Assim, teríamos uma classe base Funcionario e outras como Vendedor e Gerente.
+    No gerente o salário total é o base + um percentual de participação nos lucros. Os lucros vão 
+    ser obtidos a partir da classe Empresa.
+    No funcionario o salário total é o base + um percentual sobre as vendas realizadas.
+    As vendas do funcionario vão ser obtidas a partir de um atributo List<Venda> vendas.
+  * Uma subclasse pode sobrescrever um método alterando completamente seu comportamento
+    ou extendendo sua funcionalidade.
+  * Porque usar @Override: para o compilador te avisar quando você desejar sobrescrever um método
+    mas estiver sobrecarregando (criando nova versão). Sem o @Override ele não avisa
+    e assim você estará apenas criando um novo método (overloading) com o mesmo nome do que você
+    pensava estar sobrescrevendo. Se você sem querer colocar o nome do método 
+    a ser sobrescrito incorretamente, o compilador vai acusar se tal método não existir.
+    Sem o override, ele vai apenas criar um novo método com o nome errado.
+  * No caso de construtores, não há como modificar completamente eles em subclasses.
+    Mesmo que na subclasse não usemos super no construtor, a chamada do construtor padrão será automaticamente incluída
+    pelo compilador como segurança (para garantir que o básico realizado pelo construtor padrão será executado). 
+
+== Diferenças entre subtipagem e polimorfismo estático
+O que muda ao declarar um método m(SuperClass param) e m(T param): Usando T ou SuperClass, podemos passar como parâmetro qualquer objeto da classe indicada por T ou SuperClass ou qualquer objeto de uma subclasse desses tipos. Usando T, ao acessar param, teremos acesso à todos os métodos que temos permissão para acessar, que tenham sido declarados diretamente no tipo T ou em alguma de suas superclasses.
+
+Usando SuperClass, mesmo que seja passado um objeto de uma subclasse, não teremos como acessar diretamente qualquer método disponível na subclasse a qual o parâmetro representa. Adicionalmente, se o tipo T foi definido no nível da classe não no método, isto garante que para uma determinada instância do objeto onde o método m foi declarado, toda vez que chamarmos o método m naquela instância, precisaremos passar um objeto T do mesmo tipo. No caso do uso da SuperClass, para uma instância ownerOfM, podemos uma hora passar um objeto de uma subclasse A e depois passar um objeto de uma subclasse B, por exemplo: ownerOfM.m(a1) e depois ownerOfM.m(b1). No caso de uso de T, para uma instância ownerOfM, podemos apenas passar objetos do tipo T específico definido ao criar onwerOfM. Assim, se para ownerOfM o tipo T foi definido como da classe A, só podemos chamar m com instância de A, como: ownerOfM.m(a1) e ownerOfM.m(a2). Se SuperClass fosse usado para uma lista, permitiria que a lista tivesse elementos de qualquer subclasse de SuperClass, o que pode não ser o desejado. 
+  
+Uma lista onde SuperClass é Veiculo poderia contar objetos Avio, Carro, Barco, etc.
+Mesmo que a lista fosse de Carro e quissessemos só um tipo de carro (carros normais, da classe Carro e não subclasses
+de carro como CarroVoador), usando SuperClass não temo como restringir isso.
+Se usarmos T e dissermos que tal tipo representa Carro, só podemos adicionar elementos Carro à lista
+e não subclasses como CarroVoador.
+
+= Referências
+http://lucacardelli.name/Papers/OnUnderstanding.A4.pdf[Cardelli L., Wegner P. On Understanding Types, Data Abstraction, and Polymorphism, 1985.].

@@ -17,6 +17,13 @@ public class Cliente
     private double renda;
     private String celular;
     private String email;
+    
+    /**
+     * O atributo peso não faz sentido numa loja virtual, foi incluído apenas
+     * como demonstração de um atributo inteiro.
+     */
+    private int pesoGramas;
+    
     /**
      * Por meio deste atributo é que teremos acesso 
      * aos dados de PessoaFisica e Pessoa do Cliente.
@@ -24,44 +31,40 @@ public class Cliente
     private PessoaFisica pessoaFisica;
     
     /**
-     * Como um Cliente deve obrigatoriamente estar relacionado a 
-     * uma PessoaFisica, alteramos o construtor padrão
-     * adicionando um parâmetro pessoaFisica (assim ele 
-     * deixa de ser um construtor padrão). 
-     * Desta forma, ao instanciar um cliente, precisaremos
-     * dizer quem é a PessoaFisica que representa tal Cliente.
-     * @param pessoaFisica 
-     */
+     * Construtor para instanciar um Cliente, já indicando qual a {@link PessoaFisica} relacionada a ele.
+     * Este é um método que usa polimorfismo estático (sobrecarga de método)
+     * pois possui diferentes versões. Assim, dizemos que este é um método
+     * sobrecarregado.
+     * @param pessoaFisica {@link PessoaFisica}  que representa o Cliente
+     */    
     public Cliente(PessoaFisica pessoaFisica){
         this.pessoaFisica = pessoaFisica;
     }
     
+    /**
+     * Construtor para instanciar um Cliente, já indicando a renda do cliente e qual a {@link PessoaFisica} relacionada a ele.
+     * Este é um método que usa polimorfismo estático (sobrecarga de método)
+     * pois possui diferentes versões. Assim, dizemos que este é um método
+     * sobrecarregado.
+     * @param pessoaFisica {@link PessoaFisica}  que representa o Cliente
+     * @param renda renda do cliente
+     */    
     public Cliente(PessoaFisica pessoaFisica, double renda){
-        /**
-         * Este construtor também recebeu um parâmetro pessoaFisica.
-         * Assim, se chamarmos ele, teremos que indicar
-         * qual é a PessoaFisica que representará tal Cliente
-         * e qual a renda do cliente.
-         * Como no outro construtor já temos a linha que pega um objeto PessoaFisica
-         * por meio do parâmetro pessoaFisica e
-         * armazena no atributo de mesmo nome, aqui neste construtor teríamos que
-         * copiar e colar a linha this.pessoaFisica = pessoaFisica;
-         * Como duplicação de código é algo que deve ser evitado a todo custo,
-         * para evitar isso precisamos apenas lembrar que um construtor nada mais é que 
-         * um método especial. Desta forma, um construtor pode chamar outro construtor.
-         * Um método é chamado colocando-se seu nome, parênteses e os devidos parâmetros.
-         * Se seguissemos esta lógica, para chamar o construtor anterior
-         * precisaríamos incluir a linha Cliente(pessoaFisica);
-         * Mas no caso de chamar construtores há algumas diferenças
-         * em relação a chamar um método comum:
-         * 1) no lugar de colocar o nome do construtor, colocamos this() e os
-         *    devidos parâmetros dentro dos parênteses;
-         * 2) um construtor só pode ser chamado desta forma dentro de outro construtor;
-         * 3) tal chamada obrigatoriamente deve ser a primeira linha dentro do 
-         *    construtor que está chamando o outro.
-         */
         this(pessoaFisica);
         setRenda(renda);
+    }
+    
+    /**
+     * Construtor para instanciar um Cliente, já indicando o peso (em gramas) do cliente e qual a {@link PessoaFisica} relacionada a ele.
+     * Este é um método que usa polimorfismo estático (sobrecarga de método)
+     * pois possui diferentes versões. Assim, dizemos que este é um método
+     * sobrecarregado.
+     * @param pessoaFisica {@link PessoaFisica}  que representa o Cliente
+     * @param pesoGramas  peso (em gramas) do cliente
+     */    
+    public Cliente(PessoaFisica pessoaFisica, int pesoGramas){
+       this(pessoaFisica); 
+        setPesoGramas(pesoGramas);
     }
   
     public double getRenda(){
@@ -82,4 +85,69 @@ public class Cliente
     public PessoaFisica getPessoaFisica() {
         return pessoaFisica;
     }
+    
+    /**
+     * @return the pesoGramas
+     */
+    public int getPesoGramas() {
+        return pesoGramas;
+    }
+
+    /**
+     * @param pesoGramas the pesoGramas to set
+     */
+    public void setPesoGramas(int pesoGramas) {
+        this.pesoGramas = pesoGramas;
+    }
+    
+    /**
+     * Mostra o uso das versões sobrecarregadas (overloaded) dos
+     * construtores da classe Cliente.
+     * @param args 
+     */
+    public static void main(String[] args) {
+        //Cria uma PessoaFisica informando o CPF
+        PessoaFisica pf = new PessoaFisica("11111111111");
+        
+        /*
+        Cria um cliente usando a versão do construtor que recebe apenas uma pessoa física.
+        O compilador sabe que é esta a versão do construtor a ser chamada pois
+        estamos passando um objeto pessoa física por parâmetro.
+        */
+        Cliente cliente1 = new Cliente(pf);
+
+        /*
+        Cria um cliente usando a versão do construtor que recebe uma pessoa física
+        e a renda do cliente.
+        O compilador sabe que é esta a versão do construtor a ser chamada pois
+        estamos passando um objeto pessoa física e em seguida um número real.
+        Assim, a versão que espera um número real é aquela que solicita a renda
+        do cliente. Se simplesmente tocarmos o tipo da variável renda de double
+        para int, teremos um problema pois acharemos que estamos passando um valor
+        para ser armazenado no atributo renda, enquanto estaremos chamando 
+        o construtor que recebe um valor para ser armazenado no atributo
+        pesoGramas. Com isto, o valor que esperávamos que fosse armazenado na renda
+        será incorreta e inesperadamente armazenado no atributo pesoGramas.
+        Basta alterar o tipo da variável renda para int e rodar o programa
+        para ver o problema: no lugar da renda aparecer como 2000 e o peso como 0,
+        os valores aparecerão incorretamente invertidos.
+        
+        Logo, é preciso entender que o compilador vai saber qual método deve chamar
+        de acordo com a quantidade e tipo de parâmetros passados.
+        */
+        double renda = 2000;
+        Cliente cliente2 = new Cliente(pf, renda);
+        System.out.println("Cliente 2");
+        System.out.println("\tRenda: " +  cliente2.getRenda());
+        System.out.println("\tPeso em Gramas: " +  cliente2.getPesoGramas());
+        
+        int pesoGramas = 80000;
+        Cliente cliente3 = new Cliente(pf, pesoGramas);
+        System.out.println("\nCliente 3");
+        System.out.println("\tRenda: " +  cliente3.getRenda());
+        System.out.println("\tPeso em Gramas: " +  cliente3.getPesoGramas());
+        
+    }
+
+    
 }
