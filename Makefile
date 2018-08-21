@@ -15,7 +15,7 @@ install:
 	
 slides:
 	#bundle exec asciidoctor-revealjs "slides.adoc" -o slides.html
-	bundle exec asciidoctor-revealjs "polimorfismo.adoc" -o polimorfismo.html
+	bundle exec asciidoctor-revealjs "chapter9-polimorfismo-p2.adoc" -o polimorfismo2.html
 
 html:
 	gitbook build ./ ./html
