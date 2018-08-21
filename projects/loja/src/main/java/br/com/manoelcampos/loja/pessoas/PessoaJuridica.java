@@ -29,7 +29,38 @@ public class PessoaJuridica extends Pessoa
      * @param cnpj the cnpj to set
      */
     public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+        if (cnpj.trim().isEmpty()) {
+            throw new IllegalArgumentException("O CNPJ é obrigatório");
+        } else if (!isCnpjValido(cnpj)) {
+            throw new IllegalArgumentException("O CNPJ é inválido");
+        } else {
+            this.cnpj = cnpj;
+        }
+    }
+
+    /**
+     * Verifica se um CNPJ é válido. Código adaptado de um péssimo exemplo de
+     * validação de CNPJ obtido em http://www.guj.com.br/t/validar-cnpj/129994/7,
+     * 
+     * @param cnpj CNPJ a ser validado
+     * @return true se o CNPJ for válido, false otherwise
+     */
+    public boolean isCnpjValido(String cnpj) {
+        cnpj = removerSimbolos(cnpj);
+
+        if (cnpj.length() != 14) {
+            return false;
+        }
+
+        int soma1 = somaAlgarismos(cnpj, 0, 4) + somaAlgarismos(cnpj, 4, 8);
+        int d1 = calculaDigito(soma1);
+
+        int soma2 = somaAlgarismos(cnpj, 0, 5) + somaAlgarismos(cnpj, 5, 8);
+        int d2 = calculaDigito(soma2);
+
+        String digVerificadorCalculado = Integer.toString(d1) + Integer.toString(d2);
+        String digVerificadorExistente = cnpj.substring(cnpj.length() - 2, cnpj.length());
+        return digVerificadorExistente.equals(digVerificadorCalculado);
     }
 
     /**
@@ -100,46 +131,6 @@ public class PessoaJuridica extends Pessoa
      */
     public void setDataFundacao(LocalDate dataFundacao) {
         this.dataFundacao = dataFundacao;
-    }
-    /**
-     * Soma uma determinada sequência de algarismos de um CPF ou CNPJ.
-     * Tal some é utilizada para posteriormente calcular um dígito verificador.
-     * @param cnpj cnpj para fazer a soma de alguns algarismos
-     * @param inicio posição inicial de onde os algarismos serão somados
-     * @param totalAlgarismos total de algarismos para somar
-     * @return a soma dos algarismos indicados
-     */
-    /**
-     * Calcula um dígito verificador de um CPF ou CNPJ utilizando o algoritmo módulo 11.
-     * 
-     * @param somaAlgarismos soma de um determinado número de algarismos de um CPF ou CNPJ,
-     *                       que será usada para calcular um dígito verificador
-     * @return o dígito verificador calculado
-     */
-
-    /**
-     * Verifica se um CNPJ é válido.
-     * Código adaptado de um péssimo exemplo de validação de CNPJ obtido em
-     * http://www.guj.com.br/t/validar-cnpj/129994/7,
-     * @param cnpj CNPJ a ser validado
-     * @return true se o CNPJ for válido, false otherwise
-     */
-    public boolean isCnpjValido(String cnpj) {
-        cnpj = removerSimbolos(cnpj);
-
-        if (cnpj.length() != 14) {
-            return false;
-        }
-
-        int soma1 = somaAlgarismos(cnpj, 0, 4) + somaAlgarismos(cnpj, 4, 8);
-        int d1 = calculaDigito(soma1);
-        
-        int soma2 = somaAlgarismos(cnpj, 0, 5) + somaAlgarismos(cnpj, 5, 8);
-        int d2 = calculaDigito(soma2);
-
-        String digVerificadorCalculado = Integer.toString(d1) + Integer.toString(d2);
-        String digVerificadorExistente = cnpj.substring(cnpj.length() - 2, cnpj.length());
-        return digVerificadorExistente.equals(digVerificadorCalculado);
     }
     
     public static void main(String[] args) {

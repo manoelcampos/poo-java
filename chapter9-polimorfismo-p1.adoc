@@ -63,11 +63,6 @@ O que muda ao declarar um método m(SuperClass param) e m(T param): Usando T ou 
 
 Usando SuperClass, mesmo que seja passado um objeto de uma subclasse, não teremos como acessar diretamente qualquer método disponível na subclasse a qual o parâmetro representa. Adicionalmente, se o tipo T foi definido no nível da classe não no método, isto garante que para uma determinada instância do objeto onde o método m foi declarado, toda vez que chamarmos o método m naquela instância, precisaremos passar um objeto T do mesmo tipo. No caso do uso da SuperClass, para uma instância ownerOfM, podemos uma hora passar um objeto de uma subclasse A e depois passar um objeto de uma subclasse B, por exemplo: ownerOfM.m(a1) e depois ownerOfM.m(b1). No caso de uso de T, para uma instância ownerOfM, podemos apenas passar objetos do tipo T específico definido ao criar onwerOfM. Assim, se para ownerOfM o tipo T foi definido como da classe A, só podemos chamar m com instância de A, como: ownerOfM.m(a1) e ownerOfM.m(a2). Se SuperClass fosse usado para uma lista, permitiria que a lista tivesse elementos de qualquer subclasse de SuperClass, o que pode não ser o desejado. 
   
-Uma lista onde SuperClass é Veiculo poderia contar objetos Avio, Carro, Barco, etc.
-Mesmo que a lista fosse de Carro e quissessemos só um tipo de carro (carros normais, da classe Carro e não subclasses
-de carro como CarroVoador), usando SuperClass não temo como restringir isso.
-Se usarmos T e dissermos que tal tipo representa Carro, só podemos adicionar elementos Carro à lista
-e não subclasses como CarroVoador.
 
 = Referências
 http://lucacardelli.name/Papers/OnUnderstanding.A4.pdf[Cardelli L., Wegner P. On Understanding Types, Data Abstraction, and Polymorphism, 1985.].

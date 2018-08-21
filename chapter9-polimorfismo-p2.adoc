@@ -1,0 +1,106 @@
+= Polimorfismo
+:revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0
+:revealjs_slideNumber: true
+:source-highlighter: highlightjs
+:icons: font
+:imagesdir: images
+:allow-uri-read:
+:safe: unsafe
+:numbered:
+:listing-caption: Listing
+
+ifdef::env-github[]
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+== Problemas da Sobrescrita de Métodos
+
+- Como o sobrescrita de métodos nas classes filhas pode causar problemas
+  quando o método é totalmente modificado de forma inesperada.
+- No caso do cálculo do voo, o valor base pode ser totalmente ignorado pelas classes
+  filhas, obtendo-se um resultado inesperado.
+
+== Problemas da Sobrescrita de Métodos
+
+- Mesmo que você tenha criado as classes filhas e ter se certificado
+  de ter feito tudo certo, classes netas podem ser introduzidas e 
+  modificarem o cálculo de uma forma equivocada.
+- Uma solução é criar classes filhas finais.
+
+== Problemas da Sobrescrita de Métodos
+- A solução acima não evitar criar novas classes filhas (no lugar de netas) com uma implementação equivocada
+- Mesmo que o método na superclasse seja chamado, o valor dele pode ser 
+  indevidamente modificado nas classes filhas, até mesmo sem querer.
+- Para resolver, podemos usar métodos abstratos e o padrão de projeto
+  _template method_.
+
+== Classes Abstratas
+
+- Precisam ser declaradas como abstract
+- Podem ou não ter métodos abstratos: não possuem implementação e precisam ser implementados por alguma classe filha.
+- Não ter implementação significa serem declarados como abstract e não ter corpo (as chaves)
+
+== Classes Abstratas
+- Uma classe filha abstrata não é obrigada a implementar um método abstrato de qualquer super classe.
+- Uma classe filha concreta precisa implementar qualquer método abstrato herdado de qualquer uma das classes nos níveis superiores. 
+
+== Classes Abstratas
+- Se tiverem métodos abstratos o compilador exigirá que sejam declaradas como abstract
+- Voo e Pessoa abstratas: evitar criar um voo e pessoa genéricos
+
+== Interfaces
+
+- Definem um contrato a ser seguido por classes que as implementam
+- Tal contrato indica quais métodos são obrigatórios para as classes que implementam as interfaces
+- O contrato é especificado por um conjunto de assinaturas de métodos (cabeçalhos) sem implementação
+- A implementação é definida por classes que implementam a interface.
+
+== Interfaces
+- Definem um conjunto de métodos que classes devem implementar
+- Se uma classe concreta (não abstrata) não implementar um determinado método de uma interface,
+  o compilador acusa um erro
+
+== Interfaces e Agregação
+- Problemas de usar agregação no lugar de herança: não temos
+  mais os métodos como getNome() e setNome() diretamente em classes
+  como Piloto. 
+- Para resolver, teríamos que criar manualmente tais métodos,
+  mas isso é cansativo e nem todas as classes que agregam PessoaFisica
+  sempre teriam tais métodos. 
+
+== Interfaces
+- Nomes de interfaces usam adjetivos que representam as capacidades
+  da interface, definidas pelo seu conjunto de métodos.
+- Adjetivos de exemplo para nomes de interfaces podem ser: 
+  Iterável (Iterable), Comparável (Comparable), Clonável (Clonable).
+- As vezes é difícil seguir o padrão e encontrar uma adjetivo para uma interface
+  criada. No caso da interface para PessoaFisica,
+  podemos chamar de IPessoaFisica.
+
+== Interfaces
+
+- O Comparable é usado para, por exemplo, definir como ordenar objetos em uma lista.
+- Uma classe pode implementar múltiplas interfaces.
+- Para uma classe concreta, define que a classe terá os mesmos métodos que todas
+  as interfaces implementadas, como Comparable e Clonable
+
+== Interfaces
+
+- Isso não é o mesmo que herança múltipla, pois uma interface até o Java 7 não permite
+  definir a implementação de métodos. 
+- Até tal versão do Java, somente classes podem implementar os métodos de uma interface.
+- O Java 8 introduz o conceito de _default methods_ que permitem definir a implementação
+  de um método na interface.
+
+== Interfaces
+
+- Isto permite que uma classe herde implementações de métodos de diferentes interfaces,
+  como se a classe estivesse herdando de várias super classes.
+- Apesar de parecer herança múltipla, isto não faz com que a classe possa herdar
+  de várias outras classes.
+- Isso causou controvérsia sobre o suporte ou não à herança múltipla no Java.

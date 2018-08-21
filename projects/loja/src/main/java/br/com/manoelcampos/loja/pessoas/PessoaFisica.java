@@ -1,5 +1,7 @@
 package br.com.manoelcampos.loja.pessoas;
 
+import br.com.manoelcampos.loja.geral.Cidade;
+
 /**
  * Aqui estamos definindo que a classe PessoaFisica 
  * extende Pessoa, ou seja, PessoaFisica é filha
@@ -22,6 +24,10 @@ public class PessoaFisica extends Pessoa
     public PessoaFisica(String cpf){
         setCpf(cpf);
     }
+    
+    public PessoaFisica(String nome, Cidade cidade){
+        super(nome, cidade);
+    }
 
     public String getCpf(){ 
         return cpf; 
@@ -40,23 +46,7 @@ public class PessoaFisica extends Pessoa
         } else {
             this.cpf = cpf;
         }
-
     }
-    
-    public char getSexo(){
-        return sexo;
-    }
-    
-    public void setSexo(char sexo){
-        //O valor '\0' para variáveis char significa que a variável está vazia
-        if(sexo == '\0' || sexo == ' '){
-            System.out.println("Sexo é obrigatório"); 
-        }
-        else if(sexo != 'm' && sexo != 'f' && sexo != 'M' && sexo != 'F'){
-            System.out.println("Sexo inválido"); 
-        }
-        else this.sexo = sexo;
-    }    
 
     /**
      * Verifica se um CPF é válido ou não, utilizando o algorítmo denominado Módulo
@@ -95,7 +85,7 @@ public class PessoaFisica extends Pessoa
 
         int soma1 = somaAlgarismos(cpf, 0, 9);
         int d1 = calculaDigito(soma1);
-        
+
         int soma2 = somaAlgarismos(cpf, 0, 10);
         int d2 = calculaDigito(soma2);
 
@@ -106,11 +96,26 @@ public class PessoaFisica extends Pessoa
         // calculados
         String digVerificadorExistente = cpf.substring(cpf.length() - 2, cpf.length());
 
-        // Compara os 2 últimos dígitos do CPF com os 2 calculados. 
+        // Compara os 2 últimos dígitos do CPF com os 2 calculados.
         // Se forem iguais, o CPF é válido.
         return digVerificadorExistente.equals(digVerificadorCalculado);
-    }   
+    }
     
+    public char getSexo(){
+        return sexo;
+    }
+    
+    public void setSexo(char sexo){
+        //O valor '\0' para variáveis char significa que a variável está vazia
+        if(sexo == '\0' || sexo == ' '){
+            System.out.println("Sexo é obrigatório"); 
+        }
+        else if(sexo != 'm' && sexo != 'f' && sexo != 'M' && sexo != 'F'){
+            System.out.println("Sexo inválido"); 
+        }
+        else this.sexo = sexo;
+    }    
+
     public static void main(String[] args) {
         PessoaFisica pf = new PessoaFisica();
         //try == tentar

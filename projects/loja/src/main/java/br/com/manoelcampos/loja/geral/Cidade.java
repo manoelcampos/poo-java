@@ -57,5 +57,12 @@ public class Cidade
     public void addEmpresa(Empresa empresa){
         empresas.add(empresa);
     }
+
+    @Override
+    public String toString() {
+        return nome;
+    }
+    
+    
 }
 

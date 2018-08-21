@@ -55,3 +55,4 @@ A programação orientada a objetos (POO), juntamente com uma série de conceito
 - assim como métodos de construção evoluem para corrigir problemas como custo, tempo de construção, qualidade e segurança, a POO surgiu para corrigir problemas de outros paradigmas de programação e suprir novas necessidades tanto dos desenvolvedores quanto dos clientes;
 - diminuir a distância entre o que o código representa com o que de fato ele faz ao ser executado;
 - etc.
+

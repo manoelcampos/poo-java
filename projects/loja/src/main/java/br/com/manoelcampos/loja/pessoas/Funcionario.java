@@ -1,6 +1,8 @@
 package br.com.manoelcampos.loja.pessoas;
 
 import br.com.manoelcampos.loja.geral.Empresa;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Ver comentários na classe {@link Cliente}.
@@ -10,7 +12,7 @@ public class Funcionario
 {
     private String cargo;
     private String matricula;
-    private double salario;
+    private double salarioBase;
     private Empresa empresa;
     private PessoaFisica pessoaFisica;
 
@@ -26,8 +28,12 @@ public class Funcionario
         return matricula;
     }
 
-    public double getSalario() {
-        return salario;
+    public double getSalarioBase() {
+        return salarioBase;
+    }
+    
+    public double getSalarioTotal(){
+        return getSalarioBase();
     }
 
     public PessoaFisica getPessoaFisica() {
@@ -44,5 +50,12 @@ public class Funcionario
     
     public void setEmpresa(Empresa empresa){
         this.empresa = empresa;
+    }
+
+    /**
+     * @param salarioBase the salarioBase to set
+     */
+    public void setSalarioBase(double salarioBase) {
+        this.salarioBase = salarioBase;
     }
 }
