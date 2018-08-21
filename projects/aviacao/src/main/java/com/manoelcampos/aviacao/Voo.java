@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author Manoel Campos da Silva Filho <http://github.com/manoelcampos>
  */
-public class Voo {
+public abstract class Voo {
     private String numero;
     private String aeroportoOrigem;
     private String aeroportoDestino;
@@ -20,10 +20,19 @@ public class Voo {
         passageiros = new ArrayList<>();
     }
     
-    public double calcularPrecoPassage(){
-        return getDistanciaKm()*getPrecoPorKm();
+    public final double calcularPrecoPassage(){
+        return distanciaKm*precoPorKm + ajuste();
     }
 
+    /**
+     * Retorna um acréscimo ou desconto a ser incorporado
+     * no processo da passagem.
+     * 
+     * @return um valor positivo se for dado um acréscimo ou um
+     *         valor negativo se for dado um desconto.
+     */
+    protected abstract double ajuste();
+    
     /**
      * @return the numero
      */
@@ -121,4 +130,6 @@ public class Voo {
     public void setPassageiros(List<Passageiro> passageiros) {
         this.passageiros = passageiros;
     }
+
+
 }
