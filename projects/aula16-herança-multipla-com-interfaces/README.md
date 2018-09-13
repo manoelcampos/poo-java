@@ -1,0 +1,3 @@
+# Herança múltipla com interfaces
+
+Como resolver o problema do diamante da morte quando usamos "herança múltipla" com interfaces no Java 8: quando uma superclasse e uma interface têm um método com a mesma assinatura (nome e parâmetros iguais), se tivermos uma subclasse que estende tal superclasse e implementa tal interface, como saberemos/decidiremos qual versão do método será usada na subclasse: a da superclasse ou da interface? Os exemplos em anexo mostram as diferentes formas de resolver isso.

@@ -154,7 +154,7 @@ E. reduz a complexidade, pois permite tratar múltiplos objetos como um único o
 
 I) A relação de agregação expressa o ato ou resultado de formar um objeto usando outros objetos como seus componentes. 
 II) Na relação de agregação, as partes só existem enquanto o todo existir. 
-III Na relação de composição, as partes são independentes da existência do todo. 
+III) Na relação de composição, as partes são independentes da existência do todo. 
 
 Está correto o que se afirma em
 

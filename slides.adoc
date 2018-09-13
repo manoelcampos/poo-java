@@ -42,7 +42,6 @@ Aulas expositivas e práticas em laboratório, com aplicação da teoria no dese
 
 == Método de Avaliação
 
-
 - Média igual ou superior a 6 e pelo menos 75% de presença.
 - Atividades realizadas em sala de aula e no ambiente virtual de aprendizagem, a soma delas contabilizando 10 pontos por bimestre. 
 - Uma prova teórico-prática valendo 10 pontos por bimestre. 

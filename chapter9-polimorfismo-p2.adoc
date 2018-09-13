@@ -104,3 +104,14 @@ endif::[]
 - Apesar de parecer herança múltipla, isto não faz com que a classe possa herdar
   de várias outras classes.
 - Isso causou controvérsia sobre o suporte ou não à herança múltipla no Java.
+
+== Interfaces: exemplos de uso
+
+- Obrigar que classes tenham um conjunto de getters e setters,
+  como getId e setId para indicar que tais classes deverão
+  ter um atributo ID.
+- Ter uma interface padrão que define um conjunto de métodos para exportar dados.
+  Cada classe implementa um padrão de exportação, como HTML ou CSV (arquivo de texto com dados 
+  separados por vírgula).
+- Permitir integração entre aplicações, principalmente
+  apps web e mobile.
