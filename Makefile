@@ -14,16 +14,15 @@ install:
 	gitbook install
 	
 slides:
-	#bundle exec asciidoctor-revealjs "slides.adoc" -o slides.html
-	bundle exec asciidoctor-revealjs "chapter9-polimorfismo-p2.adoc" -o polimorfismo2.html
+	bundle exec asciidoctor-revealjs "slides.adoc" -o ../slides.html
 
 html:
-	gitbook build ./ ./html
+	gitbook build ./ ../html
 
 pdf:
-	gitbook pdf ./ book.pdf
+	gitbook pdf ./ ../book.pdf
 
 clean:
-	rm -rf "html"
-	rm -f book.pdf
-	rm -f slides.html
+	rm -rf "../html"
+	rm -f ../book.pdf
+	rm -f ../slides.html

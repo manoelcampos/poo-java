@@ -53,7 +53,9 @@ A https://pt.wikipedia.org/wiki/Programação_procedural[Programação Procedura
 
 .Programação Copia e Cola e POG
 ****
-A Programação Copia e Cola apresentada anteriormente é um dos artifícios que programadores usam para resolver muitos problemas. Mas a mundialmente conhecida Programação Orientada a Gambiarras (POG) trouxe avançaos significativos na área.
+A Programação Copia e Cola apresentada anteriormente é um dos artifícios que programadores usam para resolver muitos problemas. Mas a mundialmente conhecida Programação Orientada a Gambiarras (POG) trouxe avanços significativos na área.
+Se você quiser se aperfeiçoar nesta área, não precisa de muito, basta ir usando o jeitinho brasileiro
+e pronto. Mas se realmente quiser se tornar um profissional em POG, a Alura tem um https://www.alura.com.br/curso-online-pog-programacao-orientada-a-gambiarra["curso completo"] 🤣🤣🤣.
 
 video::45I9jX5uO9A[youtube, width="100%", height="300vh"]
 ****

@@ -4,7 +4,7 @@
 :allow-uri-read:
 :safe: unsafe
 :numbered:
-:listing-caption: Listing
+:listing-caption: Listagem
 :experimental:
 
 ifdef::env-github[]

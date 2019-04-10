@@ -18,11 +18,11 @@ O modelo de pessoa em uma loja virtual será diferente de um sistema de academia
 
 Um modelo em POO é semelhante ao projeto de uma casa: a partir dele é possível criar quantas casas desejarmos, com as mesmas características, funcionalidades e restrições.
 
-image::projeto-vs-casa.png[title=Modelo (projeto) vs Casa contruída a partir do modelo.]
+image::projeto-vs-casa.png[title=Modelo (projeto) vs Casa contruída a partir do modelo (o cachorro não fazia parte do projeto 🤣).]
 
-Algumas características poderiam ser cor, tamanho, quantidade de quartos e banheiros. No entanto, diferente de um projeto de engenharia, um modelo normalmente não define os valores destas características. Assim, ao construir uma determinada casa a partir deste modelo é que seria definida qual a cor a casa seria pintada. O modelo só indica que a casa precisa de uma cor.
+Algumas características poderiam ser cor, tamanho, quantidade de quartos e banheiros. No entanto, diferente de um projeto de engenharia, um modelo normalmente não define os valores destas características. Assim, ao construir uma determinada casa a partir deste modelo é que seria definida quantos quartos a casa teria. O modelo em POO só indica que a casa precisa ter uma quantidade de quartos.
 
-Em um projeto de engenharia, características como "cor" não são especificadas, mas outras como "tamanho da casa" são previamente definidas e não podem ser alteradas a cada casa a ser construída. Um modelo de uma casa em POO também pode aplicar estas restrições, impedindo que o tamanho da casa seja alterado a cada nova casa. 
+Em um projeto de engenharia, características como "cor" não são especificadas, mas outras como "tamanho da casa" são previamente definidas e usualmente não podem ser alteradas a cada casa a ser construída. Um modelo de uma casa em POO também pode aplicar estas restrições, impedindo que o tamanho da casa seja alterado a cada nova casa. 
 
 Da mesma forma que uma casa, um modelo de pessoa pode definir características como cor da pele, peso, altura e naturalidade. No entanto, cada pessoa pode ter uma cor de pele, peso, altura e naturalidade diferente da outra.
 
