@@ -49,10 +49,10 @@ A medida que o código vai aumentando e você vai indiscriminadamente fazendo al
 A programação orientada a objetos (POO), juntamente com uma série de conceitos e práticas de engenharia de software defini padrões para o desenvolvimento de software, buscando: 
 
 - minimizar a quantidade de bugs (erros);
-- permitir que o software seja desenvolvido em equipe (local ou remotamente) de forma que qualquer profissional capacitado possa entender o código de outra pessoa;
-- permitir que o software seja desenvolvido em partes independentes, ainda contribuindo para o trabalho em equipe;
+- permitir que o software seja desenvolvido em equipe (local ou remotamente) e facilitar o entendimento de um código feito por outra pessoa;
+- permitir que o software seja desenvolvido em partes independentes, o que contribui para o trabalho em equipe;
 - facilitar a manutenção de código para correção de bugs e inclusão de novos recursos;
-- assim como métodos de construção evoluem para corrigir problemas como custo, tempo de construção, qualidade e segurança, a POO surgiu para corrigir problemas de outros paradigmas de programação e suprir novas necessidades tanto dos desenvolvedores quanto dos clientes;
+- assim como métodos de construção evoluem para corrigir problemas como custo, tempo, qualidade e segurança, a POO surgiu para corrigir problemas de outros paradigmas de programação e suprir novas necessidades tanto dos desenvolvedores quanto dos clientes;
 - diminuir a distância entre o que o código representa com o que de fato ele faz ao ser executado;
 - etc.
 
