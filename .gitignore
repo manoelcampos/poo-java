@@ -11,3 +11,6 @@ node_modules
 */private/
 **/target/
 /projects/loja-v8/target/
+
+#macOS
+.DS_Store

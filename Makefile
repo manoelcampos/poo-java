@@ -1,20 +1,10 @@
 all: slides html pdf
 
 install:
-	#Install bundler, that in turn downloads Ruby dependencies inside the Gemfile: http://bundler.io
-	sudo gem install bundler -n /usr/local/bin
-	#Asciidoctor Reveal.js Configurations
-	bundle config --local github.https true
-	bundle --path=.bundle/gems --binstubs=.bundle/.bin
-	#Install build dependencies using Bundler
-	bundler
-	#Installs GitBook Client to make easier to generate
-	#the book in HTML or PDF instead of using the asciidoctor tool.
-	npm install gitbook-cli -g
-	gitbook install
+	sudo gem install asciidoctor asciidoctor-pdf asciidoctor-revealjs
 	
 slides:
-	bundle exec asciidoctor-revealjs "slides.adoc" -o ../slides.html
+	asciidoctor-revealjs slides.adoc -o ../index.html && echo "Slides HTML gerados com sucesso"
 
 html:
 	gitbook build ./ ../html
