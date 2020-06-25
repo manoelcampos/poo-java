@@ -40,7 +40,7 @@ Depois que já se sabe o que precisa ser feito, um dos maiores desafios é por o
 Durante o processo de aprendizagem, todos nós provavelmente utilizamos intuitivamente o "paradigma" de tentitiva e erro. Consigo até ver a cena: Você vai escrevendo o código, fazendo alterações sem saber exatamente o que está fazendo, na esperança que o programa funcione. 🙏
 
 ****
-.http://joyreactor.com/post/1646612[Tentativa e Erro 🙏: "paradigma" de programação mais utilizado quando não se tem a menor ideia do que o código está fazendo 😭.]
+.http://joyreactor.com/post/1646612[Tentativa e Erro 🙏: "paradigma" de programação mais utilizado quando você não tem a menor ideia do que está fazendo 😭.]
 image::code-doesnt-work.jpeg[]
 ****
 

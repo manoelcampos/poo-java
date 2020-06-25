@@ -1,5 +1,5 @@
 = Introdução
-:revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0
+:revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0
 :revealjs_slideNumber: true
 :source-highlighter: highlightjs
 :icons: font
