@@ -16,7 +16,7 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-http://about.me/manoelcampos[Prof. Me. Manoel Campos da Silva Filho]
+http://about.me/manoelcampos[Prof. Dr. Manoel Campos da Silva Filho]
 
 ifdef::env-github[]
 IMPORTANT: Acesse o curso online https://manoelcampos.gitbooks.io/poo-java/[neste link], onde é possível fazer o download do material em PDF e epub.
