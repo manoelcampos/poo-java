@@ -53,11 +53,13 @@ public class PessoaFisica extends Pessoa
      *                        dígito do CPF
      * @return o dígito verificador calculado
      */
-    private int calculaDigito(String cpf, int totalAlgarismos) {
+    private int calculaDigito(final String cpf, final int totalAlgarismos) {
         int soma = 0;
         int algarismo;
+        final var vetor = cpf.toCharArray();
         for (int i = 0; i < totalAlgarismos; i++) {
-            algarismo = vetor[i] - 48;
+            //converte de char para int usando o código ASCII do char como base
+            algarismo = vetor[i] - 48;  
             soma += (totalAlgarismos + 1 - i) * algarismo;
         }
 

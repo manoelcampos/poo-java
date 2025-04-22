@@ -113,7 +113,7 @@ public class PessoaJuridica extends Pessoa
         int soma = 0;
         int algarismo;
         char []vetor = cnpj.toCharArray();
-        for (int i = 0; i < totalAlgarismos; i++) {
+        for (int j = 0; j < totalAlgarismos; j++) {
             /*Na linha abaixo estamos obtendo o código ASCII do caractere
             (algarismo do CPNJ) e subtraindo 48 para obter tal
             caractere como inteiro, sem precisar utilizar funções
@@ -123,8 +123,8 @@ public class PessoaJuridica extends Pessoa
             O código ASCII do caractere '0' é 48. Logo, se subtraírmos
             48 de tal código, obtemos 0 (que é o valor inteiro correspondente
             ao caractere '0').*/
-            algarismo = vetor[i+inicio] - 48;
-            soma += algarismo * (totalAlgarismos + 1 - i);
+            algarismo = vetor[inicio + j] - 48;
+            soma += algarismo * (totalAlgarismos + 1 - j);
         }
 
         return soma;
