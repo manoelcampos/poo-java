@@ -9,11 +9,6 @@ A forma mais fácil de instalar estas ferramentas depende do sistema operacional
 === JDK no Windows
 
 No Windows o JDK deve ser baixado manualmente no site da http://oracle.com/technetwork/java/javase/downloads/[Oracle].
-Nesta página é possível fazer o download do ambiente de desenvolvimento NetBeans já com o JDK 8 incorporado.
-Como informado na introdução do curso, vamos iniciar o desenvolvimento utilizando a ferramenta https://www.bluej.org[BlueJ],
-mas posteriormente utilizaremos o NetBeans. Assim, é mais fácil já baixar tudo junto.
-
-IMPORTANT: O BlueJ 4.1.2 e o NetBeans 8.2 só funcionam com o JDK 8.
 
 O vídeo abaixo mostra o processo de instalação passo-a-passo, incluindo as configurações necessárias para 
 compilar e executar programas Java pelo prompt de comandos no Windows. 
@@ -23,41 +18,9 @@ video::CdzJcXYQxt8[youtube, width="100%", height="300vh"]
 === JDK no Linux
 
 A instalação do JDK no Linux é bem mais simples. Basta executar o comando abaixo no terminal, de acordo com a distribuição Linux que estiver utilizando.
+Aqui está sendo usada a versão 24 do OpenJDK, mas pode ser que sua distribuição Linux não tenha tal versão disponível.
+Assim, tente versões mais antigas como 21 ou 17.
 
-- Debian e derivados (como Ubuntu e Linux Mint): `sudo apt-get install openjdk-8-jdk`
-- Red Hat e derivados (como Fedora e CentOS): `sudo yum install openjdk-8-jdk`
-- ArchLinux e derivados (como ArchBang): `sudo pacman install openjdk-8-jdk`
-
-== BlueJ
-
-O https://www.bluej.org[BlueJ] é um ambiente integrado de desenvolvimento (Integrated Development Environment, IDE) utilizado para o ensino dos fundamentos de programação orientada a objetos. Diferente de ferramentas profissionais como https://www.jetbrains.com/idea[IntelliJ], http://netbeans.org[NetBeans] e http://eclipse.org[Eclipse], ele possui uma interface minimalista que nos permite focar nos conceitos de POO. Depois de 5 minutos explicando o funcionamento do BlueJ, um aluno pode começar a aprender os POO em Java. O BlueJ é utilizado unica e exclusivamente durante o processo de aprendizagem. Logo, a medida que avançarmos no curso, vamos passar para ambientes profissionais como o NetBeans.
-
-O processo de instalação do BlueJ também depende do sistema operacional que você estiver utilizando. A versão 4.1.1 do BlueJ requer o JDK 8 para funcionar.
-Depois de ter o JDK instalado como indicado na seção anterior, basta seguir as instruções abaixo.
-
-=== BlueJ no Windows
-No Windows, basta fazer o download do BlueJ no https://www.bluej.org[site official], clicando no logo do Windows. 
-
-image::bluej-windows.png[]
-
-=== BlueJ no Linux 
-Apesar de ainda não ser possível fazer o download do BlueJ utilizando ferramentas de linha de comando como `apt-get`,
-a instalação em distribuições Linux Debian ou derivadas (como o Ubuntu e Linux Mint) é bem facilitada.
-Desta forma, é preciso fazer o download no https://www.bluej.org[site official], clicando no logo do Ubuntu. 
-
-image::bluej-ubuntu.png[]
-
-Após fazer o download, abra um terminal e execute os comandos abaixo. Se o nome do arquivo baixado não for `BlueJ-linux-412.deb`, altere o nome nos comandos abaixo.
-
-[source,bash]
-----
-#Inicia a instalação do BlueJ
-sudo dpkg -i BlueJ-linux-412.deb
-
-#Caso sejam exibidos erros de falta de dependências, 
-#execute o comando abaixo para instalá-las automaticamente
-sudo apt-get -f install
-
-#Inicia novamente a instalação do BlueJ depois de instaladas as dependências
-sudo dpkg -i BlueJ-linux-412.deb
-----
+- Debian e derivados (como Ubuntu e Linux Mint): `sudo apt-get install openjdk-24-jdk`
+- Red Hat e derivados (como Fedora e CentOS): `sudo yum install openjdk-24-jdk`
+- ArchLinux e derivados (como ArchBang): `sudo pacman install openjdk-24-jdk`
